@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Home",
+      "allEvents": "All Events",
+      "lobby": "Lobby",
+      "mainStage": "Main Stage",
+      "rooms": "Rooms",
+      "qa": "Q&A",
+      "chat": "Chat",
+      "schedule": "Schedule",
+      "polls": "Polls",
+      "map": "Attendees",
+      "toggleMenu": "Toggle Menu"
+    },
+    "regions": {
+      "cookiesNotice": "Cookie Notice",
+      "topbar": "User Interaction",
+      "localSwitcher": "Toggle Locale",
+      "login": "User Login",
+      "dashboard": "User Dashboard",
+      "featuredImage": "Featured Image",
+      "avatarImage": "User Image",
+      "localeSwitcher": "Select Locale"
+    },
+    "auth": {
+      "login": "Login",
+      "loginSocial": "Login with a social account",
+      "loginEmail": "Login with email and password",
+      "logout": "Logout",
+      "email": "Email",
+      "emailInvalid": "Invalid Email",
+      "emailRequired": "Email is required",
+      "password": "Password",
+      "passwordConfirm": "Confirm Password",
+      "passwordShort": "Password is too short",
+      "passwordRequired": "Password is required",
+      "passwordMatch": "Passwords must match",
+      "register": "Register",
+      "registerAccount": "Register for an account",
+      "existingAccount": "Already have an account?"
+    },
+    "buttons": {
+      "yes": "Yes",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "join": "Join"
+    },
+    "cookies": {
+      "notice": "Cookie Notice",
+      "preferences": "Cookie Preferences",
+      "accept": "Accept",
+      "manage": "Manage",
+      "confirm": "Confirm"
+    },
+    "credit": {
+      "get": "Get Jamfire Conference"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "hello": "Hello",
+      "cookies": "Manage Cookie Preferences"
+    },
+    "dates": {
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday",
+      "sun": "Sunday",
+      "jan": "January",
+      "feb": "February",
+      "mar": "March",
+      "apr": "April",
+      "may": "May",
+      "jun": "June",
+      "jul": "July",
+      "aug": "August",
+      "sep": "September",
+      "oct": "October",
+      "nov": "November",
+      "dec": "Decmeber",
+      "am": "AM",
+      "pm": "PM"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Starts",
+        "ends": "Ends"
+      },
+      "chat": {
+        "login": "Login to chat",
+        "beTheFirst": "Be the first to chat!",
+        "message": "Message...",
+        "send": "Send"
+      },
+      "menu": {
+        "label": "Show menu"
+      },
+      "qa": {
+        "question": "Question",
+        "answer": "Answer"
+      },
+      "rooms": {
+        "title": "Leave Room?",
+        "confirm": "Confirm",
+        "alert": "You are currently in a video conferencing room. Are you sure you want to leave?"
+      },
+      "tracker": {
+        "starts": "Starts",
+        "eventEnd": "Event End",
+        "eventEnded": "This event has ended.",
+        "current": "Current",
+        "next": "Next",
+        "day": "Day",
+        "hour": "Hour",
+        "minute": "Minute",
+        "second": "Second"
+      }
+    },
+    "error": {
+      "pageNotFound": "Page not found."
+    },
+    "form": {
+      "placeholderSearch": "Search..."
+    },
+    "geolocation": {
+      "title": "Enable Geolocation?",
+      "content": "Would you like to enable your location on the guest map?",
+      "enable": "Enable",
+      "deny": "Deny"
+    },
+    "locale": {
+      "selectorTitle": "Select a language",
+      "codes": {
+        "bg": "Bulgarian",
+        "cs": "Czech",
+        "da": "Danish",
+        "de": "German",
+        "el": "Greek",
+        "en": "English",
+        "es": "Spanish",
+        "et": "Estonian",
+        "fi": "Finnish",
+        "fr": "French",
+        "hu": "Hungarian",
+        "it": "Italian",
+        "ja": "Japanese",
+        "lt": "Lithuanian",
+        "lv": "Latvian",
+        "nl": "Dutch",
+        "pl": "Polish",
+        "pt": "Portuguese",
+        "ro": "Romanian",
+        "ru": "Russian",
+        "sk": "Slovak ",
+        "sl": "Slovenian",
+        "sv": "Swedish",
+        "tr": "Turkish",
+        "zh": "Chinese"
+      }
+    }
+  }
+}

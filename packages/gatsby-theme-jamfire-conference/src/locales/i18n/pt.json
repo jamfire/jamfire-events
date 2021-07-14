@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Casa",
+      "allEvents": "Todos os eventos",
+      "lobby": "Salão",
+      "mainStage": "Palco principal",
+      "rooms": "quartos",
+      "qa": "Q&A",
+      "chat": "Bate-papo",
+      "schedule": "Cronograma",
+      "polls": "Enquetes",
+      "map": "Participantes",
+      "toggleMenu": "Alternar menu"
+    },
+    "regions": {
+      "cookiesNotice": "Aviso de Cookie",
+      "topbar": "Interação com o usuário",
+      "localSwitcher": "Alternar local",
+      "login": "Login de usuário",
+      "dashboard": "Painel do Usuário",
+      "featuredImage": "Imagem em destaque",
+      "avatarImage": "Imagem do usuário",
+      "localeSwitcher": "Selecione a localidade"
+    },
+    "auth": {
+      "login": "Conecte-se",
+      "loginSocial": "Entrar com uma conta social",
+      "loginEmail": "Login com email e senha",
+      "logout": "Sair",
+      "email": "E-mail",
+      "emailInvalid": "E-mail inválido",
+      "emailRequired": "E-mail é obrigatório",
+      "password": "Senha",
+      "passwordConfirm": "Confirme a Senha",
+      "passwordShort": "A senha é muito curta",
+      "passwordRequired": "Senha requerida",
+      "passwordMatch": "As senhas devem corresponder",
+      "register": "Registro",
+      "registerAccount": "Cadastre-se para uma conta",
+      "existingAccount": "já tem uma conta?"
+    },
+    "buttons": {
+      "yes": "sim",
+      "confirm": "confirme",
+      "cancel": "Cancelar",
+      "join": "Juntar"
+    },
+    "cookies": {
+      "notice": "Aviso de Cookie",
+      "preferences": "Preferências de cookies",
+      "accept": "Aceitar",
+      "manage": "Gerir",
+      "confirm": "confirme"
+    },
+    "credit": {
+      "get": "Get Jamfire Conference"
+    },
+    "dashboard": {
+      "title": "Painel",
+      "hello": "Olá",
+      "cookies": "Gerenciar preferências de cookies"
+    },
+    "dates": {
+      "mon": "Segunda-feira",
+      "tue": "terça",
+      "wed": "quarta-feira",
+      "thu": "quinta-feira",
+      "fri": "sexta-feira",
+      "sat": "sábado",
+      "sun": "Domigo",
+      "jan": "Janeiro",
+      "feb": "fevereiro",
+      "mar": "Março",
+      "apr": "abril",
+      "may": "Maio",
+      "jun": "Junho",
+      "jul": "julho",
+      "aug": "agosto",
+      "sep": "setembro",
+      "oct": "Outubro",
+      "nov": "novembro",
+      "dec": "Decmeber",
+      "am": "SOU",
+      "pm": "PM"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Começa",
+        "ends": "Termina"
+      },
+      "chat": {
+        "login": "Entrar para bater papo",
+        "beTheFirst": "Seja o primeiro a conversar!",
+        "message": "Mensagem...",
+        "send": "Mandar"
+      },
+      "menu": {
+        "label": "Mostrar menu"
+      },
+      "qa": {
+        "question": "Pergunta",
+        "answer": "Responder"
+      },
+      "rooms": {
+        "title": "Sair da sala?",
+        "confirm": "confirme",
+        "alert": "Você está atualmente em uma sala de videoconferência. Você tem certeza de que quer sair?"
+      },
+      "tracker": {
+        "starts": "Começa",
+        "eventEnd": "Fim do Evento",
+        "eventEnded": "Este evento terminou.",
+        "current": "Atual",
+        "next": "Próximo",
+        "day": "Dia",
+        "hour": "Hora",
+        "minute": "Minuto",
+        "second": "Segundo"
+      }
+    },
+    "error": {
+      "pageNotFound": "Página não encontrada."
+    },
+    "form": {
+      "placeholderSearch": "Procurar..."
+    },
+    "geolocation": {
+      "title": "Ativar geolocalização?",
+      "content": "Gostaria de habilitar sua localização no mapa de visitantes?",
+      "enable": "Habilitar",
+      "deny": "Negar"
+    },
+    "locale": {
+      "selectorTitle": "Selecione um idioma",
+      "codes": {
+        "bg": "búlgaro",
+        "cs": "Tcheco",
+        "da": "dinamarquês",
+        "de": "alemão",
+        "el": "grego",
+        "en": "inglês",
+        "es": "espanhol",
+        "et": "estoniano",
+        "fi": "finlandês",
+        "fr": "francês",
+        "hu": "húngaro",
+        "it": "italiano",
+        "ja": "japonês",
+        "lt": "lituano",
+        "lv": "letão",
+        "nl": "holandês",
+        "pl": "polonês",
+        "pt": "português",
+        "ro": "romena",
+        "ru": "russo",
+        "sk": "Eslovaco",
+        "sl": "esloveno",
+        "sv": "sueco",
+        "tr": "turco",
+        "zh": "chinês"
+      }
+    }
+  }
+}

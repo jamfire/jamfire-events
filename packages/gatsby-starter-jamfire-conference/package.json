@@ -1,0 +1,44 @@
+{
+  "name": "gatsby-starter-jamfire-conference",
+  "starter-name": "gatsby-starter-jamfire-conference",
+  "version": "1.0.9",
+  "private": true,
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Kaleb Heitzman",
+    "email": "kaleb@jamfire.io",
+    "url": "https://jamfire.io"
+  },
+  "homepage": "https://github.com/jamfire/jamfire/tree/master/packages/gatsby-starter-jamfire-conference#read-me",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamfire/jamfire.git",
+    "directory": "packages/gatsby-starter-jamfire-conference"
+  },
+  "bugs": {
+    "url": "https://github.com/jamfire/jamfire/issues"
+  },
+  "dependencies": {
+    "gatsby": "^3.0.0",
+    "gatsby-theme-jamfire-conference": "^1.0.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@netlify/plugin-gatsby": "^1.0.3",
+    "prettier": "^2.3.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "proxy": "npx netlify-cms-proxy-server",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}

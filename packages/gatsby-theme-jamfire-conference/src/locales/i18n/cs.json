@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Domov",
+      "allEvents": "Všechny události",
+      "lobby": "Lobby",
+      "mainStage": "Hlavní pódium",
+      "rooms": "Pokoje",
+      "qa": "Otázky a odpovědi",
+      "chat": "Povídat si",
+      "schedule": "Plán",
+      "polls": "Ankety",
+      "map": "Účastníci",
+      "toggleMenu": "Přepnout nabídku"
+    },
+    "regions": {
+      "cookiesNotice": "Upozornění na soubory cookie",
+      "topbar": "Interakce uživatele",
+      "localSwitcher": "Přepnout národní prostředí",
+      "login": "Uživatelské přihlášení",
+      "dashboard": "Uživatelský panel",
+      "featuredImage": "Doporučený obrázek",
+      "avatarImage": "Obrázek uživatele",
+      "localeSwitcher": "Vyberte národní prostředí"
+    },
+    "auth": {
+      "login": "Přihlásit se",
+      "loginSocial": "Přihlaste se pomocí sociálního účtu",
+      "loginEmail": "Přihlaste se pomocí e-mailu a hesla",
+      "logout": "Odhlásit se",
+      "email": "E-mailem",
+      "emailInvalid": "Neplatný e-mail",
+      "emailRequired": "E-mail je vyžadován",
+      "password": "Heslo",
+      "passwordConfirm": "Potvrďte heslo",
+      "passwordShort": "Heslo je příliš krátké",
+      "passwordRequired": "Heslo je vyžadováno",
+      "passwordMatch": "Heslo se musí shodovat",
+      "register": "Registrovat",
+      "registerAccount": "Zaregistrujte si účet",
+      "existingAccount": "Máte již účet?"
+    },
+    "buttons": {
+      "yes": "Ano",
+      "confirm": "Potvrdit",
+      "cancel": "zrušení",
+      "join": "Připojit"
+    },
+    "cookies": {
+      "notice": "Upozornění na soubory cookie",
+      "preferences": "Předvolby souborů cookie",
+      "accept": "Akceptovat",
+      "manage": "Spravovat",
+      "confirm": "Potvrdit"
+    },
+    "credit": {
+      "get": "Získejte konferenci Jamfire"
+    },
+    "dashboard": {
+      "title": "Přístrojová deska",
+      "hello": "Ahoj",
+      "cookies": "Spravujte předvolby souborů cookie"
+    },
+    "dates": {
+      "mon": "pondělí",
+      "tue": "úterý",
+      "wed": "středa",
+      "thu": "Čtvrtek",
+      "fri": "pátek",
+      "sat": "sobota",
+      "sun": "Neděle",
+      "jan": "leden",
+      "feb": "Únor",
+      "mar": "březen",
+      "apr": "duben",
+      "may": "Smět",
+      "jun": "červen",
+      "jul": "červenec",
+      "aug": "srpen",
+      "sep": "září",
+      "oct": "říjen",
+      "nov": "listopad",
+      "dec": "Decmeber",
+      "am": "DOPOLEDNE",
+      "pm": "ODPOLEDNE"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Začíná",
+        "ends": "Končí"
+      },
+      "chat": {
+        "login": "Přihlaste se k chatu",
+        "beTheFirst": "Buďte první, kdo chatuje!",
+        "message": "Zpráva...",
+        "send": "Poslat"
+      },
+      "menu": {
+        "label": "Zobrazit nabídku"
+      },
+      "qa": {
+        "question": "Otázka",
+        "answer": "Odpovědět"
+      },
+      "rooms": {
+        "title": "Opustit místnost?",
+        "confirm": "Potvrdit",
+        "alert": "Aktuálně jste ve videokonferenční místnosti. Opravdu chcete odejít?"
+      },
+      "tracker": {
+        "starts": "Začíná",
+        "eventEnd": "Konec akce",
+        "eventEnded": "Tato událost skončila.",
+        "current": "Proud",
+        "next": "další",
+        "day": "Den",
+        "hour": "Hodina",
+        "minute": "Minuta",
+        "second": "Druhý"
+      }
+    },
+    "error": {
+      "pageNotFound": "Stránka nenalezena."
+    },
+    "form": {
+      "placeholderSearch": "Vyhledávání..."
+    },
+    "geolocation": {
+      "title": "Povolit geolokaci?",
+      "content": "Chcete povolit svou polohu na mapě hostů?",
+      "enable": "Umožnit",
+      "deny": "Odmítnout"
+    },
+    "locale": {
+      "selectorTitle": "Vyberte jazyk",
+      "codes": {
+        "bg": "bulharský",
+        "cs": "čeština",
+        "da": "dánština",
+        "de": "Němec",
+        "el": "řecký",
+        "en": "Angličtina",
+        "es": "španělština",
+        "et": "estonština",
+        "fi": "Finština",
+        "fr": "francouzština",
+        "hu": "maďarský",
+        "it": "italština",
+        "ja": "japonský",
+        "lt": "Litevský",
+        "lv": "lotyšský",
+        "nl": "holandský",
+        "pl": "polština",
+        "pt": "portugalština",
+        "ro": "rumunština",
+        "ru": "ruština",
+        "sk": "Slovák",
+        "sl": "slovinský",
+        "sv": "švédský",
+        "tr": "turečtina",
+        "zh": "čínština"
+      }
+    }
+  }
+}

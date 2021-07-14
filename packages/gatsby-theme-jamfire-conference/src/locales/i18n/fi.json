@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Koti",
+      "allEvents": "Kaikki tapahtumat",
+      "lobby": "Aula",
+      "mainStage": "Päälava",
+      "rooms": "Huoneet",
+      "qa": "Kysymykset ja vastaukset",
+      "chat": "Chat",
+      "schedule": "Ajoittaa",
+      "polls": "Äänestykset",
+      "map": "Osallistujat",
+      "toggleMenu": "Vaihda valikko"
+    },
+    "regions": {
+      "cookiesNotice": "Evästeilmoitus",
+      "topbar": "Käyttäjän vuorovaikutus",
+      "localSwitcher": "Vaihda kieli",
+      "login": "Käyttäjän kirjautuminen",
+      "dashboard": "Käyttäjän hallintapaneeli",
+      "featuredImage": "Esitelty kuva",
+      "avatarImage": "Käyttäjän kuva",
+      "localeSwitcher": "Valitse Kieli"
+    },
+    "auth": {
+      "login": "Kirjaudu sisään",
+      "loginSocial": "Kirjaudu sisään sosiaalisella tilillä",
+      "loginEmail": "Kirjaudu sisään sähköpostilla ja salasanalla",
+      "logout": "Kirjautua ulos",
+      "email": "Sähköposti",
+      "emailInvalid": "Virheellinen sähköpostiosoite",
+      "emailRequired": "Sähköposti vaaditaan",
+      "password": "Salasana",
+      "passwordConfirm": "Vahvista salasana",
+      "passwordShort": "Salasana on liian lyhyt",
+      "passwordRequired": "salasana tarvitaan",
+      "passwordMatch": "Salasanojen täytyy täsmätä",
+      "register": "Rekisteröidy",
+      "registerAccount": "Rekisteröidy tilille",
+      "existingAccount": "Onko sinulla jo tili?"
+    },
+    "buttons": {
+      "yes": "Joo",
+      "confirm": "Vahvistaa",
+      "cancel": "Peruuttaa",
+      "join": "Liittyä seuraan"
+    },
+    "cookies": {
+      "notice": "Evästeilmoitus",
+      "preferences": "Evästeasetukset",
+      "accept": "Hyväksyä",
+      "manage": "Hallitse",
+      "confirm": "Vahvistaa"
+    },
+    "credit": {
+      "get": "Hanki Jamfire-konferenssi"
+    },
+    "dashboard": {
+      "title": "Kojelauta",
+      "hello": "Hei",
+      "cookies": "Hallitse evästeasetuksia"
+    },
+    "dates": {
+      "mon": "maanantai",
+      "tue": "tiistai",
+      "wed": "keskiviikko",
+      "thu": "torstai",
+      "fri": "perjantai",
+      "sat": "Lauantai",
+      "sun": "sunnuntai",
+      "jan": "tammikuu",
+      "feb": "helmikuu",
+      "mar": "Maaliskuu",
+      "apr": "huhtikuu",
+      "may": "saattaa",
+      "jun": "Kesäkuu",
+      "jul": "heinäkuu",
+      "aug": "elokuu",
+      "sep": "syyskuu",
+      "oct": "lokakuu",
+      "nov": "marraskuu",
+      "dec": "Decmeber",
+      "am": "OLEN",
+      "pm": "PM"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Alkaa",
+        "ends": "Päättyy"
+      },
+      "chat": {
+        "login": "Kirjaudu chattailuun",
+        "beTheFirst": "Ole ensimmäinen chat!",
+        "message": "Viesti...",
+        "send": "Lähettää"
+      },
+      "menu": {
+        "label": "Näytä-valikko"
+      },
+      "qa": {
+        "question": "Kysymys",
+        "answer": "Vastaus"
+      },
+      "rooms": {
+        "title": "Lähde huoneesta?",
+        "confirm": "Vahvistaa",
+        "alert": "Olet tällä hetkellä videoneuvotteluhuoneessa. Haluatko varmasti lähteä?"
+      },
+      "tracker": {
+        "starts": "Alkaa",
+        "eventEnd": "Tapahtuman loppu",
+        "eventEnded": "Tämä tapahtuma on päättynyt.",
+        "current": "Nykyinen",
+        "next": "Seuraava",
+        "day": "Päivä",
+        "hour": "Tunnin",
+        "minute": "Minuutti",
+        "second": "Toinen"
+      }
+    },
+    "error": {
+      "pageNotFound": "Sivua ei löydetty."
+    },
+    "form": {
+      "placeholderSearch": "Hae..."
+    },
+    "geolocation": {
+      "title": "Otetaanko maantieteellinen sijainti käyttöön?",
+      "content": "Haluatko sallia sijaintisi vieraskartalla?",
+      "enable": "ota käyttöön",
+      "deny": "Kieltää"
+    },
+    "locale": {
+      "selectorTitle": "Valitse kieli",
+      "codes": {
+        "bg": "Bulgaria",
+        "cs": "Tšekki",
+        "da": "Tanskan kieli",
+        "de": "Saksan kieli",
+        "el": "Kreikka",
+        "en": "Englanti",
+        "es": "Espanja",
+        "et": "Virolainen",
+        "fi": "Suomalainen",
+        "fr": "Ranskan kieli",
+        "hu": "Unkarin kieli",
+        "it": "italialainen",
+        "ja": "japanilainen",
+        "lt": "Liettua",
+        "lv": "Latvialainen",
+        "nl": "Hollannin kieli",
+        "pl": "Kiillottaa",
+        "pt": "Portugalin kieli",
+        "ro": "Romania",
+        "ru": "Venäjän kieli",
+        "sk": "Slovakian",
+        "sl": "Sloveeni",
+        "sv": "Ruotsin kieli",
+        "tr": "Turkki",
+        "zh": "Kiinalainen"
+      }
+    }
+  }
+}

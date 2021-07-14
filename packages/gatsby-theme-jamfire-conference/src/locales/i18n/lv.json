@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Mājas",
+      "allEvents": "Visi notikumi",
+      "lobby": "Vestibils",
+      "mainStage": "Galvenā skatuve",
+      "rooms": "Istabas",
+      "qa": "Jautājumi un atbildes",
+      "chat": "Tērzēšana",
+      "schedule": "Grafiks",
+      "polls": "Aptaujas",
+      "map": "Dalībnieki",
+      "toggleMenu": "Pārslēgt izvēlni"
+    },
+    "regions": {
+      "cookiesNotice": "Sīkdatņu paziņojums",
+      "topbar": "Lietotāju mijiedarbība",
+      "localSwitcher": "Pārslēgt lokalizāciju",
+      "login": "Lietotāja pieteikšanās",
+      "dashboard": "Lietotāja informācijas panelis",
+      "featuredImage": "Piedāvātais attēls",
+      "avatarImage": "Lietotāja attēls",
+      "localeSwitcher": "Atlasiet Lokalizācija"
+    },
+    "auth": {
+      "login": "Pieslēgties",
+      "loginSocial": "Piesakieties, izmantojot sociālo kontu",
+      "loginEmail": "Piesakieties ar e-pastu un paroli",
+      "logout": "Izlogoties",
+      "email": "E-pasts",
+      "emailInvalid": "Nepareizs e-pasts",
+      "emailRequired": "Nepieciešams e-pasts",
+      "password": "Parole",
+      "passwordConfirm": "apstipriniet paroli",
+      "passwordShort": "Parole ir pārāk īsa",
+      "passwordRequired": "nepieciešama parole",
+      "passwordMatch": "Parolēm jābūt vienādām",
+      "register": "Reģistrēties",
+      "registerAccount": "Reģistrējieties kontam",
+      "existingAccount": "Jau ir konts?"
+    },
+    "buttons": {
+      "yes": "Jā",
+      "confirm": "Apstiprināt",
+      "cancel": "Atcelt",
+      "join": "Pievienojieties"
+    },
+    "cookies": {
+      "notice": "Sīkdatņu paziņojums",
+      "preferences": "Sīkdatņu preferences",
+      "accept": "Pieņemt",
+      "manage": "Pārvaldīt",
+      "confirm": "Apstiprināt"
+    },
+    "credit": {
+      "get": "Iegūstiet Jamfire konferenci"
+    },
+    "dashboard": {
+      "title": "Mērinstrumentu panelis",
+      "hello": "Sveiki",
+      "cookies": "Pārvaldīt sīkfailu preferences"
+    },
+    "dates": {
+      "mon": "Pirmdiena",
+      "tue": "Otrdiena",
+      "wed": "Trešdiena",
+      "thu": "Ceturtdiena",
+      "fri": "Piektdiena",
+      "sat": "Sestdiena",
+      "sun": "Svētdiena",
+      "jan": "Janvāris",
+      "feb": "Februāris",
+      "mar": "Martā",
+      "apr": "Aprīlis",
+      "may": "Maijs",
+      "jun": "jūnijs",
+      "jul": "Jūlijs",
+      "aug": "augusts",
+      "sep": "Septembris",
+      "oct": "Oktobris",
+      "nov": "Novembrī",
+      "dec": "Dekmebers",
+      "am": "AM",
+      "pm": "PM"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Sākas",
+        "ends": "Beidzas"
+      },
+      "chat": {
+        "login": "Piesakieties, lai tērzētu",
+        "beTheFirst": "Esi pirmais, kurš tērzē!",
+        "message": "Ziņojums ...",
+        "send": "Nosūtīt"
+      },
+      "menu": {
+        "label": "Rādīt izvēlni"
+      },
+      "qa": {
+        "question": "Jautājums",
+        "answer": "Atbilde"
+      },
+      "rooms": {
+        "title": "Iziet no istabas?",
+        "confirm": "Apstiprināt",
+        "alert": "Jūs šobrīd atrodaties video konferenču telpā. Vai tiešām vēlaties aiziet?"
+      },
+      "tracker": {
+        "starts": "Sākas",
+        "eventEnd": "Pasākuma beigas",
+        "eventEnded": "Šis pasākums ir beidzies.",
+        "current": "Pašreizējais",
+        "next": "Nākamais",
+        "day": "Diena",
+        "hour": "Stunda",
+        "minute": "Minūte",
+        "second": "Otrkārt"
+      }
+    },
+    "error": {
+      "pageNotFound": "Lapa nav atrasta."
+    },
+    "form": {
+      "placeholderSearch": "Meklēt..."
+    },
+    "geolocation": {
+      "title": "Vai iespējot ģeogrāfisko atrašanās vietu?",
+      "content": "Vai vēlaties iespējot savu atrašanās vietu viesu kartē?",
+      "enable": "Iespējot",
+      "deny": "Noliegt"
+    },
+    "locale": {
+      "selectorTitle": "Atlasiet valodu",
+      "codes": {
+        "bg": "Bulgāru",
+        "cs": "Čehu",
+        "da": "Dāņu",
+        "de": "Vācu",
+        "el": "Grieķu",
+        "en": "Angļu",
+        "es": "Spāņu",
+        "et": "Igauņu",
+        "fi": "Somu",
+        "fr": "Franču",
+        "hu": "Ungāru",
+        "it": "Itāļu valoda",
+        "ja": "Japāņu",
+        "lt": "Lietuviešu",
+        "lv": "Latvietis",
+        "nl": "Holandiešu",
+        "pl": "Poļu",
+        "pt": "Portugāļu",
+        "ro": "Rumāņu",
+        "ru": "Krievu",
+        "sk": "Slovāku",
+        "sl": "Slovēņu",
+        "sv": "Zviedru",
+        "tr": "Turku",
+        "zh": "Ķīniešu"
+      }
+    }
+  }
+}

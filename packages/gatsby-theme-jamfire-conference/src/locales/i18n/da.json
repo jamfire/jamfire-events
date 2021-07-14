@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Hjem",
+      "allEvents": "Alle begivenheder",
+      "lobby": "Lobby",
+      "mainStage": "Hoved scene",
+      "rooms": "Værelser",
+      "qa": "Spørgsmål og svar",
+      "chat": "Snak",
+      "schedule": "Tidsplan",
+      "polls": "Afstemninger",
+      "map": "Deltagere",
+      "toggleMenu": "Skift menu"
+    },
+    "regions": {
+      "cookiesNotice": "Cookie-meddelelse",
+      "topbar": "Brugerinteraktion",
+      "localSwitcher": "Skift sprog",
+      "login": "Bruger login",
+      "dashboard": "Brugerdashboard",
+      "featuredImage": "Fremhævet billede",
+      "avatarImage": "Brugerbillede",
+      "localeSwitcher": "Vælg Sprog"
+    },
+    "auth": {
+      "login": "Log på",
+      "loginSocial": "Log ind med en social konto",
+      "loginEmail": "Log ind med e-mail og adgangskode",
+      "logout": "Log ud",
+      "email": "E-mail",
+      "emailInvalid": "Ugyldig email",
+      "emailRequired": "E-mail er påkrævet",
+      "password": "Adgangskode",
+      "passwordConfirm": "Bekræft kodeord",
+      "passwordShort": "Adgangskoden er for kort",
+      "passwordRequired": "adgangskode er påkrævet",
+      "passwordMatch": "kodeordene skal være ens",
+      "register": "Tilmeld",
+      "registerAccount": "Tilmeld dig en konto",
+      "existingAccount": "har du allerede en bruger?"
+    },
+    "buttons": {
+      "yes": "Ja",
+      "confirm": "Bekræfte",
+      "cancel": "Afbestille",
+      "join": "Tilslutte"
+    },
+    "cookies": {
+      "notice": "Cookie-meddelelse",
+      "preferences": "Cookieindstillinger",
+      "accept": "Acceptere",
+      "manage": "Styre",
+      "confirm": "Bekræfte"
+    },
+    "credit": {
+      "get": "Få Jamfire-konference"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "hello": "Hej",
+      "cookies": "Administrer cookieindstillinger"
+    },
+    "dates": {
+      "mon": "Mandag",
+      "tue": "tirsdag",
+      "wed": "onsdag",
+      "thu": "torsdag",
+      "fri": "Fredag",
+      "sat": "lørdag",
+      "sun": "Søndag",
+      "jan": "januar",
+      "feb": "februar",
+      "mar": "marts",
+      "apr": "April",
+      "may": "Kan",
+      "jun": "juni",
+      "jul": "juli",
+      "aug": "august",
+      "sep": "september",
+      "oct": "oktober",
+      "nov": "november",
+      "dec": "Decmeber",
+      "am": "ER",
+      "pm": "OM EFTERMIDDAGEN"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Starter",
+        "ends": "Ender"
+      },
+      "chat": {
+        "login": "Log ind for at chatte",
+        "beTheFirst": "Vær den første til at chatte!",
+        "message": "Besked...",
+        "send": "Sende"
+      },
+      "menu": {
+        "label": "Vis menu"
+      },
+      "qa": {
+        "question": "Spørgsmål",
+        "answer": "Svar"
+      },
+      "rooms": {
+        "title": "Forlad plads?",
+        "confirm": "Bekræfte",
+        "alert": "Du er i øjeblikket i et videokonferencerum. Er du sikker på, at du vil rejse?"
+      },
+      "tracker": {
+        "starts": "Starter",
+        "eventEnd": "Event End",
+        "eventEnded": "Denne begivenhed er afsluttet.",
+        "current": "Nuværende",
+        "next": "Næste",
+        "day": "Dag",
+        "hour": "Time",
+        "minute": "Minut",
+        "second": "Sekund"
+      }
+    },
+    "error": {
+      "pageNotFound": "Siden blev ikke fundet."
+    },
+    "form": {
+      "placeholderSearch": "Søg..."
+    },
+    "geolocation": {
+      "title": "Aktivere geografisk placering?",
+      "content": "Vil du aktivere din placering på gæstekortet?",
+      "enable": "Aktiver",
+      "deny": "Nægte"
+    },
+    "locale": {
+      "selectorTitle": "Vælg et sprog",
+      "codes": {
+        "bg": "Bulgarsk",
+        "cs": "Tjekkisk",
+        "da": "dansk",
+        "de": "tysk",
+        "el": "Græsk",
+        "en": "engelsk",
+        "es": "spansk",
+        "et": "Estisk",
+        "fi": "Finsk",
+        "fr": "fransk",
+        "hu": "Ungarsk",
+        "it": "Italiensk",
+        "ja": "Japansk",
+        "lt": "Litauisk",
+        "lv": "Lettisk",
+        "nl": "hollandsk",
+        "pl": "Polere",
+        "pt": "Portugisisk",
+        "ro": "Rumænsk",
+        "ru": "Russisk",
+        "sk": "Slovakisk",
+        "sl": "Slovensk",
+        "sv": "Svensk",
+        "tr": "tyrkisk",
+        "zh": "kinesisk"
+      }
+    }
+  }
+}

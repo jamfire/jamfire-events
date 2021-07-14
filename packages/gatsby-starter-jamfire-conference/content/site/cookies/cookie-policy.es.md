@@ -1,0 +1,4 @@
+---
+analyticsCookies:
+  enabled: true
+---

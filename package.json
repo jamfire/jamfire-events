@@ -1,0 +1,67 @@
+{
+  "name": "jamfire",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "husky"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.6",
+    "@types/node": "^16.3.1",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "axe-core": "^4.2.3",
+    "babel-eslint": "^10.1.0",
+    "commitizen": "^4.2.4",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "cypress": "^7.7.0",
+    "cypress-axe": "^0.12.2",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-baseui": "^9.116.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "gatsby-cypress": "^1.8.0",
+    "husky": "^7.0.0",
+    "is-ci": "^3.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.3.2",
+    "start-server-and-test": "^1.12.6",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:compile": "tsc --project cypress/tsconfig.json",
+    "tsc:compile:watch": "tsc --watch --project cypress/tsconfig.json",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "cy:open": "cypress open",
+    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run",
+    "ssat:dev:conference": "start-server-and-test dev:conference http://localhost:8000 cy:open",
+    "e2e:dev:conference": "concurrently --kill-others 'yarn tsc:compile:watch' 'yarn ssat:dev:conference'",
+    "dev:conference": "yarn workspace gatsby-starter-jamfire-conference develop",
+    "build:conference": "yarn workspace gatsby-starter-jamfire-conference build",
+    "serve:conference": "yarn workspace gatsby-starter-jamfire-conference serve",
+    "prepare": "is-ci || husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// import libs
+import React from "react"
+import { graphql } from "gatsby"
+import { DataProps } from "../gatsby/dataProps"
+
+// import components
+import Page from "../components/Page"
+
+export default ({ data, pageContext }: DataProps) => (
+  <Page data={data} pageContext={pageContext} />
+)
+
+export const pageQuery = graphql`
+  query ($slug: String!, $locale: String!, $defaultLocale: String!) {
+    page: pageByLocale(locale: $locale, slug: $slug) {
+      ...PageFragment
+    }
+    defaultPage: pageByLocale(locale: $defaultLocale, slug: $slug) {
+      ...PageFragment
+    }
+    config: configByLocale(locale: $locale) {
+      ...ConfigurationFragment
+    }
+    defaultConfig: configByLocale(locale: $locale) {
+      ...ConfigurationFragment
+    }
+    cookies: cookiesByLocale(locale: $defaultLocale) {
+      ...CookiesFragment
+    }
+    defaultCookies: cookiesByLocale(locale: $defaultLocale) {
+      ...CookiesFragment
+    }
+  }
+`

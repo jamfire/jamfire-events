@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Zuhause",
+      "allEvents": "Alle Veranstaltungen",
+      "lobby": "Empfangshalle",
+      "mainStage": "Hauptbühne",
+      "rooms": "Räume",
+      "qa": "Fragen und Antworten",
+      "chat": "Plaudern",
+      "schedule": "Zeitplan",
+      "polls": "Umfragen",
+      "map": "Teilnehmer",
+      "toggleMenu": "Menü umschalten"
+    },
+    "regions": {
+      "cookiesNotice": "Cookie-Hinweis",
+      "topbar": "Benutzerinteraktion",
+      "localSwitcher": "Gebietsschema umschalten",
+      "login": "Benutzer-Anmeldung",
+      "dashboard": "Benutzer-Dashboard",
+      "featuredImage": "Ausgewähltes Bild",
+      "avatarImage": "Benutzerbild",
+      "localeSwitcher": "Gebietsschema auswählen"
+    },
+    "auth": {
+      "login": "Anmeldung",
+      "loginSocial": "Melden Sie sich mit einem sozialen Konto an",
+      "loginEmail": "Login mit E-Mail und Passwort",
+      "logout": "Ausloggen",
+      "email": "Email",
+      "emailInvalid": "Ungültige E-Mail",
+      "emailRequired": "E-Mail ist erforderlich",
+      "password": "Passwort",
+      "passwordConfirm": "Kennwort bestätigen",
+      "passwordShort": "Das Passwort ist zu kurz",
+      "passwordRequired": "Passwort wird benötigt",
+      "passwordMatch": "Passwörter müssen übereinstimmen",
+      "register": "Registrieren",
+      "registerAccount": "Registrieren Sie sich für ein Konto",
+      "existingAccount": "Sie haben bereits ein Konto?"
+    },
+    "buttons": {
+      "yes": "Ja",
+      "confirm": "Bestätigen",
+      "cancel": "Stornieren",
+      "join": "Beitreten"
+    },
+    "cookies": {
+      "notice": "Cookie-Hinweis",
+      "preferences": "Cookie-Einstellungen",
+      "accept": "Akzeptieren",
+      "manage": "Verwalten",
+      "confirm": "Bestätigen"
+    },
+    "credit": {
+      "get": "Holen Sie sich die Jamfire-Konferenz"
+    },
+    "dashboard": {
+      "title": "Instrumententafel",
+      "hello": "Hallo",
+      "cookies": "Cookie-Einstellungen verwalten"
+    },
+    "dates": {
+      "mon": "Montag",
+      "tue": "Dienstag",
+      "wed": "Mittwoch",
+      "thu": "Donnerstag",
+      "fri": "Freitag",
+      "sat": "Samstag",
+      "sun": "Sonntag",
+      "jan": "Januar",
+      "feb": "Februar",
+      "mar": "März",
+      "apr": "April",
+      "may": "Kann",
+      "jun": "Juni",
+      "jul": "Juli",
+      "aug": "August",
+      "sep": "September",
+      "oct": "Oktober",
+      "nov": "November",
+      "dec": "Dezember",
+      "am": "AM",
+      "pm": "PN"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Startet",
+        "ends": "Endet"
+      },
+      "chat": {
+        "login": "Melden Sie sich an, um zu chatten",
+        "beTheFirst": "Seien Sie der Erste, der chattet!",
+        "message": "Botschaft...",
+        "send": "Senden"
+      },
+      "menu": {
+        "label": "Zeige das Menü"
+      },
+      "qa": {
+        "question": "Frage",
+        "answer": "Antworten"
+      },
+      "rooms": {
+        "title": "Zimmer verlassen?",
+        "confirm": "Bestätigen",
+        "alert": "Sie befinden sich derzeit in einem Videokonferenzraum. Bist du sicher dass du gehen willst?"
+      },
+      "tracker": {
+        "starts": "Startet",
+        "eventEnd": "Veranstaltungsende",
+        "eventEnded": "Diese Veranstaltung ist beendet.",
+        "current": "Strom",
+        "next": "Nächster",
+        "day": "Tag",
+        "hour": "Stunde",
+        "minute": "Minute",
+        "second": "Zweite"
+      }
+    },
+    "error": {
+      "pageNotFound": "Seite nicht gefunden."
+    },
+    "form": {
+      "placeholderSearch": "Suche..."
+    },
+    "geolocation": {
+      "title": "Geolokalisierung aktivieren?",
+      "content": "Möchten Sie Ihren Standort auf der Gästekarte aktivieren?",
+      "enable": "Aktivieren",
+      "deny": "Verweigern"
+    },
+    "locale": {
+      "selectorTitle": "Wähle eine Sprache",
+      "codes": {
+        "bg": "bulgarisch",
+        "cs": "Tschechisch",
+        "da": "dänisch",
+        "de": "Deutsche",
+        "el": "griechisch",
+        "en": "Englisch",
+        "es": "Spanisch",
+        "et": "estnisch",
+        "fi": "finnisch",
+        "fr": "Französisch",
+        "hu": "ungarisch",
+        "it": "Italienisch",
+        "ja": "japanisch",
+        "lt": "litauisch",
+        "lv": "lettisch",
+        "nl": "Niederländisch",
+        "pl": "Polieren",
+        "pt": "Portugiesisch",
+        "ro": "rumänisch",
+        "ru": "Russisch",
+        "sk": "slowakisch",
+        "sl": "Slowenisch",
+        "sv": "Schwedisch",
+        "tr": "Türkisch",
+        "zh": "Chinesisch"
+      }
+    }
+  }
+}

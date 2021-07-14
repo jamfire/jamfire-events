@@ -1,0 +1,47 @@
+name: "Cypress: gatsby-theme-jamfire-conference"
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/gastby-starter-jamfire-conference/**"
+      - "packages/gastby-theme-jamfire-conference/**"
+      - ".github/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "packages/gastby-starter-jamfire-conference/**"
+      - "packages/gastby-theme-jamfire-conference/**"
+      - ".github/**"
+jobs:
+  test_theme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Tests
+        uses: cypress-io/github-action@v2
+        env:
+          GATSBY_SITE_NAME: Jamfire
+          GATSBY_SHORT_NAME: Jamfire
+          GATSBY_NETLIFY_SITE_URL: https://conference.jamfire.io
+          GATSBY_NETLIFY_DISPLAY_URL: https://conference.jamfire.io
+          GATSBY_NETLIFY_BACKEND_NAME: github
+          GATSBY_NETLIFY_BACKEND_REPO: jamfire/gatsby-starter-jamfire-conference
+          GATSBY_NETLIFY_BACKEND_BRANCH: main
+          GATSBY_FIREBASE_API_KEY: ${{ secrets.GATSBY_FIREBASE_API_KEY }}
+          GATSBY_FIREBASE_APP_ID: ${{ secrets.GATSBY_FIREBASE_APP_ID }}
+          GATSBY_FIREBASE_AUTH_DOMAIN: ${{ secrets.GATSBY_FIREBASE_AUTH_DOMAIN }}
+          GATSBY_FIREBASE_DATABASE_URL: ${{ secrets.GATSBY_FIREBASE_DATABASE_URL }}
+          GATSBY_FIREBASE_MEASUREMENT_ID: ${{ secrets.GATSBY_FIREBASE_MEASUREMENT_ID }}
+          GATSBY_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.GATSBY_FIREBASE_MESSAGING_SENDER_ID }}
+          GATSBY_FIREBASE_PROJECT_ID: ${{ secrets.GATSBY_FIREBASE_PROJECT_ID }}
+          GATSBY_FIREBASE_STORAGE_BUCKET: ${{ secrets.GATSBY_FIREBASE_STORAGE_BUCKET }}
+          GATSBY_GOOGLE_ANALYTICS_TRACKING_ID: ${{ secrets.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID }}
+          GATSBY_DEFAULT_LOCALE: en
+          GATSBY_LOCALES: en,bg,cs,da,de,el,es,et,fi,fr,hu,it,ja,lt,lv,nl,pl,pt,ro,ru,sk,sl,sv,tr,zh
+        with:
+          build: yarn build:conference
+          start: yarn serve:conference
+          project: packages/gatsby-theme-jamfire-conference-e2e

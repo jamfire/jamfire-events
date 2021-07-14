@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "家",
+      "allEvents": "所有活动",
+      "lobby": "大堂",
+      "mainStage": "主舞台",
+      "rooms": "客房",
+      "qa": "问答",
+      "chat": "聊天",
+      "schedule": "日程",
+      "polls": "民意调查",
+      "map": "参加者",
+      "toggleMenu": "切换菜单"
+    },
+    "regions": {
+      "cookiesNotice": "饼干注意事项",
+      "topbar": "用户互动",
+      "localSwitcher": "切换区域设置",
+      "login": "用户登录",
+      "dashboard": "用户仪表板",
+      "featuredImage": "特色图片",
+      "avatarImage": "用户画像",
+      "localeSwitcher": "选择语言环境"
+    },
+    "auth": {
+      "login": "登录",
+      "loginSocial": "使用社交帐户登录",
+      "loginEmail": "使用电子邮件和密码登录",
+      "logout": "登出",
+      "email": "电子邮件",
+      "emailInvalid": "不合规电邮",
+      "emailRequired": "电子邮件为必填项",
+      "password": "密码",
+      "passwordConfirm": "确认密码",
+      "passwordShort": "密码太短",
+      "passwordRequired": "密码是必需的",
+      "passwordMatch": "密码必须匹配",
+      "register": "登记",
+      "registerAccount": "注册一个帐户",
+      "existingAccount": "已经有一个帐户？"
+    },
+    "buttons": {
+      "yes": "是的",
+      "confirm": "确认",
+      "cancel": "取消",
+      "join": "加入"
+    },
+    "cookies": {
+      "notice": "饼干注意事项",
+      "preferences": "Cookie 偏好",
+      "accept": "接受",
+      "manage": "管理",
+      "confirm": "确认"
+    },
+    "credit": {
+      "get": "获取 Jamfire 会议"
+    },
+    "dashboard": {
+      "title": "仪表盘",
+      "hello": "你好",
+      "cookies": "管理 Cookie 首选项"
+    },
+    "dates": {
+      "mon": "周一",
+      "tue": "周二",
+      "wed": "周三",
+      "thu": "周四",
+      "fri": "星期五",
+      "sat": "周六",
+      "sun": "星期日",
+      "jan": "一月",
+      "feb": "二月",
+      "mar": "行进",
+      "apr": "四月",
+      "may": "可能",
+      "jun": "六月",
+      "jul": "七月",
+      "aug": "八月",
+      "sep": "九月",
+      "oct": "十月",
+      "nov": "十一月",
+      "dec": "十二月",
+      "am": "是",
+      "pm": "下午"
+    },
+    "event": {
+      "lobby": {
+        "starts": "开始",
+        "ends": "结束"
+      },
+      "chat": {
+        "login": "登录聊天",
+        "beTheFirst": "成为第一个聊天的人！",
+        "message": "信息...",
+        "send": "发送"
+      },
+      "menu": {
+        "label": "显示菜单"
+      },
+      "qa": {
+        "question": "问题",
+        "answer": "回答"
+      },
+      "rooms": {
+        "title": "离开房间？",
+        "confirm": "确认",
+        "alert": "您当前在视频会议室中。你确定要离开吗？"
+      },
+      "tracker": {
+        "starts": "开始",
+        "eventEnd": "活动结束",
+        "eventEnded": "本次活动已结束。",
+        "current": "当前的",
+        "next": "下一个",
+        "day": "日",
+        "hour": "小时",
+        "minute": "分钟",
+        "second": "第二"
+      }
+    },
+    "error": {
+      "pageNotFound": "找不到网页。"
+    },
+    "form": {
+      "placeholderSearch": "搜索..."
+    },
+    "geolocation": {
+      "title": "启用地理定位？",
+      "content": "您想在访客地图上启用您的位置吗？",
+      "enable": "使能够",
+      "deny": "否定"
+    },
+    "locale": {
+      "selectorTitle": "选择语言",
+      "codes": {
+        "bg": "保加利亚语",
+        "cs": "捷克语",
+        "da": "丹麦语",
+        "de": "德语",
+        "el": "希腊语",
+        "en": "英语",
+        "es": "西班牙语",
+        "et": "爱沙尼亚语",
+        "fi": "芬兰",
+        "fr": "法语",
+        "hu": "匈牙利",
+        "it": "意大利语",
+        "ja": "日本人",
+        "lt": "立陶宛语",
+        "lv": "拉脱维亚语",
+        "nl": "荷兰语",
+        "pl": "抛光",
+        "pt": "葡萄牙语",
+        "ro": "罗马尼亚语",
+        "ru": "俄语",
+        "sk": "斯洛伐克语",
+        "sl": "斯洛文尼亚语",
+        "sv": "瑞典",
+        "tr": "土耳其",
+        "zh": "中国人"
+      }
+    }
+  }
+}

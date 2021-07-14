@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Dom",
+      "allEvents": "Wszystkie zdarzenia",
+      "lobby": "Lobby",
+      "mainStage": "Scena główna",
+      "rooms": "Pokoje",
+      "qa": "Pytania i odpowiedzi",
+      "chat": "Czat",
+      "schedule": "Harmonogram",
+      "polls": "Sondaże",
+      "map": "Uczestnicy",
+      "toggleMenu": "Przełącz menu"
+    },
+    "regions": {
+      "cookiesNotice": "Informacja o plikach cookie",
+      "topbar": "Interakcja z użytkownikiem",
+      "localSwitcher": "Przełącz region",
+      "login": "Login użytkownika",
+      "dashboard": "Panel użytkownika",
+      "featuredImage": "Przedstawiony obraz",
+      "avatarImage": "Obraz użytkownika",
+      "localeSwitcher": "Wybierz region"
+    },
+    "auth": {
+      "login": "Zaloguj sie",
+      "loginSocial": "Zaloguj się za pomocą konta społecznościowego",
+      "loginEmail": "Zaloguj się za pomocą adresu e-mail i hasła",
+      "logout": "Wyloguj",
+      "email": "E-mail",
+      "emailInvalid": "Niepoprawny email",
+      "emailRequired": "email jest wymagany",
+      "password": "Hasło",
+      "passwordConfirm": "Potwierdź hasło",
+      "passwordShort": "Hasło jest za krótkie",
+      "passwordRequired": "Wymagane jest hasło",
+      "passwordMatch": "Hasło musi pasować",
+      "register": "Zarejestrować",
+      "registerAccount": "Zarejestruj się, aby założyć konto",
+      "existingAccount": "Posiadasz już konto?"
+    },
+    "buttons": {
+      "yes": "tak",
+      "confirm": "Potwierdzać",
+      "cancel": "Anuluj",
+      "join": "Przystąp"
+    },
+    "cookies": {
+      "notice": "Informacja o plikach cookie",
+      "preferences": "Preferencje plików cookie",
+      "accept": "Zaakceptować",
+      "manage": "Zarządzać",
+      "confirm": "Potwierdzać"
+    },
+    "credit": {
+      "get": "Uzyskaj konferencję Jamfire"
+    },
+    "dashboard": {
+      "title": "Deska rozdzielcza",
+      "hello": "cześć",
+      "cookies": "Zarządzaj preferencjami plików cookie"
+    },
+    "dates": {
+      "mon": "poniedziałek",
+      "tue": "wtorek",
+      "wed": "środa",
+      "thu": "czwartek",
+      "fri": "piątek",
+      "sat": "sobota",
+      "sun": "niedziela",
+      "jan": "styczeń",
+      "feb": "luty",
+      "mar": "Marsz",
+      "apr": "kwiecień",
+      "may": "Może",
+      "jun": "czerwiec",
+      "jul": "lipiec",
+      "aug": "sierpień",
+      "sep": "wrzesień",
+      "oct": "październik",
+      "nov": "listopad",
+      "dec": "grudzień",
+      "am": "JESTEM",
+      "pm": "PO POŁUDNIU"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Rozpoczyna się",
+        "ends": "Kończy się"
+      },
+      "chat": {
+        "login": "Zaloguj się do czatu",
+        "beTheFirst": "Rozmawiaj jako pierwszy!",
+        "message": "Wiadomość...",
+        "send": "Wysłać"
+      },
+      "menu": {
+        "label": "Pokaż menu"
+      },
+      "qa": {
+        "question": "Pytanie",
+        "answer": "Odpowiedź"
+      },
+      "rooms": {
+        "title": "Opuść pokój?",
+        "confirm": "Potwierdzać",
+        "alert": "Jesteś obecnie w sali do wideokonferencji. Jesteś pewny, że chcesz wyjść?"
+      },
+      "tracker": {
+        "starts": "Rozpoczyna się",
+        "eventEnd": "Koniec wydarzenia",
+        "eventEnded": "To wydarzenie się zakończyło.",
+        "current": "obecny",
+        "next": "Kolejny",
+        "day": "Dzień",
+        "hour": "Godzina",
+        "minute": "Minuta",
+        "second": "druga"
+      }
+    },
+    "error": {
+      "pageNotFound": "Strona nie znaleziona."
+    },
+    "form": {
+      "placeholderSearch": "Szukaj..."
+    },
+    "geolocation": {
+      "title": "Włączyć geolokalizację?",
+      "content": "Czy chcesz włączyć swoją lokalizację na mapie gości?",
+      "enable": "Włączyć",
+      "deny": "Zaprzeczać"
+    },
+    "locale": {
+      "selectorTitle": "Wybierz język",
+      "codes": {
+        "bg": "bułgarski",
+        "cs": "Czech",
+        "da": "duński",
+        "de": "Niemiecki",
+        "el": "grecki",
+        "en": "język angielski",
+        "es": "hiszpański",
+        "et": "estoński",
+        "fi": "fiński",
+        "fr": "Francuski",
+        "hu": "język węgierski",
+        "it": "Włoski",
+        "ja": "język japoński",
+        "lt": "litewski",
+        "lv": "łotewski",
+        "nl": "holenderski",
+        "pl": "Polskie",
+        "pt": "portugalski",
+        "ro": "rumuński",
+        "ru": "Rosyjski",
+        "sk": "słowacki",
+        "sl": "słoweński",
+        "sv": "szwedzki",
+        "tr": "turecki",
+        "zh": "chiński"
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "Hem",
+      "allEvents": "Alla händelser",
+      "lobby": "Lobby",
+      "mainStage": "Stora scenen",
+      "rooms": "Rum",
+      "qa": "Frågor och svar",
+      "chat": "Chatt",
+      "schedule": "Schema",
+      "polls": "Omröstningar",
+      "map": "Deltagare",
+      "toggleMenu": "Växla meny"
+    },
+    "regions": {
+      "cookiesNotice": "Meddelande om cookies",
+      "topbar": "Användarinteraktion",
+      "localSwitcher": "Växla språk",
+      "login": "Användarnamn",
+      "dashboard": "Användarpanel",
+      "featuredImage": "Utvald bild",
+      "avatarImage": "Användarbild",
+      "localeSwitcher": "Välj språk"
+    },
+    "auth": {
+      "login": "Logga in",
+      "loginSocial": "Logga in med ett socialt konto",
+      "loginEmail": "Logga in med e-post och lösenord",
+      "logout": "Logga ut",
+      "email": "E-post",
+      "emailInvalid": "Ogiltig e-postadress",
+      "emailRequired": "E-post krävs",
+      "password": "Lösenord",
+      "passwordConfirm": "Bekräfta lösenord",
+      "passwordShort": "Lösenordet är för kort",
+      "passwordRequired": "lösenord krävs",
+      "passwordMatch": "Lösenorden måste överensstämma",
+      "register": "Registrera",
+      "registerAccount": "Registrera dig för ett konto",
+      "existingAccount": "Har du redan ett konto?"
+    },
+    "buttons": {
+      "yes": "Ja",
+      "confirm": "Bekräfta",
+      "cancel": "Avbryt",
+      "join": "Ansluta sig"
+    },
+    "cookies": {
+      "notice": "Meddelande om cookies",
+      "preferences": "Cookieinställningar",
+      "accept": "Acceptera",
+      "manage": "Hantera",
+      "confirm": "Bekräfta"
+    },
+    "credit": {
+      "get": "Få Jamfire Conference"
+    },
+    "dashboard": {
+      "title": "instrumentbräda",
+      "hello": "Hej",
+      "cookies": "Hantera cookiepreferenser"
+    },
+    "dates": {
+      "mon": "Måndag",
+      "tue": "Tisdag",
+      "wed": "Onsdag",
+      "thu": "Torsdag",
+      "fri": "fredag",
+      "sat": "Lördag",
+      "sun": "Söndag",
+      "jan": "Januari",
+      "feb": "Februari",
+      "mar": "Mars",
+      "apr": "April",
+      "may": "Maj",
+      "jun": "Juni",
+      "jul": "Juli",
+      "aug": "Augusti",
+      "sep": "September",
+      "oct": "Oktober",
+      "nov": "November",
+      "dec": "Decmeber",
+      "am": "AM",
+      "pm": "PM"
+    },
+    "event": {
+      "lobby": {
+        "starts": "Börjar",
+        "ends": "Slutar"
+      },
+      "chat": {
+        "login": "Logga in för att chatta",
+        "beTheFirst": "Bli den första att chatta!",
+        "message": "Meddelande...",
+        "send": "Skicka"
+      },
+      "menu": {
+        "label": "Visa meny"
+      },
+      "qa": {
+        "question": "Fråga",
+        "answer": "Svar"
+      },
+      "rooms": {
+        "title": "Lämna rum?",
+        "confirm": "Bekräfta",
+        "alert": "Du befinner dig för närvarande i ett videokonferensrum. Är du säker på att du vill lämna?"
+      },
+      "tracker": {
+        "starts": "Börjar",
+        "eventEnd": "Event End",
+        "eventEnded": "Detta evenemang har avslutats.",
+        "current": "Nuvarande",
+        "next": "Nästa",
+        "day": "Dag",
+        "hour": "Timme",
+        "minute": "Minut",
+        "second": "Andra"
+      }
+    },
+    "error": {
+      "pageNotFound": "Sidan hittas inte."
+    },
+    "form": {
+      "placeholderSearch": "Sök..."
+    },
+    "geolocation": {
+      "title": "Aktivera geolokalisering?",
+      "content": "Vill du aktivera din plats på gästkartan?",
+      "enable": "Gör det möjligt",
+      "deny": "Förneka"
+    },
+    "locale": {
+      "selectorTitle": "Välj språk",
+      "codes": {
+        "bg": "Bulgariska",
+        "cs": "Tjeckiska",
+        "da": "Danska",
+        "de": "tysk",
+        "el": "grekisk",
+        "en": "engelsk",
+        "es": "Spanska",
+        "et": "Estniska",
+        "fi": "Finska",
+        "fr": "Franska",
+        "hu": "Ungerska",
+        "it": "Italienska",
+        "ja": "Japanska",
+        "lt": "Litauiska",
+        "lv": "Lettiska",
+        "nl": "Nederländska",
+        "pl": "putsa",
+        "pt": "Portugisiska",
+        "ro": "Rumänska",
+        "ru": "Ryska",
+        "sk": "Slovakiska",
+        "sl": "Slovenska",
+        "sv": "svenska",
+        "tr": "Turkiska",
+        "zh": "Kinesiska"
+      }
+    }
+  }
+}

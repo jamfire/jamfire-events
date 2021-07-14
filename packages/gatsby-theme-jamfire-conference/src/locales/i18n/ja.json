@@ -1,0 +1,165 @@
+{
+  "translation": {
+    "navigation": {
+      "home": "ホームホーム",
+      "allEvents": "すべてのイベント",
+      "lobby": "ロビー",
+      "mainStage": "メインステージ",
+      "rooms": "部屋",
+      "qa": "Q＆A",
+      "chat": "チャット",
+      "schedule": "スケジュール",
+      "polls": "世論調査",
+      "map": "参加者",
+      "toggleMenu": "トグルメニュー"
+    },
+    "regions": {
+      "cookiesNotice": "クッキー通知",
+      "topbar": "ユーザーインタラクション",
+      "localSwitcher": "ロケールの切り替え",
+      "login": "ユーザーログイン",
+      "dashboard": "ユーザーダッシュボード",
+      "featuredImage": "注目の画像",
+      "avatarImage": "ユーザー画像",
+      "localeSwitcher": "ロケールを選択"
+    },
+    "auth": {
+      "login": "ログイン",
+      "loginSocial": "ソーシャルアカウントでログインする",
+      "loginEmail": "メールアドレスとパスワードでログイン",
+      "logout": "ログアウト",
+      "email": "Eメール",
+      "emailInvalid": "無効なメール",
+      "emailRequired": "メールが必要です",
+      "password": "パスワード",
+      "passwordConfirm": "パスワードを認証する",
+      "passwordShort": "パスワードが短すぎます",
+      "passwordRequired": "パスワードが必要です",
+      "passwordMatch": "パスワードが一致する必要があります",
+      "register": "登録",
+      "registerAccount": "アカウントに登録する",
+      "existingAccount": "すでにアカウントをお持ちですか？"
+    },
+    "buttons": {
+      "yes": "はい",
+      "confirm": "確認",
+      "cancel": "キャンセル",
+      "join": "参加する"
+    },
+    "cookies": {
+      "notice": "クッキー通知",
+      "preferences": "クッキーの設定",
+      "accept": "受け入れる",
+      "manage": "管理する",
+      "confirm": "確認"
+    },
+    "credit": {
+      "get": "JamfireConferenceを入手する"
+    },
+    "dashboard": {
+      "title": "ダッシュボード",
+      "hello": "こんにちは",
+      "cookies": "Cookieの設定を管理する"
+    },
+    "dates": {
+      "mon": "月曜",
+      "tue": "火曜日",
+      "wed": "水曜日",
+      "thu": "木曜日",
+      "fri": "金曜日",
+      "sat": "土曜日",
+      "sun": "日曜日",
+      "jan": "1月",
+      "feb": "2月",
+      "mar": "行進",
+      "apr": "4月",
+      "may": "五月",
+      "jun": "六月",
+      "jul": "7月",
+      "aug": "8月",
+      "sep": "9月",
+      "oct": "10月",
+      "nov": "11月",
+      "dec": "12月",
+      "am": "午前",
+      "pm": "午後"
+    },
+    "event": {
+      "lobby": {
+        "starts": "開始",
+        "ends": "終了"
+      },
+      "chat": {
+        "login": "チャットにログイン",
+        "beTheFirst": "最初にチャットしましょう！",
+        "message": "メッセージ...",
+        "send": "送信"
+      },
+      "menu": {
+        "label": "メニューを表示"
+      },
+      "qa": {
+        "question": "質問",
+        "answer": "回答"
+      },
+      "rooms": {
+        "title": "部屋を出ますか？",
+        "confirm": "確認",
+        "alert": "現在、ビデオ会議室にいます。本当に去りますか？"
+      },
+      "tracker": {
+        "starts": "開始",
+        "eventEnd": "イベント終了",
+        "eventEnded": "このイベントは終了しました。",
+        "current": "電流",
+        "next": "次",
+        "day": "日",
+        "hour": "時間",
+        "minute": "分",
+        "second": "2番目"
+      }
+    },
+    "error": {
+      "pageNotFound": "ページが見つかりません。"
+    },
+    "form": {
+      "placeholderSearch": "探す..."
+    },
+    "geolocation": {
+      "title": "ジオロケーションを有効にしますか？",
+      "content": "ゲストマップで現在地を有効にしますか？",
+      "enable": "有効にする",
+      "deny": "拒否"
+    },
+    "locale": {
+      "selectorTitle": "言語を選択してください",
+      "codes": {
+        "bg": "ブルガリア語",
+        "cs": "チェコ語",
+        "da": "デンマーク語",
+        "de": "ドイツ人",
+        "el": "ギリシャ語",
+        "en": "英語",
+        "es": "スペイン語",
+        "et": "エストニア語",
+        "fi": "フィンランド語",
+        "fr": "フランス語",
+        "hu": "ハンガリー語",
+        "it": "イタリアの",
+        "ja": "日本語",
+        "lt": "リトアニア語",
+        "lv": "ラトビア語",
+        "nl": "オランダの",
+        "pl": "研磨",
+        "pt": "ポルトガル語",
+        "ro": "ルーマニア語",
+        "ru": "ロシア",
+        "sk": "スロバキア",
+        "sl": "スロベニア語",
+        "sv": "スウェーデンの",
+        "tr": "トルコ語",
+        "zh": "中国語"
+      }
+    }
+  }
+}
