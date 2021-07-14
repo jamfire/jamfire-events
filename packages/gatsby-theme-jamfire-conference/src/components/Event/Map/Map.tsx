@@ -4,6 +4,7 @@ import { ClientProps } from "../_props"
 import { MapContainer, TileLayer } from "react-leaflet"
 import { useTranslation } from "react-i18next"
 import { useFirestoreQuery } from "../../../services"
+import { checkIsClient } from "../../../utils/check-is-client"
 
 // import components
 import { FirebaseContext } from "../../../services"
@@ -21,6 +22,8 @@ export default ({ config, event, locale, user }: ClientProps) => {
   const {
     frontmatter: { title, slug },
   } = event
+
+  const isClient = checkIsClient()
 
   const { darkMode } = useContext(Context)
 
@@ -67,7 +70,7 @@ export default ({ config, event, locale, user }: ClientProps) => {
     )
   }
 
-  if (typeof window !== "undefined" && bounds !== null) {
+  if (isClient && bounds !== null) {
     return (
       <MapWrapper>
         <Seo

@@ -8,6 +8,6 @@ export const initialState: InitialState = {
   modal: false,
 }
 
-export const Context = createContext(initialState)
+export const GeolocationContext = createContext(initialState)
 
-export default Context
+export default GeolocationContext

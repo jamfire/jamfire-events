@@ -4,6 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 import { divIcon } from "leaflet"
 import _ from "lodash"
 import { CoordinatesDataProps, CoordinatesDataItemProps } from "./_props"
+import { checkIsClient } from "../../../utils/check-is-client"
 
 // import components
 import { Marker } from "react-leaflet"
@@ -23,6 +24,12 @@ const sizeFactor = (size: number) => {
 // map markers
 export default ({ data }: CoordinatesDataProps) => {
   const locations = parseLocations(data)
+
+  const isClient = checkIsClient()
+
+  if (!isClient) {
+    return <></>
+  }
 
   return (
     <>

@@ -5,6 +5,7 @@ import loadable from "@loadable/component"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { localizeData } from "../../utils/localizedData"
 import { DataProps } from "../../gatsby/dataProps"
+import { checkIsClient } from "../../utils/check-is-client"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -24,6 +25,8 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa"
 
+const isClient = checkIsClient()
+
 // loadable components
 const GeolocationProvider = loadable(
   () => import("../../services/geolocation/geolocation-provider")
@@ -32,7 +35,7 @@ const Lobby = loadable(() => import("./Lobby"))
 const Client = loadable(() => import("./Client"))
 const Room = loadable(() => import("./Room"))
 const RoomChange = loadable(() => import("./RoomChange"))
-const Map = loadable(() => import("./Map/Map"))
+const Map = isClient ? loadable(() => import("./Map/Map")) : null
 
 export default ({ data, pageContext }: DataProps) => {
   const { isLoading, profile } = useContext(FirebaseContext)
