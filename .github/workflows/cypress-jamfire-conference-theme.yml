@@ -4,15 +4,15 @@ on:
     branches:
       - main
     paths:
-      - "packages/gastby-starter-jamfire-conference/**"
-      - "packages/gastby-theme-jamfire-conference/**"
+      - "packages/gatsby-starter-jamfire-conference/**"
+      - "packages/gatsby-theme-jamfire-conference/**"
       - ".github/**"
   pull_request:
     branches:
       - main
     paths:
-      - "packages/gastby-starter-jamfire-conference/**"
-      - "packages/gastby-theme-jamfire-conference/**"
+      - "packages/gatsby-starter-jamfire-conference/**"
+      - "packages/gatsby-theme-jamfire-conference/**"
       - ".github/**"
 jobs:
   test_theme:
