@@ -203,7 +203,7 @@ class DateTimeZoneControl extends Component {
     const filteredContinents = uniqBy(timezones, `continentName`)
 
     return (
-      <div id={forId} styles={styles.wrapper}>
+      <div id={forId} style={styles.wrapper}>
         <div style={styles.datetime}>
           <div style={styles.date}>
             <input
