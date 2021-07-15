@@ -725,12 +725,15 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___eventRooms___title = 'childrenMarkdownRemark___frontmatter___eventRooms___title',
   childrenMarkdownRemark___frontmatter___eventRooms___description = 'childrenMarkdownRemark___frontmatter___eventRooms___description',
   childrenMarkdownRemark___frontmatter___title = 'childrenMarkdownRemark___frontmatter___title',
-  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childrenMarkdownRemark___frontmatter___analyticsCookies___enabled',
+  childrenMarkdownRemark___frontmatter___templateKey = 'childrenMarkdownRemark___frontmatter___templateKey',
+  childrenMarkdownRemark___frontmatter___cookieNotification___title = 'childrenMarkdownRemark___frontmatter___cookieNotification___title',
+  childrenMarkdownRemark___frontmatter___cookieNotification___content = 'childrenMarkdownRemark___frontmatter___cookieNotification___content',
+  childrenMarkdownRemark___frontmatter___necessaryCookies___title = 'childrenMarkdownRemark___frontmatter___necessaryCookies___title',
+  childrenMarkdownRemark___frontmatter___necessaryCookies___content = 'childrenMarkdownRemark___frontmatter___necessaryCookies___content',
   childrenMarkdownRemark___frontmatter___analyticsCookies___title = 'childrenMarkdownRemark___frontmatter___analyticsCookies___title',
   childrenMarkdownRemark___frontmatter___analyticsCookies___content = 'childrenMarkdownRemark___frontmatter___analyticsCookies___content',
-  childrenMarkdownRemark___frontmatter___templateKey = 'childrenMarkdownRemark___frontmatter___templateKey',
+  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childrenMarkdownRemark___frontmatter___analyticsCookies___enabled',
   childrenMarkdownRemark___frontmatter___description = 'childrenMarkdownRemark___frontmatter___description',
-  childrenMarkdownRemark___frontmatter___siteUrl = 'childrenMarkdownRemark___frontmatter___siteUrl',
   childrenMarkdownRemark___frontmatter___colors___primaryColor = 'childrenMarkdownRemark___frontmatter___colors___primaryColor',
   childrenMarkdownRemark___frontmatter___colors___primaryColorHover = 'childrenMarkdownRemark___frontmatter___colors___primaryColorHover',
   childrenMarkdownRemark___frontmatter___colors___darkModeOnColor = 'childrenMarkdownRemark___frontmatter___colors___darkModeOnColor',
@@ -739,13 +742,10 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___socialLogin___google = 'childrenMarkdownRemark___frontmatter___socialLogin___google',
   childrenMarkdownRemark___frontmatter___socialLogin___twitter = 'childrenMarkdownRemark___frontmatter___socialLogin___twitter',
   childrenMarkdownRemark___frontmatter___socialLogin___github = 'childrenMarkdownRemark___frontmatter___socialLogin___github',
+  childrenMarkdownRemark___frontmatter___siteUrl = 'childrenMarkdownRemark___frontmatter___siteUrl',
   childrenMarkdownRemark___frontmatter___slug = 'childrenMarkdownRemark___frontmatter___slug',
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColor = 'childrenMarkdownRemark___frontmatter___pageBranding___primaryColor',
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover = 'childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover',
-  childrenMarkdownRemark___frontmatter___cookieNotification___title = 'childrenMarkdownRemark___frontmatter___cookieNotification___title',
-  childrenMarkdownRemark___frontmatter___cookieNotification___content = 'childrenMarkdownRemark___frontmatter___cookieNotification___content',
-  childrenMarkdownRemark___frontmatter___necessaryCookies___title = 'childrenMarkdownRemark___frontmatter___necessaryCookies___title',
-  childrenMarkdownRemark___frontmatter___necessaryCookies___content = 'childrenMarkdownRemark___frontmatter___necessaryCookies___content',
   childrenMarkdownRemark___frontmatter___eventInformation___livestreamUrl = 'childrenMarkdownRemark___frontmatter___eventInformation___livestreamUrl',
   childrenMarkdownRemark___frontmatter___eventBranding___primaryColor = 'childrenMarkdownRemark___frontmatter___eventBranding___primaryColor',
   childrenMarkdownRemark___frontmatter___eventBranding___primaryColorHover = 'childrenMarkdownRemark___frontmatter___eventBranding___primaryColorHover',
@@ -846,12 +846,15 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___eventRooms___title = 'childMarkdownRemark___frontmatter___eventRooms___title',
   childMarkdownRemark___frontmatter___eventRooms___description = 'childMarkdownRemark___frontmatter___eventRooms___description',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark___frontmatter___title',
-  childMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childMarkdownRemark___frontmatter___analyticsCookies___enabled',
+  childMarkdownRemark___frontmatter___templateKey = 'childMarkdownRemark___frontmatter___templateKey',
+  childMarkdownRemark___frontmatter___cookieNotification___title = 'childMarkdownRemark___frontmatter___cookieNotification___title',
+  childMarkdownRemark___frontmatter___cookieNotification___content = 'childMarkdownRemark___frontmatter___cookieNotification___content',
+  childMarkdownRemark___frontmatter___necessaryCookies___title = 'childMarkdownRemark___frontmatter___necessaryCookies___title',
+  childMarkdownRemark___frontmatter___necessaryCookies___content = 'childMarkdownRemark___frontmatter___necessaryCookies___content',
   childMarkdownRemark___frontmatter___analyticsCookies___title = 'childMarkdownRemark___frontmatter___analyticsCookies___title',
   childMarkdownRemark___frontmatter___analyticsCookies___content = 'childMarkdownRemark___frontmatter___analyticsCookies___content',
-  childMarkdownRemark___frontmatter___templateKey = 'childMarkdownRemark___frontmatter___templateKey',
+  childMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childMarkdownRemark___frontmatter___analyticsCookies___enabled',
   childMarkdownRemark___frontmatter___description = 'childMarkdownRemark___frontmatter___description',
-  childMarkdownRemark___frontmatter___siteUrl = 'childMarkdownRemark___frontmatter___siteUrl',
   childMarkdownRemark___frontmatter___colors___primaryColor = 'childMarkdownRemark___frontmatter___colors___primaryColor',
   childMarkdownRemark___frontmatter___colors___primaryColorHover = 'childMarkdownRemark___frontmatter___colors___primaryColorHover',
   childMarkdownRemark___frontmatter___colors___darkModeOnColor = 'childMarkdownRemark___frontmatter___colors___darkModeOnColor',
@@ -860,13 +863,10 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___socialLogin___google = 'childMarkdownRemark___frontmatter___socialLogin___google',
   childMarkdownRemark___frontmatter___socialLogin___twitter = 'childMarkdownRemark___frontmatter___socialLogin___twitter',
   childMarkdownRemark___frontmatter___socialLogin___github = 'childMarkdownRemark___frontmatter___socialLogin___github',
+  childMarkdownRemark___frontmatter___siteUrl = 'childMarkdownRemark___frontmatter___siteUrl',
   childMarkdownRemark___frontmatter___slug = 'childMarkdownRemark___frontmatter___slug',
   childMarkdownRemark___frontmatter___pageBranding___primaryColor = 'childMarkdownRemark___frontmatter___pageBranding___primaryColor',
   childMarkdownRemark___frontmatter___pageBranding___primaryColorHover = 'childMarkdownRemark___frontmatter___pageBranding___primaryColorHover',
-  childMarkdownRemark___frontmatter___cookieNotification___title = 'childMarkdownRemark___frontmatter___cookieNotification___title',
-  childMarkdownRemark___frontmatter___cookieNotification___content = 'childMarkdownRemark___frontmatter___cookieNotification___content',
-  childMarkdownRemark___frontmatter___necessaryCookies___title = 'childMarkdownRemark___frontmatter___necessaryCookies___title',
-  childMarkdownRemark___frontmatter___necessaryCookies___content = 'childMarkdownRemark___frontmatter___necessaryCookies___content',
   childMarkdownRemark___frontmatter___eventInformation___livestreamUrl = 'childMarkdownRemark___frontmatter___eventInformation___livestreamUrl',
   childMarkdownRemark___frontmatter___eventBranding___primaryColor = 'childMarkdownRemark___frontmatter___eventBranding___primaryColor',
   childMarkdownRemark___frontmatter___eventBranding___primaryColorHover = 'childMarkdownRemark___frontmatter___eventBranding___primaryColorHover',
@@ -2052,12 +2052,15 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___pageGraphics___featuredImage___id = 'frontmatter___pageGraphics___featuredImage___id',
   frontmatter___pageGraphics___featuredImage___children = 'frontmatter___pageGraphics___featuredImage___children',
   frontmatter___title = 'frontmatter___title',
-  frontmatter___analyticsCookies___enabled = 'frontmatter___analyticsCookies___enabled',
+  frontmatter___templateKey = 'frontmatter___templateKey',
+  frontmatter___cookieNotification___title = 'frontmatter___cookieNotification___title',
+  frontmatter___cookieNotification___content = 'frontmatter___cookieNotification___content',
+  frontmatter___necessaryCookies___title = 'frontmatter___necessaryCookies___title',
+  frontmatter___necessaryCookies___content = 'frontmatter___necessaryCookies___content',
   frontmatter___analyticsCookies___title = 'frontmatter___analyticsCookies___title',
   frontmatter___analyticsCookies___content = 'frontmatter___analyticsCookies___content',
-  frontmatter___templateKey = 'frontmatter___templateKey',
+  frontmatter___analyticsCookies___enabled = 'frontmatter___analyticsCookies___enabled',
   frontmatter___description = 'frontmatter___description',
-  frontmatter___siteUrl = 'frontmatter___siteUrl',
   frontmatter___colors___primaryColor = 'frontmatter___colors___primaryColor',
   frontmatter___colors___primaryColorHover = 'frontmatter___colors___primaryColorHover',
   frontmatter___colors___darkModeOnColor = 'frontmatter___colors___darkModeOnColor',
@@ -2066,13 +2069,10 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___socialLogin___google = 'frontmatter___socialLogin___google',
   frontmatter___socialLogin___twitter = 'frontmatter___socialLogin___twitter',
   frontmatter___socialLogin___github = 'frontmatter___socialLogin___github',
+  frontmatter___siteUrl = 'frontmatter___siteUrl',
   frontmatter___slug = 'frontmatter___slug',
   frontmatter___pageBranding___primaryColor = 'frontmatter___pageBranding___primaryColor',
   frontmatter___pageBranding___primaryColorHover = 'frontmatter___pageBranding___primaryColorHover',
-  frontmatter___cookieNotification___title = 'frontmatter___cookieNotification___title',
-  frontmatter___cookieNotification___content = 'frontmatter___cookieNotification___content',
-  frontmatter___necessaryCookies___title = 'frontmatter___necessaryCookies___title',
-  frontmatter___necessaryCookies___content = 'frontmatter___necessaryCookies___content',
   frontmatter___eventInformation___startTime___datetime = 'frontmatter___eventInformation___startTime___datetime',
   frontmatter___eventInformation___startTime___timezone = 'frontmatter___eventInformation___startTime___timezone',
   frontmatter___eventInformation___endTime___datetime = 'frontmatter___eventInformation___endTime___datetime',
@@ -2282,16 +2282,16 @@ export type MarkdownRemarkFrontmatter = Node & {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphics>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphics>;
   title?: Maybe<Scalars['String']>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>;
   templateKey?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
-  siteUrl?: Maybe<Scalars['String']>;
-  colors?: Maybe<MarkdownRemarkFrontmatterColors>;
-  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLogin>;
-  slug?: Maybe<Scalars['String']>;
-  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBranding>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotification>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookies>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>;
+  description?: Maybe<Scalars['String']>;
+  colors?: Maybe<MarkdownRemarkFrontmatterColors>;
+  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLogin>;
+  siteUrl?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBranding>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformation>;
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBranding>;
   eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettings>;
@@ -2305,15 +2305,15 @@ export type MarkdownRemarkFrontmatter = Node & {
 
 export type MarkdownRemarkFrontmatterAnalyticsCookies = {
   __typename?: 'MarkdownRemarkFrontmatterAnalyticsCookies';
-  enabled?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
+  enabled?: Maybe<Scalars['Boolean']>;
 };
 
 export type MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput = {
-  enabled?: Maybe<BooleanQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
+  enabled?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterColors = {
@@ -3127,12 +3127,15 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   pageGraphics___featuredImage___internal___owner = 'pageGraphics___featuredImage___internal___owner',
   pageGraphics___featuredImage___internal___type = 'pageGraphics___featuredImage___internal___type',
   title = 'title',
-  analyticsCookies___enabled = 'analyticsCookies___enabled',
+  templateKey = 'templateKey',
+  cookieNotification___title = 'cookieNotification___title',
+  cookieNotification___content = 'cookieNotification___content',
+  necessaryCookies___title = 'necessaryCookies___title',
+  necessaryCookies___content = 'necessaryCookies___content',
   analyticsCookies___title = 'analyticsCookies___title',
   analyticsCookies___content = 'analyticsCookies___content',
-  templateKey = 'templateKey',
+  analyticsCookies___enabled = 'analyticsCookies___enabled',
   description = 'description',
-  siteUrl = 'siteUrl',
   colors___primaryColor = 'colors___primaryColor',
   colors___primaryColorHover = 'colors___primaryColorHover',
   colors___darkModeOnColor = 'colors___darkModeOnColor',
@@ -3141,13 +3144,10 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   socialLogin___google = 'socialLogin___google',
   socialLogin___twitter = 'socialLogin___twitter',
   socialLogin___github = 'socialLogin___github',
+  siteUrl = 'siteUrl',
   slug = 'slug',
   pageBranding___primaryColor = 'pageBranding___primaryColor',
   pageBranding___primaryColorHover = 'pageBranding___primaryColorHover',
-  cookieNotification___title = 'cookieNotification___title',
-  cookieNotification___content = 'cookieNotification___content',
-  necessaryCookies___title = 'necessaryCookies___title',
-  necessaryCookies___content = 'necessaryCookies___content',
   eventInformation___startTime___datetime = 'eventInformation___startTime___datetime',
   eventInformation___startTime___timezone = 'eventInformation___startTime___timezone',
   eventInformation___endTime___datetime = 'eventInformation___endTime___datetime',
@@ -3274,16 +3274,16 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  siteUrl?: Maybe<StringQueryOperatorInput>;
-  colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
-  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
+  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>;
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBrandingFilterInput>;
   eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>;
@@ -3710,16 +3710,16 @@ export type QueryMarkdownRemarkFrontmatterArgs = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  siteUrl?: Maybe<StringQueryOperatorInput>;
-  colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
-  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
+  socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>;
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBrandingFilterInput>;
   eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>;
@@ -4620,6 +4620,9 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___plugins___nodeAPIs = 'pluginCreator___pluginOptions___plugins___nodeAPIs',
   pluginCreator___pluginOptions___plugins___browserAPIs = 'pluginCreator___pluginOptions___plugins___browserAPIs',
   pluginCreator___pluginOptions___plugins___pluginFilepath = 'pluginCreator___pluginOptions___plugins___pluginFilepath',
+  pluginCreator___pluginOptions___isTSX = 'pluginCreator___pluginOptions___isTSX',
+  pluginCreator___pluginOptions___jsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
+  pluginCreator___pluginOptions___allExtensions = 'pluginCreator___pluginOptions___allExtensions',
   pluginCreator___pluginOptions___modulePath = 'pluginCreator___pluginOptions___modulePath',
   pluginCreator___pluginOptions___manualInit = 'pluginCreator___pluginOptions___manualInit',
   pluginCreator___pluginOptions___sourceMap = 'pluginCreator___pluginOptions___sourceMap',
@@ -4662,9 +4665,6 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___disableBgImage = 'pluginCreator___pluginOptions___disableBgImage',
   pluginCreator___pluginOptions___linkStyles = 'pluginCreator___pluginOptions___linkStyles',
   pluginCreator___pluginOptions___pathCheck = 'pluginCreator___pluginOptions___pathCheck',
-  pluginCreator___pluginOptions___allExtensions = 'pluginCreator___pluginOptions___allExtensions',
-  pluginCreator___pluginOptions___isTSX = 'pluginCreator___pluginOptions___isTSX',
-  pluginCreator___pluginOptions___jsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
   pluginCreator___nodeAPIs = 'pluginCreator___nodeAPIs',
   pluginCreator___browserAPIs = 'pluginCreator___browserAPIs',
   pluginCreator___ssrAPIs = 'pluginCreator___ssrAPIs',
@@ -4895,6 +4895,9 @@ export enum SitePluginFieldsEnum {
   pluginOptions___plugins___nodeAPIs = 'pluginOptions___plugins___nodeAPIs',
   pluginOptions___plugins___browserAPIs = 'pluginOptions___plugins___browserAPIs',
   pluginOptions___plugins___pluginFilepath = 'pluginOptions___plugins___pluginFilepath',
+  pluginOptions___isTSX = 'pluginOptions___isTSX',
+  pluginOptions___jsxPragma = 'pluginOptions___jsxPragma',
+  pluginOptions___allExtensions = 'pluginOptions___allExtensions',
   pluginOptions___modulePath = 'pluginOptions___modulePath',
   pluginOptions___manualInit = 'pluginOptions___manualInit',
   pluginOptions___sourceMap = 'pluginOptions___sourceMap',
@@ -4937,9 +4940,6 @@ export enum SitePluginFieldsEnum {
   pluginOptions___disableBgImage = 'pluginOptions___disableBgImage',
   pluginOptions___linkStyles = 'pluginOptions___linkStyles',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  pluginOptions___allExtensions = 'pluginOptions___allExtensions',
-  pluginOptions___isTSX = 'pluginOptions___isTSX',
-  pluginOptions___jsxPragma = 'pluginOptions___jsxPragma',
   nodeAPIs = 'nodeAPIs',
   browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
@@ -5060,6 +5060,9 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   __typename?: 'SitePluginPluginOptions';
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>;
+  isTSX?: Maybe<Scalars['Boolean']>;
+  jsxPragma?: Maybe<Scalars['String']>;
+  allExtensions?: Maybe<Scalars['Boolean']>;
   modulePath?: Maybe<Scalars['String']>;
   manualInit?: Maybe<Scalars['Boolean']>;
   sourceMap?: Maybe<Scalars['Boolean']>;
@@ -5098,9 +5101,6 @@ export type SitePluginPluginOptions = {
   disableBgImage?: Maybe<Scalars['Boolean']>;
   linkStyles?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
-  allExtensions?: Maybe<Scalars['Boolean']>;
-  isTSX?: Maybe<Scalars['Boolean']>;
-  jsxPragma?: Maybe<Scalars['String']>;
 };
 
 export type SitePluginPluginOptionsFacebookPixel = {
@@ -5114,6 +5114,9 @@ export type SitePluginPluginOptionsFacebookPixelFilterInput = {
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
+  isTSX?: Maybe<BooleanQueryOperatorInput>;
+  jsxPragma?: Maybe<StringQueryOperatorInput>;
+  allExtensions?: Maybe<BooleanQueryOperatorInput>;
   modulePath?: Maybe<StringQueryOperatorInput>;
   manualInit?: Maybe<BooleanQueryOperatorInput>;
   sourceMap?: Maybe<BooleanQueryOperatorInput>;
@@ -5152,9 +5155,6 @@ export type SitePluginPluginOptionsFilterInput = {
   disableBgImage?: Maybe<BooleanQueryOperatorInput>;
   linkStyles?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
-  allExtensions?: Maybe<BooleanQueryOperatorInput>;
-  isTSX?: Maybe<BooleanQueryOperatorInput>;
-  jsxPragma?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsGoogleAnalytics = {

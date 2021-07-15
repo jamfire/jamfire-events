@@ -41,7 +41,7 @@ export default ({
   useEffect(() => {
     const container = document.getElementById("chat-messages")
     if (container) {
-      container.onwheel = e => {
+      container.onwheel = () => {
         const top: number = container.scrollTop + 600
         const height: number = container.scrollHeight
         if (top >= height) {

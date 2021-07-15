@@ -6,5 +6,5 @@ export type SeoProps = {
   config: MarkdownRemark
   activeTitle?: string
   activeFavicon?: any
-  locale?: string
+  locale: string
 }

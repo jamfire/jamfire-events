@@ -1,7 +1,13 @@
-import { Dispatch, SetStateAction } from "react"
+import { ReactNode, Dispatch, SetStateAction } from "react"
 import { NavigationProps } from "../Site/Navigation/_props"
 import { GeolocationProps } from "../../services/geolocation/_props"
+import { SitePageContext } from "../../gatsby/graphqlTypes"
 import firebase from "firebase/app"
+
+export interface ProviderProps {
+  children: ReactNode
+  pageContext: SitePageContext
+}
 
 export type InitialState = {
   darkMode: boolean

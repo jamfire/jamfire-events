@@ -19,4 +19,5 @@ const customizer: (
   if (srcValue === null || srcValue === "") {
     return objValue
   }
+  return srcValue
 }

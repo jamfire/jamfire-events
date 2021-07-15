@@ -33,10 +33,6 @@ export default ({
 }: LayoutProps) => {
   const {
     navigation,
-    toggleLogin,
-    setToggleLogin,
-    toggleLocale,
-    setToggleLocale,
     loaded,
   } = useContext(Context)
 
