@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { getSrc } from "gatsby-plugin-image"
 import { SeoProps } from "./_props"
+import { DEFAULT_LOCALE } from "../../../utils/constants"
 
 // import components
 import { Helmet } from "react-helmet-async"
@@ -10,7 +11,7 @@ export default ({
   config,
   activeTitle,
   activeFavicon = null,
-  locale = "en",
+  locale = DEFAULT_LOCALE,
 }: SeoProps) => {
   if (!activeTitle || config === null) {
     return <></>
@@ -45,16 +46,16 @@ export default ({
       }}
     >
       <title>
-        {activeTitle} | {config.frontmatter.title}
+        {activeTitle} | {config.frontmatter?.title}
       </title>
       <meta
         name="title"
-        content={`${activeTitle} | ${config.frontmatter.title}`}
+        content={`${activeTitle} | ${config.frontmatter?.title}`}
         data-react-helmet="true"
       />
       <meta
         name="description"
-        content={config.frontmatter.description}
+        content={config.frontmatter?.description}
         data-react-helmet="true"
       />
       {faviconSrc !== null && (

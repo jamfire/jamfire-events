@@ -3,6 +3,7 @@ import React, { useContext } from "react"
 import { localizeData } from "../../utils/localizedData"
 import loadable from "@loadable/component"
 import { useTranslation } from "react-i18next"
+import { DataProps } from "../../gatsby/dataProps"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -13,7 +14,7 @@ import { StyledDashboard } from "./_styles"
 // loadable components
 const Welcome = loadable(() => import("./Welcome"))
 
-export default ({ data, pageContext }) => {
+export default ({ data, pageContext }: DataProps) => {
   const { isLoading, isLoggedIn, profile } = useContext(FirebaseContext)
 
   const { t } = useTranslation()

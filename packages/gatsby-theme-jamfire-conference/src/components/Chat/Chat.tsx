@@ -15,6 +15,7 @@ export default ({ config, event }: ChatProps) => {
   const {
     id,
     frontmatter: { title, eventSettings },
+    fields: { locale }
   } = event
 
   const [chats, setChats] = useState([])
@@ -24,7 +25,7 @@ export default ({ config, event }: ChatProps) => {
 
   useEffect(() => {
     if (typeof document !== `undefined` && isClient) {
-      let width: number = document.getElementById("layout").clientWidth
+      let width: number = document.getElementById("layout")?.clientWidth || bp.tablet_up
       setMobile(width < bp.tablet_up ? true : false)
     }
   }, [])
@@ -36,7 +37,7 @@ export default ({ config, event }: ChatProps) => {
 
     if (mobile) {
       const messagesBottom = document.getElementById("messages-bottom")
-      messagesBottom.scrollIntoView()
+      messagesBottom?.scrollIntoView()
     } else {
       if (container) {
         container.scrollTop = container.scrollHeight
@@ -49,6 +50,7 @@ export default ({ config, event }: ChatProps) => {
       <Seo
         config={config}
         activeTitle={`${eventSettings.chatLabel} | ${title}`}
+        locale={locale}
       />
       <Messages
         event_id={id}

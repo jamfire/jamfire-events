@@ -3,15 +3,16 @@ import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { useCookies } from "react-cookie"
 import { useTranslation } from "react-i18next"
+import { ProviderProps } from "./_props"
 
 // import components
 import { Context, initialState } from "./Context"
 
-export default ({ children, pageContext }) => {
+export default ({ children, pageContext }: ProviderProps) => {
   const { i18n, ready } = useTranslation()
 
   // cookies
-  const [cookies, setCookies, removeCookies] = useCookies(["cookies"])
+  const [ , setCookies, removeCookies] = useCookies(["cookies"])
 
   // state
   const [darkMode, setDarkMode] = useState(initialState.darkMode)

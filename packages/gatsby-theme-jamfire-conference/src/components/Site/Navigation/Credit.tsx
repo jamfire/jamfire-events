@@ -12,7 +12,7 @@ export default () => {
   return (
     <Credit>
       <a
-        href="https://github.com/jamfire/gatsby-theme-jamfire-conference"
+        href="https://github.com/jamfire/jamfire"
         title={t("credit.get")}
         target="_blank"
         rel="noreferrer"

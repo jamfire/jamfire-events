@@ -20,7 +20,9 @@ export const bp: BreakpointProps = {
 
 // map the breakpoints
 export default (n: string) => {
-  const bpArray = Object.keys(bp).map(key => [key, bp[key]])
+  const bpArray = Object.keys(bp).map((key: string) => {
+    return [key, bp[key]]
+  })
 
   const [result] = bpArray.reduce((acc, [name, size]) => {
     if (n === name) return [...acc, `@media (min-width: ${size}px)`]

@@ -7,7 +7,7 @@ export interface LayoutProps {
   title: string | null
   config?: MarkdownRemark
   cookies?: MarkdownRemark
-  event?: MarkdownRemark
+  event?: MarkdownRemark | null
   headerLogo?: File | null
   favicon?: File | null
   useHeaderTitle?: boolean
