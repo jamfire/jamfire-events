@@ -50,7 +50,7 @@
   "dependencies": {
     "@vvo/tzdb": "^6.7.0",
     "lodash": "^4.17.21",
-    "luxon": "^1.28.0"
+    "luxon": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16"
