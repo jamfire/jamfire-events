@@ -10,6 +10,14 @@
       "husky"
     ]
   },
+  "homepage": "https://github.com/jamfire/jamfire",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamfire/jamfire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamfire/jamfire/issues"
+  },
   "devDependencies": {
     "@testing-library/cypress": "^7.0.6",
     "@types/node": "^16.3.1",
@@ -38,6 +46,7 @@
     "husky": "^7.0.0",
     "is-ci": "^3.0.0",
     "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
     "prettier": "^2.3.2",
     "start-server-and-test": "^1.12.6",
     "typescript": "^4.3.5"
