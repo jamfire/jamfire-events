@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-jamfire-conference",
   "starter-name": "gatsby-starter-jamfire-conference",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "private": true,
   "main": "index.js",
   "license": "GPL-3.0",
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "gatsby": "^3.0.0",
-    "gatsby-theme-jamfire-conference": "^1.0.18",
+    "gatsby-theme-jamfire-conference": "^1.0.19",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
