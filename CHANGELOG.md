@@ -5,10 +5,6 @@
 #### :memo: Documentation
 * [#20](https://github.com/jamfire/jamfire/pull/20) docs: added changelog ([@kalebheitzman](https://github.com/kalebheitzman))
 
-#### :house: Internal
-* `gatsby-starter-jamfire-conference`
-  * [#21](https://github.com/jamfire/jamfire/pull/21) build(gatsby-starter-jamfire-conference): removed experimental build … ([@kalebheitzman](https://github.com/kalebheitzman))
-
 #### Committers: 1
 - Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
 
