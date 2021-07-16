@@ -1,6 +1,6 @@
 {
   "name": "netlify-cms-widget-datetimezone",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "DateTime with Timezone Netlify CMS Widget",
   "main": "dist/main.js",
   "author": {
@@ -50,7 +50,7 @@
   "dependencies": {
     "@vvo/tzdb": "^6.7.0",
     "lodash": "^4.17.21",
-    "luxon": "^1.28.0"
+    "luxon": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16"
