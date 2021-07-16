@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-jamfire-conference",
   "starter-name": "gatsby-starter-jamfire-conference",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "private": true,
   "main": "index.js",
   "license": "GPL-3.0",
