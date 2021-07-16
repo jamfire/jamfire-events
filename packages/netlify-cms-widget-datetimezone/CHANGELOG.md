@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.9.7](https://github.com/jamfire/jamfire/compare/netlify-cms-widget-datetimezone@0.9.5...netlify-cms-widget-datetimezone@0.9.7) (2021-07-16)
+
+
+### Bug Fixes
+
+* **netlify-cms-wdiget-datetimezone:** fixed build error ([b4ae434](https://github.com/jamfire/jamfire/commit/b4ae434f1cc2b2ae03b83d1051cbb60971953499))
+
+
+
+
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
