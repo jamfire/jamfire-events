@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { LoginProviderProps, SocialLoginProps } from "./_props"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { FaFacebookF, FaTwitter, FaGoogle, FaGithub } from "react-icons/fa"
 import { SocialLogins, LoginButton, Icon } from "./_styles"

@@ -12,7 +12,7 @@ import { DEFAULT_LOCALE } from "../../utils/constants"
 import { ClientProps } from "./_props"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import Seo from "../site/seo"
 import Missing from "../site/missing"
 import { JitsiContainer } from "./_styles"

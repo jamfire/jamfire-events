@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import { DarkModeProps } from "./_props"
 
 // import components
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 import Switch from "react-switch"
 import { Container, Icon } from "./_styles"
 import { FaSun, FaMoon } from "react-icons/fa"

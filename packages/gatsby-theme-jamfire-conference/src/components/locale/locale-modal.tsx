@@ -8,7 +8,7 @@ import localesList from "../../locales/locales"
 import { LocaleModalProps } from "./_props"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { Modal } from "../site/modal"
 import { LocalWrapper, Language, Code, Label } from "./_styles"
 

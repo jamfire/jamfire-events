@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import { GlobalStylesProps } from "./_props"
 
 // import components
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 
 // import styles
 import { Global, css } from "@emotion/react"

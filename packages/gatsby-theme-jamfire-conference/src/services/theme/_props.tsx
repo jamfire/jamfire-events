@@ -1,6 +1,6 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
-import { NavigationProps } from "../site/navigation/_props"
-import { GeolocationProps } from "../../services/geolocation/_props"
+import { NavigationProps } from "../../components/site/navigation/_props"
+import { GeolocationProps } from "../geolocation/_props"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 

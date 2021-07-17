@@ -1,6 +1,6 @@
 // import libs
 import React, { useContext, useEffect } from "react"
-import { initialState } from "../context"
+import { initialState } from "../../services/theme"
 import loadable from "@loadable/component"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { localizeData } from "../../utils/localized-data"
@@ -11,7 +11,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 import { FirebaseContext } from "../../services"
 import { Router } from "@reach/router"
 import Layout from "../site/layout"
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import {
   FaHome,
   FaCalendarAlt,

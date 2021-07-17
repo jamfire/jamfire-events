@@ -4,7 +4,7 @@ import { navigate } from "gatsby"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { Modal, ModalButton } from "../site/modal"
 
 export default ({ config }) => {

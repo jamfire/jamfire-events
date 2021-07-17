@@ -21,7 +21,7 @@ const FirebaseProvider = loadable(() =>
 
 // app provider
 const Provider = loadable(() => 
-  import("./src/components/context/provider")
+  import("./src/services/theme/theme-provider")
 )
 
 // wrap root element

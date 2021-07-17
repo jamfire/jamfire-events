@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { FormValues } from "./_props"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { Formik, FormikHelpers } from "formik"
 import Error from "../site/error/error"

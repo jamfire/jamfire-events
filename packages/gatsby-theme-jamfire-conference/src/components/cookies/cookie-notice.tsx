@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { CookieNoticeProps } from "./_props"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import Markdown from "../markdown"
 import {
   CookieNotice,

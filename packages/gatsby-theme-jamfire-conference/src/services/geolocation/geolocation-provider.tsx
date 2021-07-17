@@ -5,7 +5,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 import firebase from "firebase/app"
 
 // import components
-import { Context } from "../../components/context"
+import { Context } from "../theme"
 import { GeolocationContext, initialState } from "./"
 import { FirebaseContext } from "../"
 import GeolocationModal from "./geolocation-modal"

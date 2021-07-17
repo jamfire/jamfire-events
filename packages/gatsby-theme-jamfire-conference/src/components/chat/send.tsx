@@ -6,7 +6,7 @@ import { SendProps } from "./_props"
 
 // import components
 import { FirebaseContext } from "../../services"
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { FaFacebookF, FaTwitter, FaGoogle, FaEnvelope } from "react-icons/fa"
 import { StyledSend, Form, Input, Button } from "./_styles"
 

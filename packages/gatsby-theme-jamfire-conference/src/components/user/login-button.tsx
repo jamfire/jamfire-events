@@ -5,7 +5,7 @@ import { UserProps } from "./_props"
 
 // import components
 import { FirebaseContext } from "../../services"
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { StyledUser } from "./_styles"
 
 export default ({ isLoading, isLoggedIn }: UserProps) => {

@@ -1,13 +1,13 @@
 // import libs
 import React, { useContext } from "react"
-import { initialState } from "../context"
+import { initialState } from "../../services/theme"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { useTranslation } from "react-i18next"
 import { ProfileProps } from "./_props"
 
 // import components
 import { FaUser } from "react-icons/fa"
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { StyledAvatar, Avatar } from "./_styles"
 import { Link } from "gatsby"
 

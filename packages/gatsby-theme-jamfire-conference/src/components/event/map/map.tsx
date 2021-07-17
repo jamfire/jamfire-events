@@ -8,7 +8,7 @@ import { checkIsClient } from "../../../utils/check-is-client"
 
 // import components
 import { FirebaseContext } from "../../../services"
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 import { MapWrapper } from "./_styles"
 import MapBounds from "./map-bounds"
 import MapMarkers from "./map-markers"

@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 import { Toggle } from "./_styles"
 import { Twirl as Hamburger } from "hamburger-react"
 

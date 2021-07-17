@@ -5,7 +5,7 @@ import { WelcomeProps } from "./_props"
 
 // import components
 import Loader from "../site/loader"
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import { Welcome } from "./_styles"
 
 export default ({ isLoading, isLoggedIn, profile }: WelcomeProps) => {

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import { SiteNavigationProps, NavLinkProps } from "./_props"
 
 // import components
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 import { StyledNavigation, Nav } from "./_styles"
 import Toggle from "./toggle"
 import Credit from "./credit"

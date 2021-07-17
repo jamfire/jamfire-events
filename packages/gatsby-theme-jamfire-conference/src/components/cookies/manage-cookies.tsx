@@ -4,7 +4,7 @@ import { jamfireSet, jamfireGet } from "../../services"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../context"
+import { Context } from "../../services/theme"
 import Switch from "react-switch"
 import { Modal } from "../site/modal"
 import {

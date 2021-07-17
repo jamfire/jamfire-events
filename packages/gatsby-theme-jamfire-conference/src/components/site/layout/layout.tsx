@@ -5,7 +5,7 @@ import { LayoutProps } from "./_props"
 import "../../../gatsby/fragments"
 
 // import components
-import { Context } from "../../context"
+import { Context } from "../../../services/theme"
 import { StyledLayout } from "./_styles"
 import GlobalStyles from "../global-styles"
 import Seo from "../seo"

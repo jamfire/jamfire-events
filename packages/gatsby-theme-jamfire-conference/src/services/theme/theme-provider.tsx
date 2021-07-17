@@ -1,12 +1,12 @@
 // import libs
 import React, { useState, useEffect } from "react"
-import { jamfireSet, jamfireGet } from "../../services"
+import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
 import { useTranslation } from "react-i18next"
 import { ProviderProps } from "./_props"
 
 // import components
-import { Context, initialState } from "./context"
+import { Context, initialState } from "./theme-context"
 
 export default ({ children, pageContext }: ProviderProps) => {
   const { i18n, ready } = useTranslation()
