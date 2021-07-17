@@ -1,10 +1,10 @@
 // import libs
 import React from "react"
 import { graphql } from "gatsby"
-import { DataProps } from "../gatsby/dataProps"
+import { DataProps } from "../gatsby/data-props"
 
 // import components
-import Events from "../components/Events"
+import Events from "../components/events"
 
 export default ({ data, pageContext }: DataProps) => (
   <Events data={data} pageContext={pageContext} />

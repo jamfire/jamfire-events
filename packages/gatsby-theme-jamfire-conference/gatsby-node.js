@@ -72,7 +72,7 @@ exports.onPreBootstrap = ({ reporter }) => {
 /**
  * Add locale field to nodes based on netlify cms folder structure
  */
-const createLocales = require("./src/gatsby/createLocales")
+const createLocales = require("./src/gatsby/create-locales")
 
 exports.onCreateNode = async ({ node, actions, reporter }) => {
   await createLocales({ node, actions, reporter })
@@ -81,10 +81,10 @@ exports.onCreateNode = async ({ node, actions, reporter }) => {
 /**
  * Create Pages
  */
-const createEvents = require("./src/gatsby/createEvents")
-const createPages = require("./src/gatsby/createPages")
-const createDashboard = require("./src/gatsby/createDashboard")
-const create404 = require("./src/gatsby/create404")
+const createEvents = require("./src/gatsby/create-events")
+const createPages = require("./src/gatsby/create-pages")
+const createDashboard = require("./src/gatsby/create-dashboard")
+const create404 = require("./src/gatsby/create-404")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   // create events
@@ -115,7 +115,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 /**
  * Customize Schema
  */
-const createSchemaCustomization = require("./src/gatsby/createSchemaCustomization")
+const createSchemaCustomization = require("./src/gatsby/create-schema-customization")
 
 exports.createSchemaCustomization = async ({ actions, reporter }) => {
   const activity = reporter.activityTimer("Create Schema Customization")
@@ -127,7 +127,7 @@ exports.createSchemaCustomization = async ({ actions, reporter }) => {
 /**
  * Create Custom Resolvers
  */
-const createCustomResolvers = require("./src/gatsby/createResolvers")
+const createCustomResolvers = require("./src/gatsby/create-resolvers")
 
 exports.createResolvers = async ({ createResolvers, reporter }) => {
   const activity = reporter.activityTimer("Create Schema Customization")

@@ -5,10 +5,10 @@ import { checkIsClient } from "../../utils/check-is-client"
 import firebase from "firebase/app"
 
 // import components
-import { Context } from "../../components/Context"
+import { Context } from "../../components/context"
 import { GeolocationContext, initialState } from "./"
 import { FirebaseContext } from "../"
-import GeolocationModal from "./GeolocationModal"
+import GeolocationModal from "./geolocation-modal"
 
 export default ({ children, config, pageContext, providerEnabled }) => {
   // provider not enabled, return only the children

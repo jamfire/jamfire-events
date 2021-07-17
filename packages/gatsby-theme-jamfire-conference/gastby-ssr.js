@@ -20,7 +20,7 @@ const FirebaseProvider = loadable(() =>
 )
 
 // app provider
-const Provider = loadable(() => import("./src/components/Context/Provider"))
+const Provider = loadable(() => import("./src/components/context/provider"))
 
 // wrap root element
 export const wrapRootElement = ({ element }) => {
