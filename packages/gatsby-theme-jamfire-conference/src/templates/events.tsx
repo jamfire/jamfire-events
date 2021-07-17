@@ -1,10 +1,10 @@
 // import libs
 import React from "react"
 import { graphql } from "gatsby"
-import { DataProps } from "../gatsby/dataProps"
+import { DataProps } from "../gatsby/data-props"
 
 // import components
-import Events from "../components/Events"
+import Events from "../components/events"
 
 export default ({ data, pageContext }: DataProps) => (
   <Events data={data} pageContext={pageContext} />
@@ -53,7 +53,13 @@ export const eventsQuery = graphql`
     config: configByLocale(locale: $locale) {
       ...ConfigurationFragment
     }
-    cookies: cookiesByLocale(locale: $locale) {
+    defaultConfig: configByLocale(locale: $locale) {
+      ...ConfigurationFragment
+    }
+    cookies: cookiesByLocale(locale: $defaultLocale) {
+      ...CookiesFragment
+    }
+    defaultCookies: cookiesByLocale(locale: $defaultLocale) {
       ...CookiesFragment
     }
   }

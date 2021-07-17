@@ -2,8 +2,7 @@
 import React from "react"
 import { HelmetProvider } from "react-helmet-async"
 import loadable from "@loadable/component"
-import i18n from "./src/locales/i18n"
-import { I18nextProvider } from "react-i18next"
+import { DEFAULT_LOCALE } from "./src/utils/constants"
 
 // import fonts
 require("typeface-work-sans")
@@ -19,9 +18,14 @@ const FirebaseProvider = loadable(() =>
   import("./src/services/firebase/firebase-provider")
 )
 
+// locales provider
+const LocalesProvider = loadable(() => 
+  import("./src/services/locales/locales-provider")
+)
+
 // app provider
-const Provider = loadable(() => 
-  import("./src/components/Context/Provider")
+const ThemeProvider = loadable(() => 
+  import("./src/services/theme/theme-provider")
 )
 
 // wrap root element
@@ -29,7 +33,7 @@ export const wrapRootElement = ({ element }) => {
   return (
     <CookiesProvider>
       <FirebaseProvider>
-        <I18nextProvider i18n={i18n}>{element}</I18nextProvider>
+        {element}
       </FirebaseProvider>
     </CookiesProvider>
   )
@@ -38,8 +42,10 @@ export const wrapRootElement = ({ element }) => {
 // wrap page element
 export const wrapPageElement = ({ element, props: { pageContext } }) => {
   return (
-    <Provider pageContext={pageContext}>
-      <HelmetProvider>{element}</HelmetProvider>
-    </Provider>
+    <LocalesProvider defaultLocale={DEFAULT_LOCALE} pageContext={pageContext}>
+      <ThemeProvider pageContext={pageContext}>
+        <HelmetProvider>{element}</HelmetProvider>
+      </ThemeProvider>
+    </LocalesProvider>
   )
 }
