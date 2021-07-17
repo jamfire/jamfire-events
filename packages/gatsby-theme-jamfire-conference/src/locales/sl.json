@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Domov",
-      "allEvents": "Vsi dogodki",
-      "lobby": "Preddverje",
-      "mainStage": "Glavni oder",
-      "rooms": "Sobe",
-      "qa": "Vprašanja in odgovori",
-      "chat": "Klepet",
-      "schedule": "Razpored",
-      "polls": "Ankete",
-      "map": "Udeleženci",
-      "toggleMenu": "Preklopi meni"
+  "navigation": {
+    "home": "Domov",
+    "allEvents": "Vsi dogodki",
+    "lobby": "Preddverje",
+    "mainStage": "Glavni oder",
+    "rooms": "Sobe",
+    "qa": "Vprašanja in odgovori",
+    "chat": "Klepet",
+    "schedule": "Razpored",
+    "polls": "Ankete",
+    "map": "Udeleženci",
+    "toggleMenu": "Preklopi meni"
+  },
+  "regions": {
+    "cookiesNotice": "Obvestilo o piškotkih",
+    "topbar": "Interakcija uporabnika",
+    "localSwitcher": "Preklopi jezik",
+    "login": "Prijava uporabnika",
+    "dashboard": "Nadzorna plošča uporabnika",
+    "featuredImage": "Predstavljena slika",
+    "avatarImage": "Uporabniška slika",
+    "localeSwitcher": "Izberite Locale"
+  },
+  "auth": {
+    "login": "Vpiši se",
+    "loginSocial": "Prijavite se s socialnim računom",
+    "loginEmail": "Prijavite se z e-pošto in geslom",
+    "logout": "Odjava",
+    "email": "E-naslov",
+    "emailInvalid": "Neveljaven e-poštni naslov",
+    "emailRequired": "E-pošta je obvezna",
+    "password": "Geslo",
+    "passwordConfirm": "potrdi geslo",
+    "passwordShort": "Geslo je prekratko",
+    "passwordRequired": "zahtevano je geslo",
+    "passwordMatch": "Geslo se mora ujemati",
+    "register": "Registrirajte se",
+    "registerAccount": "Registrirajte se za račun",
+    "existingAccount": "Že imate račun?"
+  },
+  "buttons": {
+    "yes": "Da",
+    "confirm": "Potrdite",
+    "cancel": "Prekliči",
+    "join": "Pridružite se"
+  },
+  "cookies": {
+    "notice": "Obvestilo o piškotkih",
+    "preferences": "Nastavitve piškotkov",
+    "accept": "Sprejmi",
+    "manage": "Upravljaj",
+    "confirm": "Potrdite"
+  },
+  "credit": {
+    "get": "Pridobite konferenco Jamfire"
+  },
+  "dashboard": {
+    "title": "Armaturna plošča",
+    "hello": "zdravo",
+    "cookies": "Upravljanje nastavitev piškotkov"
+  },
+  "dates": {
+    "mon": "Ponedeljek",
+    "tue": "Torek",
+    "wed": "Sreda",
+    "thu": "Četrtek",
+    "fri": "Petek",
+    "sat": "Sobota",
+    "sun": "Nedelja",
+    "jan": "Januarja",
+    "feb": "Februarja",
+    "mar": "Marec",
+    "apr": "April",
+    "may": "Maj",
+    "jun": "Junij",
+    "jul": "Julij",
+    "aug": "Avgust",
+    "sep": "September",
+    "oct": "Oktober",
+    "nov": "November",
+    "dec": "Decmeber",
+    "am": "AM",
+    "pm": "PM"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Začne se",
+      "ends": "Konča se"
     },
-    "regions": {
-      "cookiesNotice": "Obvestilo o piškotkih",
-      "topbar": "Interakcija uporabnika",
-      "localSwitcher": "Preklopi jezik",
-      "login": "Prijava uporabnika",
-      "dashboard": "Nadzorna plošča uporabnika",
-      "featuredImage": "Predstavljena slika",
-      "avatarImage": "Uporabniška slika",
-      "localeSwitcher": "Izberite Locale"
+    "chat": {
+      "login": "Prijavite se za klepet",
+      "beTheFirst": "Klepetajte prvi!",
+      "message": "Sporočilo ...",
+      "send": "Pošlji",
+      "error": "Pojavila se je napaka. Prosim poskusite kasneje."
     },
-    "auth": {
-      "login": "Vpiši se",
-      "loginSocial": "Prijavite se s socialnim računom",
-      "loginEmail": "Prijavite se z e-pošto in geslom",
-      "logout": "Odjava",
-      "email": "E-naslov",
-      "emailInvalid": "Neveljaven e-poštni naslov",
-      "emailRequired": "E-pošta je obvezna",
-      "password": "Geslo",
-      "passwordConfirm": "potrdi geslo",
-      "passwordShort": "Geslo je prekratko",
-      "passwordRequired": "zahtevano je geslo",
-      "passwordMatch": "Geslo se mora ujemati",
-      "register": "Registrirajte se",
-      "registerAccount": "Registrirajte se za račun",
-      "existingAccount": "Že imate račun?"
+    "menu": {
+      "label": "Prikaži meni"
     },
-    "buttons": {
-      "yes": "Da",
+    "qa": {
+      "question": "Vprašanje",
+      "answer": "Odgovorite"
+    },
+    "rooms": {
+      "title": "Želite zapustiti sobo?",
       "confirm": "Potrdite",
-      "cancel": "Prekliči",
-      "join": "Pridružite se"
+      "alert": "Trenutno ste v sobi za video konference. Ali ste prepričani, da želite oditi?"
     },
-    "cookies": {
-      "notice": "Obvestilo o piškotkih",
-      "preferences": "Nastavitve piškotkov",
-      "accept": "Sprejmi",
-      "manage": "Upravljaj",
-      "confirm": "Potrdite"
-    },
-    "credit": {
-      "get": "Pridobite konferenco Jamfire"
-    },
-    "dashboard": {
-      "title": "Armaturna plošča",
-      "hello": "zdravo",
-      "cookies": "Upravljanje nastavitev piškotkov"
-    },
-    "dates": {
-      "mon": "Ponedeljek",
-      "tue": "Torek",
-      "wed": "Sreda",
-      "thu": "Četrtek",
-      "fri": "Petek",
-      "sat": "Sobota",
-      "sun": "Nedelja",
-      "jan": "Januarja",
-      "feb": "Februarja",
-      "mar": "Marec",
-      "apr": "April",
-      "may": "Maj",
-      "jun": "Junij",
-      "jul": "Julij",
-      "aug": "Avgust",
-      "sep": "September",
-      "oct": "Oktober",
-      "nov": "November",
-      "dec": "Decmeber",
-      "am": "AM",
-      "pm": "PM"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Začne se",
-        "ends": "Konča se"
-      },
-      "chat": {
-        "login": "Prijavite se za klepet",
-        "beTheFirst": "Klepetajte prvi!",
-        "message": "Sporočilo ...",
-        "send": "Pošlji"
-      },
-      "menu": {
-        "label": "Prikaži meni"
-      },
-      "qa": {
-        "question": "Vprašanje",
-        "answer": "Odgovorite"
-      },
-      "rooms": {
-        "title": "Želite zapustiti sobo?",
-        "confirm": "Potrdite",
-        "alert": "Trenutno ste v sobi za video konference. Ali ste prepričani, da želite oditi?"
-      },
-      "tracker": {
-        "starts": "Začne se",
-        "eventEnd": "Konec dogodka",
-        "eventEnded": "Ta dogodek se je končal.",
-        "current": "Trenutni",
-        "next": "Naslednji",
-        "day": "Dan",
-        "hour": "Ura",
-        "minute": "Minuta",
-        "second": "Drugič"
-      }
-    },
-    "error": {
-      "pageNotFound": "Stran ni najdena."
-    },
-    "form": {
-      "placeholderSearch": "Iskanje..."
-    },
-    "geolocation": {
-      "title": "Omogočiti geolokacijo?",
-      "content": "Bi radi omogočili svojo lokacijo na zemljevidu gostov?",
-      "enable": "Omogoči",
-      "deny": "Zanikati"
-    },
-    "locale": {
-      "selectorTitle": "Izberite jezik",
-      "codes": {
-        "bg": "Bolgarščina",
-        "cs": "Češko",
-        "da": "Danski",
-        "de": "Nemško",
-        "el": "Grški",
-        "en": "angleščina",
-        "es": "španski",
-        "et": "Estonski",
-        "fi": "Finski",
-        "fr": "Francosko",
-        "hu": "Madžarsko",
-        "it": "Italijansko",
-        "ja": "Japonski",
-        "lt": "Litovsko",
-        "lv": "Latvijski",
-        "nl": "Nizozemsko",
-        "pl": "Poljski",
-        "pt": "Portugalščina",
-        "ro": "Romunski",
-        "ru": "Rusko",
-        "sk": "Slovaški",
-        "sl": "Slovenščina",
-        "sv": "Švedsko",
-        "tr": "Turški",
-        "zh": "Kitajski"
-      }
+    "tracker": {
+      "starts": "Začne se",
+      "eventEnd": "Konec dogodka",
+      "eventEnded": "Ta dogodek se je končal.",
+      "current": "Trenutni",
+      "next": "Naslednji",
+      "day": "Dan",
+      "hour": "Ura",
+      "minute": "Minuta",
+      "second": "Drugič"
+    }
+  },
+  "error": {
+    "pageNotFound": "Stran ni najdena."
+  },
+  "form": {
+    "placeholderSearch": "Iskanje..."
+  },
+  "geolocation": {
+    "title": "Omogočiti geolokacijo?",
+    "content": "Bi radi omogočili svojo lokacijo na zemljevidu gostov?",
+    "enable": "Omogoči",
+    "deny": "Zanikati"
+  },
+  "locale": {
+    "selectorTitle": "Izberite jezik",
+    "codes": {
+      "bg": "Bolgarščina",
+      "cs": "Češko",
+      "da": "Danski",
+      "de": "Nemško",
+      "el": "Grški",
+      "en": "angleščina",
+      "es": "španski",
+      "et": "Estonski",
+      "fi": "Finski",
+      "fr": "Francosko",
+      "hu": "Madžarsko",
+      "it": "Italijansko",
+      "ja": "Japonski",
+      "lt": "Litovsko",
+      "lv": "Latvijski",
+      "nl": "Nizozemsko",
+      "pl": "Poljski",
+      "pt": "Portugalščina",
+      "ro": "Romunski",
+      "ru": "Rusko",
+      "sk": "Slovaški",
+      "sl": "Slovenščina",
+      "sv": "Švedsko",
+      "tr": "Turški",
+      "zh": "Kitajski"
     }
   }
-
+}

@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Domov",
-      "allEvents": "Všetky udalosti",
-      "lobby": "Lobby",
-      "mainStage": "Hlavné pódium",
-      "rooms": "Izby",
-      "qa": "Otázky a odpovede",
-      "chat": "Chat",
-      "schedule": "Časový plán",
-      "polls": "Ankety",
-      "map": "Účastníci",
-      "toggleMenu": "Prepnúť ponuku"
+  "navigation": {
+    "home": "Domov",
+    "allEvents": "Všetky udalosti",
+    "lobby": "Lobby",
+    "mainStage": "Hlavné pódium",
+    "rooms": "Izby",
+    "qa": "Otázky a odpovede",
+    "chat": "Chat",
+    "schedule": "Časový plán",
+    "polls": "Ankety",
+    "map": "Účastníci",
+    "toggleMenu": "Prepnúť ponuku"
+  },
+  "regions": {
+    "cookiesNotice": "Oznámenie o cookies",
+    "topbar": "Interakcia používateľa",
+    "localSwitcher": "Prepnúť miestne nastavenie",
+    "login": "Prihlásenie užívateľa",
+    "dashboard": "Informačný panel používateľa",
+    "featuredImage": "Odporúčaný obrázok",
+    "avatarImage": "Obrázok používateľa",
+    "localeSwitcher": "Vyberte miestne nastavenie"
+  },
+  "auth": {
+    "login": "Prihlásiť sa",
+    "loginSocial": "Prihláste sa pomocou sociálneho účtu",
+    "loginEmail": "Prihláste sa pomocou e-mailu a hesla",
+    "logout": "Odhlásiť sa",
+    "email": "Email",
+    "emailInvalid": "Neplatný email",
+    "emailRequired": "E-mail je povinný",
+    "password": "Heslo",
+    "passwordConfirm": "Potvrďte heslo",
+    "passwordShort": "Heslo je príliš krátke",
+    "passwordRequired": "Vyžaduje sa heslo",
+    "passwordMatch": "heslá sa musia zhodovať",
+    "register": "Registrovať",
+    "registerAccount": "Zaregistrujte sa a vytvorte si účet",
+    "existingAccount": "Máte už účet?"
+  },
+  "buttons": {
+    "yes": "Áno",
+    "confirm": "Potvrdiť",
+    "cancel": "Zrušiť",
+    "join": "Pripojte sa"
+  },
+  "cookies": {
+    "notice": "Oznámenie o cookies",
+    "preferences": "Predvoľby súborov cookie",
+    "accept": "súhlasiť",
+    "manage": "Spravovať",
+    "confirm": "Potvrdiť"
+  },
+  "credit": {
+    "get": "Získajte konferenciu Jamfire"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "hello": "Ahoj",
+    "cookies": "Spravujte predvoľby súborov cookie"
+  },
+  "dates": {
+    "mon": "Pondelok",
+    "tue": "Utorok",
+    "wed": "Streda",
+    "thu": "Štvrtok",
+    "fri": "Piatok",
+    "sat": "Sobota",
+    "sun": "Nedeľa",
+    "jan": "Januára",
+    "feb": "Februára",
+    "mar": "Marca",
+    "apr": "Apríla",
+    "may": "Smieť",
+    "jun": "Júna",
+    "jul": "Júla",
+    "aug": "Augusta",
+    "sep": "September",
+    "oct": "Októbra",
+    "nov": "Novembra",
+    "dec": "Decmeber",
+    "am": "AM",
+    "pm": "POPOLUDNIE"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Začína",
+      "ends": "Končí"
     },
-    "regions": {
-      "cookiesNotice": "Oznámenie o cookies",
-      "topbar": "Interakcia používateľa",
-      "localSwitcher": "Prepnúť miestne nastavenie",
-      "login": "Prihlásenie užívateľa",
-      "dashboard": "Informačný panel používateľa",
-      "featuredImage": "Odporúčaný obrázok",
-      "avatarImage": "Obrázok používateľa",
-      "localeSwitcher": "Vyberte miestne nastavenie"
+    "chat": {
+      "login": "Prihláste sa na chat",
+      "beTheFirst": "Buďte prvý, kto chatuje!",
+      "message": "Správa ...",
+      "send": "Pošli",
+      "error": "Nastala chyba. Skúste neskôr prosím."
     },
-    "auth": {
-      "login": "Prihlásiť sa",
-      "loginSocial": "Prihláste sa pomocou sociálneho účtu",
-      "loginEmail": "Prihláste sa pomocou e-mailu a hesla",
-      "logout": "Odhlásiť sa",
-      "email": "Email",
-      "emailInvalid": "Neplatný email",
-      "emailRequired": "E-mail je povinný",
-      "password": "Heslo",
-      "passwordConfirm": "Potvrďte heslo",
-      "passwordShort": "Heslo je príliš krátke",
-      "passwordRequired": "Vyžaduje sa heslo",
-      "passwordMatch": "heslá sa musia zhodovať",
-      "register": "Registrovať",
-      "registerAccount": "Zaregistrujte sa a vytvorte si účet",
-      "existingAccount": "Máte už účet?"
+    "menu": {
+      "label": "Zobraziť ponuku"
     },
-    "buttons": {
-      "yes": "Áno",
+    "qa": {
+      "question": "Otázka",
+      "answer": "Odpoveď"
+    },
+    "rooms": {
+      "title": "Opustiť izbu?",
       "confirm": "Potvrdiť",
-      "cancel": "Zrušiť",
-      "join": "Pripojte sa"
+      "alert": "Momentálne ste v miestnosti na videokonferencie. Naozaj chcete odísť?"
     },
-    "cookies": {
-      "notice": "Oznámenie o cookies",
-      "preferences": "Predvoľby súborov cookie",
-      "accept": "súhlasiť",
-      "manage": "Spravovať",
-      "confirm": "Potvrdiť"
-    },
-    "credit": {
-      "get": "Získajte konferenciu Jamfire"
-    },
-    "dashboard": {
-      "title": "Dashboard",
-      "hello": "Ahoj",
-      "cookies": "Spravujte predvoľby súborov cookie"
-    },
-    "dates": {
-      "mon": "Pondelok",
-      "tue": "Utorok",
-      "wed": "Streda",
-      "thu": "Štvrtok",
-      "fri": "Piatok",
-      "sat": "Sobota",
-      "sun": "Nedeľa",
-      "jan": "Januára",
-      "feb": "Februára",
-      "mar": "Marca",
-      "apr": "Apríla",
-      "may": "Smieť",
-      "jun": "Júna",
-      "jul": "Júla",
-      "aug": "Augusta",
-      "sep": "September",
-      "oct": "Októbra",
-      "nov": "Novembra",
-      "dec": "Decmeber",
-      "am": "AM",
-      "pm": "POPOLUDNIE"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Začína",
-        "ends": "Končí"
-      },
-      "chat": {
-        "login": "Prihláste sa na chat",
-        "beTheFirst": "Buďte prvý, kto chatuje!",
-        "message": "Správa ...",
-        "send": "Pošli"
-      },
-      "menu": {
-        "label": "Zobraziť ponuku"
-      },
-      "qa": {
-        "question": "Otázka",
-        "answer": "Odpoveď"
-      },
-      "rooms": {
-        "title": "Opustiť izbu?",
-        "confirm": "Potvrdiť",
-        "alert": "Momentálne ste v miestnosti na videokonferencie. Naozaj chcete odísť?"
-      },
-      "tracker": {
-        "starts": "Začína",
-        "eventEnd": "Koniec udalosti",
-        "eventEnded": "Táto udalosť sa skončila.",
-        "current": "Aktuálne",
-        "next": "Ďalšie",
-        "day": "Deň",
-        "hour": "Hodina",
-        "minute": "Minúta",
-        "second": "Druhý"
-      }
-    },
-    "error": {
-      "pageNotFound": "Stránka nenájdená."
-    },
-    "form": {
-      "placeholderSearch": "Vyhľadávanie..."
-    },
-    "geolocation": {
-      "title": "Povoliť geolokáciu?",
-      "content": "Chcete povoliť svoju polohu na mape hostí?",
-      "enable": "Povoliť",
-      "deny": "Poprieť"
-    },
-    "locale": {
-      "selectorTitle": "Vyberte jazyk",
-      "codes": {
-        "bg": "Bulharský",
-        "cs": "Česky",
-        "da": "Dánsky",
-        "de": "Nemecky",
-        "el": "Grécky",
-        "en": "Angličtina",
-        "es": "Španielsky",
-        "et": "Estónsky",
-        "fi": "Fínsky",
-        "fr": "Francúzsky",
-        "hu": "Maďarský",
-        "it": "Taliansky",
-        "ja": "Japončina",
-        "lt": "Litovský",
-        "lv": "Lotyšský",
-        "nl": "Holandsky",
-        "pl": "Poľský",
-        "pt": "Portugalčina",
-        "ro": "Rumunský",
-        "ru": "Rusky",
-        "sk": "Slovák",
-        "sl": "Slovinsky",
-        "sv": "Švédsky",
-        "tr": "Turecké",
-        "zh": "Čínština"
-      }
+    "tracker": {
+      "starts": "Začína",
+      "eventEnd": "Koniec udalosti",
+      "eventEnded": "Táto udalosť sa skončila.",
+      "current": "Aktuálne",
+      "next": "Ďalšie",
+      "day": "Deň",
+      "hour": "Hodina",
+      "minute": "Minúta",
+      "second": "Druhý"
+    }
+  },
+  "error": {
+    "pageNotFound": "Stránka nenájdená."
+  },
+  "form": {
+    "placeholderSearch": "Vyhľadávanie..."
+  },
+  "geolocation": {
+    "title": "Povoliť geolokáciu?",
+    "content": "Chcete povoliť svoju polohu na mape hostí?",
+    "enable": "Povoliť",
+    "deny": "Poprieť"
+  },
+  "locale": {
+    "selectorTitle": "Vyberte jazyk",
+    "codes": {
+      "bg": "Bulharský",
+      "cs": "Česky",
+      "da": "Dánsky",
+      "de": "Nemecky",
+      "el": "Grécky",
+      "en": "Angličtina",
+      "es": "Španielsky",
+      "et": "Estónsky",
+      "fi": "Fínsky",
+      "fr": "Francúzsky",
+      "hu": "Maďarský",
+      "it": "Taliansky",
+      "ja": "Japončina",
+      "lt": "Litovský",
+      "lv": "Lotyšský",
+      "nl": "Holandsky",
+      "pl": "Poľský",
+      "pt": "Portugalčina",
+      "ro": "Rumunský",
+      "ru": "Rusky",
+      "sk": "Slovák",
+      "sl": "Slovinsky",
+      "sv": "Švédsky",
+      "tr": "Turecké",
+      "zh": "Čínština"
     }
   }
-
+}

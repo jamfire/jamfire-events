@@ -92,7 +92,8 @@
       "login": "Přihlaste se k chatu",
       "beTheFirst": "Buďte první, kdo chatuje!",
       "message": "Zpráva...",
-      "send": "Poslat"
+      "send": "Poslat",
+      "error": "Vyskytla se chyba. Prosím zkuste to znovu později."
     },
     "menu": {
       "label": "Zobrazit nabídku"

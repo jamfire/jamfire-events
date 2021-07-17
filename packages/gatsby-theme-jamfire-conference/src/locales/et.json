@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Kodu",
-      "allEvents": "Kõik sündmused",
-      "lobby": "Fuajee",
-      "mainStage": "Pealava",
-      "rooms": "Toad",
-      "qa": "Küsimused ja vastused",
-      "chat": "Vestlus",
-      "schedule": "Ajakava",
-      "polls": "Küsitlused",
-      "map": "Osalejad",
-      "toggleMenu": "Menüü sisse- ja väljalülitamine"
+  "navigation": {
+    "home": "Kodu",
+    "allEvents": "Kõik sündmused",
+    "lobby": "Fuajee",
+    "mainStage": "Pealava",
+    "rooms": "Toad",
+    "qa": "Küsimused ja vastused",
+    "chat": "Vestlus",
+    "schedule": "Ajakava",
+    "polls": "Küsitlused",
+    "map": "Osalejad",
+    "toggleMenu": "Menüü sisse- ja väljalülitamine"
+  },
+  "regions": {
+    "cookiesNotice": "Küpsiste teade",
+    "topbar": "Kasutaja suhtlus",
+    "localSwitcher": "Lülitage lokaat sisse",
+    "login": "Kasutaja sisselogimine",
+    "dashboard": "Kasutaja juhtpaneel",
+    "featuredImage": "Esiletõstetud pilt",
+    "avatarImage": "Kasutaja pilt",
+    "localeSwitcher": "Valige Lokaat"
+  },
+  "auth": {
+    "login": "Logi sisse",
+    "loginSocial": "Sisselogimine sotsiaalse kontoga",
+    "loginEmail": "Logi sisse e-posti ja parooliga",
+    "logout": "Logi välja",
+    "email": "E-post",
+    "emailInvalid": "Vale e-post",
+    "emailRequired": "E-post on kohustuslik",
+    "password": "Parool",
+    "passwordConfirm": "Kinnita salasõna",
+    "passwordShort": "Parool on liiga lühike",
+    "passwordRequired": "Parool on vajalik",
+    "passwordMatch": "salasõnad peavad kattuma",
+    "register": "Registreeri",
+    "registerAccount": "Registreeru konto jaoks",
+    "existingAccount": "On juba konto?"
+  },
+  "buttons": {
+    "yes": "Jah",
+    "confirm": "Kinnitage",
+    "cancel": "Tühista",
+    "join": "Liitu"
+  },
+  "cookies": {
+    "notice": "Küpsiste teade",
+    "preferences": "Küpsiste eelistused",
+    "accept": "Nõus",
+    "manage": "Halda",
+    "confirm": "Kinnitage"
+  },
+  "credit": {
+    "get": "Hankige Jamfire'i konverents"
+  },
+  "dashboard": {
+    "title": "Armatuurlaud",
+    "hello": "Tere",
+    "cookies": "Halda küpsiste eelistusi"
+  },
+  "dates": {
+    "mon": "Esmaspäev",
+    "tue": "Teisipäev",
+    "wed": "Kolmapäev",
+    "thu": "Neljapäev",
+    "fri": "Reede",
+    "sat": "Laupäev",
+    "sun": "Pühapäev",
+    "jan": "Jaanuar",
+    "feb": "Veebruar",
+    "mar": "Märts",
+    "apr": "Aprill",
+    "may": "Mai",
+    "jun": "Juunil",
+    "jul": "Juuli",
+    "aug": "august",
+    "sep": "Septembrini",
+    "oct": "Oktoober",
+    "nov": "Novembrini",
+    "dec": "Decmeber",
+    "am": "OLEN",
+    "pm": "PM"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Algab",
+      "ends": "Lõpeb"
     },
-    "regions": {
-      "cookiesNotice": "Küpsiste teade",
-      "topbar": "Kasutaja suhtlus",
-      "localSwitcher": "Lülitage lokaat sisse",
-      "login": "Kasutaja sisselogimine",
-      "dashboard": "Kasutaja juhtpaneel",
-      "featuredImage": "Esiletõstetud pilt",
-      "avatarImage": "Kasutaja pilt",
-      "localeSwitcher": "Valige Lokaat"
+    "chat": {
+      "login": "Logi vestluseks sisse",
+      "beTheFirst": "Ole esimene, kes vestleb!",
+      "message": "Sõnum ...",
+      "send": "Saada",
+      "error": "Ilmnes viga. Palun proovi hiljem uuesti."
     },
-    "auth": {
-      "login": "Logi sisse",
-      "loginSocial": "Sisselogimine sotsiaalse kontoga",
-      "loginEmail": "Logi sisse e-posti ja parooliga",
-      "logout": "Logi välja",
-      "email": "E-post",
-      "emailInvalid": "Vale e-post",
-      "emailRequired": "E-post on kohustuslik",
-      "password": "Parool",
-      "passwordConfirm": "Kinnita salasõna",
-      "passwordShort": "Parool on liiga lühike",
-      "passwordRequired": "Parool on vajalik",
-      "passwordMatch": "salasõnad peavad kattuma",
-      "register": "Registreeri",
-      "registerAccount": "Registreeru konto jaoks",
-      "existingAccount": "On juba konto?"
+    "menu": {
+      "label": "Kuva menüü"
     },
-    "buttons": {
-      "yes": "Jah",
+    "qa": {
+      "question": "Küsimus",
+      "answer": "Vastus"
+    },
+    "rooms": {
+      "title": "Kas lahkuda toast?",
       "confirm": "Kinnitage",
-      "cancel": "Tühista",
-      "join": "Liitu"
+      "alert": "Olete praegu videokonverentsisaalis. Kas soovite kindlasti lahkuda?"
     },
-    "cookies": {
-      "notice": "Küpsiste teade",
-      "preferences": "Küpsiste eelistused",
-      "accept": "Nõus",
-      "manage": "Halda",
-      "confirm": "Kinnitage"
-    },
-    "credit": {
-      "get": "Hankige Jamfire'i konverents"
-    },
-    "dashboard": {
-      "title": "Armatuurlaud",
-      "hello": "Tere",
-      "cookies": "Halda küpsiste eelistusi"
-    },
-    "dates": {
-      "mon": "Esmaspäev",
-      "tue": "Teisipäev",
-      "wed": "Kolmapäev",
-      "thu": "Neljapäev",
-      "fri": "Reede",
-      "sat": "Laupäev",
-      "sun": "Pühapäev",
-      "jan": "Jaanuar",
-      "feb": "Veebruar",
-      "mar": "Märts",
-      "apr": "Aprill",
-      "may": "Mai",
-      "jun": "Juunil",
-      "jul": "Juuli",
-      "aug": "august",
-      "sep": "Septembrini",
-      "oct": "Oktoober",
-      "nov": "Novembrini",
-      "dec": "Decmeber",
-      "am": "OLEN",
-      "pm": "PM"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Algab",
-        "ends": "Lõpeb"
-      },
-      "chat": {
-        "login": "Logi vestluseks sisse",
-        "beTheFirst": "Ole esimene, kes vestleb!",
-        "message": "Sõnum ...",
-        "send": "Saada"
-      },
-      "menu": {
-        "label": "Kuva menüü"
-      },
-      "qa": {
-        "question": "Küsimus",
-        "answer": "Vastus"
-      },
-      "rooms": {
-        "title": "Kas lahkuda toast?",
-        "confirm": "Kinnitage",
-        "alert": "Olete praegu videokonverentsisaalis. Kas soovite kindlasti lahkuda?"
-      },
-      "tracker": {
-        "starts": "Algab",
-        "eventEnd": "Ürituse lõpp",
-        "eventEnded": "See sündmus on lõppenud.",
-        "current": "Praegune",
-        "next": "Järgmine",
-        "day": "Päev",
-        "hour": "Tund",
-        "minute": "Minut",
-        "second": "Teiseks"
-      }
-    },
-    "error": {
-      "pageNotFound": "Lehte ei leitud."
-    },
-    "form": {
-      "placeholderSearch": "Otsing..."
-    },
-    "geolocation": {
-      "title": "Kas lubada geograafiline asukoht?",
-      "content": "Kas soovite lubada oma asukoha külaliskaardil?",
-      "enable": "Luba",
-      "deny": "Eita"
-    },
-    "locale": {
-      "selectorTitle": "Valige keel",
-      "codes": {
-        "bg": "Bulgaaria keel",
-        "cs": "Tšehhi keel",
-        "da": "Taani keel",
-        "de": "Saksa keel",
-        "el": "Kreeka keel",
-        "en": "Inglise",
-        "es": "Hispaania keel",
-        "et": "Eestlane",
-        "fi": "Soome keel",
-        "fr": "Prantsuse keel",
-        "hu": "Ungari keel",
-        "it": "Itaalia keel",
-        "ja": "Jaapani keel",
-        "lt": "Leedu keel",
-        "lv": "Läti",
-        "nl": "Hollandi",
-        "pl": "Poola keel",
-        "pt": "Portugali keel",
-        "ro": "Rumeenia keel",
-        "ru": "Vene keel",
-        "sk": "Slovaki keel",
-        "sl": "Sloveeni keel",
-        "sv": "Rootsi keel",
-        "tr": "Türgi keel",
-        "zh": "Hiina keel"
-      }
+    "tracker": {
+      "starts": "Algab",
+      "eventEnd": "Ürituse lõpp",
+      "eventEnded": "See sündmus on lõppenud.",
+      "current": "Praegune",
+      "next": "Järgmine",
+      "day": "Päev",
+      "hour": "Tund",
+      "minute": "Minut",
+      "second": "Teiseks"
+    }
+  },
+  "error": {
+    "pageNotFound": "Lehte ei leitud."
+  },
+  "form": {
+    "placeholderSearch": "Otsing..."
+  },
+  "geolocation": {
+    "title": "Kas lubada geograafiline asukoht?",
+    "content": "Kas soovite lubada oma asukoha külaliskaardil?",
+    "enable": "Luba",
+    "deny": "Eita"
+  },
+  "locale": {
+    "selectorTitle": "Valige keel",
+    "codes": {
+      "bg": "Bulgaaria keel",
+      "cs": "Tšehhi keel",
+      "da": "Taani keel",
+      "de": "Saksa keel",
+      "el": "Kreeka keel",
+      "en": "Inglise",
+      "es": "Hispaania keel",
+      "et": "Eestlane",
+      "fi": "Soome keel",
+      "fr": "Prantsuse keel",
+      "hu": "Ungari keel",
+      "it": "Itaalia keel",
+      "ja": "Jaapani keel",
+      "lt": "Leedu keel",
+      "lv": "Läti",
+      "nl": "Hollandi",
+      "pl": "Poola keel",
+      "pt": "Portugali keel",
+      "ro": "Rumeenia keel",
+      "ru": "Vene keel",
+      "sk": "Slovaki keel",
+      "sl": "Sloveeni keel",
+      "sv": "Rootsi keel",
+      "tr": "Türgi keel",
+      "zh": "Hiina keel"
     }
   }
-
+}

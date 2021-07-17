@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Huis",
-      "allEvents": "Alle evenementen",
-      "lobby": "Lobby",
-      "mainStage": "Hoofdpodium",
-      "rooms": "Kamers",
-      "qa": "Vraag en antwoord",
-      "chat": "Chatten",
-      "schedule": "Schema",
-      "polls": "peilingen",
-      "map": "deelnemers",
-      "toggleMenu": "Menu wisselen"
+  "navigation": {
+    "home": "Huis",
+    "allEvents": "Alle evenementen",
+    "lobby": "Lobby",
+    "mainStage": "Hoofdpodium",
+    "rooms": "Kamers",
+    "qa": "Vraag en antwoord",
+    "chat": "Chatten",
+    "schedule": "Schema",
+    "polls": "peilingen",
+    "map": "deelnemers",
+    "toggleMenu": "Menu wisselen"
+  },
+  "regions": {
+    "cookiesNotice": "Cookieverklaring",
+    "topbar": "Gebruikersinteractie",
+    "localSwitcher": "Toggle Locale",
+    "login": "Gebruiker login",
+    "dashboard": "Gebruikersdashboard",
+    "featuredImage": "Uitgelichte afbeelding",
+    "avatarImage": "Gebruikersafbeelding",
+    "localeSwitcher": "Selecteer landinstelling"
+  },
+  "auth": {
+    "login": "Log in",
+    "loginSocial": "Log in met een sociaal account",
+    "loginEmail": "Log in met e-mail en wachtwoord",
+    "logout": "Uitloggen",
+    "email": "E-mail",
+    "emailInvalid": "Ongeldig e-mail",
+    "emailRequired": "E-mail is vereist",
+    "password": "Wachtwoord",
+    "passwordConfirm": "bevestig wachtwoord",
+    "passwordShort": "Wachtwoord is te kort",
+    "passwordRequired": "Een wachtwoord is verplicht",
+    "passwordMatch": "wachtwoorden moeten overeenkomen",
+    "register": "Registreren",
+    "registerAccount": "Registreer voor een account",
+    "existingAccount": "Heb je al een account?"
+  },
+  "buttons": {
+    "yes": "Ja",
+    "confirm": "Bevestigen",
+    "cancel": "annuleren",
+    "join": "Doe mee"
+  },
+  "cookies": {
+    "notice": "Cookieverklaring",
+    "preferences": "Cookievoorkeuren",
+    "accept": "Aanvaarden",
+    "manage": "Beheren",
+    "confirm": "Bevestigen"
+  },
+  "credit": {
+    "get": "Jamfire-conferentie krijgen"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "hello": "Hallo",
+    "cookies": "Cookievoorkeuren beheren"
+  },
+  "dates": {
+    "mon": "maandag",
+    "tue": "dinsdag",
+    "wed": "woensdag",
+    "thu": "donderdag",
+    "fri": "vrijdag",
+    "sat": "zaterdag",
+    "sun": "zondag",
+    "jan": "januari-",
+    "feb": "februari",
+    "mar": "maart",
+    "apr": "april",
+    "may": "mei",
+    "jun": "juni-",
+    "jul": "juli-",
+    "aug": "augustus",
+    "sep": "september",
+    "oct": "oktober",
+    "nov": "november",
+    "dec": "december",
+    "am": "AM",
+    "pm": "P.M"
+  },
+  "event": {
+    "lobby": {
+      "starts": "begint",
+      "ends": "Loopt af"
     },
-    "regions": {
-      "cookiesNotice": "Cookieverklaring",
-      "topbar": "Gebruikersinteractie",
-      "localSwitcher": "Toggle Locale",
-      "login": "Gebruiker login",
-      "dashboard": "Gebruikersdashboard",
-      "featuredImage": "Uitgelichte afbeelding",
-      "avatarImage": "Gebruikersafbeelding",
-      "localeSwitcher": "Selecteer landinstelling"
+    "chat": {
+      "login": "Log in om te chatten",
+      "beTheFirst": "Wees de eerste om te chatten!",
+      "message": "Bericht...",
+      "send": "Sturen",
+      "error": "Er is een fout opgetreden. Probeer het later opnieuw."
     },
-    "auth": {
-      "login": "Log in",
-      "loginSocial": "Log in met een sociaal account",
-      "loginEmail": "Log in met e-mail en wachtwoord",
-      "logout": "Uitloggen",
-      "email": "E-mail",
-      "emailInvalid": "Ongeldig e-mail",
-      "emailRequired": "E-mail is vereist",
-      "password": "Wachtwoord",
-      "passwordConfirm": "bevestig wachtwoord",
-      "passwordShort": "Wachtwoord is te kort",
-      "passwordRequired": "Een wachtwoord is verplicht",
-      "passwordMatch": "wachtwoorden moeten overeenkomen",
-      "register": "Registreren",
-      "registerAccount": "Registreer voor een account",
-      "existingAccount": "Heb je al een account?"
+    "menu": {
+      "label": "Laat het menu zien"
     },
-    "buttons": {
-      "yes": "Ja",
+    "qa": {
+      "question": "Vraag",
+      "answer": "Antwoord"
+    },
+    "rooms": {
+      "title": "Verlaat Kamer?",
       "confirm": "Bevestigen",
-      "cancel": "annuleren",
-      "join": "Doe mee"
+      "alert": "U bevindt zich momenteel in een videoconferentieruimte. Weet je zeker dat je wilt vertrekken?"
     },
-    "cookies": {
-      "notice": "Cookieverklaring",
-      "preferences": "Cookievoorkeuren",
-      "accept": "Aanvaarden",
-      "manage": "Beheren",
-      "confirm": "Bevestigen"
-    },
-    "credit": {
-      "get": "Jamfire-conferentie krijgen"
-    },
-    "dashboard": {
-      "title": "Dashboard",
-      "hello": "Hallo",
-      "cookies": "Cookievoorkeuren beheren"
-    },
-    "dates": {
-      "mon": "maandag",
-      "tue": "dinsdag",
-      "wed": "woensdag",
-      "thu": "donderdag",
-      "fri": "vrijdag",
-      "sat": "zaterdag",
-      "sun": "zondag",
-      "jan": "januari-",
-      "feb": "februari",
-      "mar": "maart",
-      "apr": "april",
-      "may": "mei",
-      "jun": "juni-",
-      "jul": "juli-",
-      "aug": "augustus",
-      "sep": "september",
-      "oct": "oktober",
-      "nov": "november",
-      "dec": "december",
-      "am": "AM",
-      "pm": "P.M"
-    },
-    "event": {
-      "lobby": {
-        "starts": "begint",
-        "ends": "Loopt af"
-      },
-      "chat": {
-        "login": "Log in om te chatten",
-        "beTheFirst": "Wees de eerste om te chatten!",
-        "message": "Bericht...",
-        "send": "Sturen"
-      },
-      "menu": {
-        "label": "Laat het menu zien"
-      },
-      "qa": {
-        "question": "Vraag",
-        "answer": "Antwoord"
-      },
-      "rooms": {
-        "title": "Verlaat Kamer?",
-        "confirm": "Bevestigen",
-        "alert": "U bevindt zich momenteel in een videoconferentieruimte. Weet je zeker dat je wilt vertrekken?"
-      },
-      "tracker": {
-        "starts": "begint",
-        "eventEnd": "Einde evenement",
-        "eventEnded": "Dit evenement is afgelopen.",
-        "current": "Actueel",
-        "next": "De volgende",
-        "day": "Dag",
-        "hour": "Uur",
-        "minute": "Minuut",
-        "second": "Tweede"
-      }
-    },
-    "error": {
-      "pageNotFound": "Pagina niet gevonden."
-    },
-    "form": {
-      "placeholderSearch": "Zoeken..."
-    },
-    "geolocation": {
-      "title": "Geolocatie inschakelen?",
-      "content": "Wilt u uw locatie op de gastenkaart inschakelen?",
-      "enable": "Inschakelen",
-      "deny": "Ontkennen"
-    },
-    "locale": {
-      "selectorTitle": "Selecteer een taal",
-      "codes": {
-        "bg": "Bulgaars",
-        "cs": "Tsjechisch",
-        "da": "Deens",
-        "de": "Duitse",
-        "el": "Grieks",
-        "en": "Engels",
-        "es": "Spaans",
-        "et": "Ests",
-        "fi": "Fins",
-        "fr": "Frans",
-        "hu": "Hongaars",
-        "it": "Italiaans",
-        "ja": "Japans",
-        "lt": "Litouws",
-        "lv": "Lets",
-        "nl": "Nederlands",
-        "pl": "Pools",
-        "pt": "Portugees",
-        "ro": "Roemeense",
-        "ru": "Russisch",
-        "sk": "Slowaaks",
-        "sl": "Sloveens",
-        "sv": "Zweeds",
-        "tr": "Turks",
-        "zh": "Chinese"
-      }
+    "tracker": {
+      "starts": "begint",
+      "eventEnd": "Einde evenement",
+      "eventEnded": "Dit evenement is afgelopen.",
+      "current": "Actueel",
+      "next": "De volgende",
+      "day": "Dag",
+      "hour": "Uur",
+      "minute": "Minuut",
+      "second": "Tweede"
+    }
+  },
+  "error": {
+    "pageNotFound": "Pagina niet gevonden."
+  },
+  "form": {
+    "placeholderSearch": "Zoeken..."
+  },
+  "geolocation": {
+    "title": "Geolocatie inschakelen?",
+    "content": "Wilt u uw locatie op de gastenkaart inschakelen?",
+    "enable": "Inschakelen",
+    "deny": "Ontkennen"
+  },
+  "locale": {
+    "selectorTitle": "Selecteer een taal",
+    "codes": {
+      "bg": "Bulgaars",
+      "cs": "Tsjechisch",
+      "da": "Deens",
+      "de": "Duitse",
+      "el": "Grieks",
+      "en": "Engels",
+      "es": "Spaans",
+      "et": "Ests",
+      "fi": "Fins",
+      "fr": "Frans",
+      "hu": "Hongaars",
+      "it": "Italiaans",
+      "ja": "Japans",
+      "lt": "Litouws",
+      "lv": "Lets",
+      "nl": "Nederlands",
+      "pl": "Pools",
+      "pt": "Portugees",
+      "ro": "Roemeense",
+      "ru": "Russisch",
+      "sk": "Slowaaks",
+      "sl": "Sloveens",
+      "sv": "Zweeds",
+      "tr": "Turks",
+      "zh": "Chinese"
     }
   }
-
+}
