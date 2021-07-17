@@ -10,7 +10,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 // import components
 import { FirebaseContext } from "../../services"
 import { Router } from "@reach/router"
-import Layout from "../site/layout"
+import Layout from "../site-layout"
 import { Context } from "../../services/theme"
 import {
   FaHome,
@@ -35,7 +35,7 @@ const Lobby = loadable(() => import("./lobby"))
 const Client = loadable(() => import("./client"))
 const Room = loadable(() => import("./room"))
 const RoomChange = loadable(() => import("./room-change"))
-const Map = isClient ? loadable(() => import("./map/map")) : null
+const Map = isClient ? loadable(() => import("../event-map/map")) : null
 
 export default ({ data, pageContext }: DataProps) => {
   const { isLoading, profile } = useContext(FirebaseContext)

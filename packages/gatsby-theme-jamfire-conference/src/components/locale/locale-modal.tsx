@@ -9,7 +9,7 @@ import { LocaleModalProps } from "./_props"
 
 // import components
 import { Context } from "../../services/theme"
-import { Modal } from "../site/modal"
+import { Modal } from "../modal"
 import { LocalWrapper, Language, Code, Label } from "./_styles"
 
 export default ({ config }: LocaleModalProps) => {

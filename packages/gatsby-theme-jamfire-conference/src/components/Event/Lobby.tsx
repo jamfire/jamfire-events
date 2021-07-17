@@ -6,8 +6,8 @@ import { ClientProps } from "./_props"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
-import Seo from "../site/seo"
-import Missing from "../site/missing"
+import Seo from "../seo"
+import Missing from "../missing"
 import { Event, Content, FeaturedImage } from "./_styles"
 
 export default ({ config, event, locale }: ClientProps) => {

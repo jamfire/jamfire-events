@@ -6,9 +6,9 @@ import { ClientProps, RoomItemProps } from "./_props"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
-import Seo from "../site/seo"
-import { List, ListItem } from "../site/list"
-import Missing from "../site/missing"
+import Seo from "../seo"
+import { List, ListItem } from "../list"
+import Missing from "../missing"
 import RoomsSearch from "./rooms-search"
 import { RoomHeader, RoomDescription, RoomImage, JoinButton } from "./_styles"
 

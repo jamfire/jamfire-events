@@ -13,8 +13,8 @@ import { ClientProps } from "./_props"
 
 // import components
 import { Context } from "../../services/theme"
-import Seo from "../site/seo"
-import Missing from "../site/missing"
+import Seo from "../seo"
+import Missing from "../missing"
 import { JitsiContainer } from "./_styles"
 
 export default ({ config, event, locale, user }: ClientProps) => {

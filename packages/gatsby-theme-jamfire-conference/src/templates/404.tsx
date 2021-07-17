@@ -3,7 +3,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 
 // import components
-import ErrorPage from "../components/site/404"
+import ErrorPage from "../components/404"
 
 export default ({ data, pageContext }: PageProps) => (
   <ErrorPage data={data} pageContext={pageContext} />

@@ -8,7 +8,7 @@ import { DataProps } from "../../gatsby/data-props"
 // import components
 import { FirebaseContext } from "../../services"
 import PrivateRoute from "../private-route"
-import Layout from "../site/layout"
+import Layout from "../site-layout"
 import { StyledDashboard } from "./_styles"
 
 // loadable components

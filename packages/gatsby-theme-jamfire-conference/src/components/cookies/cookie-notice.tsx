@@ -23,11 +23,6 @@ export default ({ cookies, config }: CookieNoticeProps) => {
 
   const { t } = useTranslation()
 
-  // static query for logo data
-  const {
-    frontmatter: { cookieNotification },
-  } = cookies
-
   // determine whether to show cookie notice
   useEffect(() => {
     let cookiesAccepted =

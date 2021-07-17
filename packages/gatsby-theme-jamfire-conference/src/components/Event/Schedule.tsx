@@ -4,9 +4,9 @@ import { DateTime } from "luxon"
 import { ClientProps } from "./_props"
 
 // import components
-import Seo from "../site/seo"
-import { List, ListItem } from "../site/list"
-import Missing from "../site/missing"
+import Seo from "../seo"
+import { List, ListItem } from "../list"
+import Missing from "../missing"
 import { ScheduleItemDetails } from "./_styles"
 
 export default ({ config, event, locale }: ClientProps) => {

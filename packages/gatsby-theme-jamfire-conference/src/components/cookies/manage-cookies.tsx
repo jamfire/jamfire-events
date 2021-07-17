@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 // import components
 import { Context } from "../../services/theme"
 import Switch from "react-switch"
-import { Modal } from "../site/modal"
+import { Modal } from "../modal"
 import {
   Inner,
   Grid,

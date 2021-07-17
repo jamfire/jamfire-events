@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { WelcomeProps } from "./_props"
 
 // import components
-import Loader from "../site/loader"
+import Loader from "../loader"
 import { Context } from "../../services/theme"
 import { Welcome } from "./_styles"
 

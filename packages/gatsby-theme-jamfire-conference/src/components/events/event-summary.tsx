@@ -8,7 +8,7 @@ import { EventSummaryProps } from "./_props"
 import { Event, FeaturedImage, Background, Summary } from "./_styles"
 import { Link, navigate } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
-import Missing from "../site/missing"
+import Missing from "../missing"
 
 export default ({ event, locale }: EventSummaryProps) => {
   const {

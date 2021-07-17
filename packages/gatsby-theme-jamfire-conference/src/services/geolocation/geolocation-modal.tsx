@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { GeolocationModalProps } from "./_props"
 
 // import components
-import { Modal, ModalButton } from "../../components/site/modal"
+import { Modal, ModalButton } from "../../components/modal"
 
 export default ({
   isActive,

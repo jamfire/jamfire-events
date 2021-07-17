@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 // import components
 import { Context } from "../../services/theme"
-import { Modal, ModalButton } from "../site/modal"
+import { Modal, ModalButton } from "../modal"
 
 export default ({ config }) => {
   const { roomModal, toggleRoomModal, setActiveRoom, pagePath } =

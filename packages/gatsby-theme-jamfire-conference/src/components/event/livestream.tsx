@@ -5,7 +5,7 @@ import { LivestreamProps } from "./_props"
 // import components
 import { FeaturedImage, Content, LivestreamWrapper } from "./_styles"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Missing from "../site/missing"
+import Missing from "../missing"
 
 export default ({ event }: LivestreamProps) => {
   const {

@@ -6,9 +6,9 @@ import { DataProps } from "../../gatsby/data-props"
 import { useTranslation } from "react-i18next"
 
 // import components
-import Layout from "../site/layout"
+import Layout from "../site-layout"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Missing from "../site/missing"
+import Missing from "../missing"
 import { StyledHome, Content, FeaturedImage } from "./_styles"
 
 // page component

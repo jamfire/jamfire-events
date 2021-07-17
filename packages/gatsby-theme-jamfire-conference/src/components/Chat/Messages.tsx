@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 
 // import components
 import { FirebaseContext } from "../../services"
-import Loader from "../site/loader"
+import Loader from "../loader"
 import {
   Container,
   Inner,
@@ -30,7 +30,7 @@ export default ({
 
   const [data, isLoading, error] = useFirestoreQuery(
     firestore
-      .collection("messages")
+      ?.collection("messages")
       .where("event_id", "==", event_id)
       .orderBy("created_at", "asc")
       .limit(100)

@@ -5,8 +5,8 @@ import { ClientProps } from "./_props"
 
 // import components
 import { Router } from "@reach/router"
-import { Wrapper } from "../site/wrappers"
-import Sidebar from "../site/sidebar"
+import { Wrapper } from "../wrappers"
+import Sidebar from "../sidebar"
 
 // route components
 const Livestream = loadable(() => import("./livestream"))

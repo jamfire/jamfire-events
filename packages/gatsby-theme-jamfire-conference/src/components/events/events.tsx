@@ -5,10 +5,10 @@ import { DataProps } from "../../gatsby/data-props"
 import { useTranslation } from "react-i18next"
 
 // import components
-import Layout from "../site/layout"
+import Layout from "../site-layout"
 import { EventsWrapper, Events } from "./_styles"
 import EventSummary from "./event-summary"
-import Pagination from "../site/pagination"
+import Pagination from "../pagination"
 
 export default ({ data, pageContext }: DataProps) => {
   const {

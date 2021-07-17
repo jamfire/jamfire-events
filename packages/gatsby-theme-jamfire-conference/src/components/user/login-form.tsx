@@ -8,7 +8,7 @@ import { FormValues } from "./_props"
 import { Context } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { Formik, FormikHelpers } from "formik"
-import Error from "../site/error/error"
+import Error from "../error/error"
 
 // import form elements
 import {

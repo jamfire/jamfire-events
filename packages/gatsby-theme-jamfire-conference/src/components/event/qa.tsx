@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next"
 import { QAProps } from "./_props"
 
 // import components
-import Seo from "../site/seo"
-import { List, ListItem } from "../site/list"
-import Missing from "../site/missing"
+import Seo from "../seo"
+import { List, ListItem } from "../list"
+import Missing from "../missing"
 import { QAItem, QACircle } from "./_styles"
 import { FaQuestion, FaComment } from "react-icons/fa"
 

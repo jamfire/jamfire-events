@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 // import components
 import { Context } from "../../services/theme"
-import { Modal } from "../site/modal"
+import { Modal } from "../modal"
 import { LoginWrapper } from "./_styles"
 import LoginForm from "./login-form"
 import SocialLogins from "./social-logins"

@@ -7,7 +7,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 // import components
 import { StyledChat } from "./_styles"
 import { FirebaseContext } from "../../services"
-import Seo from "../site/seo"
+import Seo from "../seo"
 import Messages from "./messages"
 import Send from "./send"
 
