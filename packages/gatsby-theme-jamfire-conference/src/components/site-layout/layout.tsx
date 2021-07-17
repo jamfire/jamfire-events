@@ -1,6 +1,7 @@
 // import libs
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import loadable from "@loadable/component"
+import { useTranslation } from "react-i18next"
 import { LayoutProps } from "./_props"
 import "../../gatsby/fragments"
 
@@ -33,13 +34,20 @@ export default ({
 }: LayoutProps) => {
   const {
     navigation,
-    loaded,
   } = useContext(Context)
+
+  const { ready } = useTranslation()
+
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(ready)
+  }, [ready])
 
   if (!loaded) {
     return <></>
   }
-
+  
   return (
     <StyledLayout id="layout">
       <Seo activeTitle={title} activeFavicon={favicon} config={config} />

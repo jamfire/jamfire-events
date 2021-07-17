@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
-import { useTranslation } from "react-i18next"
 import { ProviderProps } from "./_props"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"
 
-export default ({ children, pageContext }: ProviderProps) => {
-  const { i18n, ready } = useTranslation()
+export default ({ children }: ProviderProps) => {
 
   // cookies
   const [ , setCookies, removeCookies] = useCookies(["cookies"])
@@ -28,15 +26,8 @@ export default ({ children, pageContext }: ProviderProps) => {
   const [enableAnalytics, setEnableAnalytics] = useState(
     initialState.enableAnalytics
   )
-  const [loaded, setLoaded] = useState(false)
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
-
-  useEffect(() => {
-    if (i18n.isInitialized) {
-      setLoaded(ready)
-    }
-  }, [i18n])
 
   // get initial dark mode
   useEffect(() => {
@@ -112,7 +103,6 @@ export default ({ children, pageContext }: ProviderProps) => {
         setToggleCookies,
         enableAnalytics,
         setEnableAnalytics,
-        loaded,
         toggleLocale,
         setToggleLocale,
         localesEnabled

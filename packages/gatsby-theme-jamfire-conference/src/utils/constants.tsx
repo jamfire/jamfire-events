@@ -8,3 +8,6 @@ export const LOCALES = process.env.GATSBY_LOCALES
 
 // locales enabled
 export const LOCALES_ENABLED = LOCALES.length > 1 ? true : false
+
+// environment
+export const ENVIRONMENT = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"

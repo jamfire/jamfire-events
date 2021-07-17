@@ -1,18 +1,13 @@
 // import libs
-import { ReactNode } from 'react';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import resourcesToBackend from 'i18next-resources-to-backend';
+import { ENVIRONMENT } from '../../utils/constants';
+import { LocalesProviderProps } from './_props';
 
 // import components
 import { I18nextProvider } from 'react-i18next';
-
-// theme provider props
-export interface LocalesProviderProps {
-  children: ReactNode
-  defaultLocale: string
-}
 
 export const LocalesProvider = ({
   children,
@@ -39,7 +34,7 @@ export const LocalesProvider = ({
         initImmediate: false,
         lng: pageContext.locale,
         fallbackLng: defaultLocale,
-        debug: true, //debug ? true : false,
+        debug: ENVIRONMENT === "development" ? true : false,
         defaultNS: 'translation',
         interpolation: {
           escapeValue: false,

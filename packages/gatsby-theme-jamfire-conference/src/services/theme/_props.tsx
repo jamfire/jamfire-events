@@ -1,5 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
-import { NavigationProps } from "../../components/site/navigation/_props"
+import { NavigationProps } from "../../components/site-navigation/_props"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 
@@ -31,8 +31,6 @@ export type InitialState = {
   setToggleCookies?: Dispatch<SetStateAction<boolean>>
   enableAnalytics: boolean
   setEnableAnalytics?: Dispatch<SetStateAction<boolean>>
-  loaded: boolean
-  setLoaded?: Dispatch<SetStateAction<boolean>>
   toggleLocale: boolean
   setToggleLocale: Dispatch<SetStateAction<boolean>>
   localesEnabled: boolean

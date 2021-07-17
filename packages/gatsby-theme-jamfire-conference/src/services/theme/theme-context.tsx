@@ -38,7 +38,6 @@ export const initialState: InitialState = {
   setToggleCookies: () => true || false,
   enableAnalytics: false,
   setEnableAnalytics: () => true || false,
-  loaded: false,
   toggleLocale: false,
   setToggleLocale: () => true || false,
   localesEnabled: LOCALES.length > 1 ? true : false,
