@@ -17,6 +17,8 @@ export const initialState: InitialState = {
   setUser: () => null,
   toggleLogin: false,
   setToggleLogin: () => true || false,
+  toggleDashboard: false,
+  setToggleDashboard: () => true || false,
   navigation: [
     {
       title: "navigation.home",

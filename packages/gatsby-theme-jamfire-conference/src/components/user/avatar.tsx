@@ -1,7 +1,6 @@
 // import libs
 import React, { useContext } from "react"
 import { initialState } from "../../services/theme"
-import { DEFAULT_LOCALE } from "../../utils/constants"
 import { useTranslation } from "react-i18next"
 import { ProfileProps } from "./_props"
 
@@ -12,16 +11,11 @@ import { StyledAvatar, Avatar } from "./_styles"
 import { Link } from "gatsby"
 
 export default ({ isLoggedIn, isLoading, profile }: ProfileProps) => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const { photoURL, displayName } = profile || {}
 
-  const { setToggleLogin, setNavigation } = useContext(Context)
-
-  const dashboardUrl: string =
-    DEFAULT_LOCALE === i18n.language 
-      ? `/dashboard/` 
-      : `/${i18n.language}/dashboard/`
+  const { setToggleLogin, setToggleDashboard, setNavigation } = useContext(Context)
 
   if (isLoading) {
     return (
@@ -46,25 +40,21 @@ export default ({ isLoggedIn, isLoading, profile }: ProfileProps) => {
   }
 
   return (
-    <StyledAvatar role="region" aria-label={t("regions.dashboard")}>
-      <Link
-        id="avatar"
-        to={dashboardUrl}
-        onClick={() => {
-          setNavigation(initialState.navigation)
-        }}
-      >
-        <Avatar>
-          <img
-            role="img"
-            aria-label={t("regions.avatarImage")}
-            src={photoURL}
-            alt={displayName}
-            height="40"
-            width="40"
-          />
-        </Avatar>
-      </Link>
+    <StyledAvatar 
+      role="region" 
+      aria-label={t("regions.dashboard")}
+      onClick={() => setToggleDashboard(true)}  
+    >
+      <Avatar>
+        <img
+          role="img"
+          aria-label={t("regions.avatarImage")}
+          src={photoURL}
+          alt={displayName}
+          height="40"
+          width="40"
+        />
+      </Avatar>
     </StyledAvatar>
   )
 }

@@ -83,7 +83,6 @@ exports.onCreateNode = async ({ node, actions, reporter }) => {
  */
 const createEvents = require("./src/gatsby/create-events")
 const createPages = require("./src/gatsby/create-pages")
-const createDashboard = require("./src/gatsby/create-dashboard")
 const create404 = require("./src/gatsby/create-404")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
@@ -98,12 +97,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   pageActivity.start()
   await createPages({ actions, graphql, reporter })
   pageActivity.end()
-
-  // create dashboard
-  const dashboardActivity = reporter.activityTimer(`Create dashboard`)
-  dashboardActivity.start()
-  await createDashboard({ actions, reporter })
-  dashboardActivity.end()
 
   // create 404
   const errorActivity = reporter.activityTimer(`Create 404`)

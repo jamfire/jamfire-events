@@ -20,6 +20,7 @@ const Main = loadable(() => import("../site-main"))
 const CookieNotice = loadable(() => import("../cookies/cookie-notice"))
 const ManageCookies = loadable(() => import("../cookies/manage-cookies"))
 const LocaleModal = loadable(() => import("../locale/locale-modal"))
+const DashboardModal = loadable(() => import("../dashboard-modal"))
 
 export default ({
   children,
@@ -65,6 +66,7 @@ export default ({
       <LocaleModal config={config} />
       <CookieNotice cookies={cookies} config={config} />
       <ManageCookies cookies={cookies} config={config} />
+      <DashboardModal config={config} />
     </StyledLayout>
   )
 }

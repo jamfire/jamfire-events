@@ -30,6 +30,7 @@ export const Avatar = styled.div`
   border-radius: 40px;
   background: var(--content-background);
   color: var(--nav-anchor-color);
+  cursor: pointer;
 
   &:hover {
     background: var(--content-background-hover);

@@ -70,13 +70,6 @@ export default ({ cookies, config }: ManageCookiesProps) => {
     setToggleCookies(false)
   }
 
-  // handle cookie change
-  const handleCookie = (nextValue: boolean) => {
-    if (currentCookie === "analyticsEnabled") {
-      setAnalyticsEnabled(nextValue)
-    }
-  }
-
   if (isLoading) {
     return <></>
   }

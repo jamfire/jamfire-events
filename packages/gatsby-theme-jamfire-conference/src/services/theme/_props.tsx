@@ -15,6 +15,8 @@ export type InitialState = {
   setToggle: Dispatch<SetStateAction<boolean>>
   toggleLogin: boolean
   setToggleLogin: Dispatch<SetStateAction<boolean>>
+  toggleDashboard: boolean,
+  setToggleDashboard: Dispatch<SetStateAction<boolean>>
   navigation: NavigationProps[]
   setNavigation: Dispatch<SetStateAction<NavigationProps[]>>
   activeRoom: boolean

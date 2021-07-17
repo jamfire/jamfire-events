@@ -16,6 +16,7 @@ export default ({ children }: ProviderProps) => {
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
   const [toggle, setToggle] = useState(initialState.toggle)
   const [toggleLogin, setToggleLogin] = useState(initialState.toggleLogin)
+  const [toggleDashboard, setToggleDashboard] = useState(initialState.toggleDashboard)
   const [navigation, setNavigation] = useState(initialState.navigation)
   const [user, setUser] = useState(initialState.user)
   const [activeRoom, setActiveRoom] = useState(initialState.activeRoom)
@@ -87,6 +88,8 @@ export default ({ children }: ProviderProps) => {
         setToggle,
         toggleLogin,
         setToggleLogin,
+        toggleDashboard,
+        setToggleDashboard,
         navigation,
         setNavigation,
         user,

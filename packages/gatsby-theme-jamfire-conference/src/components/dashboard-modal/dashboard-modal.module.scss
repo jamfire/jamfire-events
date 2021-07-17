@@ -1,0 +1,83 @@
+@import '../../theme/media.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: -2rem;
+  width: 90vw;
+
+  @include tablet-up {
+    grid-template-columns: 1fr 1fr;
+    width: 60vw;
+    min-height: 50vh;
+  }
+}
+
+.profile {
+  position: relative;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 1rem;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.display-name {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.email {
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.options {
+  position: relative;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+
+  @include tablet-up {
+    border-top: 0;
+    border-left: 1px solid var(--border-color);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      button {
+        cursor: pointer;
+        display: block;
+        background: none;
+        color: var(--logo-background);
+        border: 0;
+        outline: 0;
+        padding: 0;
+        transition: color 85ms ease-out;
+
+        &:hover {
+          color: var(--logo-hover);
+        }
+      }
+    }
+  }
+}
