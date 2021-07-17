@@ -1,0 +1,17 @@
+@import "../../theme/media.scss";
+
+.content {
+  grid-area: content;
+  padding: 1rem;
+
+  @include tablet-up {
+    padding: 0;
+  }
+
+  @include tablet-side {
+    overflow-y: scroll;
+    height: fill-available;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+  }
+}

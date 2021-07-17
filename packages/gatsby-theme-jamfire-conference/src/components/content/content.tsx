@@ -2,9 +2,9 @@
 import React from "react"
 import { ContentProps } from "./_props"
 
-// import libs
-import { Content } from "./_styles"
+// import styles
+import * as styles from "./content.module.scss"
 
 export default ({ children }: ContentProps) => {
-  return <Content>{children}</Content>
+  return <div className={styles.content}>{children}</div>
 }
