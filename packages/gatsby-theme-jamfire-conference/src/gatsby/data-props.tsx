@@ -1,6 +1,6 @@
 // imports
-import { MarkdownRemark, MarkdownRemarkGroupConnection } from "./graphqlTypes"
-import { SitePageContext } from "./graphqlTypes"
+import { MarkdownRemark, MarkdownRemarkGroupConnection } from "./graphql-types"
+import { SitePageContext } from "./graphql-types"
 import { RouteComponentProps } from "@reach/router"
 
 // extend gatsby data props for markdown content

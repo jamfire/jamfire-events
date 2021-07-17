@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { ProviderProps } from "./_props"
 
 // import components
-import { Context, initialState } from "./theme-context"
+import { ThemeContext, initialState } from "./theme-context"
 
 export default ({ children, pageContext }: ProviderProps) => {
   const { i18n, ready } = useTranslation()
@@ -32,7 +32,6 @@ export default ({ children, pageContext }: ProviderProps) => {
   const [loaded, setLoaded] = useState(false)
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
-  const [geolocation, setGeolocation] = useState(null)
 
   useEffect(() => {
     setLoaded(ready)
@@ -97,7 +96,7 @@ export default ({ children, pageContext }: ProviderProps) => {
   }, [enableAnalytics])
 
   return (
-    <Context.Provider
+    <ThemeContext.Provider
       value={{
         darkMode,
         setDarkMode,
@@ -126,12 +125,10 @@ export default ({ children, pageContext }: ProviderProps) => {
         loaded,
         toggleLocale,
         setToggleLocale,
-        localesEnabled,
-        geolocation,
-        setGeolocation,
+        localesEnabled
       }}
     >
       {children}
-    </Context.Provider>
+    </ThemeContext.Provider>
   )
 }

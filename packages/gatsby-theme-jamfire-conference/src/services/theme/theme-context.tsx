@@ -10,6 +10,7 @@ import { FaHome, FaCalendarAlt } from "react-icons/fa"
 export const initialState: InitialState = {
   darkMode: false,
   locale: "en",
+  setLocale: () => {},
   toggle: false,
   user: null,
   toggleLogin: false,
@@ -43,10 +44,8 @@ export const initialState: InitialState = {
   toggleLocale: false,
   setToggleLocale: () => true || false,
   localesEnabled: LOCALES.length > 1 ? true : false,
-  geolocation: null,
-  setGeolocation: () => null,
 }
 
-export const Context = createContext(initialState)
+export const ThemeContext = createContext(initialState)
 
-export default Context
+export default ThemeContext

@@ -4,7 +4,7 @@ import { DEFAULT_LOCALE, LOCALES } from "../../utils/constants"
 import { useTranslation } from "react-i18next"
 import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
-import localesList from "../../locales/locales"
+import localesList from "../../services/locales/locales"
 import { LocaleModalProps } from "./_props"
 
 // import components

@@ -725,15 +725,16 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___eventRooms___title = 'childrenMarkdownRemark___frontmatter___eventRooms___title',
   childrenMarkdownRemark___frontmatter___eventRooms___description = 'childrenMarkdownRemark___frontmatter___eventRooms___description',
   childrenMarkdownRemark___frontmatter___title = 'childrenMarkdownRemark___frontmatter___title',
+  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childrenMarkdownRemark___frontmatter___analyticsCookies___enabled',
+  childrenMarkdownRemark___frontmatter___analyticsCookies___title = 'childrenMarkdownRemark___frontmatter___analyticsCookies___title',
+  childrenMarkdownRemark___frontmatter___analyticsCookies___content = 'childrenMarkdownRemark___frontmatter___analyticsCookies___content',
   childrenMarkdownRemark___frontmatter___templateKey = 'childrenMarkdownRemark___frontmatter___templateKey',
   childrenMarkdownRemark___frontmatter___cookieNotification___title = 'childrenMarkdownRemark___frontmatter___cookieNotification___title',
   childrenMarkdownRemark___frontmatter___cookieNotification___content = 'childrenMarkdownRemark___frontmatter___cookieNotification___content',
   childrenMarkdownRemark___frontmatter___necessaryCookies___title = 'childrenMarkdownRemark___frontmatter___necessaryCookies___title',
   childrenMarkdownRemark___frontmatter___necessaryCookies___content = 'childrenMarkdownRemark___frontmatter___necessaryCookies___content',
-  childrenMarkdownRemark___frontmatter___analyticsCookies___title = 'childrenMarkdownRemark___frontmatter___analyticsCookies___title',
-  childrenMarkdownRemark___frontmatter___analyticsCookies___content = 'childrenMarkdownRemark___frontmatter___analyticsCookies___content',
-  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childrenMarkdownRemark___frontmatter___analyticsCookies___enabled',
   childrenMarkdownRemark___frontmatter___description = 'childrenMarkdownRemark___frontmatter___description',
+  childrenMarkdownRemark___frontmatter___siteUrl = 'childrenMarkdownRemark___frontmatter___siteUrl',
   childrenMarkdownRemark___frontmatter___colors___primaryColor = 'childrenMarkdownRemark___frontmatter___colors___primaryColor',
   childrenMarkdownRemark___frontmatter___colors___primaryColorHover = 'childrenMarkdownRemark___frontmatter___colors___primaryColorHover',
   childrenMarkdownRemark___frontmatter___colors___darkModeOnColor = 'childrenMarkdownRemark___frontmatter___colors___darkModeOnColor',
@@ -742,7 +743,6 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___socialLogin___google = 'childrenMarkdownRemark___frontmatter___socialLogin___google',
   childrenMarkdownRemark___frontmatter___socialLogin___twitter = 'childrenMarkdownRemark___frontmatter___socialLogin___twitter',
   childrenMarkdownRemark___frontmatter___socialLogin___github = 'childrenMarkdownRemark___frontmatter___socialLogin___github',
-  childrenMarkdownRemark___frontmatter___siteUrl = 'childrenMarkdownRemark___frontmatter___siteUrl',
   childrenMarkdownRemark___frontmatter___slug = 'childrenMarkdownRemark___frontmatter___slug',
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColor = 'childrenMarkdownRemark___frontmatter___pageBranding___primaryColor',
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover = 'childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover',
@@ -846,15 +846,16 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___eventRooms___title = 'childMarkdownRemark___frontmatter___eventRooms___title',
   childMarkdownRemark___frontmatter___eventRooms___description = 'childMarkdownRemark___frontmatter___eventRooms___description',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark___frontmatter___title',
+  childMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childMarkdownRemark___frontmatter___analyticsCookies___enabled',
+  childMarkdownRemark___frontmatter___analyticsCookies___title = 'childMarkdownRemark___frontmatter___analyticsCookies___title',
+  childMarkdownRemark___frontmatter___analyticsCookies___content = 'childMarkdownRemark___frontmatter___analyticsCookies___content',
   childMarkdownRemark___frontmatter___templateKey = 'childMarkdownRemark___frontmatter___templateKey',
   childMarkdownRemark___frontmatter___cookieNotification___title = 'childMarkdownRemark___frontmatter___cookieNotification___title',
   childMarkdownRemark___frontmatter___cookieNotification___content = 'childMarkdownRemark___frontmatter___cookieNotification___content',
   childMarkdownRemark___frontmatter___necessaryCookies___title = 'childMarkdownRemark___frontmatter___necessaryCookies___title',
   childMarkdownRemark___frontmatter___necessaryCookies___content = 'childMarkdownRemark___frontmatter___necessaryCookies___content',
-  childMarkdownRemark___frontmatter___analyticsCookies___title = 'childMarkdownRemark___frontmatter___analyticsCookies___title',
-  childMarkdownRemark___frontmatter___analyticsCookies___content = 'childMarkdownRemark___frontmatter___analyticsCookies___content',
-  childMarkdownRemark___frontmatter___analyticsCookies___enabled = 'childMarkdownRemark___frontmatter___analyticsCookies___enabled',
   childMarkdownRemark___frontmatter___description = 'childMarkdownRemark___frontmatter___description',
+  childMarkdownRemark___frontmatter___siteUrl = 'childMarkdownRemark___frontmatter___siteUrl',
   childMarkdownRemark___frontmatter___colors___primaryColor = 'childMarkdownRemark___frontmatter___colors___primaryColor',
   childMarkdownRemark___frontmatter___colors___primaryColorHover = 'childMarkdownRemark___frontmatter___colors___primaryColorHover',
   childMarkdownRemark___frontmatter___colors___darkModeOnColor = 'childMarkdownRemark___frontmatter___colors___darkModeOnColor',
@@ -863,7 +864,6 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___socialLogin___google = 'childMarkdownRemark___frontmatter___socialLogin___google',
   childMarkdownRemark___frontmatter___socialLogin___twitter = 'childMarkdownRemark___frontmatter___socialLogin___twitter',
   childMarkdownRemark___frontmatter___socialLogin___github = 'childMarkdownRemark___frontmatter___socialLogin___github',
-  childMarkdownRemark___frontmatter___siteUrl = 'childMarkdownRemark___frontmatter___siteUrl',
   childMarkdownRemark___frontmatter___slug = 'childMarkdownRemark___frontmatter___slug',
   childMarkdownRemark___frontmatter___pageBranding___primaryColor = 'childMarkdownRemark___frontmatter___pageBranding___primaryColor',
   childMarkdownRemark___frontmatter___pageBranding___primaryColorHover = 'childMarkdownRemark___frontmatter___pageBranding___primaryColorHover',
@@ -2052,15 +2052,16 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___pageGraphics___featuredImage___id = 'frontmatter___pageGraphics___featuredImage___id',
   frontmatter___pageGraphics___featuredImage___children = 'frontmatter___pageGraphics___featuredImage___children',
   frontmatter___title = 'frontmatter___title',
+  frontmatter___analyticsCookies___enabled = 'frontmatter___analyticsCookies___enabled',
+  frontmatter___analyticsCookies___title = 'frontmatter___analyticsCookies___title',
+  frontmatter___analyticsCookies___content = 'frontmatter___analyticsCookies___content',
   frontmatter___templateKey = 'frontmatter___templateKey',
   frontmatter___cookieNotification___title = 'frontmatter___cookieNotification___title',
   frontmatter___cookieNotification___content = 'frontmatter___cookieNotification___content',
   frontmatter___necessaryCookies___title = 'frontmatter___necessaryCookies___title',
   frontmatter___necessaryCookies___content = 'frontmatter___necessaryCookies___content',
-  frontmatter___analyticsCookies___title = 'frontmatter___analyticsCookies___title',
-  frontmatter___analyticsCookies___content = 'frontmatter___analyticsCookies___content',
-  frontmatter___analyticsCookies___enabled = 'frontmatter___analyticsCookies___enabled',
   frontmatter___description = 'frontmatter___description',
+  frontmatter___siteUrl = 'frontmatter___siteUrl',
   frontmatter___colors___primaryColor = 'frontmatter___colors___primaryColor',
   frontmatter___colors___primaryColorHover = 'frontmatter___colors___primaryColorHover',
   frontmatter___colors___darkModeOnColor = 'frontmatter___colors___darkModeOnColor',
@@ -2069,7 +2070,6 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___socialLogin___google = 'frontmatter___socialLogin___google',
   frontmatter___socialLogin___twitter = 'frontmatter___socialLogin___twitter',
   frontmatter___socialLogin___github = 'frontmatter___socialLogin___github',
-  frontmatter___siteUrl = 'frontmatter___siteUrl',
   frontmatter___slug = 'frontmatter___slug',
   frontmatter___pageBranding___primaryColor = 'frontmatter___pageBranding___primaryColor',
   frontmatter___pageBranding___primaryColorHover = 'frontmatter___pageBranding___primaryColorHover',
@@ -2282,14 +2282,14 @@ export type MarkdownRemarkFrontmatter = Node & {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphics>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphics>;
   title?: Maybe<Scalars['String']>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>;
   templateKey?: Maybe<Scalars['String']>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotification>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookies>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>;
   description?: Maybe<Scalars['String']>;
+  siteUrl?: Maybe<Scalars['String']>;
   colors?: Maybe<MarkdownRemarkFrontmatterColors>;
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLogin>;
-  siteUrl?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBranding>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformation>;
@@ -2305,15 +2305,15 @@ export type MarkdownRemarkFrontmatter = Node & {
 
 export type MarkdownRemarkFrontmatterAnalyticsCookies = {
   __typename?: 'MarkdownRemarkFrontmatterAnalyticsCookies';
+  enabled?: Maybe<Scalars['Boolean']>;
   title?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
-  enabled?: Maybe<Scalars['Boolean']>;
 };
 
 export type MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput = {
+  enabled?: Maybe<BooleanQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
-  enabled?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterColors = {
@@ -3127,15 +3127,16 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   pageGraphics___featuredImage___internal___owner = 'pageGraphics___featuredImage___internal___owner',
   pageGraphics___featuredImage___internal___type = 'pageGraphics___featuredImage___internal___type',
   title = 'title',
+  analyticsCookies___enabled = 'analyticsCookies___enabled',
+  analyticsCookies___title = 'analyticsCookies___title',
+  analyticsCookies___content = 'analyticsCookies___content',
   templateKey = 'templateKey',
   cookieNotification___title = 'cookieNotification___title',
   cookieNotification___content = 'cookieNotification___content',
   necessaryCookies___title = 'necessaryCookies___title',
   necessaryCookies___content = 'necessaryCookies___content',
-  analyticsCookies___title = 'analyticsCookies___title',
-  analyticsCookies___content = 'analyticsCookies___content',
-  analyticsCookies___enabled = 'analyticsCookies___enabled',
   description = 'description',
+  siteUrl = 'siteUrl',
   colors___primaryColor = 'colors___primaryColor',
   colors___primaryColorHover = 'colors___primaryColorHover',
   colors___darkModeOnColor = 'colors___darkModeOnColor',
@@ -3144,7 +3145,6 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   socialLogin___google = 'socialLogin___google',
   socialLogin___twitter = 'socialLogin___twitter',
   socialLogin___github = 'socialLogin___github',
-  siteUrl = 'siteUrl',
   slug = 'slug',
   pageBranding___primaryColor = 'pageBranding___primaryColor',
   pageBranding___primaryColorHover = 'pageBranding___primaryColorHover',
@@ -3274,14 +3274,14 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
   colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
-  siteUrl?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>;
@@ -3589,7 +3589,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -3710,14 +3709,14 @@ export type QueryMarkdownRemarkFrontmatterArgs = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>;
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>;
   title?: Maybe<StringQueryOperatorInput>;
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>;
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>;
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  siteUrl?: Maybe<StringQueryOperatorInput>;
   colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>;
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>;
-  siteUrl?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>;
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>;
@@ -3816,7 +3815,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  flags?: Maybe<SiteFlags>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -4063,10 +4061,6 @@ export enum SiteFieldsEnum {
   siteMetadata___description = 'siteMetadata___description',
   port = 'port',
   host = 'host',
-  flags___PRESERVE_FILE_DOWNLOAD_CACHE = 'flags___PRESERVE_FILE_DOWNLOAD_CACHE',
-  flags___DEV_SSR = 'flags___DEV_SSR',
-  flags___FAST_DEV = 'flags___FAST_DEV',
-  flags___PARALLEL_SOURCING = 'flags___PARALLEL_SOURCING',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   id = 'id',
@@ -4162,28 +4156,12 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  flags?: Maybe<SiteFlagsFilterInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-};
-
-export type SiteFlags = {
-  __typename?: 'SiteFlags';
-  PRESERVE_FILE_DOWNLOAD_CACHE?: Maybe<Scalars['Boolean']>;
-  DEV_SSR?: Maybe<Scalars['Boolean']>;
-  FAST_DEV?: Maybe<Scalars['Boolean']>;
-  PARALLEL_SOURCING?: Maybe<Scalars['Boolean']>;
-};
-
-export type SiteFlagsFilterInput = {
-  PRESERVE_FILE_DOWNLOAD_CACHE?: Maybe<BooleanQueryOperatorInput>;
-  DEV_SSR?: Maybe<BooleanQueryOperatorInput>;
-  FAST_DEV?: Maybe<BooleanQueryOperatorInput>;
-  PARALLEL_SOURCING?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SiteFunction = Node & {

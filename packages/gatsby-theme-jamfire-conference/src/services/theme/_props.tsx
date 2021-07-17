@@ -1,6 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
 import { NavigationProps } from "../../components/site/navigation/_props"
-import { GeolocationProps } from "../geolocation/_props"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 
@@ -12,8 +11,8 @@ export interface ProviderProps {
 export type InitialState = {
   darkMode: boolean
   setDarkMode?: Dispatch<SetStateAction<boolean>>
-  locale?: string
-  setLocale?: Dispatch<SetStateAction<string>>
+  locale: string
+  setLocale: Dispatch<SetStateAction<string | undefined>>
   toggle: boolean
   setToggle?: Dispatch<SetStateAction<boolean>>
   toggleLogin: boolean
@@ -24,7 +23,7 @@ export type InitialState = {
   setActiveRoom?: Dispatch<SetStateAction<boolean>>
   roomModal: boolean
   toggleRoomModal?: Dispatch<SetStateAction<boolean>>
-  user?: firebase.User
+  user?: firebase.User | null
   setUser?: Dispatch<SetStateAction<firebase.User>>
   chats: any
   setChats?: Dispatch<SetStateAction<any>>
@@ -39,6 +38,4 @@ export type InitialState = {
   toggleLocale: boolean
   setToggleLocale: Dispatch<SetStateAction<boolean>>
   localesEnabled: boolean
-  geolocation: GeolocationProps | null
-  setGeolocation: Dispatch<SetStateAction<GeolocationProps>>
 }
