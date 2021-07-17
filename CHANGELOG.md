@@ -1,13 +1,20 @@
 # Changelog
 
-## Unreleased (2021-07-16)
+## Unreleased (2021-07-17)
+
+#### :rocket: Enhancement
+* `gatsby-theme-jamfire-conference`
+  * [#25](https://github.com/jamfire/jamfire/pull/25) refactor(gatsby-theme-jamfire-conference): version 1.1.0 ([@kalebheitzman](https://github.com/kalebheitzman))
 
 #### :memo: Documentation
 * [#20](https://github.com/jamfire/jamfire/pull/20) docs: added changelog ([@kalebheitzman](https://github.com/kalebheitzman))
 
+#### :house: Internal
+* `gatsby-starter-jamfire-conference`
+  * [#21](https://github.com/jamfire/jamfire/pull/21) build(gatsby-starter-jamfire-conference): removed experimental build … ([@kalebheitzman](https://github.com/kalebheitzman))
+
 #### Committers: 1
 - Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
-
 
 ## netlify-cms-widget-datetimezone@0.9.8 (2021-07-16)
 
