@@ -1,6 +1,6 @@
 // import libs
 import { Dispatch, SetStateAction } from "react"
-import { MarkdownRemark } from "../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 
 export type InitialState = {

@@ -5,11 +5,13 @@ import { bp } from "../../utils/media"
 import { checkIsClient } from "../../utils/check-is-client"
 
 // import components
-import { StyledChat } from "./_styles"
 import { FirebaseContext } from "../../services"
 import Seo from "../seo"
 import Messages from "./messages"
 import Send from "./send"
+
+// import styles
+import * as styles from "./chat.module.scss"
 
 export default ({ config, event }: ChatProps) => {
   const {
@@ -46,7 +48,7 @@ export default ({ config, event }: ChatProps) => {
   }
 
   return (
-    <StyledChat id="chat">
+    <div className={`chat ${styles.chat}`} id="chat">
       <Seo
         config={config}
         activeTitle={`${eventSettings.chatLabel} | ${title}`}
@@ -66,6 +68,6 @@ export default ({ config, event }: ChatProps) => {
         scrollToBottom={scrollToBottom}
         user={user}
       />
-    </StyledChat>
+    </div>
   )
 }

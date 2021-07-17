@@ -2,7 +2,7 @@ import firebase from "firebase/app"
 import {
   MarkdownRemark,
   MarkdownRemarkFrontmatterSocialLogin,
-} from "../../gatsby/graphqlTypes"
+} from "../../gatsby/graphql-types"
 
 // profile props
 export type ProfileProps = {

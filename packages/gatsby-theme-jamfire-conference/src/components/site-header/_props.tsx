@@ -1,5 +1,5 @@
 // import libs
-import { MarkdownRemark, File } from "../../../gatsby/graphqlTypes"
+import { MarkdownRemark, File } from "../../../gatsby/graphql-types"
 
 // header props
 export type HeaderProps = {

@@ -42,6 +42,9 @@ module.exports = () => {
        * Typography & Styling
        */
       {
+        resolve: `gatsby-plugin-sass`,
+      },
+      {
         resolve: `gatsby-plugin-emotion`,
         options: {
           sourceMap: true,
@@ -53,7 +56,7 @@ module.exports = () => {
       {
         resolve: `gatsby-plugin-typography`,
         options: {
-          pathToConfigModule: path.join(__dirname, `src/utils/typography`),
+          pathToConfigModule: path.join(__dirname, `src/theme/typography`),
           omitGoogleFont: true,
         },
       },

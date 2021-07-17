@@ -1,0 +1,71 @@
+@import "../../theme/media.scss";
+
+.send {
+  background: var(--list-header-background);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+
+  position: fixed;
+  width: 100%;
+  bottom: 80px;
+
+  @include tablet-up {
+    position: relative;
+    width: auto;
+    bottom: auto;
+  }
+}
+
+.login {
+    background: var(--logo-background);
+    color: var(--logo-color);
+    cursor: pointer;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .icon {
+        margin-left: 5px;
+    }
+
+    .icons {
+        text-align: right;
+    }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.25rem 0.5rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background: var(--background);
+}
+
+.button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: var(--logo-background);
+  color: var(--logo-color);
+  cursor: pointer;
+
+  &:disabled {
+    background: var(--disabled-button-background);
+    color: var(--disabled-button-color);
+  }
+}

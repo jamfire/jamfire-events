@@ -1,8 +1,4 @@
-// import libs
-import styled from "@emotion/styled"
-
-// button component
-export const Button = styled.a`
+.button {
   background: var(--button-background);
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -14,4 +10,4 @@ export const Button = styled.a`
     color: var(--logo-color);
     text-decoration: none;
   }
-`
+}

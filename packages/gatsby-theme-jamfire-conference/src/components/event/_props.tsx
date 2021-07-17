@@ -1,5 +1,5 @@
 // import libs
-import { MarkdownRemark } from "../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 import { RouteComponentProps } from "@reach/router"
 import firebase from "firebase/app"
 

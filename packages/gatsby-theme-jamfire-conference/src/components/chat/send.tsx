@@ -3,12 +3,15 @@ import React, { useState, useContext } from "react"
 import firebase from "firebase/app"
 import { useTranslation } from "react-i18next"
 import { SendProps } from "./_props"
+import cx from "classnames"
 
 // import components
 import { FirebaseContext } from "../../services"
 import { Context } from "../../services/theme"
 import { FaFacebookF, FaTwitter, FaGoogle, FaEnvelope } from "react-icons/fa"
-import { StyledSend, Form, Input, Button } from "./_styles"
+
+// import styles
+import * as styles from "./send.module.scss"
 
 export default ({
   event_id,
@@ -29,17 +32,17 @@ export default ({
 
   if (!user)
     return (
-      <StyledSend className="login" onClick={() => setToggleLogin(true)}>
+      <div className={cx(styles.send, styles.login)} onClick={() => setToggleLogin(true)}>
         <div className="label">
           <span>{t("event.chat.login")}</span>
         </div>
-        <div className="icons">
-          <FaFacebookF className="icon" />
-          <FaTwitter className="icon" />
-          <FaGoogle className="icon" />
-          <FaEnvelope className="icon" />
+        <div className={styles.icons}>
+          <FaFacebookF className={styles.icon} />
+          <FaTwitter className={styles.icon} />
+          <FaGoogle className={styles.icon} />
+          <FaEnvelope className={styles.icon} />
         </div>
-      </StyledSend>
+      </div>
     )
 
   const sendMessage = (event: any) => {
@@ -93,16 +96,17 @@ export default ({
   }
 
   return (
-    <StyledSend>
-      <Form onSubmit={sendMessage}>
-        <Input
+    <div className={styles.send}>
+      <form className={styles.form} onSubmit={sendMessage}>
+        <input
+          className={styles.input}
           type="text"
           placeholder={t("event.chat.message")}
           onChange={handleChange}
           value={message}
         />
-        <Button disabled={disabled}>{t("event.chat.send")}</Button>
-      </Form>
-    </StyledSend>
+        <button className={styles.button} disabled={disabled}>{t("event.chat.send")}</button>
+      </form>
+    </div>
   )
 }

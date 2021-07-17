@@ -1,0 +1,18 @@
+// styled no video
+.missing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  text-align: center;
+}
+
+// missing icon
+.icon {
+  font-size: 8rem;
+  color: var(--list-header-background);
+  margin-bottom: 1rem;
+}

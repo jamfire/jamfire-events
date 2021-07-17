@@ -17,5 +17,10 @@ export interface DataProps extends RouteComponentProps {
     page?: MarkdownRemark
     defaultPage?: MarkdownRemark
   }
-  pageContext: SitePageContext
+  pageContext: PageContextProps
+}
+
+export interface PageContextProps extends SitePageContext {
+  locale: string
+  defaultLocale: string
 }

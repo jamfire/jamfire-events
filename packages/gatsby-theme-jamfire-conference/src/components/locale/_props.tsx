@@ -1,4 +1,4 @@
-import { MarkdownRemark } from "../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 export type LocaleHeader = {
   config: MarkdownRemark

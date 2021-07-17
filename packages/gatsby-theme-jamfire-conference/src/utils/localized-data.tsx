@@ -1,6 +1,6 @@
 // import libs
 import mergeWith from "lodash/mergeWith"
-import { MarkdownRemark } from "../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../gatsby/graphql-types"
 
 // localize data
 export const localizeData: (

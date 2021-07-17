@@ -1,5 +1,5 @@
 // import libs
-import { MarkdownRemark } from "../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // event summary type
 export type EventSummaryProps = {

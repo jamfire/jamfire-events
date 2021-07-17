@@ -1,21 +1,17 @@
 // import libs
 import React, { useEffect, useState, useContext } from "react"
-import { MessagesProps } from "./_props"
+import { MessagesProps, MessageProps } from "./_props"
 import { useFirestoreQuery } from "../../services"
 import { useTranslation } from "react-i18next"
+import { DateTime } from "luxon"
+import cx from "classnames"
 
 // import components
 import { FirebaseContext } from "../../services"
 import Loader from "../loader"
-import {
-  Container,
-  Inner,
-  StyledMessages,
-  StyledMessage,
-  Text,
-  Avatar,
-  Name,
-} from "./_styles"
+
+// import styles
+import * as styles from "./messages.module.scss"
 
 export default ({
   chats,
@@ -70,31 +66,31 @@ export default ({
 
   if (error) {
     return (
-      <Container>
-        <Inner>{error.message}</Inner>
-      </Container>
+      <div className={styles.container}>
+        <div className={styles.inner}>{t("event.chat.error")}</div>
+      </div>
     )
   }
 
   if (isLoading) {
     return (
-      <Container>
+      <div className={styles.container}>
         <Loader />
-      </Container>
+      </div>
     )
   }
 
   if (chats.length === 0) {
     return (
-      <Container>
-        <Inner>{t("event.chat.beTheFirst")}</Inner>
-      </Container>
+      <div className={styles.container}>
+        <div className={styles.inner}>{t("event.chat.beTheFirst")}</div>
+      </div>
     )
   }
 
   return (
-    <Container>
-      <StyledMessages id="chat-messages">
+    <div className={styles.container}>
+      <ul className={styles.messages} id="chat-messages">
         {chats.map((message: any, id: number) => {
           let currentId = message.user_id
           let prevId =
@@ -114,29 +110,41 @@ export default ({
             />
           )
         })}
-      </StyledMessages>
+      </ul>
       <div id="messages-bottom" />
-    </Container>
+    </div>
   )
 }
 
-const Message = ({ item, userId, sameSender, nextSender }) => {
+const Message = ({ item, userId, sameSender, nextSender }: MessageProps) => {
   const { message, created_at, user_id, displayName, photoURL } = item
 
   const me = userId === user_id ? "me" : "not-me"
   const first = sameSender ? "not-first" : "first"
+  const date = DateTime.fromSeconds(created_at.seconds)
 
   return (
-    <StyledMessage className={`${me} ${first}`}>
+    <li className={cx(styles.message, styles[me], styles[first])}>
       {!nextSender && (
-        <Avatar>
+        <div className={styles.avatar}>
           <img src={photoURL} alt={displayName} />
-        </Avatar>
+        </div>
       )}
-      <Text className={me}>
+      <div className={cx(styles.text, styles[me])}>
         <span>{message}</span>
-      </Text>
-      {!nextSender && <Name className={me}>{displayName}</Name>}
-    </StyledMessage>
+      </div>
+      {!nextSender && me === "me" && (
+        <div className={cx(styles.name, styles[me])}>
+          <span>{displayName}</span> 
+          <span>{date.toLocaleString(DateTime.DATETIME_SHORT)}</span>  
+        </div>
+      )}
+      {!nextSender && me === "not-me" && (
+        <div className={cx(styles.name, styles[me])}>
+          <span>{date.toLocaleString(DateTime.DATETIME_SHORT)}</span>
+          <span>{displayName}</span>
+        </div>
+      )}
+    </li>
   )
 }

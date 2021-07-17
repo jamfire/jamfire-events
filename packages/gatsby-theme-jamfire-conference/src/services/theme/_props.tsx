@@ -10,27 +10,27 @@ export interface ProviderProps {
 
 export type InitialState = {
   darkMode: boolean
-  setDarkMode?: Dispatch<SetStateAction<boolean>>
+  setDarkMode: Dispatch<SetStateAction<boolean>>
   toggle: boolean
-  setToggle?: Dispatch<SetStateAction<boolean>>
+  setToggle: Dispatch<SetStateAction<boolean>>
   toggleLogin: boolean
-  setToggleLogin?: Dispatch<SetStateAction<boolean>>
+  setToggleLogin: Dispatch<SetStateAction<boolean>>
   navigation: NavigationProps[]
-  setNavigation?: Dispatch<SetStateAction<NavigationProps[]>>
+  setNavigation: Dispatch<SetStateAction<NavigationProps[]>>
   activeRoom: boolean
-  setActiveRoom?: Dispatch<SetStateAction<boolean>>
+  setActiveRoom: Dispatch<SetStateAction<boolean>>
   roomModal: boolean
-  toggleRoomModal?: Dispatch<SetStateAction<boolean>>
-  user?: firebase.User | null
-  setUser?: Dispatch<SetStateAction<firebase.User>>
+  toggleRoomModal: Dispatch<SetStateAction<boolean>>
+  user: firebase.User | null
+  setUser: Dispatch<SetStateAction<firebase.User | null>>
   chats: any
-  setChats?: Dispatch<SetStateAction<any>>
+  setChats: Dispatch<SetStateAction<any>>
   pagePath: string
-  setPagePath?: Dispatch<SetStateAction<string>>
+  setPagePath: Dispatch<SetStateAction<string>>
   toggleCookies: boolean
-  setToggleCookies?: Dispatch<SetStateAction<boolean>>
+  setToggleCookies: Dispatch<SetStateAction<boolean>>
   enableAnalytics: boolean
-  setEnableAnalytics?: Dispatch<SetStateAction<boolean>>
+  setEnableAnalytics: Dispatch<SetStateAction<boolean>>
   toggleLocale: boolean
   setToggleLocale: Dispatch<SetStateAction<boolean>>
   localesEnabled: boolean

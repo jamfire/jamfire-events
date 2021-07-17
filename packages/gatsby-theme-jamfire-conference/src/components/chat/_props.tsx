@@ -1,5 +1,5 @@
 import { RouteComponentProps } from "@reach/router"
-import { MarkdownRemark } from "../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 
 // chat props
@@ -18,6 +18,23 @@ export type MessagesProps = {
   user: firebase.User | null
   mobile?: boolean
   mobileHeight?: number | null
+}
+
+// message props
+export type MessageProps = {
+  item: {
+    message: string
+    created_at: {
+      seconds: number
+      milliseconds: number
+    }
+    user_id: string
+    displayName: string
+    photoURL: string
+  },
+  userId: string | number,
+  sameSender: boolean,
+  nextSender: boolean,
 }
 
 // types

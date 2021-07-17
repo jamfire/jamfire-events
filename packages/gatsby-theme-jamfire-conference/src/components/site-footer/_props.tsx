@@ -1,5 +1,5 @@
 // import livs
-import { MarkdownRemark } from "../../../gatsby/graphqlTypes"
+import { MarkdownRemark } from "../../../gatsby/graphql-types"
 
 // footer props
 export type FooterProps = {

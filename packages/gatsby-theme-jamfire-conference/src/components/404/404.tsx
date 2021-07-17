@@ -2,17 +2,21 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import { localizeData } from "../../utils/localized-data"
+import { DataProps } from "../../gatsby/data-props"
 
 // import components
 import Layout from "../site-layout"
 import { WideWrapper } from "../wrappers"
-import { StyledMissing, MissingIcon } from "./_styles"
+import { FaFireAlt } from "react-icons/fa"
 
-export default ({ data, pageContext }) => {
+// import styles
+import * as styles from "./error.module.scss"
+
+export default ({ data, pageContext }: DataProps) => {
   const { config, defaultConfig, cookies, defaultCookies } = data
 
-  const configData = localizeData(config[0], defaultConfig[0])
-  const cookiesData = localizeData(cookies[0], defaultCookies[0])
+  const configData = localizeData(config, defaultConfig)
+  const cookiesData = localizeData(cookies, defaultCookies)
 
   const { t } = useTranslation()
 
@@ -24,12 +28,12 @@ export default ({ data, pageContext }) => {
       cookies={cookiesData}
     >
       <WideWrapper>
-        <StyledMissing>
-          <div className="content">
-            <MissingIcon fontSize={8} />
+        <div className={`404-page ${styles.missing}`}>
+          <div className={styles.content}>
+            <FaFireAlt className={styles.icon} />
             <h2>{t("error.pageNotFound")}</h2>
           </div>
-        </StyledMissing>
+        </div>
       </WideWrapper>
     </Layout>
   )

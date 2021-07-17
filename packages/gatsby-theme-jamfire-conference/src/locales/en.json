@@ -92,7 +92,8 @@
       "login": "Login to chat",
       "beTheFirst": "Be the first to chat!",
       "message": "Message...",
-      "send": "Send"
+      "send": "Send",
+      "error": "An error occurred. Please try again later."
     },
     "menu": {
       "label": "Show menu"
