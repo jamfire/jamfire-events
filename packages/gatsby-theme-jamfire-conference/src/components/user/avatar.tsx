@@ -12,14 +12,16 @@ import { StyledAvatar, Avatar } from "./_styles"
 import { Link } from "gatsby"
 
 export default ({ isLoggedIn, isLoading, profile }: ProfileProps) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const { photoURL, displayName } = profile || {}
 
-  const { setToggleLogin, setNavigation, locale } = useContext(Context)
+  const { setToggleLogin, setNavigation } = useContext(Context)
 
   const dashboardUrl: string =
-    DEFAULT_LOCALE === locale ? `/dashboard/` : `/${locale}/dashboard/`
+    DEFAULT_LOCALE === i18n.language 
+      ? `/dashboard/` 
+      : `/${i18n.language}/dashboard/`
 
   if (isLoading) {
     return (

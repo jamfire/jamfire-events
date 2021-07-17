@@ -59,7 +59,7 @@ export default ({ data, pageContext }: DataProps) => {
   const localizedLabel: (label: string) => boolean = label => {
     let localize = true
 
-    if (event && typeof event.frontmatter.eventSettings !== undefined) {
+    if (event && typeof event?.frontmatter?.eventSettings !== undefined) {
       let localizedLabel = event.frontmatter.eventSettings[label] || null
 
       if (localizedLabel) {

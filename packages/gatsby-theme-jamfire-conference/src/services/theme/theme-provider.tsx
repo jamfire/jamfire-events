@@ -16,7 +16,6 @@ export default ({ children, pageContext }: ProviderProps) => {
 
   // state
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
-  const [locale, setLocale] = useState(initialState.locale)
   const [toggle, setToggle] = useState(initialState.toggle)
   const [toggleLogin, setToggleLogin] = useState(initialState.toggleLogin)
   const [navigation, setNavigation] = useState(initialState.navigation)
@@ -34,17 +33,10 @@ export default ({ children, pageContext }: ProviderProps) => {
   const [localesEnabled] = useState(initialState.localesEnabled)
 
   useEffect(() => {
-    setLoaded(ready)
-  }, [ready])
-
-  useEffect(() => {
-    setLocale(pageContext.locale)
-    i18n.changeLanguage(pageContext.locale)
-  }, [locale])
-
-  useEffect(() => {
-    setLocale(pageContext.locale)
-  }, [pageContext])
+    if (i18n.isInitialized) {
+      setLoaded(ready)
+    }
+  }, [i18n])
 
   // get initial dark mode
   useEffect(() => {
@@ -100,8 +92,6 @@ export default ({ children, pageContext }: ProviderProps) => {
       value={{
         darkMode,
         setDarkMode,
-        locale,
-        setLocale,
         toggle,
         setToggle,
         toggleLogin,

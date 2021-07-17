@@ -2,6 +2,7 @@
 import React from "react"
 import { HelmetProvider } from "react-helmet-async"
 import loadable from "@loadable/component"
+import { DEFAULT_LOCALE } from "./src/utils/constants"
 
 // import fonts
 require("typeface-work-sans")
@@ -32,7 +33,7 @@ export const wrapRootElement = ({ element }) => {
   return (
     <CookiesProvider>
       <FirebaseProvider>
-        <LocalesProvider>{element}</LocalesProvider>
+        {element}
       </FirebaseProvider>
     </CookiesProvider>
   )
@@ -41,8 +42,10 @@ export const wrapRootElement = ({ element }) => {
 // wrap page element
 export const wrapPageElement = ({ element, props: { pageContext } }) => {
   return (
-    <ThemeProvider pageContext={pageContext}>
-      <HelmetProvider>{element}</HelmetProvider>
-    </ThemeProvider>
+    <LocalesProvider defaultLocale={DEFAULT_LOCALE} pageContext={pageContext}>
+      <ThemeProvider pageContext={pageContext}>
+        <HelmetProvider>{element}</HelmetProvider>
+      </ThemeProvider>
+    </LocalesProvider>
   )
 }

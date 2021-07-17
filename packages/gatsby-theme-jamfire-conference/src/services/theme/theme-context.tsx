@@ -9,8 +9,6 @@ import { FaHome, FaCalendarAlt } from "react-icons/fa"
 // initial state
 export const initialState: InitialState = {
   darkMode: false,
-  locale: "en",
-  setLocale: () => {},
   toggle: false,
   user: null,
   toggleLogin: false,

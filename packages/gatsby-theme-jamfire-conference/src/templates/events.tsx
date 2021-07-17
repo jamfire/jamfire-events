@@ -53,7 +53,13 @@ export const eventsQuery = graphql`
     config: configByLocale(locale: $locale) {
       ...ConfigurationFragment
     }
-    cookies: cookiesByLocale(locale: $locale) {
+    defaultConfig: configByLocale(locale: $locale) {
+      ...ConfigurationFragment
+    }
+    cookies: cookiesByLocale(locale: $defaultLocale) {
+      ...CookiesFragment
+    }
+    defaultCookies: cookiesByLocale(locale: $defaultLocale) {
       ...CookiesFragment
     }
   }

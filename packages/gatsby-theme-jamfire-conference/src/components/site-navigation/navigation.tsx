@@ -18,14 +18,16 @@ export default ({ navigation, config }: SiteNavigationProps) => {
     return <></>
   }
 
-  const { toggle, locale } = useContext(Context)
+  const { toggle } = useContext(Context)
+
+  const { i18n } = useTranslation()
 
   return (
     <StyledNavigation>
       <Nav>
         <ul className={toggle ? "toggled" : "untoggled"}>
           {navigation.map((item: any, key: number) => {
-            return <NavLink locale={locale} link={item} key={key} />
+            return <NavLink locale={i18n.language} link={item} key={key} />
           })}
         </ul>
       </Nav>

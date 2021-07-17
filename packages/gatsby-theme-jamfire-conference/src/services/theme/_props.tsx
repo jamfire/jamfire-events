@@ -11,8 +11,6 @@ export interface ProviderProps {
 export type InitialState = {
   darkMode: boolean
   setDarkMode?: Dispatch<SetStateAction<boolean>>
-  locale: string
-  setLocale: Dispatch<SetStateAction<string | undefined>>
   toggle: boolean
   setToggle?: Dispatch<SetStateAction<boolean>>
   toggleLogin: boolean

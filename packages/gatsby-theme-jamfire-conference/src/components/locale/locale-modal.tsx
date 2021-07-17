@@ -13,12 +13,14 @@ import { Modal } from "../modal"
 import { LocalWrapper, Language, Code, Label } from "./_styles"
 
 export default ({ config }: LocaleModalProps) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const location = useLocation()
 
-  const { locale, toggleLocale, setToggleLocale, setLocale, localesEnabled } =
+  const { toggleLocale, setToggleLocale, localesEnabled } =
     useContext(Context)
+
+  const locale = i18n.language
 
   let locales = LOCALES.filter(locale => locale !== locale)
 
@@ -39,7 +41,7 @@ export default ({ config }: LocaleModalProps) => {
         ? basePath
         : `/${newLocale}${basePath}/`.replace("//", "/")
 
-    setLocale(locale)
+    i18n.changeLanguage(newLocale)
     setToggleLocale(!toggleLocale)
     return navigate(path)
   }
