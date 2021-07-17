@@ -4,6 +4,11 @@ import MarkdownIt from "markdown-it"
 import { MarkdownContentProps } from "./_props"
 
 export default ({ content, className }: MarkdownContentProps) => {
+
+  if (content === null || content === undefined) {
+    return null
+  }
+
   const md = new MarkdownIt()
 
   return (

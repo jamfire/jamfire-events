@@ -1,0 +1,90 @@
+@import "../../theme/media.scss";
+
+// styled inner component
+.inner {
+  background: var(--content-background);
+  width: 90vw;
+  border-radius: 4px;
+  min-height: 60vh;
+  display: grid;
+  grid-template-rows: 1fr 80px;
+  margin: -2rem;
+
+  @include tablet-up {
+    width: 80vw;
+  }
+
+  @include tablet-side {
+    width: 55vw;
+  }
+}
+
+// footer component
+.footer {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+}
+
+// content component
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+
+// cookies list component
+.list {
+
+  ul {
+    list-style: none;
+    border-right: 1px solid var(--border-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--border-color);
+
+      button {
+        border: 0;
+        border-right: 3px solid transparent;
+        outline: 0;
+        cursor: pointer;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background: none;
+        cursor: pointer;
+        text-align: left;
+        color: var(--text-color);
+
+        &:hover {
+          color: var(--logo-background);
+        }
+
+        &.active {
+          border-right: 3px solid var(--logo-background);
+        }
+      }
+    }
+  }
+}
+
+// content component
+.content {
+  padding: 1rem;
+  overflow-y: scroll;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+// content header component
+.header {
+    display: grid;
+    grid-template-columns: 1fr 52px;
+    grid-gap: 1rem;
+    padding-bottom: 1rem;
+}

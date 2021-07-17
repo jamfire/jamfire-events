@@ -5,6 +5,17 @@ export type CookieNoticeProps = {
   cookies: MarkdownRemark
 }
 
+export type ManageCookiesProps = {
+  config: MarkdownRemark
+  cookies: MarkdownRemark
+}
+
 export type ButtonProps = {
   primary?: boolean
+}
+
+export type CookieProps = {
+  title: string
+  content: string
+  enabled?: boolean
 }
