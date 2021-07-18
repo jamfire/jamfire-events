@@ -1,0 +1,165 @@
+@import "../../theme/media.scss";
+
+/**
+ * Shared Styles
+ */
+.dark, .light {
+
+    // main layout
+    --margin-push: 100px;
+    --sidebar-width: 300px; 
+} 
+
+/**
+ * Light Theme Styles
+ */
+.light {
+
+    // basic colors
+    --text-color: #333;
+    --background: #fff;
+    --html-background: #222;
+    --content-background: #f7f7f7;
+    --content-background-darker: #eee;
+    --content-background-hover: #eee;
+    --callout-background: #fff;
+
+    // hero colors
+    --hero-overlay: rgba(255, 255, 255, 0.75);
+
+    // logo colors
+    --logo-hover: var(--accent-color);
+    --logo-background: var(--primary-color);
+    --logo-color: #fff;
+
+    // anchor colors
+    --anchor-color: var(--primary-color);
+    --anchor-active: var(--primary-color);
+    --nav-anchor-color: #aaa;
+    --nav-anchor-active: #888;
+
+    // border-colors
+    --border-color: #efefef;
+
+    // button colors
+    --button-background: #efefef;
+    --button-background-hover: var(--primary-color);
+    --button-text-hover: #fff;
+    --disabled-button-background: #ddd;
+    --disabled-button-color: #aaa;
+    --outline-button-color: var(--primary-color);
+
+    // overlay colors
+    --overlay: rgb(17,72,119);
+    --overlay-gradient: linear-gradient(55deg, rgba(145,37,107,0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    --overlay-hover: linear-gradient(55deg, rgba(145,37,107,0.7) 0%, rgba(0, 0, 0, 0) 100%);
+
+    // form colors
+    --placeholder-color: #333;
+    --form-background: #efefef;
+    --form-disabled-color: #ccc;
+    --form-enabled-color: #fff;
+    --form-button-background: #009965;
+
+    // list colors
+    --list-header-background: #efefef;
+    --list-header-background-callout: #e7e7e7;
+    --list-header-background-darker: #ddd;
+
+    // form colors
+    --form-boder: #777;
+    --form-input-background: #fff;
+    --form-input-color: #333;
+    --form-input-placeholder: #333;
+    --form-error-color: #d23331;
+    --form-button-bg: #eeeeee;
+    --form-button-color: #333;
+    --form-button-bg-hover: var(--primary-color);
+    --form-button-color-hover: #fff;
+
+    // error colors
+    --error-background: #ff8c87;
+    --error-color: #fff;
+
+    // question and answer
+    --qa-secondary-color: #aaa;
+    --qa-secondary-background: #efefef;
+    --qa-header-color: #e7e7e7;
+}
+
+/**
+ * Dark Theme Styles
+ */
+.dark {
+
+    // basic colors
+    --text-color: #eee;
+    --background: #3c4043;
+    --html-background: #222;
+    --content-background: #333;
+    --content-background-darker: #222;
+    --content-background-hover: #555;
+    --callout-background: #2a2a2a;
+
+    // hero colors
+    --hero-overlay: rgba(0, 0, 0, 0.25);
+
+    // logo colors
+    --logo-hover: var(--accent-color);
+    --logo-background: var(--primary-color);
+    --logo-color: #fff : #fff;
+
+    // anchor colors
+    --anchor-color: var(--primary-color);
+    --anchor-active: var(--primary-color);
+    --nav-anchor-color: #888;
+    --nav-anchor-active: #fff;
+
+    // border-colors
+    --border-color: #373737;
+
+    // button colors
+    --button-background: #373737;
+    --button-background-hover: var(--primary-color);
+    --button-text-hover: #fff;
+    --disabled-button-background: #373737;
+    --disabled-button-color: #888;
+    --outline-button-color: #fff;
+
+    // overlay colors
+    --overlay: rgb(17,72,119);
+    --overlay-gradient: linear-gradient(55deg, rgba(103,37,80,0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    --overlay-hover: linear-gradient(55deg, rgba(103,37,80,0.7) 0%, rgba(0, 0, 0, 0) 100%);
+
+    // form colors
+    --placeholder-color: #aaa;
+    --form-background: #2a2a2a;
+    --form-disabled-color: #444;
+    --form-enabled-color: #eee;
+    --form-button-background: #009965;
+
+    // list colors
+    --list-header-background: #2f2f2f;
+    --list-header-background-callout: #3f3f3f;
+    --list-header-background-darker: #2f2f2f;
+
+    // form colors
+    --form-boder: #aaa;
+    --form-input-background: #444;
+    --form-input-color: #bbb;
+    --form-input-placeholder: #bbb;
+    --form-error-color: #d23331;
+    --form-button-bg: #2f2f2f;
+    --form-button-color: #ddd;
+    --form-button-bg-hover: var(--primary-color);
+    --form-button-color-hover: #fff;
+
+    // error colors
+    --error-background: #ff8c87;
+    --error-color: #fff;
+
+    // question and answer
+    --qa-secondary-color: #fff;
+    --qa-secondary-background: #666;
+    --qa-header-color: #333;
+}

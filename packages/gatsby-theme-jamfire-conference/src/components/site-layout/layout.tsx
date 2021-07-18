@@ -8,7 +8,6 @@ import "../../gatsby/fragments"
 // import components
 import { Context } from "../../services/theme"
 import { StyledLayout } from "./_styles"
-import GlobalStyles from "../global-styles"
 import Seo from "../seo"
 import Header from "../site-header"
 import Navigation from "../site-navigation"
@@ -16,6 +15,7 @@ import Footer from "../site-footer"
 
 // import styles
 import "./global.scss"
+import * as styles from "./layout.module.scss"
 
 // loadable components
 const LoginModal = loadable(() => import("../user/login-modal"))
@@ -36,8 +36,10 @@ export default ({
   useHeaderTitle = false,
   locale,
 }: LayoutProps) => {
+
   const {
     navigation,
+    darkMode
   } = useContext(Context)
 
   const { ready } = useTranslation()
@@ -49,7 +51,7 @@ export default ({
   }, [ready])
 
   if (!loaded) {
-    return <></>
+    return null
   }
 
   const {
@@ -59,16 +61,21 @@ export default ({
     }
   } = config?.frontmatter || {}
   
+  const theme = darkMode ? styles.dark : styles.light
+
   return (
-    <StyledLayout id="layout">
+    <StyledLayout className={theme} id="layout">
       <style dangerouslySetInnerHTML={{ __html: `
         :root {
           --primary-color: ${primaryColor};
           --accent-color: ${primaryColorHover};
         }
       `}} />
-      <Seo activeTitle={title} activeFavicon={favicon} config={config} />
-      <GlobalStyles config={config} />
+      <Seo 
+        activeTitle={title} 
+        activeFavicon={favicon} 
+        config={config} 
+      />
       <Header
         config={config}
         headerLogo={headerLogo}
