@@ -10,6 +10,9 @@ import { EventsWrapper, Events } from "./_styles"
 import EventSummary from "./event-summary"
 import Pagination from "../pagination"
 
+// import styles
+import * as styles from "./events.module.scss"
+
 export default ({ data, pageContext }: DataProps) => {
   const {
     events,
@@ -33,19 +36,19 @@ export default ({ data, pageContext }: DataProps) => {
       config={configData}
       cookies={cookiesData}
     >
-      <EventsWrapper>
-        <Events>
+      <div className={styles.wrapper}>
+        <div className={styles.events}>
           {eventsData.edges.map((event: any, key: number) => (
             <EventSummary key={key} event={event} locale={pageContext.locale} />
           ))}
-        </Events>
+        </div>
         <Pagination
           currentPage={pageContext.currentPage}
           numPages={pageContext.numPages}
           locale={pageContext.locale}
           path={`/events/`}
         />
-      </EventsWrapper>
+      </div>
     </Layout>
   )
 }

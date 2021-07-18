@@ -2,7 +2,7 @@
 import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // event summary type
-export type EventSummaryProps = {
+export interface EventSummaryProps {
   event: {
     node: MarkdownRemark
   }
