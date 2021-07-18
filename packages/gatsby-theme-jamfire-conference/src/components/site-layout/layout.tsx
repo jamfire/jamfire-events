@@ -2,12 +2,12 @@
 import React, { useContext, useState, useEffect } from "react"
 import loadable from "@loadable/component"
 import { useTranslation } from "react-i18next"
-import { LayoutProps } from "./_props"
+import { LayoutProps } from "./layout.d"
+import cx from "classnames"
 import "../../gatsby/fragments"
 
 // import components
 import { Context } from "../../services/theme"
-import { StyledLayout } from "./_styles"
 import Seo from "../seo"
 import Header from "../site-header"
 import Navigation from "../site-navigation"
@@ -55,16 +55,18 @@ export default ({
   }
 
   const {
-    colors: {
-      primaryColor,
-      primaryColorHover
-    }
+    colors
   } = config?.frontmatter || {}
+
+  const {
+    primaryColor,
+    primaryColorHover
+  } = colors || {}
   
   const theme = darkMode ? styles.dark : styles.light
 
   return (
-    <StyledLayout className={theme} id="layout">
+    <div className={cx(theme, styles.layout)} id="layout">
       <style dangerouslySetInnerHTML={{ __html: `
         :root {
           --primary-color: ${primaryColor};
@@ -90,6 +92,6 @@ export default ({
       <CookieNotice cookies={cookies} config={config} />
       <ManageCookies cookies={cookies} config={config} />
       <DashboardModal config={config} />
-    </StyledLayout>
+    </div>
   )
 }

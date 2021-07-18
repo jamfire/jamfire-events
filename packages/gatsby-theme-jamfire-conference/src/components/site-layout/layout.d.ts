@@ -1,5 +1,5 @@
 // import libs
-import { MarkdownRemark } from "../../../gatsby/graphql-types"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // layout props
 export interface LayoutProps {
