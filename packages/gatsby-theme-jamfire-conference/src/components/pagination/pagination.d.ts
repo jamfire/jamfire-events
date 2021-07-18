@@ -1,5 +1,5 @@
 // pagination props
-export type PaginationProps = {
+export interface PaginationProps {
   currentPage: number
   numPages: number
   locale: string
@@ -7,7 +7,7 @@ export type PaginationProps = {
 }
 
 // page item props
-export type PageItemProps = {
+export interface PageItemProps {
   pageNumber: number
   currentPage: number
   path: string

@@ -1,5 +1,5 @@
 // imports
-import { MarkdownRemark, MarkdownRemarkGroupConnection } from "./graphql-types"
+import { MarkdownRemark, MarkdownRemarkEdge, MarkdownRemarkGroupConnection } from "./graphql-types"
 import { SitePageContext } from "./graphql-types"
 import { RouteComponentProps } from "@reach/router"
 
@@ -12,8 +12,8 @@ export interface DataProps extends RouteComponentProps {
     defaultCookies: MarkdownRemark
     event?: MarkdownRemark
     defaultEvent?: MarkdownRemark
-    events?: MarkdownRemarkGroupConnection
-    defaultEvents?: MarkdownRemarkGroupConnection
+    events?:  EventsProps
+    defaultEvents?: EventsProps
     page?: MarkdownRemark
     defaultPage?: MarkdownRemark
   }
@@ -23,4 +23,10 @@ export interface DataProps extends RouteComponentProps {
 export interface PageContextProps extends SitePageContext {
   locale: string
   defaultLocale: string
+  currentPage?: number
+  numPages?: number
+}
+
+export interface EventsProps extends MarkdownRemarkGroupConnection {
+  edges: Array<MarkdownRemarkEdge>
 }

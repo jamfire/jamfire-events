@@ -1,6 +1,6 @@
 // import libs
 import React from "react"
-import { PaginationProps, PageItemProps } from "./_props"
+import { PaginationProps, PageItemProps } from "./pagination.d"
 
 // import components
 import { Pagination } from "./_styles"
