@@ -2,7 +2,7 @@
 import React, { useState, useContext } from "react"
 import firebase from "firebase/app"
 import { useTranslation } from "react-i18next"
-import { SendProps } from "./_props"
+import { SendProps } from "./chat.d"
 import cx from "classnames"
 
 // import components

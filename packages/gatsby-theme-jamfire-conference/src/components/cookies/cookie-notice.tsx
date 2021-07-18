@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useContext } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { useTranslation } from "react-i18next"
-import { CookieNoticeProps } from "./_props"
+import { CookieNoticeProps } from "./cookies"
 import cx from "classnames"
 
 // import components

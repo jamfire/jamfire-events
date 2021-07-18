@@ -1,6 +1,6 @@
 // import libs
 import React, { useContext } from "react"
-import { DashboardModalProps } from "./_props"
+import { DashboardModalProps } from "./dashboard-modal.d"
 import { useTranslation } from "react-i18next"
 
 // import components

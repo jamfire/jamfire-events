@@ -10,7 +10,7 @@ export interface ChatProps extends RouteComponentProps {
 }
 
 // message props
-export type MessagesProps = {
+export interface MessagesProps {
   event_id: string
   chats: any
   setChats: any
@@ -21,7 +21,7 @@ export type MessagesProps = {
 }
 
 // message props
-export type MessageProps = {
+export interface MessageProps {
   item: {
     message: string
     created_at: {
@@ -37,8 +37,8 @@ export type MessageProps = {
   nextSender: boolean,
 }
 
-// types
-export type SendProps = {
+// send props
+export interface SendProps {
   event_id: string
   chats: any
   setChats: any

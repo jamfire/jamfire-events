@@ -1,6 +1,6 @@
 // import libs
 import React from "react"
-import { ButtonProps } from "./_props"
+import { ButtonProps } from "./button.d"
 
 // import styles
 import * as styles from "./button.module.scss"

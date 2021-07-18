@@ -2,7 +2,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { useTranslation } from "react-i18next"
-import { ManageCookiesProps } from "./_props"
+import { ManageCookiesProps } from "./cookies"
 import cx from "classnames"
 
 // import components

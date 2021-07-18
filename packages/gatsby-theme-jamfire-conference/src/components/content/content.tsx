@@ -1,6 +1,6 @@
 // import libs
 import React from "react"
-import { ContentProps } from "./_props"
+import { ContentProps } from "./content.d"
 
 // import styles
 import * as styles from "./content.module.scss"

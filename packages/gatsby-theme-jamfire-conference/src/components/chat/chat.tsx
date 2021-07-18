@@ -1,6 +1,6 @@
 // import libs
 import React, { useContext, useState, useEffect } from "react"
-import { ChatProps } from "./_props"
+import { ChatProps } from "./chat.d"
 import { bp } from "../../utils/media"
 import { checkIsClient } from "../../utils/check-is-client"
 

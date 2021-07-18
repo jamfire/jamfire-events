@@ -7,20 +7,21 @@ const useFirestoreQuery = (query: any) => {
   const [docs, setDocs] = React.useState([])
 
   React.useEffect(() => {
-    const unsubscribe = query.onSnapshot(
-      (querySnapshot: any) => {
-        setIsLoading(false)
-        setDocs(
-          querySnapshot.docs.map((doc: any) => ({
-            _id: doc.id,
-            ...doc.data(),
-          }))
-        )
-      },
-      (err: Error) => {
-        setError(err)
-      }
-    )
+    const unsubscribe = query
+      .onSnapshot(
+        (querySnapshot: any) => {
+          setIsLoading(false)
+          setDocs(
+            querySnapshot.docs.map((doc: any) => ({
+              _id: doc.id,
+              ...doc.data(),
+            }))
+          )
+        },
+        (err: Error) => {
+          setError(err)
+        }
+      )
 
     return () => unsubscribe()
   }, [])

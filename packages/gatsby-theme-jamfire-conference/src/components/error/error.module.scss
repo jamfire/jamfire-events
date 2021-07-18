@@ -1,8 +1,5 @@
-// import styles
-import styled from "@emotion/styled"
-
 // error message
-export const Error = styled.div`
+.error {
   font-style: italic;
   padding: 0.25rem 1rem;
   border-radius: 4px;
@@ -11,4 +8,4 @@ export const Error = styled.div`
   color: var(--error-color);
   border-radius: 4px;
   margin-bottom: 1rem;
-`
+}

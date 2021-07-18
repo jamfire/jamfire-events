@@ -1,6 +1,6 @@
 // import libs
 import React, { useEffect, useState, useContext } from "react"
-import { MessagesProps, MessageProps } from "./_props"
+import { MessagesProps, MessageProps } from "./chat.d"
 import { useFirestoreQuery } from "../../services"
 import { useTranslation } from "react-i18next"
 import { DateTime } from "luxon"

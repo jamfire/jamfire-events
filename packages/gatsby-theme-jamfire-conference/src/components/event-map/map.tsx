@@ -2,14 +2,17 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ClientProps } from "../event/_props"
 import { MapContainer, TileLayer } from "react-leaflet"
+import { LatLngBounds } from "leaflet"
 import { useTranslation } from "react-i18next"
 import { useFirestoreQuery } from "../../services"
 import { checkIsClient } from "../../utils/check-is-client"
+import { SetBoundsProps, DataProps } from "./event-map"
+import firebase from "firebase/app"
+import "firebase/firestore"
 
 // import components
 import { FirebaseContext } from "../../services"
 import { Context } from "../../services/theme"
-import { MapWrapper } from "./_styles"
 import MapBounds from "./map-bounds"
 import MapMarkers from "./map-markers"
 import Seo from "../seo"
@@ -17,17 +20,23 @@ import Loader from "../loader"
 
 // import css
 import "leaflet/dist/leaflet.css"
+import * as styles from "./map.module.scss"
 
 export default ({ config, event }: ClientProps) => {
   const {
-    frontmatter: { title, slug },
+    frontmatter
   } = event
+
+  const {
+    title,
+    slug
+  } = frontmatter || {}
 
   const isClient = checkIsClient()
 
   const { darkMode } = useContext(Context)
 
-  const [bounds, setBounds] = useState(null)
+  const [bounds, setBounds]: SetBoundsProps = useState(new LatLngBounds([0,0], [0,0]))
   const [loaded, setLoaded] = useState(false)
 
   const { firestore } = useContext(FirebaseContext)
@@ -37,7 +46,7 @@ export default ({ config, event }: ClientProps) => {
       ?.collection("geolocation")
       .where("slug", "==", slug)
       .orderBy("created_at", "desc")
-      .limit(1000)
+      .limit(500) as firebase.firestore.DocumentData
   )
 
   useEffect(() => {
@@ -46,45 +55,52 @@ export default ({ config, event }: ClientProps) => {
     }
   }, [isLoading])
 
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    let locations = []
 
-    if (data.length > 0) {
-      data.length > 0 &&
-        data.forEach(location => {
-          locations.push([location.lat, location.lon])
-        })
+    let locations = JSON.parse(JSON.stringify(data))
 
-      setBounds(locations)
-    }
+    let coords: [number, number][] = []
+    
+    locations.forEach((location: DataProps) => {
+      const lat: number = parseFloat(location?.lat)
+      const lon: number = parseFloat(location?.lon)
+      coords.push([lat, lon])
+    })
+
+    const newBounds = new LatLngBounds(coords)
+
+    setBounds(newBounds)
+    
   }, [data])
 
   // if loading or an error display the loader
   if (!loaded) {
     return (
-      <MapWrapper>
+      <div className={styles.wrapper}>
         <Loader />
-      </MapWrapper>
+      </div>
     )
   }
 
   if (isClient && bounds !== null) {
     return (
-      <MapWrapper>
+      <div className={styles.wrapper}>
         <Seo
           config={config}
           activeTitle={`${t("navigation.map")} | ${title}`}
+          locale={i18n.language}
         />
         <MapContainer
+          className={styles.leafletContainer}
           center={[0, 0]}
           zoom={3}
           attributionControl={false}
-          // zoomControl={false}
-          // doubleClickZoom={false}
-          // scrollWheelZoom={false}
-          // dragging={false}
+          zoomControl={false}
+          doubleClickZoom={false}
+          scrollWheelZoom={false}
+          dragging={false}
           animate={true}
           easeLinearity={0.35}
         >
@@ -102,18 +118,8 @@ export default ({ config, event }: ClientProps) => {
           )}
           <MapBounds bounds={bounds} />
           <MapMarkers data={data} />
-          {/* {data.map((location, idx: number) => {
-
-              return(
-                <Marker 
-                  key={idx}
-                  position={[ location.lat, location.lon]} 
-                  icon={UserMarker}
-                />
-              )
-            })} */}
         </MapContainer>
-      </MapWrapper>
+      </div>
     )
   }
 
