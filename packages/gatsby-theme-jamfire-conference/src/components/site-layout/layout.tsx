@@ -14,6 +14,9 @@ import Header from "../site-header"
 import Navigation from "../site-navigation"
 import Footer from "../site-footer"
 
+// import styles
+import "./global.scss"
+
 // loadable components
 const LoginModal = loadable(() => import("../user/login-modal"))
 const Main = loadable(() => import("../site-main"))
@@ -48,9 +51,22 @@ export default ({
   if (!loaded) {
     return <></>
   }
+
+  const {
+    colors: {
+      primaryColor,
+      primaryColorHover
+    }
+  } = config?.frontmatter || {}
   
   return (
     <StyledLayout id="layout">
+      <style dangerouslySetInnerHTML={{ __html: `
+        :root {
+          --primary-color: ${primaryColor};
+          --accent-color: ${primaryColorHover};
+        }
+      `}} />
       <Seo activeTitle={title} activeFavicon={favicon} config={config} />
       <GlobalStyles config={config} />
       <Header

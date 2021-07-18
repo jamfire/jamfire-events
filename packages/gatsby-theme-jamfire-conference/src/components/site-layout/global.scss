@@ -1,0 +1,4 @@
+// global dark and light styles
+:root {
+    --accent-hover: lighten(var(--accent-color), 10%);
+}

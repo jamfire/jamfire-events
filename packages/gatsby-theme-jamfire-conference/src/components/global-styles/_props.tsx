@@ -1,7 +1,7 @@
 // import libs
-import { MarkdownRemark } from "../../../gatsby/graphql-types"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // styles props
-export type GlobalStylesProps = {
+export interface GlobalStylesProps {
   config: MarkdownRemark
 }
