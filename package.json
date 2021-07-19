@@ -33,7 +33,7 @@
     "cypress": "^7.7.0",
     "cypress-axe": "^0.12.2",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-baseui": "^9.116.3",
