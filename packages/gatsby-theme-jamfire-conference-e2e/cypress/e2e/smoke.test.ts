@@ -12,8 +12,5 @@ describe(`Smoke Test`, () => {
 
     // demo event page
     cy.visit(`/event/demo/`).assertRoute(`/event/demo/`)
-
-    // dashboard should redirect
-    cy.visit(`/dashboard`).assertRoute(`/`)
   })
 })
