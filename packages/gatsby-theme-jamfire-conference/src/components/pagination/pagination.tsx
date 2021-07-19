@@ -3,8 +3,10 @@ import React from "react"
 import { PaginationProps, PageItemProps } from "./pagination.d"
 
 // import components
-import { Pagination } from "./_styles"
 import { Link } from "gatsby"
+
+// import styles
+import * as styles from "./pagination.module.scss"
 
 export default ({ currentPage, numPages, locale, path }: PaginationProps) => {
   let pages: PageItemProps[] = []
@@ -21,7 +23,7 @@ export default ({ currentPage, numPages, locale, path }: PaginationProps) => {
   }
 
   return (
-    <Pagination>
+    <div className={styles.pagination}>
       <ul>
         {pages.map(page => {
           const { pageNumber, currentPage, path } = page
@@ -35,6 +37,6 @@ export default ({ currentPage, numPages, locale, path }: PaginationProps) => {
           )
         })}
       </ul>
-    </Pagination>
+    </div>
   )
 }

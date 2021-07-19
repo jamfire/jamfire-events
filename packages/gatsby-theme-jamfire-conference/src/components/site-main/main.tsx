@@ -1,10 +1,10 @@
 // import libs
 import React from "react"
-import { MainProps } from "./_props"
+import { MainProps } from "./main.d"
 
-// import components
-import { StyledMain } from "./_styles"
+// import styles
+import * as styles from "./main.module.scss"
 
 export default ({ children }: MainProps) => {
-  return <StyledMain>{children}</StyledMain>
+  return <main className={styles.main}>{children}</main>
 }

@@ -1,7 +1,7 @@
 // import libs
 import React, { useState, useEffect } from "react"
 import { getSrc } from "gatsby-plugin-image"
-import { SeoProps } from "./_props"
+import { SeoProps } from "./seo.d"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 
 // import components
@@ -20,10 +20,14 @@ export default ({
   const { frontmatter } = config || {}
 
   const {
-    graphics: { favicon },
+    graphics,
   } = frontmatter || {}
 
-  const [faviconSrc, setFaviconSrc] = useState(null)
+  const {
+    favicon
+  } = graphics || {}
+
+  const [faviconSrc, setFaviconSrc] = useState("")
 
   useEffect(() => {
     // favicon processing
@@ -35,7 +39,8 @@ export default ({
       seoFavicon = activeFavicon
     }
     if (seoFavicon !== null) {
-      setFaviconSrc(getSrc(seoFavicon))
+      const src = getSrc(seoFavicon)
+      setFaviconSrc(src || "")
     }
   }, [activeFavicon])
 
@@ -55,11 +60,11 @@ export default ({
       />
       <meta
         name="description"
-        content={config.frontmatter?.description}
+        content={config.frontmatter?.description || ""}
         data-react-helmet="true"
       />
       {faviconSrc !== null && (
-        <link rel="icon" type="image/png" href={faviconSrc} sizes="16x16" />
+        <link rel="icon" type="image/png" href={faviconSrc || ""} sizes="16x16" />
       )}
     </Helmet>
   )

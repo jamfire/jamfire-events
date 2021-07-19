@@ -1,5 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
-import { NavigationProps } from "../../components/site-navigation/_props"
+import { NavigationProps } from "../../components/site-navigation/navigation.d"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 

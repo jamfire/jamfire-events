@@ -1,10 +1,10 @@
 // import livs
-import { MarkdownRemark } from "../../../gatsby/graphql-types"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // footer props
 export type FooterProps = {
   config: MarkdownRemark
-  event?: MarkdownRemark
+  event: MarkdownRemark | null
 }
 
 // copyright props

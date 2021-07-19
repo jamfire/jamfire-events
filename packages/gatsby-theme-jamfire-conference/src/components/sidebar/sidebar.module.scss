@@ -1,19 +1,17 @@
-// import styles
-import styled from "@emotion/styled"
-import mq from "../../utils/media"
+@import "../../theme/media.scss";
 
 // sidebar component
-export const Sidebar = styled.div`
+.sidebar {
   grid-area: sidebar;
 
-  ${mq("tablet_up")} {
+  @include tablet-up {
     border-top: 1px solid var(--border-color);
     height: calc(100vh - 160px);
     overflow-y: scroll;
   }
 
-  ${mq("tablet_side")} {
+  @include tablet-side {
     border-top: none;
     border-right: 1px solid var(--border-color);
   }
-`
+}

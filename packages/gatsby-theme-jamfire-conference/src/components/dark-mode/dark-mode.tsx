@@ -1,50 +1,51 @@
 // import libs
 import React, { useContext } from "react"
-import { DarkModeProps } from "./_props"
+import { DarkModeProps } from "./dark-mode.d"
 
 // import components
 import { Context } from "../../services/theme"
 import Switch from "react-switch"
-import { Container, Icon } from "./_styles"
 import { FaSun, FaMoon } from "react-icons/fa"
+
+// import styles
+import * as styles from "./dark-mode.module.scss"
 
 // Sun component
 const Sun = () => (
-  <Icon>
-    <FaSun className="sun" />
-  </Icon>
+  <div className={styles.icon}>
+    <FaSun className={styles.sun} />
+  </div>
 )
 
 // Moon component
 const Moon = () => (
-  <Icon>
-    <FaMoon className="moon" />
-  </Icon>
+  <div className={styles.icon}>
+    <FaMoon className={styles.moon} />
+  </div>
 )
 
 export default ({ config }: DarkModeProps) => {
-  // static query for logo data
-  let {
-    frontmatter: {
-      colors: { darkModeOffColor, darkModeOnColor },
-    },
-  } = config
 
-  if (!darkModeOnColor) {
-    darkModeOffColor = "#ff0050"
-  }
+  const {
+    frontmatter
+  } = config || {}
 
-  if (!darkModeOffColor) {
-    darkModeOffColor = "#ff0050"
-  }
+  const {
+    colors
+  } = frontmatter || {}
+
+  const {
+    darkModeOffColor,
+    darkModeOnColor
+  } = colors || {}
+
+  const offColor = darkModeOffColor || "#ff0050"
+  const onColor = darkModeOnColor || "#ff0050"
 
   const { darkMode, setDarkMode } = useContext(Context)
 
-  const onColor: string = darkMode ? darkModeOnColor : darkModeOnColor
-  const offColor: string = darkMode ? darkModeOffColor : darkModeOffColor
-
   return (
-    <Container>
+    <div className={styles.container}>
       <Switch
         className="dark-mode"
         aria-label="Dark Mode"
@@ -58,6 +59,6 @@ export default ({ config }: DarkModeProps) => {
         uncheckedIcon={<Sun />}
         checkedIcon={<Moon />}
       />
-    </Container>
+    </div>
   )
 }

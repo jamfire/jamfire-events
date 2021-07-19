@@ -1,9 +1,7 @@
-// import styles
-import styled from "@emotion/styled"
-import mq from "../../utils/media"
+@import "../../theme/media.scss";
 
 // navigation component
-export const StyledNavigation = styled.div`
+.navigation {
   grid-area: navigation;
   background: var(--background);
   border-top: 1px solid var(--border-color);
@@ -12,7 +10,7 @@ export const StyledNavigation = styled.div`
   grid-template-columns: 0 1fr 80px;
   grid-template-areas: "main-nav copyright toggle";
 
-  ${mq("tablet_up")} {
+  @include tablet-up {
     border-top: 0;
     border-right: 1px solid var(--border-color);
     margin-right: -1px;
@@ -22,10 +20,10 @@ export const StyledNavigation = styled.div`
     text-align: center;
     grid-template-columns: 1fr 0 80px;
   }
-`
+}
 
 // styled nav component
-export const Nav = styled.nav`
+.nav {
   grid-area: main-nav;
 
   width: 100%;
@@ -86,7 +84,7 @@ export const Nav = styled.nav`
     }
   }
 
-  ${mq("tablet_up")} {
+  @include tablet-up {
     ul {
       width: 100%;
       display: block;
@@ -110,7 +108,7 @@ export const Nav = styled.nav`
           border-right: 3px solid transparent;
           border-left: 3px solid transparent;
           border-top: none;
-          bordor-bottom: none;
+          border-bottom: none;
           height: auto;
           padding: 0.5rem 0.25rem;
           margin: 2px 0;
@@ -125,49 +123,5 @@ export const Nav = styled.nav`
       }
     }
   }
-`
+}
 
-// toggle component
-export const Toggle = styled.div`
-  grid-area: toggle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--background-color);
-
-  ${mq("tablet_up")} {
-    display: none;
-  }
-`
-
-// styled credit component
-export const Credit = styled.div`
-  display: none;
-
-  ${mq("tablet_up")} {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-      display: block;
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--content-background);
-      color: var(--nav-anchor-color);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-`

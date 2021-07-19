@@ -42,7 +42,7 @@ export default ({
     darkMode
   } = useContext(Context)
 
-  const { ready } = useTranslation()
+  const { ready, i18n } = useTranslation()
 
   const [loaded, setLoaded] = useState(false)
 
@@ -74,9 +74,10 @@ export default ({
         }
       `}} />
       <Seo 
-        activeTitle={title} 
+        activeTitle={title || ""} 
         activeFavicon={favicon} 
-        config={config} 
+        config={config || null} 
+        locale={i18n.language}
       />
       <Header
         config={config}

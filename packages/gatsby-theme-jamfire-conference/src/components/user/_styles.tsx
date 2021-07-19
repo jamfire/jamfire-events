@@ -1,54 +1,6 @@
 import styled from "@emotion/styled"
 import mq from "../../utils/media"
 
-export const StyledAvatar = styled.div`
-  grid-area: profile;
-  position: relative;
-  display: flex;
-  background: var(--logo-background);
-  justify-content: center;
-  align-items: center;
-
-  ${mq("tablet_up")} {
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    background: transparent;
-  }
-
-  ${mq("desktop")} {
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 40px;
-  }
-`
-
-export const Avatar = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  background: var(--content-background);
-  color: var(--nav-anchor-color);
-  cursor: pointer;
-
-  &:hover {
-    background: var(--content-background-hover);
-  }
-
-  &.cursor {
-    cursor: pointer;
-  }
-
-  img {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    margin-bottom: 0;
-    border: 1px solid var(--logo-color);
-    box-sizing: content-box;
-  }
-`
 
 // styled social logins
 export const SocialLogins = styled.div``

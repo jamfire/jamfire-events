@@ -1,25 +1,27 @@
 // import libs
 import React from "react"
 import loadable from "@loadable/component"
-import { FooterProps } from "./_props"
+import { FooterProps } from "./footer.d"
 
 // import components
-import { StyledFooter, TrackerWrapper } from "./_styles"
 import Copyright from "./copyright"
+
+// import styles
+import * as styles from "./footer.module.scss"
 
 // loadable components
 const Tracker = loadable(() => import("../event/tracker"))
 
 export const Footer = ({ config, event }: FooterProps) => {
   return (
-    <StyledFooter>
+    <footer className={styles.footer}>
       {event && (
-        <TrackerWrapper>
+        <div className={styles.tracker}>
           <Tracker event={event} />
-        </TrackerWrapper>
+        </div>
       )}
       <Copyright config={config} />
-    </StyledFooter>
+    </footer>
   )
 }
 

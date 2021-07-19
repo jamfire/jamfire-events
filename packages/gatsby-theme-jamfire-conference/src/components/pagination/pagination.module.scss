@@ -1,12 +1,10 @@
-// import styles
-import styled from "@emotion/styled"
-import mq from "../../utils/media"
+@import "../../theme/media.scss";
 
 // styled pagination
-export const Pagination = styled.div`
+.pagination {
   padding: 0 1rem;
 
-  ${mq("tablet_up")} {
+  @include tablet-up {
     padding: 0 2rem;
   }
 
@@ -43,4 +41,4 @@ export const Pagination = styled.div`
       }
     }
   }
-`
+}

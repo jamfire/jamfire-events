@@ -1,8 +1,8 @@
 // import libs
-import { MarkdownRemark } from "../../../gatsby/graphql-types"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // navigation props
-export type NavigationProps = {
+export interface NavigationProps {
   title: string
   to: string
   className: string
@@ -14,13 +14,13 @@ export type NavigationProps = {
 }
 
 // navigation props
-export type SiteNavigationProps = {
+export interface SiteNavigationProps {
   navigation: NavigationProps[]
   config: MarkdownRemark
 }
 
 // navlink props
-export type NavLinkProps = {
+export interface NavLinkProps {
   locale: string
   link: NavigationProps
 }

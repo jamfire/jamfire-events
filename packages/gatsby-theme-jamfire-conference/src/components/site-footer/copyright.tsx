@@ -1,18 +1,23 @@
 // import libs
 import React from "react"
-import { CopyrightProps } from "./_props"
+import { CopyrightProps } from "./footer.d"
+import cx from "classnames"
 
-// import components
-import { Copyright } from "./_styles"
+// import styles
+import * as styles from "./copyright.module.scss"
 
 export default ({ config, mobile = false }: CopyrightProps) => {
   if (!config) {
     return <></>
   }
 
+  const mobileStyles = mobile
+    ? styles.mobile
+    : ""
+
   return (
-    <Copyright mobile={mobile}>
-      &copy; {new Date().getFullYear()} {config.frontmatter.title}.
-    </Copyright>
+    <div className={cx(styles.copyright, mobileStyles)}>
+      &copy; {new Date().getFullYear()} {config?.frontmatter?.title}.
+    </div>
   )
 }

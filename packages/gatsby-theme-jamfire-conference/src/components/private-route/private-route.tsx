@@ -3,7 +3,7 @@ import React, { useContext, useMemo, useEffect } from "react"
 import { FirebaseContext } from "../../services"
 import { checkIsClient } from "../../utils/check-is-client"
 import { navigate } from "gatsby"
-import { PrivateRouteProps } from "./_props"
+import { PrivateRouteProps } from "./private-route.d"
 
 export default ({ children, path = "/" }: PrivateRouteProps) => {
   const { authToken } = useContext(FirebaseContext)

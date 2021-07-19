@@ -5,8 +5,8 @@ import { MarkdownRemark } from "../../gatsby/graphql-types"
 export interface LayoutProps {
   children: any
   title: string | null
-  config?: MarkdownRemark
-  cookies?: MarkdownRemark
+  config: MarkdownRemark
+  cookies: MarkdownRemark
   event?: MarkdownRemark | null
   headerLogo?: File | null
   favicon?: File | null

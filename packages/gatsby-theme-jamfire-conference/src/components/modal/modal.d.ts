@@ -1,6 +1,6 @@
 // import libs
 import { ReactElement, Dispatch, SetStateAction } from "react"
-import { MarkdownRemark } from "../../../gatsby/graphql-types"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // click outside props
 export interface ClickOutsideProps {
