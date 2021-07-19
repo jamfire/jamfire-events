@@ -3,46 +3,49 @@ import React, { useState, useEffect, Dispatch, SetStateAction } from "react"
 import { DateTime, DurationObject } from "luxon"
 import { useTranslation } from "react-i18next"
 import { MarkdownRemarkFrontmatterEventSchedule } from "../../gatsby/graphql-types"
-import { TrackerProps } from "./_props"
+import { TrackerProps } from "./tracker.d"
+import cx from "classnames"
 
-// import components
-import { Tracker } from "./_styles"
+// import styles
+import * as styles from "./tracker.module.scss"
 
 export default ({ event }: TrackerProps) => {
   const {
-    frontmatter: {
-      eventSchedule,
-      eventInformation: { startTime, endTime },
-    },
-  } = event || {}
+    eventSchedule,
+    eventInformation
+  } = event.frontmatter || {}
+
+  const { 
+    startTime, endTime 
+  } = eventInformation || {}
 
   if (!eventSchedule) {
-    return <></>
+    return null
   }
 
   // message state
   const [tracker, setTracker]: [string, Dispatch<SetStateAction<string>>] =
-    useState(null)
+    useState("")
 
   // datetimes
-  const SDT: DateTime = DateTime.fromISO(startTime.datetime)
-  const EDT: DateTime = DateTime.fromISO(endTime.datetime)
+  const startDateTime: DateTime = DateTime.fromISO(startTime?.datetime)
+  const endDateTime: DateTime = DateTime.fromISO(endTime?.datetime)
 
   const { t } = useTranslation()
 
   const setDisplay: () => string = () => {
-    const CDT: DateTime = DateTime.now()
+    const currentDateTime: DateTime = DateTime.now()
 
-    let output: string | null = null
+    let output: string = ""
 
     // event has ended
-    if (CDT > EDT) {
-      output = `<p class="italic">${t("event.tracker.eventEnded")}</p>`
+    if (currentDateTime > endDateTime) {
+      output = `<p className={${styles.italic}}">${t("event.tracker.eventEnded")}</p>`
     }
 
     // event has not started
-    if (SDT > CDT) {
-      let diff: DurationObject = SDT.diff(CDT, [
+    if (startDateTime > currentDateTime) {
+      let diff: DurationObject = startDateTime.diff(currentDateTime, [
         "days",
         "hours",
         "minutes",
@@ -53,36 +56,36 @@ export default ({ event }: TrackerProps) => {
       let html: string | null = null
 
       html = `<div>`
-      html += `<div class="start">${t("event.tracker.starts")}:</div>`
+      html += `<div class="${styles.start}">${t("event.tracker.starts")}:</div>`
       html +=
         diff.days > 0
-          ? `<div class="box time"><span class="number">${
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
               diff.days
-            }</span><span class="symbol">${t("event.tracker.day").charAt(
+            }</span><span class="${styles.symbol}">${t("event.tracker.day").charAt(
               0
             )}</span></div>`
           : ""
       html +=
         diff.hours > 0
-          ? `<div class="box time"><span class="number">${
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
               diff.hours
-            }</span><span class="symbol">${t("event.tracker.hour").charAt(
+            }</span><span class="${styles.symbol}">${t("event.tracker.hour").charAt(
               0
             )}</span></div>`
           : ""
       html +=
         diff.minutes >= 0
-          ? `<div class="box time"><span class="number">${
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
               diff.minutes
-            }</span><span class="symbol">${t("event.tracker.minute").charAt(
+            }</span><span class="${styles.symbol}">${t("event.tracker.minute").charAt(
               0
             )}</span></div>`
           : ""
       html +=
         diff.seconds >= 0
-          ? `<div class="box time"><span class="number">${
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
               diff.seconds
-            }</span><span class="symbol">${t("event.tracker.second").charAt(
+            }</span><span class="${styles.symbol}">${t("event.tracker.second").charAt(
               0
             )}</span></div>`
           : ""
@@ -114,14 +117,14 @@ export default ({ event }: TrackerProps) => {
       }
       // set NDT to close of event if no next item
       else {
-        NDT = EDT
+        NDT = endDateTime
       }
 
       // current item datetime
       let IDT: DateTime = DateTime.fromISO(item.startTime.datetime)
 
-      if (IDT < CDT && CDT < NDT) {
-        let diff: DurationObject = NDT.diff(CDT, [
+      if (IDT < currentDateTime && currentDateTime < NDT) {
+        let diff: DurationObject = NDT.diff(currentDateTime, [
           "days",
           "hours",
           "minutes",
@@ -132,41 +135,41 @@ export default ({ event }: TrackerProps) => {
         let html: string | null = null
 
         html = `<div>`
-        html += `<div class="box label">${t("event.tracker.current")}: ${
+        html += `<div class="${cx(styles.box, styles.label)}">${t("event.tracker.current")}: ${
           item.title
         }</div>`
-        html += `<div class="box label">${t(
+        html += `<div class="${cx(styles.box, styles.label)}">${t(
           "event.tracker.next"
         )}: ${nextItemTitle}</div>`
         html +=
           diff.days > 0
-            ? `<div class="box time"><span class="number">${
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
                 diff.days
-              }</span><span class="symbol">${t("event.tracker.day").charAt(
+              }</span><span class="${styles.symbol}">${t("event.tracker.day").charAt(
                 0
               )}</span></div>`
             : ""
         html +=
           diff.hours > 0
-            ? `<div class="box time"><span class="number">${
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
                 diff.hours
-              }</span><span class="symbol">${t("event.tracker.hour").charAt(
+              }</span><span class="${styles.symbol}">${t("event.tracker.hour").charAt(
                 0
               )}</span></div>`
             : ""
         html +=
           diff.minutes >= 0
-            ? `<div class="box time"><span class="number">${
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
                 diff.minutes
-              }</span><span class="symbol">${t("event.tracker.minute").charAt(
+              }</span><span class="${styles.symbol}">${t("event.tracker.minute").charAt(
                 0
               )}</span></div>`
             : ""
         html +=
           diff.seconds >= 0
-            ? `<div class="box time"><span class="number">${
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
                 diff.seconds
-              }</span><span class="symbol">${t("event.tracker.second").charAt(
+              }</span><span class="${styles.symbol}">${t("event.tracker.second").charAt(
                 0
               )}</span></div>`
             : ""
@@ -189,8 +192,8 @@ export default ({ event }: TrackerProps) => {
   })
 
   return (
-    <Tracker>
+    <div className={styles.tracker}>
       <div dangerouslySetInnerHTML={{ __html: tracker }} />
-    </Tracker>
+    </div>
   )
 }

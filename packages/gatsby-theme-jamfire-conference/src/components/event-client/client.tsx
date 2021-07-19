@@ -1,7 +1,7 @@
 // import libs
 import React from "react"
 import loadable from "@loadable/component"
-import { ClientProps } from "./_props"
+import { ClientProps } from "../event/event"
 
 // import components
 import { Router } from "@reach/router"
@@ -9,11 +9,11 @@ import { Wrapper } from "../wrappers"
 import Sidebar from "../sidebar"
 
 // route components
-const Livestream = loadable(() => import("./livestream"))
-const Schedule = loadable(() => import("./schedule"))
-const Rooms = loadable(() => import("./rooms"))
+const Livestream = loadable(() => import("../event-livestream/livestream"))
+const Schedule = loadable(() => import("../event-schedule/schedule"))
+const Rooms = loadable(() => import("../event-rooms/rooms"))
 const Chat = loadable(() => import("../chat"))
-const QA = loadable(() => import("./qa"))
+const QA = loadable(() => import("../event-qa/qa"))
 
 export default ({ config, event, basePath, locale }: ClientProps) => {
   const {

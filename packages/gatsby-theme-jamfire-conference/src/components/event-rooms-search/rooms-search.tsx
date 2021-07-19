@@ -1,16 +1,17 @@
 // import libs
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { RoomsSearchProps } from "./_props"
+import { RoomsSearchProps } from "./rooms-search.d"
 
 // import components
-import { RoomSearchInput } from "./_styles"
+import * as styles from "./rooms-search.module.scss"
 
 export default ({ setRoomName }: RoomsSearchProps) => {
   const { t } = useTranslation()
 
   return (
-    <RoomSearchInput
+    <input  
+      className={styles.search}
       type="text"
       placeholder={t("form.placeholderSearch")}
       onChange={e => setRoomName(e.target.value)}

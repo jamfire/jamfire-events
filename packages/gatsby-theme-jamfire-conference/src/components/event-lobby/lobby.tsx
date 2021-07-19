@@ -2,13 +2,13 @@
 import React from "react"
 import { DateTime } from "luxon"
 import { useTranslation } from "react-i18next"
-import { ClientProps } from "./_props"
+import { ClientProps } from "../event/event"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
 import Seo from "../seo"
 import Missing from "../missing"
-import { Event, Content, FeaturedImage } from "./_styles"
+import { Event, Content, FeaturedImage } from "../event/_styles"
 
 export default ({ config, event, locale }: ClientProps) => {
   const {

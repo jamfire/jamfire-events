@@ -4,7 +4,7 @@ import { RouteComponentProps } from "@reach/router"
 import firebase from "firebase/app"
 
 // livestream props
-export type LivestreamProps = {
+export interface LivestreamProps {
   event: MarkdownRemark
 }
 
@@ -21,7 +21,7 @@ export interface ClientProps extends RouteComponentProps {
 }
 
 // content styles props
-export type ContentStyleProps = {
+export interface ContentStyleProps {
   padding?: boolean
 }
 
@@ -32,19 +32,4 @@ export interface QAProps extends RouteComponentProps {
   path?: string
 }
 
-// room item props
-export type RoomItemProps = {
-  room: any
-  event: MarkdownRemark
-  locale: string
-}
 
-// room search props
-export type RoomsSearchProps = {
-  setRoomName: (arg0: string) => void
-}
-
-// tracker props
-export type TrackerProps = {
-  event?: MarkdownRemark
-}

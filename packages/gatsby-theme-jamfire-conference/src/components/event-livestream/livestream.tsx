@@ -1,9 +1,9 @@
 // import libs
 import React from "react"
-import { LivestreamProps } from "./_props"
+import { LivestreamProps } from "../event/event"
 
 // import components
-import { FeaturedImage, Content, LivestreamWrapper } from "./_styles"
+import { FeaturedImage, Content, LivestreamWrapper } from "../event/_styles"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Missing from "../missing"
 

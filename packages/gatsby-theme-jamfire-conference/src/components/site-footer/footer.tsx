@@ -10,7 +10,7 @@ import Copyright from "./copyright"
 import * as styles from "./footer.module.scss"
 
 // loadable components
-const Tracker = loadable(() => import("../event/tracker"))
+const Tracker = loadable(() => import("../event-tracker"))
 
 export const Footer = ({ config, event }: FooterProps) => {
   return (

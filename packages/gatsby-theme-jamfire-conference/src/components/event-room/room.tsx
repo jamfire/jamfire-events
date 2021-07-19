@@ -9,13 +9,13 @@ import React, { useContext, useEffect, useState } from "react"
 import { DateTime } from "luxon"
 import { useMatch } from "@reach/router"
 import { DEFAULT_LOCALE } from "../../utils/constants"
-import { ClientProps } from "./_props"
+import { ClientProps } from "../event/event"
 
 // import components
 import { Context } from "../../services/theme"
 import Seo from "../seo"
 import Missing from "../missing"
-import { JitsiContainer } from "./_styles"
+import { JitsiContainer } from "../event/_styles"
 
 export default ({ config, event, locale, user }: ClientProps) => {
   const {

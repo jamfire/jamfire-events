@@ -1,6 +1,6 @@
 // import libs
 import React, { useContext, useState, useEffect } from "react"
-import { ClientProps } from "../event/_props"
+import { ClientProps } from "../event/event.d"
 import { MapContainer, TileLayer } from "react-leaflet"
 import { LatLngBounds } from "leaflet"
 import { useTranslation } from "react-i18next"

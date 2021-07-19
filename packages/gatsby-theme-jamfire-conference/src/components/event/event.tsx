@@ -31,10 +31,10 @@ const isClient = checkIsClient()
 const GeolocationProvider = loadable(
   () => import("../../services/geolocation/geolocation-provider")
 )
-const Lobby = loadable(() => import("./lobby"))
-const Client = loadable(() => import("./client"))
-const Room = loadable(() => import("./room"))
-const RoomChange = loadable(() => import("./room-change"))
+const Lobby = loadable(() => import("../event-lobby/lobby"))
+const Client = loadable(() => import("../event-client/client"))
+const Room = loadable(() => import("../event-room/room"))
+const RoomChange = loadable(() => import("../event-room-change/room-change"))
 const Map = isClient ? loadable(() => import("../event-map/map")) : null
 
 export default ({ data, pageContext }: DataProps) => {

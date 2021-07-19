@@ -2,20 +2,23 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { DEFAULT_LOCALE } from "../../utils/constants"
-import { ClientProps, RoomItemProps } from "./_props"
+import { RoomsProps, RoomItemProps } from "./rooms.d"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
-import RoomsSearch from "./rooms-search"
-import { RoomHeader, RoomDescription, RoomImage, JoinButton } from "./_styles"
+import RoomsSearch from "../event-rooms-search/rooms-search"
 
-export default ({ config, event, locale }: ClientProps) => {
+// import styles
+import * as styles from "./rooms.module.scss"
+
+export default ({ config, event, locale }: RoomsProps) => {
   const {
-    frontmatter: { title, eventRooms, eventSettings },
-  } = event
+    title, eventRooms, eventSettings
+  } = event.frontmatter || {}
 
   const [activeRooms, setActiveRooms] = useState("")
 
@@ -43,7 +46,8 @@ export default ({ config, event, locale }: ClientProps) => {
     <List>
       <Seo
         config={config}
-        activeTitle={`${eventSettings.roomsLabel} | ${title}`}
+        activeTitle={`${eventSettings?.roomsLabel} | ${title}`}
+        locale={locale}
       />
       <ListItem>
         <RoomsSearch setRoomName={setRoomName} />
@@ -62,8 +66,8 @@ export default ({ config, event, locale }: ClientProps) => {
 
 const RoomItem = ({ room, event, locale }: RoomItemProps) => {
   const {
-    frontmatter: { slug },
-  } = event
+    slug,
+  } = event.frontmatter || {}
 
   const basePath =
     locale === DEFAULT_LOCALE ? `/event/${slug}/` : `/${locale}/event/${slug}/`
@@ -72,17 +76,17 @@ const RoomItem = ({ room, event, locale }: RoomItemProps) => {
 
   return (
     <ListItem>
-      <RoomHeader>
+      <div className={styles.roomHeader}>
         <RoomItemImage room={room} />
         <div />
-        <JoinButton to={`${basePath}rooms/${room.slug}/`}>
+        <Link className={styles.joinButton} to={`${basePath}rooms/${room.slug}/`}>
           {t("buttons.join")}
-        </JoinButton>
-      </RoomHeader>
-      <RoomDescription>
-        {room.title && <p className="title">{room.title}</p>}
-        {room.description && <p className="description">{room.description}</p>}
-      </RoomDescription>
+        </Link>
+      </div>
+      <div className={styles.roomDescription}>
+        {room.title && <p className={styles.title}>{room.title}</p>}
+        {room.description && <p className={styles.description}>{room.description}</p>}
+      </div>
     </ListItem>
   )
 }
@@ -91,14 +95,15 @@ const RoomItemImage = ({ room }) => {
   const { title, image } = room
 
   return (
-    <RoomImage>
+    <div className={styles.roomImage}>
       {image && (
         <GatsbyImage
+          className={styles.gatsbyImageWrapper}
           image={image.childImageSharp.gatsbyImageData}
           alt={title}
         />
       )}
       {!image && <span>{room.title.charAt(0)}</span>}
-    </RoomImage>
+    </div>
   )
 }

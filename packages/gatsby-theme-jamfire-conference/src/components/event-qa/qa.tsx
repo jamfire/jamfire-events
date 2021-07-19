@@ -1,13 +1,13 @@
 // import libs
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { QAProps } from "./_props"
+import { QAProps } from "../event/event"
 
 // import components
 import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
-import { QAItem, QACircle } from "./_styles"
+import { QAItem, QACircle } from "../event/_styles"
 import { FaQuestion, FaComment } from "react-icons/fa"
 
 export default ({ config, event }: QAProps) => {
