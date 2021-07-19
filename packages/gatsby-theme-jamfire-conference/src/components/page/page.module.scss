@@ -1,0 +1,45 @@
+@import "../../theme/media.scss";
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "home-image"
+    "home-content";
+  position: relative;
+
+  @include tablet-side {
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "home-content home-image";
+  }
+}
+
+.content {
+  grid-area: home-content;
+  padding: 1rem;
+
+  @include tablet-side {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.featured-image {
+  grid-area: home-image;
+  height: 40vh;
+  background: var(--content-background);
+
+  @include tablet-side {
+    height: calc(100vh - 160px);
+  }
+
+  .gatsby-image-wrapper {
+    height: 40vh;
+
+    @include tablet-side {
+      height: calc(100vh - 160px);
+    }
+  }
+}
