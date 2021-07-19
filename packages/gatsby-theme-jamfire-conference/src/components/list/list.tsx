@@ -1,14 +1,14 @@
 // import libs
 import React from "react"
-import { ListProps, ListItemProps } from "./_props"
+import { ListProps, ListItemProps } from "./list.d"
 
-// import components
-import { StyledList, StyledListItem } from "./_styles"
+// import styles
+import * as styles from "./list.module.scss"
 
 export const List = ({ children }: ListProps) => {
-  return <StyledList tabIndex={0}>{children}</StyledList>
+  return <ul className={styles.list} tabIndex={0}>{children}</ul>
 }
 
 export const ListItem = ({ children }: ListItemProps) => {
-  return <StyledListItem>{children}</StyledListItem>
+  return <li className={styles.item}>{children}</li>
 }

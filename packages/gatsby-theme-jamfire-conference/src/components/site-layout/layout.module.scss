@@ -174,9 +174,9 @@
   grid-template-rows: 80px 1fr;
   height: 100vh;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  min-height: fill-available;
   max-height: 100vh;
-  max-height: -webkit-fill-available;
+  max-height: fill-available;
   width: 100vw;
 
   @include tablet-up {
