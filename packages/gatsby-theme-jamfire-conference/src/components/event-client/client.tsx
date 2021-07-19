@@ -1,7 +1,7 @@
 // import libs
 import React from "react"
 import loadable from "@loadable/component"
-import { ClientProps } from "../event/event"
+import { ClientProps } from "./client.d"
 
 // import components
 import { Router } from "@reach/router"
@@ -9,18 +9,20 @@ import { Wrapper } from "../wrappers"
 import Sidebar from "../sidebar"
 
 // route components
-const Livestream = loadable(() => import("../event-livestream/livestream"))
-const Schedule = loadable(() => import("../event-schedule/schedule"))
-const Rooms = loadable(() => import("../event-rooms/rooms"))
+const Livestream = loadable(() => import("../event-livestream"))
+const Schedule = loadable(() => import("../event-schedule"))
+const Rooms = loadable(() => import("../event-rooms"))
 const Chat = loadable(() => import("../chat"))
-const QA = loadable(() => import("../event-qa/qa"))
+const QA = loadable(() => import("../event-qa"))
 
 export default ({ config, event, basePath, locale }: ClientProps) => {
   const {
-    frontmatter: {
-      eventSettings: { mainStageFeature },
-    },
-  } = event
+    eventSettings
+  } = event.frontmatter || {}
+
+  const {
+    mainStageFeature
+  } = eventSettings || {}
 
   return (
     <Wrapper>
@@ -51,7 +53,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
             path="/schedule"
           />
           <Chat config={config} event={event} path="/chat" />
-          <QA config={config} event={event} path="/qa" />
+          <QA config={config} event={event} path="/qa" locale={locale} />
         </Router>
       </Sidebar>
       <Livestream event={event} />

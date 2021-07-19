@@ -2,12 +2,13 @@
 import React, { useContext } from "react"
 import { navigate } from "gatsby"
 import { useTranslation } from "react-i18next"
+import { RoomChangeProps } from "./room-change.d"
 
 // import components
 import { Context } from "../../services/theme"
 import { Modal, ModalButton } from "../modal"
 
-export default ({ config }) => {
+export default ({ config }: RoomChangeProps) => {
   const { roomModal, toggleRoomModal, setActiveRoom, pagePath } =
     useContext(Context)
 

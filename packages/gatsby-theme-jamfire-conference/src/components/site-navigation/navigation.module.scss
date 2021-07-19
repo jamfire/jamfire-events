@@ -60,7 +60,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-decoration: none;
+        text-decoration: none !important;
         color: var(--nav-anchor-color);
         border-top: 3px solid transparent;
         border-bottom: 3px solid transparent;

@@ -1,19 +1,22 @@
 // import libs
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { QAProps } from "../event/event"
+import { QAProps, QAItem } from "./qa.d"
+import cx from "classnames"
 
 // import components
 import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
-import { QAItem, QACircle } from "../event/_styles"
 import { FaQuestion, FaComment } from "react-icons/fa"
 
-export default ({ config, event }: QAProps) => {
+// import styles
+import * as styles from "./qa.module.scss"
+
+export default ({ config, event, locale }: QAProps) => {
   const {
-    frontmatter: { title, eventQA, eventSettings },
-  } = event
+    title, eventQA, eventSettings
+  } = event.frontmatter || {}
 
   if (!eventQA) return <Missing fontSize={4} />
 
@@ -21,7 +24,8 @@ export default ({ config, event }: QAProps) => {
     <List>
       <Seo
         config={config}
-        activeTitle={`${eventSettings.qaLabel} | ${title}`}
+        activeTitle={`${eventSettings?.qaLabel} | ${title}`}
+        locale={locale}
       />
       {eventQA &&
         eventQA.map((item: any, key: number) => (
@@ -31,23 +35,23 @@ export default ({ config, event }: QAProps) => {
   )
 }
 
-const QuestionAnswer = ({ item }) => {
+const QuestionAnswer = ({ item }: QAItem) => {
   const { t } = useTranslation()
 
   return (
     <ListItem>
-      <QAItem className="question">
-        <QACircle className="primary">
+      <div className={cx(styles.item, styles.question)}>
+        <div className={cx(styles.circle, styles.primary)}>
           <FaQuestion title={t("event.qa.question")} />
-        </QACircle>
-        <div className="text">{item.question}</div>
-      </QAItem>
-      <QAItem className="answer">
-        <QACircle className="secondary">
+        </div>
+        <div className={styles.text}>{item.question}</div>
+      </div>
+      <div className={cx(styles.item, styles.answer)}>
+        <div className={cx(styles.circle, styles.secondary)}>
           <FaComment title={t("event.qa.answer")} />
-        </QACircle>
-        <div className="text">{item.answer}</div>
-      </QAItem>
+        </div>
+        <div className={styles.text}>{item.answer}</div>
+      </div>
     </ListItem>
   )
 }

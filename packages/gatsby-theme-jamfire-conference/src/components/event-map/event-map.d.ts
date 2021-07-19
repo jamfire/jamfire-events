@@ -1,5 +1,13 @@
 // imports
 import { LatLngBoundsExpression, LatLngBounds } from "leaflet"
+import { RouteComponentProps } from "@reach/router"
+import { MarkdownRemark } from "../../gatsby/graphql-types"
+
+export interface MapProps extends RouteComponentProps {
+  config?: MarkdownRemark
+  event?: MarkdownRemark
+  locale: string
+}
 
 // icon wrapper props
 export type IconProps = {

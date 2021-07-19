@@ -9,29 +9,33 @@ import React, { useContext, useEffect, useState } from "react"
 import { DateTime } from "luxon"
 import { useMatch } from "@reach/router"
 import { DEFAULT_LOCALE } from "../../utils/constants"
-import { ClientProps } from "../event/event"
+import { RoomProps } from "./room.d"
 
 // import components
 import { Context } from "../../services/theme"
 import Seo from "../seo"
 import Missing from "../missing"
-import { JitsiContainer } from "../event/_styles"
 
-export default ({ config, event, locale, user }: ClientProps) => {
+// import styles
+import * as styles from "./room.module.scss"
+
+export default ({ config, event, locale, user }: RoomProps) => {
   const {
-    frontmatter: {
-      slug,
-      title,
-      eventInformation: { startTime },
-      eventRooms,
-    },
-  } = event
+    slug,
+    title,
+    eventInformation,
+    eventRooms,
+  } = event.frontmatter || {}
+
+  const {
+    startTime
+  } = eventInformation || {}
 
   if (!eventRooms) {
     return (
-      <JitsiContainer>
+      <div className={styles.jitsiContainer}>
         <Missing />
-      </JitsiContainer>
+      </div>
     )
   }
 
@@ -44,16 +48,16 @@ export default ({ config, event, locale, user }: ClientProps) => {
 
   const match = useMatch(matchString)
 
-  const eventRoom = eventRooms.find(room => room.slug === match.room)
+  const eventRoom = eventRooms.find(room => room?.slug === match?.room)
 
   // parse date
-  const jsDate = new Date(startTime)
+  const jsDate = new Date(startTime?.datetime)
   const luxonDate = DateTime.fromMillis(jsDate.getTime())
   const yy = luxonDate.year
   const mm = luxonDate.month
   const dd = luxonDate.day
 
-  const jitsiRoom = `${eventRoom.slug}-${yy}-${mm}-${dd}`
+  const jitsiRoom = `${eventRoom?.slug}-${yy}-${mm}-${dd}`
 
   const jitsiContainerId = "jitsi-container-id"
 
@@ -165,8 +169,12 @@ export default ({ config, event, locale, user }: ClientProps) => {
 
   return (
     <>
-      <Seo config={config} activeTitle={`${eventRoom.title} | ${title}`} />
-      <JitsiContainer id={jitsiContainerId} />
+      <Seo 
+        config={config} 
+        activeTitle={`${eventRoom?.title} | ${title}`} 
+        locale={locale}  
+      />
+      <div className={styles.jitsiContainer} id={jitsiContainerId} />
     </>
   )
 }

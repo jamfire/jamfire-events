@@ -2,8 +2,9 @@ import {
     MarkdownRemark,
     MarkdownRemarkFrontmatterEventSchedule
 } from "../../gatsby/graphql-types"
+import { RouteComponentProps } from "@reach/router"
 
-export interface ScheduleProps {
+export interface ScheduleProps extends RouteComponentProps {
     config: MarkdownRemark
     event: MarkdownRemark
     locale: string

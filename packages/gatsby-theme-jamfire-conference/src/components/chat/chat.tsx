@@ -16,9 +16,17 @@ import * as styles from "./chat.module.scss"
 export default ({ config, event }: ChatProps) => {
   const {
     id,
-    frontmatter: { title, eventSettings },
-    fields: { locale }
+    frontmatter,
+    fields
   } = event
+
+  const {
+    title, eventSettings
+  } = frontmatter || {}
+
+  const {
+    locale
+  } = fields || {}
 
   const [chats, setChats] = useState([])
   const [mobile, setMobile] = useState(false)
@@ -51,7 +59,7 @@ export default ({ config, event }: ChatProps) => {
     <div className={`chat ${styles.chat}`} id="chat">
       <Seo
         config={config}
-        activeTitle={`${eventSettings.chatLabel} | ${title}`}
+        activeTitle={`${eventSettings?.chatLabel} | ${title}`}
         locale={locale}
       />
       <Messages

@@ -1,19 +1,27 @@
 // import libs
 import React from "react"
-import { LivestreamProps } from "../event/event"
+import { LivestreamProps } from "./livestream.d"
 
 // import components
-import { FeaturedImage, Content, LivestreamWrapper } from "../event/_styles"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Missing from "../missing"
 
+// import styles
+import * as styles from "./livestream.module.scss"
+
 export default ({ event }: LivestreamProps) => {
   const {
-    frontmatter: {
-      eventGraphics: { lobbyImage },
-      eventInformation: { livestreamUrl },
-    },
-  } = event || {}
+    eventGraphics,
+    eventInformation,
+  } = event.frontmatter || {}
+
+  const {
+    lobbyImage
+  } = eventGraphics || {}
+
+  const {
+    livestreamUrl
+  } = eventInformation || {}
 
   // livestreamUrl and lobbyImage both missing
   if (!livestreamUrl && !lobbyImage) return <Missing />
@@ -21,25 +29,26 @@ export default ({ event }: LivestreamProps) => {
   // no livestream url but lobbyImage exists
   if (!livestreamUrl && lobbyImage) {
     return (
-      <FeaturedImage>
+      <div className={styles.featuredImage}>
         <GatsbyImage
-          image={lobbyImage.childImageSharp.gatsbyImageData}
+          className={styles.gatsbyImageWrapper}
+          image={lobbyImage?.childImageSharp?.gatsbyImageData}
           alt=""
         />
-      </FeaturedImage>
+      </div>
     )
   }
 
   return (
-    <Content id="livestream">
-      <LivestreamWrapper>
+    <div className={styles.content} id="livestream">
+      <div className={styles.livestream}>
         <iframe
-          src={livestreamUrl}
+          src={livestreamUrl || ""}
           allowFullScreen
           frameBorder="0"
           title={"Livestream"}
         />
-      </LivestreamWrapper>
-    </Content>
+      </div>
+    </div>
   )
 }

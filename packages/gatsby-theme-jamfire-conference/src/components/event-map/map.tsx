@@ -1,6 +1,6 @@
 // import libs
 import React, { useContext, useState, useEffect } from "react"
-import { ClientProps } from "../event/event.d"
+import { MapProps } from "./event-map.d"
 import { MapContainer, TileLayer } from "react-leaflet"
 import { LatLngBounds } from "leaflet"
 import { useTranslation } from "react-i18next"
@@ -22,10 +22,10 @@ import Loader from "../loader"
 import "leaflet/dist/leaflet.css"
 import * as styles from "./map.module.scss"
 
-export default ({ config, event }: ClientProps) => {
+export default ({ config, event, locale }: MapProps) => {
   const {
     frontmatter
-  } = event
+  } = event || {}
 
   const {
     title,
@@ -55,7 +55,7 @@ export default ({ config, event }: ClientProps) => {
     }
   }, [isLoading])
 
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   useEffect(() => {
 
@@ -90,7 +90,7 @@ export default ({ config, event }: ClientProps) => {
         <Seo
           config={config}
           activeTitle={`${t("navigation.map")} | ${title}`}
-          locale={i18n.language}
+          locale={locale}
         />
         <MapContainer
           className={styles.leafletContainer}
