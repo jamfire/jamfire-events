@@ -1,4 +1,6 @@
-export default {
+import { LocalesProps } from "./locales.d"
+
+export const localesList: LocalesProps = {
   bg: "Български",
   cs: "Česky",
   da: "Dansk",

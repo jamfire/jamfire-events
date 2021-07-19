@@ -51,7 +51,7 @@ export const ModalTitle = styled.header`
   h3 {
     display: flex;
     align-items: center;
-    color: var(--logo-color);
+    color: var(--logo-color) !important;
     height: 100%;
     margin: 0;
   }
