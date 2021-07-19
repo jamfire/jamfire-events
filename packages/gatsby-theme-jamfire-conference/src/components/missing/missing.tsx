@@ -1,14 +1,27 @@
 // import libs
 import React from "react"
-import { MissingProps } from "./_props"
+import { MissingProps } from "./missing.d"
 
 // import components
-import { StyledMissing, Icon } from "./_styles"
+import { FaFireAlt } from "react-icons/fa"
 
-export default ({ fontSize, darker = "false" }: MissingProps) => {
+// import styles
+import * as styles from "./missing.module.scss"
+
+export default ({ fontSize = 8, darker = "false" }: MissingProps) => {
+
+  const color = darker === "true"
+    ? "var(--list-header-background-darker)"
+    : "var(--list-header-background)"
+    
   return (
-    <StyledMissing>
-      <Icon fontSize={fontSize ? fontSize : 8} darker={darker} />
-    </StyledMissing>
+    <div className={styles.missing}>
+      <FaFireAlt 
+        style={{
+          color: color,
+          fontSize: `${fontSize}rem`
+        }}
+      />
+    </div>
   )
 }

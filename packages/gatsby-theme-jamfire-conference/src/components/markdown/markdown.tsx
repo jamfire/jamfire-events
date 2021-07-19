@@ -1,7 +1,7 @@
 // import libs
 import React from "react"
 import MarkdownIt from "markdown-it"
-import { MarkdownContentProps } from "./_props"
+import { MarkdownContentProps } from "./markdown.d"
 
 export default ({ content, className }: MarkdownContentProps) => {
 

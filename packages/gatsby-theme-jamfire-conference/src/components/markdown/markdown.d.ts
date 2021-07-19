@@ -1,5 +1,5 @@
 // markdown content props
-export type MarkdownContentProps = {
+export interface MarkdownContentProps {
   content: string | null | undefined
   className?: string
 }

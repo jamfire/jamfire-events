@@ -1,11 +1,13 @@
 // import libs
 import React from "react"
-import { ModalProps } from "./_props"
+import { ModalProps } from "./modal.d"
 
 // import components
 import ClickOutside from "./click-outside"
-import { ModalWrapper, Modal, ModalContent } from "./_styles"
-import { ModalTitle } from "."
+import ModalTitle from "./modal-title"
+
+// import styles
+import * as styles from "./modal.module.scss"
 
 export default ({
   children,
@@ -22,17 +24,17 @@ export default ({
 
   // modal is active
   return (
-    <ModalWrapper>
+    <div className={styles.wrapper}>
       <ClickOutside
         onClick={() => {
           setIsActive(false)
         }}
       >
-        <Modal id={id}>
+        <div className={styles.modal} id={id}>
           <ModalTitle title={title} config={config} />
-          <ModalContent>{children}</ModalContent>
-        </Modal>
+          <div className={styles.content}>{children}</div>
+        </div>
       </ClickOutside>
-    </ModalWrapper>
+    </div>
   )
 }

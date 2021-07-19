@@ -3,12 +3,12 @@ import { ReactElement, Dispatch, SetStateAction } from "react"
 import { MarkdownRemark } from "../../../gatsby/graphql-types"
 
 // click outside props
-export type ClickOutsideProps = {
-  children: ReactElement
-  onClick: () => void
+export interface ClickOutsideProps {
+  onClick: () => void;
+  children: ReactElement;
 }
 
-export type ModalProps = {
+export interface ModalProps {
   id: string
   children?: ReactElement
   title: string
@@ -17,7 +17,13 @@ export type ModalProps = {
   config: MarkdownRemark
 }
 
-export type ModalTitleProps = {
+export interface ModalTitleProps {
   title: string
   config: MarkdownRemark
+}
+
+export interface ModalButtonProps {
+  label: string
+  className: string
+  onClick: () => void
 }

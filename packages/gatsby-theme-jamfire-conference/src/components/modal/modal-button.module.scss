@@ -1,0 +1,16 @@
+// styled button
+.button {
+  border: 0;
+  outline: 0;
+  background: var(--button-background);
+  margin-right: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-color);
+
+  &:hover {
+    background: var(--button-background-hover);
+    color: var(--button-text-hover);
+  }
+}

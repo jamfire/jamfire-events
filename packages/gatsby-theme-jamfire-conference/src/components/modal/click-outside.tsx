@@ -1,28 +1,30 @@
 // import libs
-import React, { useRef, useEffect, cloneElement } from "react"
-import { ClickOutsideProps } from "./_props"
+import React, { useRef, useEffect, cloneElement } from 'react';
+import { ClickOutsideProps } from './modal.d';
 
 // detect outside click
 export default ({ children, onClick }: ClickOutsideProps) => {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!ref?.current) {
-      return
+      return;
     }
 
-    const handleClickOutside = (e: any) => {
-      if (onClick && !ref.current.contains(e.target)) {
-        onClick()
+    const handleClickOutside = (e: MouseEvent) => {
+      const element = e.target as HTMLDivElement;
+
+      if (ref.current && !ref.current.contains(element)) {
+        onClick();
       }
-    }
+    };
 
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [onClick])
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClick, ref]);
 
-  return <div id="click-outside">{cloneElement(children, { ref })}</div>
+  return <div id="click-outside">{cloneElement(children, { ref })}</div>;
 }
