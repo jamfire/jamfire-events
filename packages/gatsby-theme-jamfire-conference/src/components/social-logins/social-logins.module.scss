@@ -1,0 +1,31 @@
+
+// styled social logins
+.social-logins {
+    position: relative;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// styled login button
+.login-button {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 4px;
+  background: var(--form-button-bg);
+  color: var(--form-button-color);
+
+  &:hover {
+    background: var(--form-button-bg-hover);
+    color: var(--form-button-color-hover);
+  }
+}

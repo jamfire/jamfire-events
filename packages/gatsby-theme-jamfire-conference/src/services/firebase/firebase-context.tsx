@@ -10,7 +10,7 @@ export interface FirebaseContextData {
   isLoggedIn: boolean
   profile: firebase.User | null
   authToken: string | null
-  setAuthToken: (authToken: string) => void
+  setAuthToken: (authToken: string | null) => void
   logout: () => void
 }
 

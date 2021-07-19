@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { TopbarProps } from "./topbar.d"
 
 // import components
-import LoginButton from "../user/login-button"
+import LoginButton from "../login-button"
 import LanguageSwitcher from "../locale/language-switcher"
 import DarkMode from "../dark-mode"
 

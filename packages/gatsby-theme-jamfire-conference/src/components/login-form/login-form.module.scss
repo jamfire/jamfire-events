@@ -1,0 +1,55 @@
+// styled login form
+.login-form {
+    position: relative;
+}
+
+// styled input wrapper component
+.field-wrapper {
+  margin-bottom: 1rem;
+}
+
+// error component
+.error {
+  padding: 0.5rem 1rem 0;
+  color: var(--form-error-color);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+// styled input component
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--form-border);
+  box-sizing: border-box;
+  outline: 0;
+  border-radius: 4px;
+  background: var(--form-input-background);
+  color: var(--form-input-color);
+}
+
+// styled button component
+.button {
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: var(--form-button-bg);
+  color: var(--form-button-color);
+
+  &:hover {
+    background: var(--form-button-bg-hover);
+    color: var(--form-button-color-hover);
+  }
+}
+
+// toggle button component
+.toggle {
+  outline: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: none;
+  color: var(--form-button-color);
+}

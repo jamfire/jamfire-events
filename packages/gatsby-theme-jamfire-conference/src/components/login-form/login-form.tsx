@@ -2,23 +2,17 @@
 import React, { useContext, useCallback, useState } from "react"
 import * as Yup from "yup"
 import { useTranslation } from "react-i18next"
-import { FormValues } from "./_props"
+import { FormValues } from "./login-form.d"
+import cx from "classnames"
 
 // import components
 import { Context } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { Formik, FormikHelpers } from "formik"
-import Error from "../error/error"
+import Error from "../error"
 
-// import form elements
-import {
-  LoginForm,
-  FieldWrapper,
-  FormError,
-  Input,
-  Button,
-  Toggle,
-} from "./_styles"
+// import styles
+import * as styles from "./login-form.module.scss"
 
 export default () => {
   const [register, setRegister] = useState(false)
@@ -114,7 +108,7 @@ export default () => {
   })
 
   return (
-    <LoginForm>
+    <div className={styles.loginForm}>
       <Formik
         initialValues={{ email: "", password: "", passwordConfirmation: "" }}
         initialStatus={{ errors: [], success: false }}
@@ -134,8 +128,9 @@ export default () => {
         }) => (
           <form onSubmit={handleSubmit}>
             <p>{t("auth.loginEmail")}</p>
-            <FieldWrapper>
-              <Input
+            <div className={styles.fieldWrapper}>
+              <input
+                className={styles.input}
                 type="email"
                 name="email"
                 placeholder={t("auth.email")}
@@ -145,11 +140,12 @@ export default () => {
                 value={values.email}
               />
               {errors.email && touched.email && (
-                <FormError className="form-error">{errors.email}</FormError>
+                <div className={styles.error}>{errors.email}</div>
               )}
-            </FieldWrapper>
-            <FieldWrapper>
-              <Input
+            </div>
+            <div className={styles.fieldWrapper}>
+              <input
+                className={styles.input}
                 type="password"
                 name="password"
                 placeholder={t("auth.password")}
@@ -159,12 +155,13 @@ export default () => {
                 value={values.password}
               />
               {errors.password && touched.password && (
-                <FormError className="form-error">{errors.password}</FormError>
+                <div className={styles.error}>{errors.password}</div>
               )}
-            </FieldWrapper>
+            </div>
             {register && (
-              <FieldWrapper>
-                <Input
+              <div className={styles.fieldWrapper}>
+                <input
+                  className={styles.input}
                   type="password"
                   name="passwordConfirmation"
                   placeholder={t("auth.passwordConfirm")}
@@ -175,42 +172,42 @@ export default () => {
                 />
                 {errors.passwordConfirmation &&
                   touched.passwordConfirmation && (
-                    <FormError className="form-error">
+                    <div className={styles.error}>
                       {errors.passwordConfirmation}
-                    </FormError>
+                    </div>
                   )}
-              </FieldWrapper>
+              </div>
             )}
             {loginError && <Error>{loginError}</Error>}
-            <FieldWrapper>
+            <div className={styles.fieldWrapper}>
               {register && (
                 <>
-                  <Button type="submit" disabled={isSubmitting}>
+                  <button className={styles.button} type="submit" disabled={isSubmitting}>
                     {t("auth.register")}
-                  </Button>
-                  <Toggle onClick={() => setRegister(false)}>
+                  </button>
+                  <button className={styles.toggle} onClick={() => setRegister(false)}>
                     {t("auth.existingAccount")}
-                  </Toggle>
+                  </button>
                 </>
               )}
               {!register && (
                 <>
-                  <Button
-                    className="email-login"
+                  <button
+                    className={cx(styles.button, "email-login")}
                     type="submit"
                     disabled={isSubmitting}
                   >
                     {t("auth.login")}
-                  </Button>
-                  <Toggle onClick={() => setRegister(true)}>
+                  </button>
+                  <button className={cx(styles.toggle, "register")} onClick={() => setRegister(true)}>
                     {t("auth.registerAccount")}
-                  </Toggle>
+                  </button>
                 </>
               )}
-            </FieldWrapper>
+            </div>
           </form>
         )}
       </Formik>
-    </LoginForm>
+    </div>
   )
 }

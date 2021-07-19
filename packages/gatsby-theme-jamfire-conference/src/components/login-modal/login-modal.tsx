@@ -1,19 +1,25 @@
 // import libs
 import React, { useContext } from "react"
-import { LoginModalProps } from "./_props"
+import { LoginModalProps } from "./login-modal.d"
 import { useTranslation } from "react-i18next"
 
 // import components
 import { Context } from "../../services/theme"
 import { Modal } from "../modal"
-import { LoginWrapper } from "./_styles"
-import LoginForm from "./login-form"
-import SocialLogins from "./social-logins"
+import LoginForm from "../login-form"
+import SocialLogins from "../social-logins"
+
+// import styles
+import * as styles from "./login-modal.module.scss"
 
 export default ({ config }: LoginModalProps) => {
   const {
-    frontmatter: { socialLogin },
-  } = config
+    frontmatter
+  } = config || {}
+
+  const {
+    socialLogin
+  } = frontmatter || {}
 
   const { toggleLogin, setToggleLogin } = useContext(Context)
 
@@ -27,10 +33,10 @@ export default ({ config }: LoginModalProps) => {
       isActive={toggleLogin}
       setIsActive={setToggleLogin}
     >
-      <LoginWrapper>
+      <div className={styles.wrapper}>
         <LoginForm />
         <SocialLogins socialLogin={socialLogin} />
-      </LoginWrapper>
+      </div>
     </Modal>
   )
 }

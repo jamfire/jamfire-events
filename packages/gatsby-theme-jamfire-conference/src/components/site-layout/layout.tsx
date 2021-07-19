@@ -18,7 +18,7 @@ import "./global.scss"
 import * as styles from "./layout.module.scss"
 
 // loadable components
-const LoginModal = loadable(() => import("../user/login-modal"))
+const LoginModal = loadable(() => import("../login-modal/login-modal"))
 const Main = loadable(() => import("../site-main"))
 const CookieNotice = loadable(() => import("../cookies/cookie-notice"))
 const ManageCookies = loadable(() => import("../cookies/manage-cookies"))
@@ -31,7 +31,7 @@ export default ({
   config,
   cookies,
   event = null,
-  headerLogo = null,
+  headerLogo,
   favicon = null,
   useHeaderTitle = false,
   locale,

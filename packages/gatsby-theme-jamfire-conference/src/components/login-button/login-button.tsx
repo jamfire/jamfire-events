@@ -1,14 +1,16 @@
 // import libs
 import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
-import { UserProps } from "./_props"
+import { LoginButtonProps } from "./login-button.d"
 
 // import components
 import { FirebaseContext } from "../../services"
 import { Context } from "../../services/theme"
-import { StyledUser } from "./_styles"
 
-export default ({ isLoading, isLoggedIn }: UserProps) => {
+// import styles
+import * as styles from "./login-button.module.scss"
+
+export default ({ isLoading, isLoggedIn }: LoginButtonProps) => {
   const { setToggleLogin } = useContext(Context)
 
   const { logout } = useContext(FirebaseContext)
@@ -16,16 +18,16 @@ export default ({ isLoading, isLoggedIn }: UserProps) => {
   const { t } = useTranslation()
 
   if (isLoading) {
-    return <StyledUser />
+    return <div className={styles.loginButton} />
   }
 
   return (
-    <StyledUser>
+    <div className={styles.loginButton}>
       {isLoggedIn ? (
         <button
           role="button"
           aria-label={t("auth.logout")}
-          className="logout"
+          className={styles.logout}
           onClick={() => {
             logout()
           }}
@@ -36,7 +38,7 @@ export default ({ isLoading, isLoggedIn }: UserProps) => {
         <button
           role="button"
           aria-label={t("auth.login")}
-          className="login"
+          className={styles.login}
           onClick={() => {
             setToggleLogin(true)
           }}
@@ -44,6 +46,6 @@ export default ({ isLoading, isLoggedIn }: UserProps) => {
           {t("auth.login")}
         </button>
       )}
-    </StyledUser>
+    </div>
   )
 }
