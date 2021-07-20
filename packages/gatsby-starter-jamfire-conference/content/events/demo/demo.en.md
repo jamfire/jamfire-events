@@ -70,11 +70,29 @@ eventRooms:
       Conference Room 1 with a graphic.
 
     image: pexels-bruno-salvadori-2269872.jpg
+    roomType: jitsi
+    roomLocale: en
   - title: Conference Room 2
     slug: jamfire-conference-room-2
     description: |+
       Conference Room 2 without a graphic.
 
+    roomType: jitsi
+    roomLocale: en
+  - roomType: zoom
+    slug: jamfire-conference-room-3
+    title: Conference Room 3
+    description: Conference Room 3 that launches a Zoom meeting.
+    roomUrl: https://zoom.us/my/kalebheitzman?pwd=1234567890
+    image: room-3.jpg
+    roomLocale: es
+  - roomType: "google "
+    slug: jamfire-conference-room-4
+    title: Conference Room 4
+    description: Conference Room 4 that launches a Google Meet conference.
+    roomUrl: https://meet.google.com/stj-sryk-rff
+    image: room-4.jpg
+    roomLocale: en
 eventQA:
   - question: Where can I access this conference?
     answer: You can access it on desktop, tablet, and mobile devices.

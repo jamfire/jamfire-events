@@ -3,12 +3,39 @@
 // room header component
 .room-header {
   background: var(--list-header-background);
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px 1fr;
   justify-content: space-between;
   padding: 0.5rem 1rem;
 
   @include tablet-up {
     padding: 0.5rem 2rem;
+  }
+}
+
+.room-join {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.room-type {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    background: var(--list-header-background-callout);
+    border-radius: 4px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    height: 1.8rem;
+    line-height: 1.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+    margin-right: 0.25rem;
+    text-transform: uppercase;
   }
 }
 
@@ -37,6 +64,7 @@
 // room description component
 .room-description {
   padding: 0.5rem 1rem 1rem;
+  display: grid;
 
   @include tablet-up {
     padding: 0.5rem 2rem;
@@ -71,14 +99,20 @@
   background: var(--primary-color);
   color: var(--header-color) !important;
   border-radius: 4px;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   margin-bottom: 0.5rem;
-  height: 2rem;
+  height: 1.8rem;
   line-height: 1.5rem;
   padding: 0 0.5rem;
+  text-decoration: none !important;
 
   &:hover {
     text-decoration: none;
     background: var(--accent-hover);
+  }
+
+  .external-link {
+    font-size: 0.75rem;
+    margin-left: 0.15rem;
   }
 }

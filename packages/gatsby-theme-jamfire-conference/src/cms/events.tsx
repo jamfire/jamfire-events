@@ -1,4 +1,5 @@
 import { primaryColor, primaryColorHover } from "./configuration"
+import { DEFAULT_LOCALE, LOCALES } from "../utils/constants"
 
 export default {
   name: "events",
@@ -184,6 +185,32 @@ export default {
           label: "Description",
           widget: "text",
           i18n: true,
+        },
+        {
+          name: "roomLocale",
+          label: "Room Locale",
+          hint: "Select a language for this room",
+          widget: "select",
+          options: LOCALES,
+          default: DEFAULT_LOCALE,
+        },
+        {
+          name: "roomType",
+          label: "Room Type",
+          widget: "select",
+          options: [
+            { label: "Jitsi", value: "jitsi" },
+            { label: "Zoom", value: "zoom" },
+            { label: "Google Meet", value: "google " },
+          ],
+          default: ["jitsi"],
+          i18n: true,
+        },
+        {
+          name: "roomUrl",
+          label: "Room Url",
+          hint: "If using a room other than Jitsi, enter your meeting link.",
+          required: false,
         },
         {
           name: "image",

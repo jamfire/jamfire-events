@@ -21,3 +21,9 @@ export interface RoomItemProps {
 export interface RoomItemImageProps {
   room: MarkdownRemarkFrontmatterEventRoom
 }
+
+// join button props
+export interface JoinButtonProps {
+  room: MarkdownRemarkFrontmatterEventRoom
+  basePath: string
+}
