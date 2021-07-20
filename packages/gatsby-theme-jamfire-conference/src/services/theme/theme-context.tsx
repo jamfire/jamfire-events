@@ -2,7 +2,7 @@
 import * as React from "react"
 import { createContext } from "react"
 import { LOCALES } from "../../utils/constants"
-import { InitialState } from "./theme"
+import { InitialState } from "./theme.d"
 
 // import components
 import { FaHome, FaCalendarAlt } from "react-icons/fa"
@@ -38,12 +38,6 @@ export const initialState: InitialState = {
     },
   ],
   setNavigation: () => {},
-  activeRoom: false,
-  setActiveRoom: () => null,
-  roomModal: false,
-  toggleRoomModal: () => true || false,
-  chats: [],
-  setChats: () => {},
   pagePath: "/",
   setPagePath: () => null,
   toggleCookies: false,
@@ -53,8 +47,6 @@ export const initialState: InitialState = {
   toggleLocale: false,
   setToggleLocale: () => true || false,
   localesEnabled: LOCALES.length > 1 ? true : false,
-  geolocation: null,
-  setGeolocation: () => null,
 }
 
 export const ThemeContext = createContext(initialState)

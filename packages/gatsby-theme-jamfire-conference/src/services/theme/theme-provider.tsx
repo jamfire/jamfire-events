@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
-import { ProviderProps } from "./theme"
-import { GeolocationProps } from "../geolocation/geolocation"
+import { ProviderProps } from "./theme.d"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"
@@ -21,9 +20,6 @@ export default ({ children }: ProviderProps) => {
   )
   const [navigation, setNavigation] = useState(initialState.navigation)
   const [user, setUser] = useState(initialState.user)
-  const [activeRoom, setActiveRoom] = useState(initialState.activeRoom)
-  const [roomModal, toggleRoomModal] = useState(initialState.roomModal)
-  const [chats, setChats] = useState(initialState.chats)
   const [pagePath, setPagePath] = useState(initialState.pagePath)
   const [toggleCookies, setToggleCookies] = useState(initialState.toggleCookies)
   const [enableAnalytics, setEnableAnalytics] = useState(
@@ -31,7 +27,6 @@ export default ({ children }: ProviderProps) => {
   )
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
-  const [geolocation, setGeolocation] = useState<null | GeolocationProps>(null)
 
   // set dark mode
   useEffect(() => {
@@ -85,12 +80,6 @@ export default ({ children }: ProviderProps) => {
         setNavigation,
         user,
         setUser,
-        activeRoom,
-        setActiveRoom,
-        roomModal,
-        toggleRoomModal,
-        chats,
-        setChats,
         pagePath,
         setPagePath,
         toggleCookies,
@@ -100,8 +89,6 @@ export default ({ children }: ProviderProps) => {
         toggleLocale,
         setToggleLocale,
         localesEnabled,
-        geolocation,
-        setGeolocation,
       }}
     >
       {children}

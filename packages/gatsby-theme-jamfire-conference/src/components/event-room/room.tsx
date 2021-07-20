@@ -12,7 +12,7 @@ import { DEFAULT_LOCALE } from "../../utils/constants"
 import { RoomProps } from "./room.d"
 
 // import components
-import { ThemeContext } from "../../services/theme"
+import { EventContext } from "../../services/event"
 import Seo from "../seo"
 import Missing from "../missing"
 
@@ -38,7 +38,7 @@ export default ({ config, event, locale, user }: RoomProps) => {
     )
   }
 
-  const { setActiveRoom } = useContext(ThemeContext)
+  const { setActiveRoom } = useContext(EventContext)
 
   const matchString =
     locale === DEFAULT_LOCALE

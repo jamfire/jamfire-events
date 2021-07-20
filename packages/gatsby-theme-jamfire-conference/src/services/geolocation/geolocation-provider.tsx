@@ -6,7 +6,7 @@ import { GeolocationProviderProps } from "./geolocation"
 import firebase from "firebase/app"
 
 // import components
-import { ThemeContext } from "../theme"
+import { EventContext } from "../event"
 import { GeolocationContext, initialState } from "./"
 import { FirebaseContext } from "../"
 import GeolocationModal from "./geolocation-modal"
@@ -22,7 +22,7 @@ export default ({
     return <>{children}</>
   }
 
-  const { geolocation, setGeolocation } = useContext(ThemeContext)
+  const { geolocation, setGeolocation } = useContext(EventContext)
 
   // state
   const [geolocationEnabled, setGeolocationEnabled] = useState(
