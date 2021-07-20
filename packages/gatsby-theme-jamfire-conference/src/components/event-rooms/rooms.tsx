@@ -16,9 +16,7 @@ import RoomsSearch from "../event-rooms-search/rooms-search"
 import * as styles from "./rooms.module.scss"
 
 export default ({ config, event, locale }: RoomsProps) => {
-  const {
-    title, eventRooms, eventSettings
-  } = event.frontmatter || {}
+  const { title, eventRooms, eventSettings } = event.frontmatter || {}
 
   const [activeRooms, setActiveRooms] = useState("")
 
@@ -65,9 +63,7 @@ export default ({ config, event, locale }: RoomsProps) => {
 }
 
 const RoomItem = ({ room, event, locale }: RoomItemProps) => {
-  const {
-    slug,
-  } = event.frontmatter || {}
+  const { slug } = event.frontmatter || {}
 
   const basePath =
     locale === DEFAULT_LOCALE ? `/event/${slug}/` : `/${locale}/event/${slug}/`
@@ -79,13 +75,18 @@ const RoomItem = ({ room, event, locale }: RoomItemProps) => {
       <div className={styles.roomHeader}>
         <RoomItemImage room={room} />
         <div />
-        <Link className={styles.joinButton} to={`${basePath}rooms/${room.slug}/`}>
+        <Link
+          className={styles.joinButton}
+          to={`${basePath}rooms/${room.slug}/`}
+        >
           {t("buttons.join")}
         </Link>
       </div>
       <div className={styles.roomDescription}>
         {room.title && <p className={styles.title}>{room.title}</p>}
-        {room.description && <p className={styles.description}>{room.description}</p>}
+        {room.description && (
+          <p className={styles.description}>{room.description}</p>
+        )}
       </div>
     </ListItem>
   )

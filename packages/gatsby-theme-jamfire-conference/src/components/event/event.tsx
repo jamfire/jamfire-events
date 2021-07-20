@@ -70,12 +70,8 @@ export default ({ data, pageContext }: DataProps) => {
     return localize
   }
 
-  const {
-    title,
-    slug,
-    eventSettings,
-    eventGraphics,
-  } = eventData?.frontmatter || {}
+  const { title, slug, eventSettings, eventGraphics } =
+    eventData?.frontmatter || {}
 
   const { favicon, headerLogo } = eventGraphics || {}
 
@@ -243,12 +239,7 @@ export default ({ data, pageContext }: DataProps) => {
             path="/rooms/:room"
           />
           {eventSettings?.map && (
-            <Map
-              config={config}
-              event={event}
-              locale={locale}
-              path="/map"
-            />
+            <Map config={config} event={event} locale={locale} path="/map" />
           )}
         </Router>
       </GeolocationProvider>

@@ -16,13 +16,9 @@ const Chat = loadable(() => import("../chat"))
 const QA = loadable(() => import("../event-qa"))
 
 export default ({ config, event, basePath, locale }: ClientProps) => {
-  const {
-    eventSettings
-  } = event.frontmatter || {}
+  const { eventSettings } = event.frontmatter || {}
 
-  const {
-    mainStageFeature
-  } = eventSettings || {}
+  const { mainStageFeature } = eventSettings || {}
 
   return (
     <Wrapper>

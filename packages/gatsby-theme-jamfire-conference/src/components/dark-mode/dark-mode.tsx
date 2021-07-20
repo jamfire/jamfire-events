@@ -25,19 +25,11 @@ const Moon = () => (
 )
 
 export default ({ config }: DarkModeProps) => {
+  const { frontmatter } = config || {}
 
-  const {
-    frontmatter
-  } = config || {}
+  const { colors } = frontmatter || {}
 
-  const {
-    colors
-  } = frontmatter || {}
-
-  const {
-    darkModeOffColor,
-    darkModeOnColor
-  } = colors || {}
+  const { darkModeOffColor, darkModeOnColor } = colors || {}
 
   const offColor = darkModeOffColor || "#ff0050"
   const onColor = darkModeOnColor || "#ff0050"

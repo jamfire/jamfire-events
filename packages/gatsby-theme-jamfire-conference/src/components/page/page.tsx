@@ -24,18 +24,13 @@ export default ({ data, pageContext }: DataProps) => {
   const configData = localizeData(config, defaultConfig)
   const cookiesData = localizeData(cookies, defaultCookies)
 
-  const {
-    frontmatter,
-    html,
-  } = pageData || {}
+  const { frontmatter, html } = pageData || {}
 
-  const {
-    title,
-    pageGraphics
-  } = frontmatter || {}
+  const { title, pageGraphics } = frontmatter || {}
 
   const backgroundImage: IGatsbyImageData =
-    pageGraphics?.featuredImage && pageGraphics?.featuredImage.childImageSharp !== null
+    pageGraphics?.featuredImage &&
+    pageGraphics?.featuredImage.childImageSharp !== null
       ? pageGraphics?.featuredImage?.childImageSharp?.gatsbyImageData
       : null
 
@@ -52,15 +47,18 @@ export default ({ data, pageContext }: DataProps) => {
           <div dangerouslySetInnerHTML={{ __html: html || "" }} />
         </div>
 
-        <div 
+        <div
           className={styles.featuredImage}
-          role="img" 
+          role="img"
           aria-label={t("regions.featuredImage")}
         >
-          {backgroundImage && <GatsbyImage 
-            className={styles.gatsbyImageWrapper} 
-            image={backgroundImage} alt="" />
-          }
+          {backgroundImage && (
+            <GatsbyImage
+              className={styles.gatsbyImageWrapper}
+              image={backgroundImage}
+              alt=""
+            />
+          )}
           {!backgroundImage && <Missing />}
         </div>
       </div>

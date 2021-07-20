@@ -35,7 +35,6 @@
 
 // cookies list component
 .list {
-
   ul {
     list-style: none;
     border-right: 1px solid var(--border-color);
@@ -83,8 +82,8 @@
 
 // content header component
 .header {
-    display: grid;
-    grid-template-columns: 1fr 52px;
-    grid-gap: 1rem;
-    padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 52px;
+  grid-gap: 1rem;
+  padding-bottom: 1rem;
 }

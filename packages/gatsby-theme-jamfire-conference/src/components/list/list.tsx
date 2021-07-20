@@ -6,7 +6,11 @@ import { ListProps, ListItemProps } from "./list.d"
 import * as styles from "./list.module.scss"
 
 export const List = ({ children }: ListProps) => {
-  return <ul className={styles.list} tabIndex={0}>{children}</ul>
+  return (
+    <ul className={styles.list} tabIndex={0}>
+      {children}
+    </ul>
+  )
 }
 
 export const ListItem = ({ children }: ListItemProps) => {

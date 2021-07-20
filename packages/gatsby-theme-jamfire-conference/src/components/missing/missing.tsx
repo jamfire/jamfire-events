@@ -9,17 +9,17 @@ import { FaFireAlt } from "react-icons/fa"
 import * as styles from "./missing.module.scss"
 
 export default ({ fontSize = 8, darker = "false" }: MissingProps) => {
+  const color =
+    darker === "true"
+      ? "var(--list-header-background-darker)"
+      : "var(--list-header-background)"
 
-  const color = darker === "true"
-    ? "var(--list-header-background-darker)"
-    : "var(--list-header-background)"
-    
   return (
     <div className={styles.missing}>
-      <FaFireAlt 
+      <FaFireAlt
         style={{
           color: color,
-          fontSize: `${fontSize}rem`
+          fontSize: `${fontSize}rem`,
         }}
       />
     </div>

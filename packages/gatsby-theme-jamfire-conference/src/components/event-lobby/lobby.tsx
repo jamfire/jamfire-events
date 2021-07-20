@@ -13,24 +13,13 @@ import Missing from "../missing"
 import * as styles from "./lobby.module.scss"
 
 export default ({ config, event, locale }: LobbyProps) => {
-  const {
-    frontmatter,
-    html,
-  } = event || {}
+  const { frontmatter, html } = event || {}
 
-  const {
-    title,
-    eventInformation,
-    eventGraphics,
-  } = frontmatter || {}
+  const { title, eventInformation, eventGraphics } = frontmatter || {}
 
-  const {
-    startTime, endTime 
-  } = eventInformation || {}
+  const { startTime, endTime } = eventInformation || {}
 
-  const {
-    lobbyImage, favicon
-  } = eventGraphics || {}
+  const { lobbyImage, favicon } = eventGraphics || {}
 
   const featuredImage =
     lobbyImage && lobbyImage.childImageSharp
@@ -55,7 +44,7 @@ export default ({ config, event, locale }: LobbyProps) => {
         locale={locale}
         activeFavicon={favicon}
       />
-      <div className={styles.content} tabIndex={0} style={{ padding: "2rem"}}>
+      <div className={styles.content} tabIndex={0} style={{ padding: "2rem" }}>
         <h1>{title}</h1>
         <ul className={styles.eventTimes}>
           <li>
@@ -69,7 +58,13 @@ export default ({ config, event, locale }: LobbyProps) => {
       </div>
 
       <div className={styles.featuredImage}>
-        {featuredImage && <GatsbyImage className={styles.gatsbyImageWrapper} image={featuredImage} alt="" />}
+        {featuredImage && (
+          <GatsbyImage
+            className={styles.gatsbyImageWrapper}
+            image={featuredImage}
+            alt=""
+          />
+        )}
         {!featuredImage && <Missing />}
       </div>
     </div>

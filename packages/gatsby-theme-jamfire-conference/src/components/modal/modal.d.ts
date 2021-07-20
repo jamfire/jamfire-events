@@ -4,8 +4,8 @@ import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // click outside props
 export interface ClickOutsideProps {
-  onClick: () => void;
-  children: ReactElement;
+  onClick: () => void
+  children: ReactElement
 }
 
 export interface ModalProps {

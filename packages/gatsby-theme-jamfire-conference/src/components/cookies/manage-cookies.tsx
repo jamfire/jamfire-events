@@ -28,14 +28,9 @@ export default ({ cookies, config }: ManageCookiesProps) => {
   const { t } = useTranslation()
 
   // get cookie information
-  const {
-    frontmatter
-  } = cookies
+  const { frontmatter } = cookies
 
-  const {
-    necessaryCookies,
-    analyticsCookies
-  } = frontmatter || {}
+  const { necessaryCookies, analyticsCookies } = frontmatter || {}
 
   // set state on load
   useEffect(() => {
@@ -77,7 +72,7 @@ export default ({ cookies, config }: ManageCookiesProps) => {
   let cookieData = {
     title: "",
     content: "",
-    enabled: true
+    enabled: true,
   }
 
   if (currentCookie === "necessaryCookies") {
@@ -150,9 +145,9 @@ export default ({ cookies, config }: ManageCookiesProps) => {
           </div>
         </div>
         <footer className={styles.footer}>
-          <button 
+          <button
             className={cx(noticeStyles.button, noticeStyles.primary)}
-            onClick={() => confirmChoices()}  
+            onClick={() => confirmChoices()}
           >
             {t("cookies.confirm")}
           </button>

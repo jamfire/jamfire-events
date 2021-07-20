@@ -11,9 +11,7 @@ export default ({ config, mobile = false }: CopyrightProps) => {
     return <></>
   }
 
-  const mobileStyles = mobile
-    ? styles.mobile
-    : ""
+  const mobileStyles = mobile ? styles.mobile : ""
 
   return (
     <div className={cx(styles.copyright, mobileStyles)}>

@@ -10,18 +10,11 @@ import Missing from "../missing"
 import * as styles from "./livestream.module.scss"
 
 export default ({ event }: LivestreamProps) => {
-  const {
-    eventGraphics,
-    eventInformation,
-  } = event.frontmatter || {}
+  const { eventGraphics, eventInformation } = event.frontmatter || {}
 
-  const {
-    lobbyImage
-  } = eventGraphics || {}
+  const { lobbyImage } = eventGraphics || {}
 
-  const {
-    livestreamUrl
-  } = eventInformation || {}
+  const { livestreamUrl } = eventInformation || {}
 
   // livestreamUrl and lobbyImage both missing
   if (!livestreamUrl && !lobbyImage) return <Missing />

@@ -1,10 +1,10 @@
 @import "../../theme/media.scss";
 
 .chat {
-    height: auto;
+  height: auto;
 
-    @include tablet-up {
-        display: grid;
-        grid-template-rows: 1fr 60px;
-    }
+  @include tablet-up {
+    display: grid;
+    grid-template-rows: 1fr 60px;
+  }
 }

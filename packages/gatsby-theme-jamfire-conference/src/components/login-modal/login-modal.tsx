@@ -13,13 +13,9 @@ import SocialLogins from "../social-logins"
 import * as styles from "./login-modal.module.scss"
 
 export default ({ config }: LoginModalProps) => {
-  const {
-    frontmatter
-  } = config || {}
+  const { frontmatter } = config || {}
 
-  const {
-    socialLogin
-  } = frontmatter || {}
+  const { socialLogin } = frontmatter || {}
 
   const { toggleLogin, setToggleLogin } = useContext(Context)
 

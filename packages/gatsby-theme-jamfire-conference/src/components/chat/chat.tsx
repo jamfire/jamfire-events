@@ -14,19 +14,11 @@ import Send from "./send"
 import * as styles from "./chat.module.scss"
 
 export default ({ config, event }: ChatProps) => {
-  const {
-    id,
-    frontmatter,
-    fields
-  } = event
+  const { id, frontmatter, fields } = event
 
-  const {
-    title, eventSettings
-  } = frontmatter || {}
+  const { title, eventSettings } = frontmatter || {}
 
-  const {
-    locale
-  } = fields || {}
+  const { locale } = fields || {}
 
   const [chats, setChats] = useState([])
   const [mobile, setMobile] = useState(false)
@@ -35,7 +27,8 @@ export default ({ config, event }: ChatProps) => {
 
   useEffect(() => {
     if (typeof document !== `undefined` && isClient) {
-      let width: number = document.getElementById("layout")?.clientWidth || bp.tablet_up
+      let width: number =
+        document.getElementById("layout")?.clientWidth || bp.tablet_up
       setMobile(width < bp.tablet_up ? true : false)
     }
   }, [])

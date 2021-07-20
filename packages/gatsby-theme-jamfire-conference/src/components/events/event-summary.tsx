@@ -16,25 +16,14 @@ import * as styles from "./event-summary.module.scss"
 
 export default ({ event, locale }: EventSummaryProps) => {
   const {
-    node: {
-      frontmatter
-    },
+    node: { frontmatter },
   } = event
 
-  const {
-    title,
-    slug,
-    eventGraphics,
-    eventInformation,
-  } = frontmatter || {}
+  const { title, slug, eventGraphics, eventInformation } = frontmatter || {}
 
-  const {
-    lobbyImage
-  } = eventGraphics || {}
+  const { lobbyImage } = eventGraphics || {}
 
-  const {
-    startTime
-  } = eventInformation || {}
+  const { startTime } = eventInformation || {}
 
   const eventPath: string =
     locale === DEFAULT_LOCALE ? `/event/${slug}/` : `/${locale}/event/${slug}/`
@@ -47,9 +36,18 @@ export default ({ event, locale }: EventSummaryProps) => {
   const dtStartTime = DateTime.fromISO(startTime?.datetime)
 
   return (
-    <div className={cx(styles.event, `event-${slug}`)} onClick={() => navigate(eventPath)}>
+    <div
+      className={cx(styles.event, `event-${slug}`)}
+      onClick={() => navigate(eventPath)}
+    >
       <div className={styles.featuredImage}>
-        {featuredImage && <GatsbyImage image={featuredImage} alt="" className={styles.background} />}
+        {featuredImage && (
+          <GatsbyImage
+            image={featuredImage}
+            alt=""
+            className={styles.background}
+          />
+        )}
         {!featuredImage && <Missing darker="true" />}
       </div>
       <div className={styles.summary}>

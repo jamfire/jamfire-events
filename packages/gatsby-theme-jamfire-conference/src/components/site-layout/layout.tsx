@@ -36,11 +36,7 @@ export default ({
   useHeaderTitle = false,
   locale,
 }: LayoutProps) => {
-
-  const {
-    navigation,
-    darkMode
-  } = useContext(Context)
+  const { navigation, darkMode } = useContext(Context)
 
   const { ready, i18n } = useTranslation()
 
@@ -54,29 +50,28 @@ export default ({
     return null
   }
 
-  const {
-    colors
-  } = config?.frontmatter || {}
+  const { colors } = config?.frontmatter || {}
 
-  const {
-    primaryColor,
-    primaryColorHover
-  } = colors || {}
-  
+  const { primaryColor, primaryColorHover } = colors || {}
+
   const theme = darkMode ? styles.dark : styles.light
 
   return (
     <div className={cx(theme, styles.layout)} id="layout">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         :root {
           --primary-color: ${primaryColor};
           --accent-color: ${primaryColorHover};
         }
-      `}} />
-      <Seo 
-        activeTitle={title || ""} 
-        activeFavicon={favicon} 
-        config={config || null} 
+      `,
+        }}
+      />
+      <Seo
+        activeTitle={title || ""}
+        activeFavicon={favicon}
+        config={config || null}
         locale={i18n.language}
       />
       <Header

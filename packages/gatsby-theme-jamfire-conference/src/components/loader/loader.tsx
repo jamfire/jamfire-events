@@ -11,10 +11,10 @@ import * as styles from "./loader.module.scss"
 export default ({ fontSize }: LoaderProps) => {
   return (
     <div className={styles.loader}>
-      <FaFireAlt 
-        className={styles.icon} 
-        style={{ fontSize: fontSize ? fontSize : 4}}
-        aria-hidden="true" 
+      <FaFireAlt
+        className={styles.icon}
+        style={{ fontSize: fontSize ? fontSize : 4 }}
+        aria-hidden="true"
       />
     </div>
   )

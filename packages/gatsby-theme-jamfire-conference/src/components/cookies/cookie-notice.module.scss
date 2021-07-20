@@ -19,7 +19,7 @@
 
 // content component
 .content {
-    position: relative;
+  position: relative;
 }
 
 // cookie title notice
@@ -40,22 +40,22 @@
 
 // button component
 .button {
-    margin: 0.5rem;
-    border: 1px solid var(--logo-background);
-    outline: 0;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background: var(--background-color);
-    color: var(--logo-background);
+  margin: 0.5rem;
+  border: 1px solid var(--logo-background);
+  outline: 0;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: var(--background-color);
+  color: var(--logo-background);
 
-    &.primary {
-        background: var(--logo-background);
-        color: var(--logo-color);
-    }
+  &.primary {
+    background: var(--logo-background);
+    color: var(--logo-color);
+  }
 
-    &:hover {
-        background: var(--logo-hover);
-        color: var(--logo-color);
-    }
+  &:hover {
+    background: var(--logo-hover);
+    color: var(--logo-color);
+  }
 }

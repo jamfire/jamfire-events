@@ -20,21 +20,21 @@
 }
 
 .login {
-    background: var(--logo-background);
-    color: var(--logo-color);
-    cursor: pointer;
-    justify-content: flex-start;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  background: var(--logo-background);
+  color: var(--logo-color);
+  cursor: pointer;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    .icon {
-        margin-left: 5px;
-    }
+  .icon {
+    margin-left: 5px;
+  }
 
-    .icons {
-        text-align: right;
-    }
+  .icons {
+    text-align: right;
+  }
 }
 
 .form {

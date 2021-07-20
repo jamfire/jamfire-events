@@ -1,5 +1,12 @@
 // import libs
-import React, { FC, Dispatch, SetStateAction, useEffect, useMemo, useState } from "react"
+import React, {
+  FC,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 import firebase from "firebase/app"
 import "firebase/auth"
 import "firebase/firestore"
@@ -21,9 +28,10 @@ const FirebaseProvider: FC = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [profile, setProfile] = useState<firebase.User | null>(null)
-  const [authToken, setAuthToken]: [string | null, Dispatch<SetStateAction<string | null>>] = useState(
-    isClient ? window.localStorage.getItem("authToken") : null
-  )
+  const [authToken, setAuthToken]: [
+    string | null,
+    Dispatch<SetStateAction<string | null>>
+  ] = useState(isClient ? window.localStorage.getItem("authToken") : null)
 
   // set auth token to local storage and state
   const onSetAuthToken = (token: string) => {

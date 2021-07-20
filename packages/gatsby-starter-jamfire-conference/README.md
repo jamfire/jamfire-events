@@ -1,6 +1,6 @@
 # Gatsby Starter Conferencing Site
 
-[![GitHub](https://img.shields.io/github/license/jamfire/jamfire?style=flat)](https://github.com/jamfire/jamfire/blob/master/packages/gatsby-starter-jamfire-conference/LICENSE) ![GitHub package.json version](https://img.shields.io/github/package-json/v/jamfire/gatsby-starter-jamfire-conference) [![publish starter](https://github.com/jamfire/jamfire/actions/workflows/publish-starters.yml/badge.svg)](https://github.com/jamfire/jamfire/actions/workflows/publish-starters.yml)  [![Netlify Status](https://img.shields.io/netlify/6b0b0a47-5646-4cdb-b887-8cc2240275f5)](https://app.netlify.com/sites/jamfireconference/deploys)
+[![GitHub](https://img.shields.io/github/license/jamfire/jamfire?style=flat)](https://github.com/jamfire/jamfire/blob/master/packages/gatsby-starter-jamfire-conference/LICENSE) ![GitHub package.json version](https://img.shields.io/github/package-json/v/jamfire/gatsby-starter-jamfire-conference) [![publish starter](https://github.com/jamfire/jamfire/actions/workflows/publish-starters.yml/badge.svg)](https://github.com/jamfire/jamfire/actions/workflows/publish-starters.yml) [![Netlify Status](https://img.shields.io/netlify/6b0b0a47-5646-4cdb-b887-8cc2240275f5)](https://app.netlify.com/sites/jamfireconference/deploys)
 
 [View the demo](https://conference.jamfire.io)
 

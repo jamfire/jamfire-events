@@ -12,9 +12,7 @@ import Missing from "../missing"
 import * as styles from "./schedule.module.scss"
 
 export default ({ config, event, locale }: ScheduleProps) => {
-  const {
-    title, eventSchedule, eventSettings,
-  } = event.frontmatter || {}
+  const { title, eventSchedule, eventSettings } = event.frontmatter || {}
 
   if (!eventSchedule) return <Missing fontSize={4} />
 

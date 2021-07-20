@@ -38,16 +38,16 @@ export default ({ data }: firebase.firestore.DocumentData) => {
     <>
       {locations.map(location => {
         const size = sizeFactor(location[1].length)
-        const iconSize = Math.ceil(16 * (size/100) + 16)
+        const iconSize = Math.ceil(16 * (size / 100) + 16)
 
         // users icon component
         const IconMarkup = renderToStaticMarkup(
-          <div 
-            className={styles.iconWrapper} 
+          <div
+            className={styles.iconWrapper}
             style={{
               height: `${iconSize}px`,
-              width: `${iconSize}px`
-            }}  
+              width: `${iconSize}px`,
+            }}
           >
             <div className={styles.iconBackground} />
           </div>
@@ -57,7 +57,7 @@ export default ({ data }: firebase.firestore.DocumentData) => {
         const IconMarker = divIcon({
           html: IconMarkup,
           className: styles.leafletDivIcon,
-          iconSize: [iconSize, iconSize]
+          iconSize: [iconSize, iconSize],
         })
 
         return (

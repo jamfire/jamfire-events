@@ -182,10 +182,17 @@ export default () => {
             <div className={styles.fieldWrapper}>
               {register && (
                 <>
-                  <button className={styles.button} type="submit" disabled={isSubmitting}>
+                  <button
+                    className={styles.button}
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
                     {t("auth.register")}
                   </button>
-                  <button className={styles.toggle} onClick={() => setRegister(false)}>
+                  <button
+                    className={styles.toggle}
+                    onClick={() => setRegister(false)}
+                  >
                     {t("auth.existingAccount")}
                   </button>
                 </>
@@ -199,7 +206,10 @@ export default () => {
                   >
                     {t("auth.login")}
                   </button>
-                  <button className={cx(styles.toggle, "register")} onClick={() => setRegister(true)}>
+                  <button
+                    className={cx(styles.toggle, "register")}
+                    onClick={() => setRegister(true)}
+                  >
                     {t("auth.registerAccount")}
                   </button>
                 </>

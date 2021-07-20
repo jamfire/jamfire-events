@@ -19,12 +19,12 @@ const FirebaseProvider = loadable(() =>
 )
 
 // locales provider
-const LocalesProvider = loadable(() => 
+const LocalesProvider = loadable(() =>
   import("./src/services/locales/locales-provider")
 )
 
 // app provider
-const ThemeProvider = loadable(() => 
+const ThemeProvider = loadable(() =>
   import("./src/services/theme/theme-provider")
 )
 
@@ -32,9 +32,7 @@ const ThemeProvider = loadable(() =>
 export const wrapRootElement = ({ element }) => {
   return (
     <CookiesProvider>
-      <FirebaseProvider>
-        {element}
-      </FirebaseProvider>
+      <FirebaseProvider>{element}</FirebaseProvider>
     </CookiesProvider>
   )
 }

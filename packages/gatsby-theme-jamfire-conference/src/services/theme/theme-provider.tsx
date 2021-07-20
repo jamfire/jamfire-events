@@ -8,15 +8,16 @@ import { ProviderProps } from "./_props"
 import { ThemeContext, initialState } from "./theme-context"
 
 export default ({ children }: ProviderProps) => {
-
   // cookies
-  const [ , setCookies, removeCookies] = useCookies(["cookies"])
+  const [, setCookies, removeCookies] = useCookies(["cookies"])
 
   // state
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
   const [toggle, setToggle] = useState(initialState.toggle)
   const [toggleLogin, setToggleLogin] = useState(initialState.toggleLogin)
-  const [toggleDashboard, setToggleDashboard] = useState(initialState.toggleDashboard)
+  const [toggleDashboard, setToggleDashboard] = useState(
+    initialState.toggleDashboard
+  )
   const [navigation, setNavigation] = useState(initialState.navigation)
   const [user, setUser] = useState(initialState.user)
   const [activeRoom, setActiveRoom] = useState(initialState.activeRoom)
@@ -96,7 +97,7 @@ export default ({ children }: ProviderProps) => {
         setEnableAnalytics,
         toggleLocale,
         setToggleLocale,
-        localesEnabled
+        localesEnabled,
       }}
     >
       {children}

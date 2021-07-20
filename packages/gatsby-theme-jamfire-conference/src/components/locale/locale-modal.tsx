@@ -20,8 +20,7 @@ export default ({ config }: LocaleModalProps) => {
 
   const location = useLocation()
 
-  const { toggleLocale, setToggleLocale, localesEnabled } =
-    useContext(Context)
+  const { toggleLocale, setToggleLocale, localesEnabled } = useContext(Context)
 
   let locales = LOCALES.filter(locale => locale !== i18n.language)
 
@@ -32,10 +31,10 @@ export default ({ config }: LocaleModalProps) => {
 
   // set locale
   const setSiteLocale: (newLocale: string) => void = (newLocale: string) => {
-    const basePath = `${location.pathname.replace(`/${i18n.language}`, "")}/`.replace(
-      "//",
-      "/"
-    )
+    const basePath = `${location.pathname.replace(
+      `/${i18n.language}`,
+      ""
+    )}/`.replace("//", "/")
 
     const path: string =
       newLocale === DEFAULT_LOCALE
@@ -57,10 +56,7 @@ export default ({ config }: LocaleModalProps) => {
     >
       <div className={styles.wrapper}>
         {LOCALES.map(locale => {
-
-          const activeClass = locale === i18n.language
-            ? styles.active
-            : ""
+          const activeClass = locale === i18n.language ? styles.active : ""
 
           return (
             <div
@@ -73,7 +69,9 @@ export default ({ config }: LocaleModalProps) => {
               <div className={styles.code}>{locale}</div>
               <div className={styles.label}>
                 <div>{localesList[locale]}</div>
-                <div className={styles.localized}>{t(`locale.codes.${locale}`)}</div>
+                <div className={styles.localized}>
+                  {t(`locale.codes.${locale}`)}
+                </div>
               </div>
             </div>
           )

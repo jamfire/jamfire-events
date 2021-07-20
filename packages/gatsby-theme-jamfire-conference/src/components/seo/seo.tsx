@@ -19,13 +19,9 @@ export default ({
 
   const { frontmatter } = config || {}
 
-  const {
-    graphics,
-  } = frontmatter || {}
+  const { graphics } = frontmatter || {}
 
-  const {
-    favicon
-  } = graphics || {}
+  const { favicon } = graphics || {}
 
   const [faviconSrc, setFaviconSrc] = useState("")
 
@@ -64,7 +60,12 @@ export default ({
         data-react-helmet="true"
       />
       {faviconSrc !== null && (
-        <link rel="icon" type="image/png" href={faviconSrc || ""} sizes="16x16" />
+        <link
+          rel="icon"
+          type="image/png"
+          href={faviconSrc || ""}
+          sizes="16x16"
+        />
       )}
     </Helmet>
   )

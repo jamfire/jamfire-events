@@ -1,12 +1,15 @@
 // import libs
 import mergeWith from "lodash/mergeWith"
-import { MarkdownRemark, MarkdownRemarkGroupConnection } from "../gatsby/graphql-types"
+import {
+  MarkdownRemark,
+  MarkdownRemarkGroupConnection,
+} from "../gatsby/graphql-types"
 
 // localize data
 export const localizeData: (
-  localized: MarkdownRemark |  undefined,
-  original: MarkdownRemark |  undefined
-) => MarkdownRemark |  undefined = (localized, original) => {
+  localized: MarkdownRemark | undefined,
+  original: MarkdownRemark | undefined
+) => MarkdownRemark | undefined = (localized, original) => {
   const data = mergeWith(original, localized, customizer)
   return data
 }

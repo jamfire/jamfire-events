@@ -11,14 +11,17 @@ import { Context } from "../../services/theme"
 import * as styles from "./avatar.module.scss"
 
 export default ({ isLoggedIn, isLoading, profile = null }: AvatarProps) => {
-
   const { setToggleLogin, setToggleDashboard } = useContext(Context)
 
   const { t } = useTranslation()
 
   if (isLoading) {
     return (
-      <div className={styles.wrapper} role="region" aria-label={t("regions.dashboard")}>
+      <div
+        className={styles.wrapper}
+        role="region"
+        aria-label={t("regions.dashboard")}
+      >
         <div className={styles.avatar} id="avatar" />
       </div>
     )
@@ -26,8 +29,12 @@ export default ({ isLoggedIn, isLoading, profile = null }: AvatarProps) => {
 
   if (!isLoggedIn) {
     return (
-      <div className={styles.wrapper} role="region" aria-label={t("regions.dashboard")}>
-        <div 
+      <div
+        className={styles.wrapper}
+        role="region"
+        aria-label={t("regions.dashboard")}
+      >
+        <div
           id="avatar"
           className={styles.avatar}
           onClick={() => setToggleLogin(true)}
@@ -52,11 +59,11 @@ export default ({ isLoggedIn, isLoading, profile = null }: AvatarProps) => {
   }
 
   return (
-    <div 
+    <div
       className={styles.wrapper}
-      role="region" 
+      role="region"
       aria-label={t("regions.dashboard")}
-      onClick={() => setToggleDashboard(true)}  
+      onClick={() => setToggleDashboard(true)}
     >
       <div className={styles.avatar}>
         <img

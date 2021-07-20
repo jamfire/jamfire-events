@@ -10,14 +10,9 @@ import cx from "classnames"
 import * as styles from "./tracker.module.scss"
 
 export default ({ event }: TrackerProps) => {
-  const {
-    eventSchedule,
-    eventInformation
-  } = event.frontmatter || {}
+  const { eventSchedule, eventInformation } = event.frontmatter || {}
 
-  const { 
-    startTime, endTime 
-  } = eventInformation || {}
+  const { startTime, endTime } = eventInformation || {}
 
   if (!eventSchedule) {
     return null
@@ -40,18 +35,22 @@ export default ({ event }: TrackerProps) => {
 
     // event has ended
     if (currentDateTime > endDateTime) {
-      output = `<p className={${styles.italic}}">${t("event.tracker.eventEnded")}</p>`
+      output = `<p className={${styles.italic}}">${t(
+        "event.tracker.eventEnded"
+      )}</p>`
     }
 
     // event has not started
     if (startDateTime > currentDateTime) {
-      let diff: DurationObject = startDateTime.diff(currentDateTime, [
-        "days",
-        "hours",
-        "minutes",
-        "seconds",
-        "milliseconds",
-      ]).toObject()
+      let diff: DurationObject = startDateTime
+        .diff(currentDateTime, [
+          "days",
+          "hours",
+          "minutes",
+          "seconds",
+          "milliseconds",
+        ])
+        .toObject()
 
       let html: string | null = null
 
@@ -59,35 +58,35 @@ export default ({ event }: TrackerProps) => {
       html += `<div class="${styles.start}">${t("event.tracker.starts")}:</div>`
       html +=
         diff.days > 0
-          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-              diff.days
-            }</span><span class="${styles.symbol}">${t("event.tracker.day").charAt(
-              0
-            )}</span></div>`
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+              styles.number
+            }">${diff.days}</span><span class="${styles.symbol}">${t(
+              "event.tracker.day"
+            ).charAt(0)}</span></div>`
           : ""
       html +=
         diff.hours > 0
-          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-              diff.hours
-            }</span><span class="${styles.symbol}">${t("event.tracker.hour").charAt(
-              0
-            )}</span></div>`
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+              styles.number
+            }">${diff.hours}</span><span class="${styles.symbol}">${t(
+              "event.tracker.hour"
+            ).charAt(0)}</span></div>`
           : ""
       html +=
         diff.minutes >= 0
-          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-              diff.minutes
-            }</span><span class="${styles.symbol}">${t("event.tracker.minute").charAt(
-              0
-            )}</span></div>`
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+              styles.number
+            }">${diff.minutes}</span><span class="${styles.symbol}">${t(
+              "event.tracker.minute"
+            ).charAt(0)}</span></div>`
           : ""
       html +=
         diff.seconds >= 0
-          ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-              diff.seconds
-            }</span><span class="${styles.symbol}">${t("event.tracker.second").charAt(
-              0
-            )}</span></div>`
+          ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+              styles.number
+            }">${diff.seconds}</span><span class="${styles.symbol}">${t(
+              "event.tracker.second"
+            ).charAt(0)}</span></div>`
           : ""
       html += `</div>`
 
@@ -135,43 +134,43 @@ export default ({ event }: TrackerProps) => {
         let html: string | null = null
 
         html = `<div>`
-        html += `<div class="${cx(styles.box, styles.label)}">${t("event.tracker.current")}: ${
-          item.title
-        }</div>`
+        html += `<div class="${cx(styles.box, styles.label)}">${t(
+          "event.tracker.current"
+        )}: ${item.title}</div>`
         html += `<div class="${cx(styles.box, styles.label)}">${t(
           "event.tracker.next"
         )}: ${nextItemTitle}</div>`
         html +=
           diff.days > 0
-            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-                diff.days
-              }</span><span class="${styles.symbol}">${t("event.tracker.day").charAt(
-                0
-              )}</span></div>`
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+                styles.number
+              }">${diff.days}</span><span class="${styles.symbol}">${t(
+                "event.tracker.day"
+              ).charAt(0)}</span></div>`
             : ""
         html +=
           diff.hours > 0
-            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-                diff.hours
-              }</span><span class="${styles.symbol}">${t("event.tracker.hour").charAt(
-                0
-              )}</span></div>`
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+                styles.number
+              }">${diff.hours}</span><span class="${styles.symbol}">${t(
+                "event.tracker.hour"
+              ).charAt(0)}</span></div>`
             : ""
         html +=
           diff.minutes >= 0
-            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-                diff.minutes
-              }</span><span class="${styles.symbol}">${t("event.tracker.minute").charAt(
-                0
-              )}</span></div>`
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+                styles.number
+              }">${diff.minutes}</span><span class="${styles.symbol}">${t(
+                "event.tracker.minute"
+              ).charAt(0)}</span></div>`
             : ""
         html +=
           diff.seconds >= 0
-            ? `<div class="${cx(styles.box, styles.time)}"><span class="${styles.number}">${
-                diff.seconds
-              }</span><span class="${styles.symbol}">${t("event.tracker.second").charAt(
-                0
-              )}</span></div>`
+            ? `<div class="${cx(styles.box, styles.time)}"><span class="${
+                styles.number
+              }">${diff.seconds}</span><span class="${styles.symbol}">${t(
+                "event.tracker.second"
+              ).charAt(0)}</span></div>`
             : ""
         html += `</div>`
 

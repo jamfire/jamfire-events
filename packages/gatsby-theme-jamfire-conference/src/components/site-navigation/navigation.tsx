@@ -58,9 +58,8 @@ const NavLink = ({ locale, link }: NavLinkProps) => {
   let partiallyActive =
     link.partiallyActive && path.indexOf(navLink) >= 0 ? true : false
 
-  let activeClass = active === true || partiallyActive === true 
-    ? styles.active
-    : ""
+  let activeClass =
+    active === true || partiallyActive === true ? styles.active : ""
 
   const { t } = useTranslation()
 

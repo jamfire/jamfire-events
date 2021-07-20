@@ -61,12 +61,12 @@ export default ({ cookies, config }: CookieNoticeProps) => {
       <CookieNotification cookies={cookies} config={config} />
       <div className={styles.buttons}>
         <button
-          className={cx(styles.button, styles.primary, 'manage-cookies')}
+          className={cx(styles.button, styles.primary, "manage-cookies")}
           onClick={() => setToggleCookies(true)}
         >
           {t("cookies.manage")}
         </button>
-        <button 
+        <button
           className={cx(styles.button, "accept-cookies")}
           onClick={cookiesAccepted}
         >
@@ -80,8 +80,6 @@ export default ({ cookies, config }: CookieNoticeProps) => {
 const CookieNotification = ({ cookies, config }: CookieNoticeProps) => (
   <div className={styles.content}>
     <p className={styles.title}>{config.frontmatter?.title}</p>
-    <Markdown
-      content={cookies.frontmatter?.cookieNotification?.content}
-    />
+    <Markdown content={cookies.frontmatter?.cookieNotification?.content} />
   </div>
 )

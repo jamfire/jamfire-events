@@ -135,8 +135,8 @@ const Message = ({ item, userId, sameSender, nextSender }: MessageProps) => {
       </div>
       {!nextSender && me === "me" && (
         <div className={cx(styles.name, styles[me])}>
-          <span>{displayName}</span> 
-          <span>{date.toLocaleString(DateTime.DATETIME_SHORT)}</span>  
+          <span>{displayName}</span>
+          <span>{date.toLocaleString(DateTime.DATETIME_SHORT)}</span>
         </div>
       )}
       {!nextSender && me === "not-me" && (

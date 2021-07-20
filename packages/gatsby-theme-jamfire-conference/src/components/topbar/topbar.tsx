@@ -15,7 +15,11 @@ export default ({ isLoading, isLoggedIn, config }: TopbarProps) => {
   const { t } = useTranslation()
 
   return (
-    <div className={styles.topbar} role="region" aria-label={t("regions.topbar")}>
+    <div
+      className={styles.topbar}
+      role="region"
+      aria-label={t("regions.topbar")}
+    >
       <LoginButton
         aria-label={t("regions.login")}
         isLoading={isLoading}

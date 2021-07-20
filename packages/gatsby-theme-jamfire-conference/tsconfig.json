@@ -13,10 +13,8 @@
     "noEmit": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "plugins": [
-      { "name": "typescript-plugin-css-modules" }
-    ]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["./src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

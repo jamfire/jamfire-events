@@ -31,10 +31,10 @@ export interface MessageProps {
     user_id: string
     displayName: string
     photoURL: string
-  },
-  userId: string | number,
-  sameSender: boolean,
-  nextSender: boolean,
+  }
+  userId: string | number
+  sameSender: boolean
+  nextSender: boolean
 }
 
 // send props

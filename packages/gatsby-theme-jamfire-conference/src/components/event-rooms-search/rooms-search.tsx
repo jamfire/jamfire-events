@@ -10,7 +10,7 @@ export default ({ setRoomName }: RoomsSearchProps) => {
   const { t } = useTranslation()
 
   return (
-    <input  
+    <input
       className={styles.search}
       type="text"
       placeholder={t("form.placeholderSearch")}

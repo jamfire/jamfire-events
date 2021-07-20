@@ -12,19 +12,15 @@ import { Modal } from "../modal"
 import * as styles from "./dashboard-modal.module.scss"
 
 export default ({ config }: DashboardModalProps) => {
+  const { toggleDashboard, setToggleDashboard, setToggleCookies } =
+    useContext(Context)
 
-  const { 
-    toggleDashboard, setToggleDashboard, setToggleCookies 
-  } = useContext(Context);
-
-  const { 
-    isLoading, isLoggedIn, profile, logout 
-  } = useContext(FirebaseContext);
+  const { isLoading, isLoggedIn, profile, logout } = useContext(FirebaseContext)
 
   const { t } = useTranslation()
 
   if (isLoading || !isLoggedIn || !profile) {
-    return null;
+    return null
   }
 
   return (
@@ -39,13 +35,11 @@ export default ({ config }: DashboardModalProps) => {
         <div className={styles.profile}>
           <div className={styles.profileHeader}>
             <img
-              src={profile?.photoURL || ''}
-              alt={profile?.displayName || ''}
+              src={profile?.photoURL || ""}
+              alt={profile?.displayName || ""}
             />
             <div className={styles.details}>
-              <div className={styles.displayName}>
-                {profile.displayName}
-              </div>
+              <div className={styles.displayName}>{profile.displayName}</div>
               <div className={styles.email}>{profile.email}</div>
             </div>
           </div>
@@ -53,14 +47,16 @@ export default ({ config }: DashboardModalProps) => {
         <div className={styles.options}>
           <ul>
             <li>
-              <button onClick={() => logout()}>{t('auth.logout')}</button>
+              <button onClick={() => logout()}>{t("auth.logout")}</button>
             </li>
             <li>
-              <button onClick={() => {
-                setToggleDashboard(false)
-                setToggleCookies(true)
-              }}>
-                {t('dashboard.cookies')}
+              <button
+                onClick={() => {
+                  setToggleDashboard(false)
+                  setToggleCookies(true)
+                }}
+              >
+                {t("dashboard.cookies")}
               </button>
             </li>
           </ul>

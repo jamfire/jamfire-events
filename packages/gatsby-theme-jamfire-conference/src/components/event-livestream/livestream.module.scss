@@ -2,49 +2,49 @@
 
 // livestream component
 .livestream {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
 
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      margin: 0;
-    }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+  }
 }
 
 // content component
 .content {
-    grid-area: content;
-  
-    @include tablet-up {
-      overflow-y: scroll;
-      height: fill-available;
-      height: 100%;
-      border-right: 1px solid var(--border-color);
-    }  
+  grid-area: content;
+
+  @include tablet-up {
+    overflow-y: scroll;
+    height: fill-available;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+  }
 }
-  
+
 // featured image component
 .featuredImage {
+  height: 40vh;
+  background: var(--content-background);
+  grid-area: featured-image;
+
+  @include tablet-up {
+    height: calc(100vh - 160px);
+  }
+
+  .gatsby-image-wrapper {
     height: 40vh;
-    background: var(--content-background);
-    grid-area: featured-image;
-  
+
     @include tablet-up {
       height: calc(100vh - 160px);
-    }
-  
-    .gatsby-image-wrapper {
-      height: 40vh;
-  
-      @include tablet-up {
-        height: calc(100vh - 160px);
-        width: 100%;
-      }
+      width: 100%;
     }
   }
+}

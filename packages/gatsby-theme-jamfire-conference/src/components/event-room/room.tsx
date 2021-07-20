@@ -20,16 +20,9 @@ import Missing from "../missing"
 import * as styles from "./room.module.scss"
 
 export default ({ config, event, locale, user }: RoomProps) => {
-  const {
-    slug,
-    title,
-    eventInformation,
-    eventRooms,
-  } = event.frontmatter || {}
+  const { slug, title, eventInformation, eventRooms } = event.frontmatter || {}
 
-  const {
-    startTime
-  } = eventInformation || {}
+  const { startTime } = eventInformation || {}
 
   if (!eventRooms) {
     return (
@@ -169,10 +162,10 @@ export default ({ config, event, locale, user }: RoomProps) => {
 
   return (
     <>
-      <Seo 
-        config={config} 
-        activeTitle={`${eventRoom?.title} | ${title}`} 
-        locale={locale}  
+      <Seo
+        config={config}
+        activeTitle={`${eventRoom?.title} | ${title}`}
+        locale={locale}
       />
       <div className={styles.jitsiContainer} id={jitsiContainerId} />
     </>

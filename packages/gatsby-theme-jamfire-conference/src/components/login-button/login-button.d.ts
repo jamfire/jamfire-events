@@ -1,5 +1,5 @@
 // user props
 export interface LoginButtonProps {
-    isLoading: boolean
-    isLoggedIn: boolean
+  isLoading: boolean
+  isLoggedIn: boolean
 }

@@ -1,48 +1,46 @@
-
 // tracker props
-.tracker {  
-    
-    p {
-        margin: 0;
+.tracker {
+  p {
+    margin: 0;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .start {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  .box {
+    display: inline-block;
+    background: var(--content-background);
+    padding: 0 0.5rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+
+    &.label {
+      padding: 0.15rem 0.5rem;
     }
 
-    .italic {
-        font-style: italic;
+    &.time {
+      padding-right: 0;
     }
 
-    .start {
-        display: inline-block;
-        margin-right: 0.5rem;
+    span.number {
+      display: inline-block;
+      min-width: 20px;
+      text-align: right;
     }
 
-    .box {
-        display: inline-block;
-        background: var(--content-background);
-        padding: 0 0.5rem;
-        border-radius: 4px;
-        margin-right: 0.5rem;
-
-        &.label {
-            padding: 0.15rem 0.5rem;
-        }
-
-        &.time {
-            padding-right: 0;
-        }
-
-        span.number {
-            display: inline-block;
-            min-width: 20px;
-            text-align: right;
-        }
-
-        span.symbol {
-            display: inline-block;
-            background: var(--content-background-darker);
-            padding: 0.15rem 0.35rem;
-            margin-left: 5px;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
+    span.symbol {
+      display: inline-block;
+      background: var(--content-background-darker);
+      padding: 0.15rem 0.35rem;
+      margin-left: 5px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
+  }
 }

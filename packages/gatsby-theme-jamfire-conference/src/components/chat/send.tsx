@@ -32,7 +32,10 @@ export default ({
 
   if (!user)
     return (
-      <div className={cx(styles.send, styles.login)} onClick={() => setToggleLogin(true)}>
+      <div
+        className={cx(styles.send, styles.login)}
+        onClick={() => setToggleLogin(true)}
+      >
         <div className="label">
           <span>{t("event.chat.login")}</span>
         </div>
@@ -105,7 +108,9 @@ export default ({
           onChange={handleChange}
           value={message}
         />
-        <button className={styles.button} disabled={disabled}>{t("event.chat.send")}</button>
+        <button className={styles.button} disabled={disabled}>
+          {t("event.chat.send")}
+        </button>
       </form>
     </div>
   )

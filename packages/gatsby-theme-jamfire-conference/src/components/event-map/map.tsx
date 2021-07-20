@@ -23,20 +23,17 @@ import "leaflet/dist/leaflet.css"
 import * as styles from "./map.module.scss"
 
 export default ({ config, event, locale }: MapProps) => {
-  const {
-    frontmatter
-  } = event || {}
+  const { frontmatter } = event || {}
 
-  const {
-    title,
-    slug
-  } = frontmatter || {}
+  const { title, slug } = frontmatter || {}
 
   const isClient = checkIsClient()
 
   const { darkMode } = useContext(Context)
 
-  const [bounds, setBounds]: SetBoundsProps = useState(new LatLngBounds([0,0], [0,0]))
+  const [bounds, setBounds]: SetBoundsProps = useState(
+    new LatLngBounds([0, 0], [0, 0])
+  )
   const [loaded, setLoaded] = useState(false)
 
   const { firestore } = useContext(FirebaseContext)
@@ -58,11 +55,10 @@ export default ({ config, event, locale }: MapProps) => {
   const { t } = useTranslation()
 
   useEffect(() => {
-
     let locations = JSON.parse(JSON.stringify(data))
 
     let coords: [number, number][] = []
-    
+
     locations.forEach((location: DataProps) => {
       const lat: number = parseFloat(location?.lat)
       const lon: number = parseFloat(location?.lon)
@@ -72,7 +68,6 @@ export default ({ config, event, locale }: MapProps) => {
     const newBounds = new LatLngBounds(coords)
 
     setBounds(newBounds)
-    
   }, [data])
 
   // if loading or an error display the loader

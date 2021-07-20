@@ -1,13 +1,11 @@
 import firebase from "firebase/app"
-import {
-  MarkdownRemarkFrontmatterSocialLogin,
-} from "../../gatsby/graphql-types"
+import { MarkdownRemarkFrontmatterSocialLogin } from "../../gatsby/graphql-types"
 
 // social login props
 export interface SocialLoginProps {
-    socialLogin?: MarkdownRemarkFrontmatterSocialLogin | null
+  socialLogin?: MarkdownRemarkFrontmatterSocialLogin | null
 }
-  
+
 // login provider props
 export type LoginProviderProps =
   | firebase.auth.FacebookAuthProvider

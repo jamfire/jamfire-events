@@ -1,5 +1,9 @@
 // imports
-import { MarkdownRemark, MarkdownRemarkEdge, MarkdownRemarkGroupConnection } from "./graphql-types"
+import {
+  MarkdownRemark,
+  MarkdownRemarkEdge,
+  MarkdownRemarkGroupConnection,
+} from "./graphql-types"
 import { SitePageContext } from "./graphql-types"
 import { RouteComponentProps } from "@reach/router"
 
@@ -12,7 +16,7 @@ export interface DataProps extends RouteComponentProps {
     defaultCookies: MarkdownRemark
     event?: MarkdownRemark
     defaultEvent?: MarkdownRemark
-    events?:  EventsProps
+    events?: EventsProps
     defaultEvents?: EventsProps
     page?: MarkdownRemark
     defaultPage?: MarkdownRemark

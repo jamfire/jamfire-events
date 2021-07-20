@@ -3,8 +3,8 @@ import firebase from "firebase/app"
 import { RouteComponentProps } from "@reach/router"
 
 export interface RoomProps extends RouteComponentProps {
-    config?: MarkdownRemark
-    event?: MarkdownRemark
-    locale: string
-    user: firebase.User | null
+  config?: MarkdownRemark
+  event?: MarkdownRemark
+  locale: string
+  user: firebase.User | null
 }

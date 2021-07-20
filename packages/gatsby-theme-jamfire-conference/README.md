@@ -133,12 +133,12 @@ GATSBY_LOCALES=en,bg,cs,da,de,el,es,et,fi,fr,hu,it,ja,lt,lv,nl,pl,pt,ro,ru,sk,sl
 The following languages are available:
 
 |                  |                  |                   |                   |                |
-| ---------------- | ---------------- | ----------------- | ----------------- | -------------- |
+| ---------------- | ---------------- | ----------------- | ----------------- | -------------- | --- |
 | "BG" - Bulgarian | "CS" - Czech     | "DA" - Danish     | "DE" - German     | "EL" - Greek   |
 | "EN" - English   | "ES" - Spanish   | "ET" - Estonian   | "FI" - Finnish    | "FR" - French  |
 | "HU" - Hungarian | "IT" - Italian   | "JA" - Japanese   | "LT" - Lithuanian | "LV" - Latvian |
 | "NL" - Dutch     | "PL" - Polish    | "PT" - Portuguese | "RO" - Romanian   | "RU" - Russian |
-| "SK" - Slovak    | "SL" - Slovenian | "SV" - Swedish    | "TR" - Turkish    | "ZH" - Chinese    |                |
+| "SK" - Slovak    | "SL" - Slovenian | "SV" - Swedish    | "TR" - Turkish    | "ZH" - Chinese |     |
 
 ## Changelog
 

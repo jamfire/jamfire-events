@@ -54,7 +54,7 @@
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,scss}\"",
     "cy:open": "cypress open",
     "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run",
     "cy:conference": "start-server-and-test dev:conference http://localhost:8000 cy:conference:open",

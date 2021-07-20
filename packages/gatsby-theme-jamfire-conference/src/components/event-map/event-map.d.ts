@@ -28,8 +28,10 @@ export interface BoundsProps {
   bounds: LatLngBoundsExpression
 }
 
-export type SetBoundsProps = 
-  [LatlngBoundsExpression, React.Dispatch<React.SetStateAction<LatLngBounds>>]
+export type SetBoundsProps = [
+  LatlngBoundsExpression,
+  React.Dispatch<React.SetStateAction<LatLngBounds>>
+]
 
 export interface DataProps {
   _id: string

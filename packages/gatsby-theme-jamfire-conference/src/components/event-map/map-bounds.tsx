@@ -6,7 +6,6 @@ import { BoundsProps } from "./event-map"
 
 // set map bounds
 export default ({ bounds }: BoundsProps) => {
-
   const isClient = checkIsClient()
 
   if (!isClient) {
