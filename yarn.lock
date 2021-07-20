@@ -9396,12 +9396,12 @@ gatsby-core-utils@^2.9.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-cypress@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cypress/-/gatsby-cypress-1.9.0.tgz#f7fd84bebf26a65c242508f10a7964d0ae28ca07"
-  integrity sha512-fp1gFfV4VSGOOT2uWas7iocWb8i8Oanim2VBc8tochJHJyheawhTmuQNS46KNz12JNGqMow2T2/dGU+rAyTsbQ==
+gatsby-cypress@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/gatsby-cypress/-/gatsby-cypress-1.10.0.tgz#ce49c51eb9c68327ac56eac55e066a2a8947d1c1"
+  integrity sha512-9muJzgKPDxMXHimVO4LfvtjK+RUCzqbJl5p0wC8XDs+9as7QGssRkC9fuw01FRDnUpYyKv/ezeBt5NEuADQggQ==
   dependencies:
-    "@babel/runtime" "^7.14.0"
+    "@babel/runtime" "^7.14.6"
 
 gatsby-graphiql-explorer@^1.9.0:
   version "1.9.0"
