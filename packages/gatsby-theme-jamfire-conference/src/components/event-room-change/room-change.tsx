@@ -5,12 +5,14 @@ import { useTranslation } from "react-i18next"
 import { RoomChangeProps } from "./room-change.d"
 
 // import components
+import { EventContext } from "../../services/event"
 import { ThemeContext } from "../../services/theme"
 import { Modal, ModalButton } from "../modal"
 
 export default ({ config }: RoomChangeProps) => {
-  const { roomModal, toggleRoomModal, setActiveRoom, pagePath } =
-    useContext(ThemeContext)
+  const { roomModal, toggleRoomModal, setActiveRoom } = useContext(EventContext)
+
+  const { pagePath } = useContext(ThemeContext)
 
   const { t } = useTranslation()
 

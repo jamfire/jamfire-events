@@ -9,6 +9,7 @@ import cx from "classnames"
 
 // import components
 import { ThemeContext } from "../../services/theme"
+import { EventContext } from "../../services/event"
 import Toggle from "./toggle"
 import Credit from "./credit"
 import Copyright from "../site-footer/copyright"
@@ -45,8 +46,9 @@ export default ({ navigation, config }: SiteNavigationProps) => {
 
 // navlink component
 const NavLink = ({ locale, link }: NavLinkProps) => {
-  const { activeRoom, roomModal, toggleRoomModal, setPagePath, setToggle } =
-    useContext(ThemeContext)
+  const { setPagePath, setToggle } = useContext(ThemeContext)
+
+  const { activeRoom, roomModal, toggleRoomModal } = useContext(EventContext)
 
   const path = useLocation().pathname
 

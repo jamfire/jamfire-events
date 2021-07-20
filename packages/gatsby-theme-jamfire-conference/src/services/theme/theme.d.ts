@@ -20,14 +20,8 @@ export interface InitialState {
   setToggleDashboard: Dispatch<SetStateAction<boolean>>
   navigation: NavigationProps[]
   setNavigation: Dispatch<SetStateAction<NavigationProps[]>>
-  activeRoom: boolean
-  setActiveRoom: Dispatch<SetStateAction<boolean>>
-  roomModal: boolean
-  toggleRoomModal: Dispatch<SetStateAction<boolean>>
   user: firebase.User | null
   setUser: Dispatch<SetStateAction<firebase.User | null>>
-  chats: any
-  setChats: Dispatch<SetStateAction<any>>
   pagePath: string
   setPagePath: Dispatch<SetStateAction<string>>
   toggleCookies: boolean
@@ -37,6 +31,4 @@ export interface InitialState {
   toggleLocale: boolean
   setToggleLocale: Dispatch<SetStateAction<boolean>>
   localesEnabled: boolean
-  geolocation: null | GeolocationProps
-  setGeolocation: Dispatch<SetStateAction<null | GeolocationProps>>
 }

@@ -31,6 +31,9 @@ const isClient = checkIsClient()
 const GeolocationProvider = loadable(
   () => import("../../services/geolocation/geolocation-provider")
 )
+const EventProvider = loadable(
+  () => import("../../services/event/event-provider")
+)
 const Lobby = loadable(() => import("../event-lobby"))
 const Client = loadable(() => import("../event-client"))
 const Room = loadable(() => import("../event-room"))
@@ -206,47 +209,49 @@ export default ({ data, pageContext }: DataProps) => {
     locale === DEFAULT_LOCALE ? basePath : `/${locale}${basePath}`
 
   return (
-    <Layout
-      title={title || ""}
-      event={eventData}
-      config={configData}
-      cookies={cookiesData}
-      headerLogo={headerLogo}
-      favicon={favicon}
-      locale={pageContext.locale}
-    >
-      <RoomChange config={config} />
-      <GeolocationProvider
-        pageContext={pageContext}
-        providerEnabled={eventSettings?.map || false}
-        config={config}
+    <EventProvider>
+      <Layout
+        title={title || ""}
+        event={eventData}
+        config={configData}
+        cookies={cookiesData}
+        headerLogo={headerLogo}
+        favicon={favicon}
+        locale={pageContext.locale}
       >
-        <Router basepath={routerBasePath}>
-          <Lobby
-            event={eventData}
-            config={configData}
-            locale={pageContext.locale}
-            path="/"
-          />
-          <Client
-            event={eventData}
-            config={configData}
-            locale={pageContext.locale}
-            path="/:subpage"
-            basePath={routerBasePath}
-          />
-          <Room
-            event={eventData}
-            config={configData}
-            locale={pageContext.locale}
-            user={profile}
-            path="/rooms/:room"
-          />
-          {eventSettings?.map && (
-            <Map config={config} event={event} locale={locale} path="/map" />
-          )}
-        </Router>
-      </GeolocationProvider>
-    </Layout>
+        <RoomChange config={config} />
+        <GeolocationProvider
+          pageContext={pageContext}
+          providerEnabled={eventSettings?.map || false}
+          config={config}
+        >
+          <Router basepath={routerBasePath}>
+            <Lobby
+              event={eventData}
+              config={configData}
+              locale={pageContext.locale}
+              path="/"
+            />
+            <Client
+              event={eventData}
+              config={configData}
+              locale={pageContext.locale}
+              path="/:subpage"
+              basePath={routerBasePath}
+            />
+            <Room
+              event={eventData}
+              config={configData}
+              locale={pageContext.locale}
+              user={profile}
+              path="/rooms/:room"
+            />
+            {eventSettings?.map && (
+              <Map config={config} event={event} locale={locale} path="/map" />
+            )}
+          </Router>
+        </GeolocationProvider>
+      </Layout>
+    </EventProvider>
   )
 }
