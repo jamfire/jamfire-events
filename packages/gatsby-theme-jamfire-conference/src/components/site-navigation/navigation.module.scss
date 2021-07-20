@@ -1,0 +1,126 @@
+@import "../../theme/media.scss";
+
+// navigation component
+.navigation {
+  grid-area: navigation;
+  background: var(--background);
+  border-top: 1px solid var(--border-color);
+
+  display: grid;
+  grid-template-columns: 0 1fr 80px;
+  grid-template-areas: "main-nav copyright toggle";
+
+  @include tablet-up {
+    border-top: 0;
+    border-right: 1px solid var(--border-color);
+    margin-right: -1px;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 0 80px;
+  }
+}
+
+// styled nav component
+.nav {
+  grid-area: main-nav;
+
+  width: 100%;
+  height: 80px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--background);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    position: absolute;
+    bottom: 79px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    z-index: 9000;
+
+    &.untoggled {
+      display: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none !important;
+        color: var(--nav-anchor-color);
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        height: 80px;
+        box-sizing: border-box;
+        transition: all 85ms ease-out;
+
+        &.active,
+        &:hover {
+          color: var(--anchor-active);
+          // border-top: 3px solid var(--anchor-active);
+        }
+      }
+
+      .label {
+        margin-top: 4px;
+        font-size: 10px;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+  }
+
+  @include tablet-up {
+    ul {
+      width: 100%;
+      display: block;
+      height: auto;
+      margin-top: 1rem;
+      border-top: 0;
+      position: relative;
+      bottom: auto;
+      top: auto;
+      border-bottom: 0;
+      z-index: auto;
+
+      &.untoggled {
+        display: block;
+      }
+
+      li {
+        margin: 0;
+
+        a {
+          border-right: 3px solid transparent;
+          border-left: 3px solid transparent;
+          border-top: none;
+          border-bottom: none;
+          height: auto;
+          padding: 0.5rem 0.25rem;
+          margin: 2px 0;
+
+          &.active,
+          &:hover {
+            color: var(--nav-anchor-active);
+            border-right: 3px solid var(--anchor-active);
+            border-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

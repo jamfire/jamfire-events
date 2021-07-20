@@ -1,22 +1,21 @@
 // import libs
 import React, { useContext, useState, useEffect } from "react"
-import { ChatProps } from "./_props"
-import { bp } from "../../utils/media"
+import { ChatProps } from "./chat.d"
 import { checkIsClient } from "../../utils/check-is-client"
 
 // import components
-import { StyledChat } from "./_styles"
 import { FirebaseContext } from "../../services"
 import Seo from "../seo"
 import Messages from "./messages"
 import Send from "./send"
 
-export default ({ config, event }: ChatProps) => {
-  const {
-    id,
-    frontmatter: { title, eventSettings },
-    fields: { locale }
-  } = event
+// import styles
+import * as styles from "./chat.module.scss"
+
+export default ({ config, event, locale }: ChatProps) => {
+  const { id, frontmatter } = event || {}
+
+  const { title, eventSettings } = frontmatter || {}
 
   const [chats, setChats] = useState([])
   const [mobile, setMobile] = useState(false)
@@ -25,8 +24,8 @@ export default ({ config, event }: ChatProps) => {
 
   useEffect(() => {
     if (typeof document !== `undefined` && isClient) {
-      let width: number = document.getElementById("layout")?.clientWidth || bp.tablet_up
-      setMobile(width < bp.tablet_up ? true : false)
+      let width: number = document.getElementById("layout")?.clientWidth || 576
+      setMobile(width < 576 ? true : false)
     }
   }, [])
 
@@ -46,10 +45,10 @@ export default ({ config, event }: ChatProps) => {
   }
 
   return (
-    <StyledChat id="chat">
+    <div className={`chat ${styles.chat}`} id="chat">
       <Seo
         config={config}
-        activeTitle={`${eventSettings.chatLabel} | ${title}`}
+        activeTitle={`${eventSettings?.chatLabel} | ${title}`}
         locale={locale}
       />
       <Messages
@@ -66,6 +65,6 @@ export default ({ config, event }: ChatProps) => {
         scrollToBottom={scrollToBottom}
         user={user}
       />
-    </StyledChat>
+    </div>
   )
 }

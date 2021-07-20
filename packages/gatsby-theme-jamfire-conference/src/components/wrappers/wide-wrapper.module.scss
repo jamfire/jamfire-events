@@ -1,0 +1,14 @@
+@import "../../theme/media.scss";
+
+// wide wrapper component
+.wide-wrapper {
+  height: calc(100vh - 160px);
+  overflow-y: scroll;
+  padding: 1rem;
+  position: relative;
+
+  @include tablet-up {
+    height: calc(100vh - 80px);
+    padding: 2rem;
+  }
+}

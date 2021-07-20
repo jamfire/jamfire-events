@@ -1,0 +1,50 @@
+@import "../../theme/media.scss";
+
+// event component
+.event {
+  background: var(--callout-background);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+// summary component
+.summary {
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet-up {
+    padding: 2rem;
+  }
+}
+
+// featured image component
+.featured-image {
+  height: 20vh;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: var(--content-background-darker);
+
+  @include tablet-up {
+    height: 30vh;
+  }
+}
+
+// background component
+.background {
+  height: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}

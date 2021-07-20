@@ -11,7 +11,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 import { FirebaseContext } from "../../services"
 import { Router } from "@reach/router"
 import Layout from "../site-layout"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import {
   FaHome,
   FaCalendarAlt,
@@ -31,11 +31,11 @@ const isClient = checkIsClient()
 const GeolocationProvider = loadable(
   () => import("../../services/geolocation/geolocation-provider")
 )
-const Lobby = loadable(() => import("./lobby"))
-const Client = loadable(() => import("./client"))
-const Room = loadable(() => import("./room"))
-const RoomChange = loadable(() => import("./room-change"))
-const Map = isClient ? loadable(() => import("../event-map/map")) : null
+const Lobby = loadable(() => import("../event-lobby"))
+const Client = loadable(() => import("../event-client"))
+const Room = loadable(() => import("../event-room"))
+const RoomChange = loadable(() => import("../event-room-change"))
+const Map = loadable(() => import("../event-map"))
 
 export default ({ data, pageContext }: DataProps) => {
   const { isLoading, profile } = useContext(FirebaseContext)
@@ -60,9 +60,13 @@ export default ({ data, pageContext }: DataProps) => {
     let localize = true
 
     if (event && typeof event?.frontmatter?.eventSettings !== undefined) {
-      let localizedLabel = event.frontmatter.eventSettings[label] || null
+      const labels = JSON.parse(
+        JSON.stringify(event?.frontmatter?.eventSettings)
+      )
+      const localizedLabel =
+        Object.entries(labels).find(value => value[0] === label) || ""
 
-      if (localizedLabel) {
+      if (localizedLabel?.length > 0) {
         localize = false
       }
     }
@@ -70,18 +74,14 @@ export default ({ data, pageContext }: DataProps) => {
     return localize
   }
 
-  const {
-    frontmatter: {
-      title,
-      slug,
-      eventSettings,
-      eventGraphics: { favicon, headerLogo },
-    },
-  } = eventData
+  const { title, slug, eventSettings, eventGraphics } =
+    eventData?.frontmatter || {}
 
-  const { mainStageFeature } = eventSettings
+  const { favicon, headerLogo } = eventGraphics || {}
 
-  const { setNavigation } = useContext(Context)
+  const { mainStageFeature } = eventSettings || {}
+
+  const { setNavigation } = useContext(ThemeContext)
 
   const basePath = `/event/${slug}/`
 
@@ -107,7 +107,7 @@ export default ({ data, pageContext }: DataProps) => {
       className: "all-events-link",
       icon: <FaCalendarAlt />,
       partiallyActive: false,
-      enabled: eventSettings.allEvents === true,
+      enabled: eventSettings?.allEvents === true,
       cb: () => {
         reset()
       },
@@ -123,53 +123,53 @@ export default ({ data, pageContext }: DataProps) => {
     {
       title: localizedLabel("mainStageLabel")
         ? "navigation.mainStage"
-        : eventSettings.mainStageLabel,
+        : eventSettings?.mainStageLabel,
       to: `${basePath}main-stage/`,
       className: "event-mainstage-link",
       icon: <FaVideo />,
       partiallyActive: false,
-      enabled: eventSettings.mainStage === true,
+      enabled: eventSettings?.mainStage === true,
     },
     {
       title: localizedLabel("scheduleLabel")
         ? "navigation.schedule"
-        : eventSettings.scheduleLabel,
+        : eventSettings?.scheduleLabel,
       to: `${basePath}schedule/`,
       className: "event-schedule-link",
       icon: <FaListAlt />,
       partiallyActive: false,
       enabled:
-        eventSettings.schedule === true && mainStageFeature !== "schedule",
+        eventSettings?.schedule === true && mainStageFeature !== "schedule",
     },
     {
       title: localizedLabel("chatLabel")
         ? "navigation.chat"
-        : eventSettings.chatLabel,
+        : eventSettings?.chatLabel,
       to: `${basePath}chat/`,
       className: "event-chat-link",
       icon: <FaUserFriends />,
       partiallyActive: false,
-      enabled: eventSettings.chat === true && mainStageFeature !== "chat",
+      enabled: eventSettings?.chat === true && mainStageFeature !== "chat",
     },
     {
       title: localizedLabel("roomsLabel")
         ? "navigation.rooms"
-        : eventSettings.roomsLabel,
+        : eventSettings?.roomsLabel,
       to: `${basePath}rooms/`,
       className: "event-rooms-link",
       icon: <FaUsers />,
       partiallyActive: true,
-      enabled: eventSettings.rooms === true,
+      enabled: eventSettings?.rooms === true,
     },
     {
       title: localizedLabel("qaLabel")
         ? "navigation.qa"
-        : eventSettings.qaLabel,
+        : eventSettings?.qaLabel,
       to: `${basePath}qa/`,
       className: "event-qa-link",
       icon: <FaQuestion />,
       partiallyActive: false,
-      enabled: eventSettings.qa === true,
+      enabled: eventSettings?.qa === true,
     },
     // {
     //   title: localizedLabel("pollsLabel") ? "navigation.polls" : eventSettings.pollsLabel,
@@ -181,12 +181,12 @@ export default ({ data, pageContext }: DataProps) => {
     {
       title: localizedLabel("mapLabel")
         ? "navigation.map"
-        : eventSettings.mapLabel,
+        : eventSettings?.mapLabel,
       to: `${basePath}map/`,
       className: "event-map-link",
       icon: <FaMapMarkerAlt />,
       partiallyActive: false,
-      enabled: eventSettings.map === true,
+      enabled: eventSettings?.map === true,
     },
   ]
 
@@ -207,18 +207,18 @@ export default ({ data, pageContext }: DataProps) => {
 
   return (
     <Layout
-      title={title}
+      title={title || ""}
       event={eventData}
       config={configData}
       cookies={cookiesData}
-      headerLogo={headerLogo || null}
-      favicon={favicon || null}
+      headerLogo={headerLogo}
+      favicon={favicon}
       locale={pageContext.locale}
     >
       <RoomChange config={config} />
       <GeolocationProvider
         pageContext={pageContext}
-        providerEnabled={eventSettings.map}
+        providerEnabled={eventSettings?.map || false}
         config={config}
       >
         <Router basepath={routerBasePath}>
@@ -242,14 +242,8 @@ export default ({ data, pageContext }: DataProps) => {
             user={profile}
             path="/rooms/:room"
           />
-          {eventSettings.map && (
-            <Map
-              config={config}
-              event={event}
-              locale={locale}
-              path="/map"
-              user={profile}
-            />
+          {eventSettings?.map && (
+            <Map config={config} event={event} locale={locale} path="/map" />
           )}
         </Router>
       </GeolocationProvider>

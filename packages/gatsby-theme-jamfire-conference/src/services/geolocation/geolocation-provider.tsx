@@ -2,21 +2,27 @@
 import React, { useContext, useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { checkIsClient } from "../../utils/check-is-client"
+import { GeolocationProviderProps } from "./geolocation"
 import firebase from "firebase/app"
 
 // import components
-import { Context } from "../theme"
+import { ThemeContext } from "../theme"
 import { GeolocationContext, initialState } from "./"
 import { FirebaseContext } from "../"
 import GeolocationModal from "./geolocation-modal"
 
-export default ({ children, config, pageContext, providerEnabled }) => {
+export default ({
+  children,
+  config,
+  pageContext,
+  providerEnabled,
+}: GeolocationProviderProps) => {
   // provider not enabled, return only the children
   if (!providerEnabled) {
     return <>{children}</>
   }
 
-  const { geolocation, setGeolocation } = useContext(Context)
+  const { geolocation, setGeolocation } = useContext(ThemeContext)
 
   // state
   const [geolocationEnabled, setGeolocationEnabled] = useState(
@@ -45,11 +51,9 @@ export default ({ children, config, pageContext, providerEnabled }) => {
     if (isClient && !isLoading && geolocation === null && geolocationEnabled) {
       let url = "https://weatherapi-com.p.rapidapi.com/ip.json?q=auto:ip"
 
-      let headers = {}
-      headers["x-rapidapi-key"] = process.env.GATSBY_RAPID_API_KEY
-      headers["x-rapidapi-host"] = "weatherapi-com.p.rapidapi.com"
-
-      let params = {}
+      let headers = new Headers()
+      headers.append("x-rapidapi-key", `${process.env.GATSBY_RAPID_API_KEY}`)
+      headers.append("x-rapidapi-host", "weatherapi-com.p.rapidapi.com")
 
       fetch(url, { method: "GET", headers: headers })
         .then(res => res.json())
@@ -65,7 +69,7 @@ export default ({ children, config, pageContext, providerEnabled }) => {
           setGeolocation(geolocationData)
 
           firestore
-            .collection("geolocation")
+            ?.collection("geolocation")
             .add(geolocationData)
             .then(docRef => {
               console.log("Document written with ID: ", docRef.id)

@@ -1,11 +1,12 @@
 // import libs
 import React from "react"
-import { graphql, PageProps } from "gatsby"
+import { graphql } from "gatsby"
+import { DataProps } from "../gatsby/data-props"
 
 // import components
 import ErrorPage from "../components/404"
 
-export default ({ data, pageContext }: PageProps) => (
+export default ({ data, pageContext }: DataProps) => (
   <ErrorPage data={data} pageContext={pageContext} />
 )
 

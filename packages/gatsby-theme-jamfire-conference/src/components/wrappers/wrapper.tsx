@@ -1,10 +1,10 @@
 // import libs
 import React from "react"
-import { WrapperProps } from "./_props"
+import { WrapperProps } from "./wrappers.d"
 
-// import components
-import { Wrapper } from "./_styles"
+// import styles
+import * as styles from "./wrapper.module.scss"
 
 export default ({ children }: WrapperProps) => {
-  return <Wrapper>{children}</Wrapper>
+  return <div className={styles.wrapper}>{children}</div>
 }

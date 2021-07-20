@@ -1,34 +1,46 @@
 // import libs
-import React, { FC, useEffect, useMemo, useState } from "react"
+import React, {
+  FC,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 import firebase from "firebase/app"
 import "firebase/auth"
 import "firebase/firestore"
 import { checkIsClient } from "../../utils/check-is-client"
 import { getFirebase } from "./get-firebase-instance"
+import { FirebaseContextData } from "./firebase"
 
 // import components
-import FirebaseContext, { FirebaseContextData } from "./firebase-context"
+import FirebaseContext from "./firebase-context"
 
 // firebase provider
-const FirebaseProvider: FC = ({ children }) => {
+const FirebaseProvider: FC<FirebaseContextData> = ({ children }) => {
   // check if is browser
   const isClient: boolean = useMemo(() => checkIsClient(), [])
 
   // state management
   const [firebase, setFirebase] = useState<firebase.app.App | null>(null)
-  const [firestore, setFirestore] = useState(null)
-  const [auth, setAuth] = useState(null)
+  const [firestore, setFirestore] =
+    useState<firebase.firestore.Firestore | null>(null)
+  const [auth, setAuth] = useState<firebase.auth.Auth | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [profile, setProfile] = useState<firebase.User | null>(null)
-  const [authToken, setAuthToken] = useState<FirebaseContextData["authToken"]>(
-    isClient ? window.localStorage.getItem("authToken") : null
-  )
+  const [authToken, setAuthToken]: [
+    string | null,
+    Dispatch<SetStateAction<string | null>>
+  ] = useState(isClient ? window.localStorage.getItem("authToken") : null)
 
   // set auth token to local storage and state
-  const onSetAuthToken = (token: string) => {
+  const onSetAuthToken = (token: string | null) => {
     setAuthToken(token)
-    localStorage.setItem("authToken", token)
+    if (token) {
+      localStorage.setItem("authToken", token)
+    }
   }
 
   // logout of firebase

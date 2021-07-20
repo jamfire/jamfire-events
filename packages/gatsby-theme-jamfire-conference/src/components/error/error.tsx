@@ -1,9 +1,9 @@
 // import libs
 import React, { useEffect, useState } from "react"
-import { ErrorProps } from "./_props"
+import { ErrorProps } from "./error.d"
 
-// import components
-import { Error } from "./_styles"
+// import styles
+import * as styles from "./error.module.scss"
 
 // error component
 export default ({ children }: ErrorProps) => {
@@ -21,5 +21,5 @@ export default ({ children }: ErrorProps) => {
     return <></>
   }
 
-  return <Error>{children}</Error>
+  return <div className={styles.error}>{children}</div>
 }

@@ -1,13 +1,15 @@
 // import libs
 import React from "react"
+import cx from "classnames"
+import { ModalButtonProps } from "./modal.d"
 
-// import components
-import { Button } from "./_styles"
+// import styles
+import * as styles from "./modal-button.module.scss"
 
-export default ({ label, onClick, className }) => {
+export default ({ label, onClick, className }: ModalButtonProps) => {
   return (
-    <Button className={className} onClick={onClick}>
+    <button className={cx(styles.button, className)} onClick={onClick}>
       {label}
-    </Button>
+    </button>
   )
 }

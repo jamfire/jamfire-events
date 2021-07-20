@@ -7,12 +7,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import DateTimeZoneControl from "./DateTimeZoneControl"
-import DateTimeZonePreview from "./DateTimeZonePreview"
+import DateTimeZoneControl from "./DateTimeZoneControl";
+import DateTimeZonePreview from "./DateTimeZonePreview";
 
 if (typeof window !== `undefined`) {
-  window.DateTimeZoneControl = DateTimeZoneControl
-  window.DateTimeZonePreview = DateTimeZonePreview
+	window.DateTimeZoneControl = DateTimeZoneControl;
+	window.DateTimeZonePreview = DateTimeZonePreview;
 }
 
-export { DateTimeZoneControl, DateTimeZonePreview }
+export { DateTimeZoneControl, DateTimeZonePreview };

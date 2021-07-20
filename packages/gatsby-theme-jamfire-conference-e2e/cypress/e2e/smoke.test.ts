@@ -3,17 +3,14 @@
 /// <reference types="@testing-library/cypress" />
 
 describe(`Smoke Test`, () => {
-  it(`Site loads`, () => {
-    // home page
-    cy.visit(`/`).assertRoute(`/`)
+	it(`Site loads`, () => {
+		// home page
+		cy.visit(`/`).assertRoute(`/`);
 
-    // all events page
-    cy.visit(`/events/`).assertRoute(`/events/`)
+		// all events page
+		cy.visit(`/events/`).assertRoute(`/events/`);
 
-    // demo event page
-    cy.visit(`/event/demo/`).assertRoute(`/event/demo/`)
-
-    // dashboard should redirect
-    cy.visit(`/dashboard`).assertRoute(`/`)
-  })
-})
+		// demo event page
+		cy.visit(`/event/demo/`).assertRoute(`/event/demo/`);
+	});
+});

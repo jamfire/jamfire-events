@@ -1,0 +1,61 @@
+@import "../../theme/media.scss";
+
+.notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: 2rem;
+  background: var(--content-background);
+  display: grid;
+  z-index: 100;
+
+  @include tablet-up {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+// content component
+.content {
+  position: relative;
+}
+
+// cookie title notice
+.title {
+  margin-bottom: 1.666rem;
+  font-weight: 600;
+  font-size: 1.55185rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.1;
+}
+
+// buttons component
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// button component
+.button {
+  margin: 0.5rem;
+  border: 1px solid var(--logo-background);
+  outline: 0;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: var(--background-color);
+  color: var(--logo-background);
+
+  &.primary {
+    background: var(--logo-background);
+    color: var(--logo-color);
+  }
+
+  &:hover {
+    background: var(--logo-hover);
+    color: var(--logo-color);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../theme/media.scss";
+
+// styled user
+.login-button {
+  display: none;
+
+  @include tablet-up {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  button {
+    background: var(--logo-hover);
+    border: none;
+    border-radius: 4px;
+    padding: 1px 0.75rem;
+    outline: none;
+    cursor: pointer;
+    color: var(--logo-color);
+
+    &.logout,
+    &.login {
+      display: none;
+
+      @include tablet-up {
+        display: block;
+      }
+    }
+  }
+}

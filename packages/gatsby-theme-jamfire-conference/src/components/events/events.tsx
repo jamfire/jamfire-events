@@ -1,14 +1,16 @@
 // import libs
 import React from "react"
-import { localizeData } from "../../utils/localized-data"
+import { localizeData, localizeEvents } from "../../utils/localized-data"
 import { DataProps } from "../../gatsby/data-props"
 import { useTranslation } from "react-i18next"
 
 // import components
 import Layout from "../site-layout"
-import { EventsWrapper, Events } from "./_styles"
 import EventSummary from "./event-summary"
 import Pagination from "../pagination"
+
+// import styles
+import * as styles from "./events.module.scss"
 
 export default ({ data, pageContext }: DataProps) => {
   const {
@@ -18,13 +20,16 @@ export default ({ data, pageContext }: DataProps) => {
     defaultConfig,
     cookies,
     defaultCookies,
-  } = data
+  } = data || {}
 
-  const eventsData = localizeData(events, defaultEvents)
+  const eventsData = localizeEvents(events, defaultEvents)
   const configData = localizeData(config, defaultConfig)
   const cookiesData = localizeData(cookies, defaultCookies)
 
   const { t } = useTranslation()
+
+  const currentPage: number = pageContext.currentPage || 0
+  const numPages: number = pageContext.numPages || 0
 
   return (
     <Layout
@@ -33,19 +38,19 @@ export default ({ data, pageContext }: DataProps) => {
       config={configData}
       cookies={cookiesData}
     >
-      <EventsWrapper>
-        <Events>
-          {eventsData.edges.map((event: any, key: number) => (
+      <div className={styles.wrapper}>
+        <div className={styles.events}>
+          {eventsData?.edges.map((event: any, key: number) => (
             <EventSummary key={key} event={event} locale={pageContext.locale} />
           ))}
-        </Events>
+        </div>
         <Pagination
-          currentPage={pageContext.currentPage}
-          numPages={pageContext.numPages}
+          currentPage={currentPage}
+          numPages={numPages}
           locale={pageContext.locale}
           path={`/events/`}
         />
-      </EventsWrapper>
+      </div>
     </Layout>
   )
 }

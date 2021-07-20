@@ -2,25 +2,22 @@
 import React, { useContext, useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { useTranslation } from "react-i18next"
+import { ManageCookiesProps } from "./cookies"
+import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Switch from "react-switch"
 import { Modal } from "../modal"
-import {
-  Inner,
-  Grid,
-  CookiesList,
-  Content,
-  ContentHeader,
-  Footer,
-  Button,
-} from "./_styles"
 
-export default ({ cookies, config }) => {
+// import styles
+import * as styles from "./manage-cookies.module.scss"
+import * as noticeStyles from "./cookie-notice.module.scss"
+
+export default ({ cookies, config }: ManageCookiesProps) => {
   // context
   const { toggleCookies, setToggleCookies, setEnableAnalytics } =
-    useContext(Context)
+    useContext(ThemeContext)
 
   // state
   const [isLoading, setIsLoading] = useState(true)
@@ -30,6 +27,11 @@ export default ({ cookies, config }) => {
   // translation
   const { t } = useTranslation()
 
+  // get cookie information
+  const { frontmatter } = cookies
+
+  const { necessaryCookies, analyticsCookies } = frontmatter || {}
+
   // set state on load
   useEffect(() => {
     let analyticsEnabled = jamfireGet("analyticsEnabled")
@@ -37,11 +39,6 @@ export default ({ cookies, config }) => {
     setEnableAnalytics(analyticsEnabled === "true" ? true : false) // provider context
     setIsLoading(false)
   }, [])
-
-  // get cookie information
-  const {
-    frontmatter: { necessaryCookies, analyticsCookies },
-  } = cookies
 
   // active class name
   const activeClass = (cookieName: string) => {
@@ -68,13 +65,23 @@ export default ({ cookies, config }) => {
     setToggleCookies(false)
   }
 
-  // handle cookie change
-  const handleCookie = (nextValue: boolean) => {
-    cookieToggles[currentCookie].setCookie(!nextValue)
-  }
-
   if (isLoading) {
     return <></>
+  }
+
+  let cookieData = {
+    title: "",
+    content: "",
+    enabled: true,
+  }
+
+  if (currentCookie === "necessaryCookies") {
+    cookieData = JSON.parse(JSON.stringify(necessaryCookies))
+    cookieData.enabled = true
+  }
+
+  if (currentCookie === "analyticsCookies") {
+    cookieData = JSON.parse(JSON.stringify(analyticsCookies))
   }
 
   return (
@@ -85,16 +92,16 @@ export default ({ cookies, config }) => {
       setIsActive={setToggleCookies}
       config={config}
     >
-      <Inner>
-        <Grid>
-          <CookiesList>
+      <div className={styles.inner}>
+        <div className={styles.grid}>
+          <div className={styles.list}>
             <ul>
               <li>
                 <button
                   className={activeClass("necessaryCookies")}
                   onClick={() => setCurrentCookie("necessaryCookies")}
                 >
-                  {necessaryCookies.title}
+                  {necessaryCookies?.title}
                 </button>
               </li>
               <li>
@@ -102,19 +109,19 @@ export default ({ cookies, config }) => {
                   className={activeClass("analyticsCookies")}
                   onClick={() => setCurrentCookie("analyticsCookies")}
                 >
-                  {analyticsCookies.title}
+                  {analyticsCookies?.title}
                 </button>
               </li>
             </ul>
-          </CookiesList>
-          <Content className="manage-cookies-content">
-            <ContentHeader>
-              <h3>{cookies.frontmatter[currentCookie].title}</h3>
-              {currentCookie !== "necessaryCookies" && (
+          </div>
+          <div className={cx(styles.content, "manage-cookies-content")}>
+            <header className={styles.header}>
+              <h3>{cookieData.title}</h3>
+              {currentCookie === "analyticsCookies" && (
                 <Switch
                   className={`${currentCookie}-input`}
-                  checked={cookieToggles[currentCookie].value}
-                  onChange={handleCookie}
+                  checked={analyticsEnabled}
+                  onChange={nextValue => setAnalyticsEnabled(nextValue)}
                   height={22}
                   width={46}
                 />
@@ -129,20 +136,23 @@ export default ({ cookies, config }) => {
                   width={46}
                 />
               )}
-            </ContentHeader>
+            </header>
             <div
               dangerouslySetInnerHTML={{
-                __html: cookies.frontmatter[currentCookie].content,
+                __html: cookieData.content,
               }}
             />
-          </Content>
-        </Grid>
-        <Footer>
-          <Button primary={true} onClick={() => confirmChoices()}>
+          </div>
+        </div>
+        <footer className={styles.footer}>
+          <button
+            className={cx(noticeStyles.button, noticeStyles.primary)}
+            onClick={() => confirmChoices()}
+          >
             {t("cookies.confirm")}
-          </Button>
-        </Footer>
-      </Inner>
+          </button>
+        </footer>
+      </div>
     </Modal>
   )
 }

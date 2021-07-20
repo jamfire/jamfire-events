@@ -1,0 +1,24 @@
+@import "../../theme/media.scss";
+
+// styled copyright element
+.copyright {
+  grid-area: copyright;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 0;
+  align-items: center;
+
+  &.mobile {
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+
+  @include tablet-up {
+    display: flex;
+
+    &.mobile {
+      display: none;
+    }
+  }
+}

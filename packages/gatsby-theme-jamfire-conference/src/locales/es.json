@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Casa",
-      "allEvents": "Todos los eventos",
-      "lobby": "Vestíbulo",
-      "mainStage": "Escenario principal",
-      "rooms": "Habitaciones",
-      "qa": "Preguntas y respuestas",
-      "chat": "Chat",
-      "schedule": "Calendario",
-      "polls": "Centro",
-      "map": "Asistentes",
-      "toggleMenu": "Alternar menú"
+  "navigation": {
+    "home": "Casa",
+    "allEvents": "Todos los eventos",
+    "lobby": "Vestíbulo",
+    "mainStage": "Escenario principal",
+    "rooms": "Habitaciones",
+    "qa": "Preguntas y respuestas",
+    "chat": "Chat",
+    "schedule": "Calendario",
+    "polls": "Centro",
+    "map": "Asistentes",
+    "toggleMenu": "Alternar menú"
+  },
+  "regions": {
+    "cookiesNotice": "Aviso de cookies",
+    "topbar": "La interacción del usuario",
+    "localSwitcher": "Alternar configuración regional",
+    "login": "Inicio de sesión de usuario",
+    "dashboard": "Panel de usuario",
+    "featuredImage": "Foto principal",
+    "avatarImage": "Imagen de usuario",
+    "localeSwitcher": "Seleccionar configuración regional"
+  },
+  "auth": {
+    "login": "Acceso",
+    "loginSocial": "Iniciar sesión con una cuenta social",
+    "loginEmail": "Iniciar sesión con correo electrónico y contraseña",
+    "logout": "Cerrar sesión",
+    "email": "Correo electrónico",
+    "emailInvalid": "Email inválido",
+    "emailRequired": "correo electronico es requerido",
+    "password": "Contraseña",
+    "passwordConfirm": "confirmar Contraseña",
+    "passwordShort": "La contraseña es demasiado corta",
+    "passwordRequired": "se requiere contraseña",
+    "passwordMatch": "Las contraseñas deben coincidir",
+    "register": "Registrarse",
+    "registerAccount": "Regístrese para obtener una cuenta",
+    "existingAccount": "¿Ya tienes una cuenta?"
+  },
+  "buttons": {
+    "yes": "sí",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "join": "Entrar"
+  },
+  "cookies": {
+    "notice": "Aviso de cookies",
+    "preferences": "Preferencias de cookies",
+    "accept": "Aceptar",
+    "manage": "Gestionar",
+    "confirm": "Confirmar"
+  },
+  "credit": {
+    "get": "Obtenga Jamfire Conference"
+  },
+  "dashboard": {
+    "title": "Tablero",
+    "hello": "Hola",
+    "cookies": "Administrar preferencias de cookies"
+  },
+  "dates": {
+    "mon": "lunes",
+    "tue": "martes",
+    "wed": "miércoles",
+    "thu": "jueves",
+    "fri": "viernes",
+    "sat": "sábado",
+    "sun": "domingo",
+    "jan": "enero",
+    "feb": "febrero",
+    "mar": "marcha",
+    "apr": "abril",
+    "may": "Mayo",
+    "jun": "junio",
+    "jul": "mes de julio",
+    "aug": "agosto",
+    "sep": "septiembre",
+    "oct": "octubre",
+    "nov": "noviembre",
+    "dec": "Diciembre",
+    "am": "SOY",
+    "pm": "PM"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Empieza",
+      "ends": "Termina"
     },
-    "regions": {
-      "cookiesNotice": "Aviso de cookies",
-      "topbar": "La interacción del usuario",
-      "localSwitcher": "Alternar configuración regional",
-      "login": "Inicio de sesión de usuario",
-      "dashboard": "Panel de usuario",
-      "featuredImage": "Foto principal",
-      "avatarImage": "Imagen de usuario",
-      "localeSwitcher": "Seleccionar configuración regional"
+    "chat": {
+      "login": "Iniciar sesión para chatear",
+      "beTheFirst": "¡Sé el primero en charlar!",
+      "message": "Mensaje...",
+      "send": "Enviar",
+      "error": "Ocurrió un error. Por favor, inténtelo de nuevo más tarde."
     },
-    "auth": {
-      "login": "Acceso",
-      "loginSocial": "Iniciar sesión con una cuenta social",
-      "loginEmail": "Iniciar sesión con correo electrónico y contraseña",
-      "logout": "Cerrar sesión",
-      "email": "Correo electrónico",
-      "emailInvalid": "Email inválido",
-      "emailRequired": "correo electronico es requerido",
-      "password": "Contraseña",
-      "passwordConfirm": "confirmar Contraseña",
-      "passwordShort": "La contraseña es demasiado corta",
-      "passwordRequired": "se requiere contraseña",
-      "passwordMatch": "Las contraseñas deben coincidir",
-      "register": "Registrarse",
-      "registerAccount": "Regístrese para obtener una cuenta",
-      "existingAccount": "¿Ya tienes una cuenta?"
+    "menu": {
+      "label": "Muestrame el menu"
     },
-    "buttons": {
-      "yes": "sí",
+    "qa": {
+      "question": "Pregunta",
+      "answer": "Respuesta"
+    },
+    "rooms": {
+      "title": "¿Dejar la habitación?",
       "confirm": "Confirmar",
-      "cancel": "Cancelar",
-      "join": "Entrar"
+      "alert": "Actualmente se encuentra en una sala de videoconferencias. Estás seguro que quieres irte?"
     },
-    "cookies": {
-      "notice": "Aviso de cookies",
-      "preferences": "Preferencias de cookies",
-      "accept": "Aceptar",
-      "manage": "Gestionar",
-      "confirm": "Confirmar"
-    },
-    "credit": {
-      "get": "Obtenga Jamfire Conference"
-    },
-    "dashboard": {
-      "title": "Tablero",
-      "hello": "Hola",
-      "cookies": "Administrar preferencias de cookies"
-    },
-    "dates": {
-      "mon": "lunes",
-      "tue": "martes",
-      "wed": "miércoles",
-      "thu": "jueves",
-      "fri": "viernes",
-      "sat": "sábado",
-      "sun": "domingo",
-      "jan": "enero",
-      "feb": "febrero",
-      "mar": "marcha",
-      "apr": "abril",
-      "may": "Mayo",
-      "jun": "junio",
-      "jul": "mes de julio",
-      "aug": "agosto",
-      "sep": "septiembre",
-      "oct": "octubre",
-      "nov": "noviembre",
-      "dec": "Diciembre",
-      "am": "SOY",
-      "pm": "PM"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Empieza",
-        "ends": "Termina"
-      },
-      "chat": {
-        "login": "Iniciar sesión para chatear",
-        "beTheFirst": "¡Sé el primero en charlar!",
-        "message": "Mensaje...",
-        "send": "Enviar"
-      },
-      "menu": {
-        "label": "Muestrame el menu"
-      },
-      "qa": {
-        "question": "Pregunta",
-        "answer": "Respuesta"
-      },
-      "rooms": {
-        "title": "¿Dejar la habitación?",
-        "confirm": "Confirmar",
-        "alert": "Actualmente se encuentra en una sala de videoconferencias. Estás seguro que quieres irte?"
-      },
-      "tracker": {
-        "starts": "Empieza",
-        "eventEnd": "Fin del evento",
-        "eventEnded": "Este evento ha terminado.",
-        "current": "Actual",
-        "next": "próximo",
-        "day": "Día",
-        "hour": "Hora",
-        "minute": "Minuto",
-        "second": "Segundo"
-      }
-    },
-    "error": {
-      "pageNotFound": "Página no encontrada."
-    },
-    "form": {
-      "placeholderSearch": "Buscar..."
-    },
-    "geolocation": {
-      "title": "¿Habilitar la geolocalización?",
-      "content": "¿Le gustaría habilitar su ubicación en el mapa de invitados?",
-      "enable": "Permitir",
-      "deny": "Negar"
-    },
-    "locale": {
-      "selectorTitle": "Selecciona un idioma",
-      "codes": {
-        "bg": "búlgaro",
-        "cs": "checo",
-        "da": "danés",
-        "de": "alemán",
-        "el": "griego",
-        "en": "inglés",
-        "es": "Español",
-        "et": "Estonio",
-        "fi": "finlandés",
-        "fr": "francés",
-        "hu": "húngaro",
-        "it": "italiano",
-        "ja": "japonés",
-        "lt": "lituano",
-        "lv": "letón",
-        "nl": "holandés",
-        "pl": "polaco",
-        "pt": "portugués",
-        "ro": "rumano",
-        "ru": "ruso",
-        "sk": "eslovaco",
-        "sl": "esloveno",
-        "sv": "sueco",
-        "tr": "turco",
-        "zh": "chino"
-      }
+    "tracker": {
+      "starts": "Empieza",
+      "eventEnd": "Fin del evento",
+      "eventEnded": "Este evento ha terminado.",
+      "current": "Actual",
+      "next": "próximo",
+      "day": "Día",
+      "hour": "Hora",
+      "minute": "Minuto",
+      "second": "Segundo"
+    }
+  },
+  "error": {
+    "pageNotFound": "Página no encontrada."
+  },
+  "form": {
+    "placeholderSearch": "Buscar..."
+  },
+  "geolocation": {
+    "title": "¿Habilitar la geolocalización?",
+    "content": "¿Le gustaría habilitar su ubicación en el mapa de invitados?",
+    "enable": "Permitir",
+    "deny": "Negar"
+  },
+  "locale": {
+    "selectorTitle": "Selecciona un idioma",
+    "codes": {
+      "bg": "búlgaro",
+      "cs": "checo",
+      "da": "danés",
+      "de": "alemán",
+      "el": "griego",
+      "en": "inglés",
+      "es": "Español",
+      "et": "Estonio",
+      "fi": "finlandés",
+      "fr": "francés",
+      "hu": "húngaro",
+      "it": "italiano",
+      "ja": "japonés",
+      "lt": "lituano",
+      "lv": "letón",
+      "nl": "holandés",
+      "pl": "polaco",
+      "pt": "portugués",
+      "ro": "rumano",
+      "ru": "ruso",
+      "sk": "eslovaco",
+      "sl": "esloveno",
+      "sv": "sueco",
+      "tr": "turco",
+      "zh": "chino"
     }
   }
-
+}

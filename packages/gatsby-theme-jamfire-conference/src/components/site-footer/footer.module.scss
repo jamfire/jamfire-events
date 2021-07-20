@@ -1,0 +1,27 @@
+@import "../../theme/media.scss";
+
+// styled footer component
+.footer {
+  display: none;
+
+  @include tablet-up {
+    grid-area: footer;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "tracker-wrapper copyright";
+    padding: 0 2rem;
+    height: 80px;
+    border-top: 1px solid var(--border-color);
+    box-sizing: border-box;
+  }
+}
+
+// styled tracker wrapper element
+.tracker {
+  grid-area: tracker-wrapper;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

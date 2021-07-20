@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Bumped Luxon deps
+
 ## [0.9.6] - 2021-07-14
 
 ### Fixe
@@ -26,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Updated readme documentation
+
 ## [0.9.3] - 2021-07-11
 
 ### Added

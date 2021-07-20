@@ -1,0 +1,42 @@
+// qa item component
+.item {
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-gap: 0.5rem;
+
+  &.question {
+    background: var(--qa-header-color);
+  }
+
+  &.answer {
+    padding-bottom: 1.5rem;
+  }
+
+  .text {
+    margin-top: 3px;
+  }
+}
+
+// qa circle component
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: var(--list-header-background-callout);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+
+  &.primary {
+    background: var(--logo-background);
+    color: var(--logo-color);
+  }
+
+  &.secondary {
+    background: var(--qa-secondary-background);
+    color: var(--qa-secondary-color);
+  }
+}

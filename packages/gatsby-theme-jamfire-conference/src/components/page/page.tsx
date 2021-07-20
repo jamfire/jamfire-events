@@ -9,7 +9,9 @@ import { useTranslation } from "react-i18next"
 import Layout from "../site-layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Missing from "../missing"
-import { StyledHome, Content, FeaturedImage } from "./_styles"
+
+// import styles
+import * as styles from "./page.module.scss"
 
 // page component
 export default ({ data, pageContext }: DataProps) => {
@@ -22,37 +24,44 @@ export default ({ data, pageContext }: DataProps) => {
   const configData = localizeData(config, defaultConfig)
   const cookiesData = localizeData(cookies, defaultCookies)
 
-  const {
-    frontmatter: {
-      title,
-      pageGraphics: { featuredImage },
-    },
-    html,
-  } = pageData
+  const { frontmatter, html } = pageData || {}
+
+  const { title, pageGraphics } = frontmatter || {}
 
   const backgroundImage: IGatsbyImageData =
-    featuredImage && featuredImage.childImageSharp !== null
-      ? featuredImage.childImageSharp.gatsbyImageData
+    pageGraphics?.featuredImage &&
+    pageGraphics?.featuredImage.childImageSharp !== null
+      ? pageGraphics?.featuredImage?.childImageSharp?.gatsbyImageData
       : null
 
   return (
     <Layout
-      title={title}
+      title={title || ""}
       locale={pageContext.locale}
       config={configData}
       cookies={cookiesData}
     >
-      <StyledHome>
-        <Content>
+      <div className={styles.page}>
+        <div className={styles.content}>
           <h1>{title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </Content>
+          <div dangerouslySetInnerHTML={{ __html: html || "" }} />
+        </div>
 
-        <FeaturedImage role="img" aria-label={t("regions.featuredImage")}>
-          {backgroundImage && <GatsbyImage image={backgroundImage} alt="" />}
+        <div
+          className={styles.featuredImage}
+          role="img"
+          aria-label={t("regions.featuredImage")}
+        >
+          {backgroundImage && (
+            <GatsbyImage
+              className={styles.gatsbyImageWrapper}
+              image={backgroundImage}
+              alt=""
+            />
+          )}
           {!backgroundImage && <Missing />}
-        </FeaturedImage>
-      </StyledHome>
+        </div>
+      </div>
     </Layout>
   )
 }

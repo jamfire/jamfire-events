@@ -1,0 +1,16 @@
+// schedule item details component
+.details {
+  .time {
+    background: var(--list-header-background);
+    padding: 0.5rem 2rem;
+  }
+
+  .title {
+    font-weight: bold;
+    padding: 0.5rem 2rem 0;
+  }
+
+  .description {
+    padding: 0 2rem 1rem;
+  }
+}

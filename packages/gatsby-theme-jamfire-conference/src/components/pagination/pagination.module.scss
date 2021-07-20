@@ -1,0 +1,44 @@
+@import "../../theme/media.scss";
+
+// styled pagination
+.pagination {
+  padding: 0 1rem;
+
+  @include tablet-up {
+    padding: 0 2rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        padding: 0.25rem 0;
+        text-align: center;
+        min-width: 2rem;
+        background: var(--background);
+        margin: 0 0 0 0.5rem;
+        border-radius: 4px;
+
+        &:hover {
+          text-decoration: none;
+          background: var(--logo-background);
+          color: var(--logo-color);
+        }
+
+        &.active {
+          background: var(--logo-background);
+          color: var(--logo-color);
+
+          &:hover {
+            background: var(--logo-hover);
+          }
+        }
+      }
+    }
+  }
+}

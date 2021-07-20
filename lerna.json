@@ -1,11 +1,9 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "version": "independent",
-  "changelog": {
-    "ignoreCommitters": ["dependabot"]
-  }
+	"packages": ["packages/*"],
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"version": "independent",
+	"changelog": {
+		"ignoreCommitters": ["dependabot"]
+	}
 }

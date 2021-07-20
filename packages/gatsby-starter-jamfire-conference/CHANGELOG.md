@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bumped Luxon deps
+
 ## [1.0.10] - 2021-07-13
 
 ### Added
@@ -21,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated readme documentation
+
 ## [1.0.8] - 2021-07-11
 
 ### Changed

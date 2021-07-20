@@ -1,0 +1,15 @@
+@import "../../theme/media.scss";
+
+// jitsi container
+.jitsi-container {
+  background: #374e62;
+  height: calc(100vh - 80px);
+
+  iframe {
+    height: 100%;
+  }
+
+  @include tablet-up {
+    height: calc(100vh - 160px);
+  }
+}

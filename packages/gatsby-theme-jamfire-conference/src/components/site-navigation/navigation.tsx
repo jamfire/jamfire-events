@@ -4,44 +4,49 @@ import { navigate } from "gatsby"
 import { useLocation } from "@reach/router"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { useTranslation } from "react-i18next"
-import { SiteNavigationProps, NavLinkProps } from "./_props"
+import { SiteNavigationProps, NavLinkProps } from "./navigation.d"
+import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
-import { StyledNavigation, Nav } from "./_styles"
+import { ThemeContext } from "../../services/theme"
 import Toggle from "./toggle"
 import Credit from "./credit"
 import Copyright from "../site-footer/copyright"
+
+// import styles
+import * as styles from "./navigation.module.scss"
 
 export default ({ navigation, config }: SiteNavigationProps) => {
   if (!navigation) {
     return <></>
   }
 
-  const { toggle } = useContext(Context)
+  const { toggle } = useContext(ThemeContext)
 
   const { i18n } = useTranslation()
 
+  const toggledClass = toggle ? "" : styles.untoggled
+
   return (
-    <StyledNavigation>
-      <Nav>
-        <ul className={toggle ? "toggled" : "untoggled"}>
+    <div className={styles.navigation}>
+      <nav className={styles.nav}>
+        <ul className={toggledClass}>
           {navigation.map((item: any, key: number) => {
             return <NavLink locale={i18n.language} link={item} key={key} />
           })}
         </ul>
-      </Nav>
+      </nav>
       <Toggle />
       <Credit />
       <Copyright config={config} mobile={true} />
-    </StyledNavigation>
+    </div>
   )
 }
 
 // navlink component
 const NavLink = ({ locale, link }: NavLinkProps) => {
   const { activeRoom, roomModal, toggleRoomModal, setPagePath, setToggle } =
-    useContext(Context)
+    useContext(ThemeContext)
 
   const path = useLocation().pathname
 
@@ -54,14 +59,14 @@ const NavLink = ({ locale, link }: NavLinkProps) => {
     link.partiallyActive && path.indexOf(navLink) >= 0 ? true : false
 
   let activeClass =
-    active === true || partiallyActive === true ? "active" : "inactive"
+    active === true || partiallyActive === true ? styles.active : ""
 
   const { t } = useTranslation()
 
   return (
     <li>
       <a
-        className={`${activeClass} ${link.className}`}
+        className={cx(activeClass, link.className)}
         onClick={e => {
           setToggle(false)
           setPagePath(navLink)
@@ -81,7 +86,7 @@ const NavLink = ({ locale, link }: NavLinkProps) => {
         }}
       >
         {link.icon}
-        <div className="label">{t(link.title)}</div>
+        <div className={styles.label}>{t(link.title)}</div>
       </a>
     </li>
   )

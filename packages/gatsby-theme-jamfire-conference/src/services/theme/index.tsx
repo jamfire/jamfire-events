@@ -1,4 +1,4 @@
-import Context, { initialState } from "./theme-context"
-import Provider from "./theme-provider"
+import ThemeContext, { initialState } from "./theme-context"
+import ThemeProvider from "./theme-provider"
 
-export { Context, Provider, initialState }
+export { ThemeContext, ThemeProvider, initialState }

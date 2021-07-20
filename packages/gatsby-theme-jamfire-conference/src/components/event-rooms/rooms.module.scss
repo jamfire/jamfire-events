@@ -1,0 +1,84 @@
+@import "../../theme/media.scss";
+
+// room header component
+.room-header {
+  background: var(--list-header-background);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  @include tablet-up {
+    padding: 0.5rem 2rem;
+  }
+}
+
+// room image component
+.room-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span,
+  img,
+  .gatsby-image-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: var(--list-header-background-callout);
+  }
+}
+
+// room description component
+.room-description {
+  padding: 0.5rem 1rem 1rem;
+
+  @include tablet-up {
+    padding: 0.5rem 2rem;
+  }
+
+  p {
+    margin: 0;
+
+    &:first-of-type {
+      font-weight: bold;
+    }
+
+    &.title {
+      position: relative;
+    }
+
+    &.description {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// join button component
+.join-button {
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  background: var(--logo-background);
+  color: var(--logo-color) !important;
+  border-radius: 4px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  line-height: 1.5rem;
+  padding: 0 0.5rem;
+
+  &:hover {
+    text-decoration: none;
+    background: var(--logo-hover);
+  }
+}

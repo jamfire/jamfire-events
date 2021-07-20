@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Domicile",
-      "allEvents": "Tous les évènements",
-      "lobby": "Lobby",
-      "mainStage": "Scène principale",
-      "rooms": "Pièces",
-      "qa": "Questions et réponses",
-      "chat": "Discuter",
-      "schedule": "Horaire",
-      "polls": "Les sondages",
-      "map": "Participants",
-      "toggleMenu": "Basculer le menu"
+  "navigation": {
+    "home": "Domicile",
+    "allEvents": "Tous les évènements",
+    "lobby": "Lobby",
+    "mainStage": "Scène principale",
+    "rooms": "Pièces",
+    "qa": "Questions et réponses",
+    "chat": "Discuter",
+    "schedule": "Horaire",
+    "polls": "Les sondages",
+    "map": "Participants",
+    "toggleMenu": "Basculer le menu"
+  },
+  "regions": {
+    "cookiesNotice": "Avis relatif aux cookies",
+    "topbar": "Interaction de l'utilisateur",
+    "localSwitcher": "Basculer les paramètres régionaux",
+    "login": "Utilisateur en ligne",
+    "dashboard": "Tableau de bord utilisateur",
+    "featuredImage": "L'image sélectionnée",
+    "avatarImage": "Image de l'utilisateur",
+    "localeSwitcher": "Sélectionnez les paramètres régionaux"
+  },
+  "auth": {
+    "login": "Connexion",
+    "loginSocial": "Connectez-vous avec un compte social",
+    "loginEmail": "Connectez-vous avec email et mot de passe",
+    "logout": "Se déconnecter",
+    "email": "E-mail",
+    "emailInvalid": "Email invalide",
+    "emailRequired": "L'e-mail est requis",
+    "password": "Mot de passe",
+    "passwordConfirm": "Confirmez le mot de passe",
+    "passwordShort": "Le mot de passe est trop court",
+    "passwordRequired": "Mot de passe requis",
+    "passwordMatch": "les mots de passe doivent correspondre",
+    "register": "S'inscrire",
+    "registerAccount": "Inscrivez-vous pour un compte",
+    "existingAccount": "Vous avez déjà un compte?"
+  },
+  "buttons": {
+    "yes": "Oui",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "join": "Rejoindre"
+  },
+  "cookies": {
+    "notice": "Avis relatif aux cookies",
+    "preferences": "Préférences de cookies",
+    "accept": "J'accepte",
+    "manage": "Faire en sorte",
+    "confirm": "Confirmer"
+  },
+  "credit": {
+    "get": "Obtenez la conférence Jamfire"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "hello": "Bonjour",
+    "cookies": "Gérer les préférences de cookies"
+  },
+  "dates": {
+    "mon": "lundi",
+    "tue": "Mardi",
+    "wed": "Mercredi",
+    "thu": "jeudi",
+    "fri": "Vendredi",
+    "sat": "samedi",
+    "sun": "dimanche",
+    "jan": "janvier",
+    "feb": "février",
+    "mar": "Mars",
+    "apr": "avril",
+    "may": "Mai",
+    "jun": "juin",
+    "jul": "juillet",
+    "aug": "août",
+    "sep": "septembre",
+    "oct": "octobre",
+    "nov": "novembre",
+    "dec": "décembre",
+    "am": "UN M",
+    "pm": "PM"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Départs",
+      "ends": "Prend fin"
     },
-    "regions": {
-      "cookiesNotice": "Avis relatif aux cookies",
-      "topbar": "Interaction de l'utilisateur",
-      "localSwitcher": "Basculer les paramètres régionaux",
-      "login": "Utilisateur en ligne",
-      "dashboard": "Tableau de bord utilisateur",
-      "featuredImage": "L'image sélectionnée",
-      "avatarImage": "Image de l'utilisateur",
-      "localeSwitcher": "Sélectionnez les paramètres régionaux"
+    "chat": {
+      "login": "Connectez-vous pour discuter",
+      "beTheFirst": "Soyez le premier à discuter !",
+      "message": "Un message...",
+      "send": "Envoyer",
+      "error": "Une erreur s'est produite. Veuillez réessayer plus tard."
     },
-    "auth": {
-      "login": "Connexion",
-      "loginSocial": "Connectez-vous avec un compte social",
-      "loginEmail": "Connectez-vous avec email et mot de passe",
-      "logout": "Se déconnecter",
-      "email": "E-mail",
-      "emailInvalid": "Email invalide",
-      "emailRequired": "L'e-mail est requis",
-      "password": "Mot de passe",
-      "passwordConfirm": "Confirmez le mot de passe",
-      "passwordShort": "Le mot de passe est trop court",
-      "passwordRequired": "Mot de passe requis",
-      "passwordMatch": "les mots de passe doivent correspondre",
-      "register": "S'inscrire",
-      "registerAccount": "Inscrivez-vous pour un compte",
-      "existingAccount": "Vous avez déjà un compte?"
+    "menu": {
+      "label": "Afficher le menu"
     },
-    "buttons": {
-      "yes": "Oui",
+    "qa": {
+      "question": "Question",
+      "answer": "Répondre"
+    },
+    "rooms": {
+      "title": "Quitter la pièce?",
       "confirm": "Confirmer",
-      "cancel": "Annuler",
-      "join": "Rejoindre"
+      "alert": "Vous êtes actuellement dans une salle de visioconférence. Êtes-vous sûr de vouloir quitter?"
     },
-    "cookies": {
-      "notice": "Avis relatif aux cookies",
-      "preferences": "Préférences de cookies",
-      "accept": "J'accepte",
-      "manage": "Faire en sorte",
-      "confirm": "Confirmer"
-    },
-    "credit": {
-      "get": "Obtenez la conférence Jamfire"
-    },
-    "dashboard": {
-      "title": "Tableau de bord",
-      "hello": "Bonjour",
-      "cookies": "Gérer les préférences de cookies"
-    },
-    "dates": {
-      "mon": "lundi",
-      "tue": "Mardi",
-      "wed": "Mercredi",
-      "thu": "jeudi",
-      "fri": "Vendredi",
-      "sat": "samedi",
-      "sun": "dimanche",
-      "jan": "janvier",
-      "feb": "février",
-      "mar": "Mars",
-      "apr": "avril",
-      "may": "Mai",
-      "jun": "juin",
-      "jul": "juillet",
-      "aug": "août",
-      "sep": "septembre",
-      "oct": "octobre",
-      "nov": "novembre",
-      "dec": "décembre",
-      "am": "UN M",
-      "pm": "PM"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Départs",
-        "ends": "Prend fin"
-      },
-      "chat": {
-        "login": "Connectez-vous pour discuter",
-        "beTheFirst": "Soyez le premier à discuter !",
-        "message": "Un message...",
-        "send": "Envoyer"
-      },
-      "menu": {
-        "label": "Afficher le menu"
-      },
-      "qa": {
-        "question": "Question",
-        "answer": "Répondre"
-      },
-      "rooms": {
-        "title": "Quitter la pièce?",
-        "confirm": "Confirmer",
-        "alert": "Vous êtes actuellement dans une salle de visioconférence. Êtes-vous sûr de vouloir quitter?"
-      },
-      "tracker": {
-        "starts": "Départs",
-        "eventEnd": "Fin de l'événement",
-        "eventEnded": "Cet événement est terminé.",
-        "current": "Actuel",
-        "next": "Suivant",
-        "day": "Jour",
-        "hour": "Heure",
-        "minute": "Minute",
-        "second": "Deuxième"
-      }
-    },
-    "error": {
-      "pageNotFound": "Page non trouvée."
-    },
-    "form": {
-      "placeholderSearch": "Rechercher..."
-    },
-    "geolocation": {
-      "title": "Activer la géolocalisation ?",
-      "content": "Souhaitez-vous activer votre emplacement sur la carte des invités ?",
-      "enable": "Activer",
-      "deny": "Refuser"
-    },
-    "locale": {
-      "selectorTitle": "Sélectionnez une langue",
-      "codes": {
-        "bg": "bulgare",
-        "cs": "tchèque",
-        "da": "danois",
-        "de": "Allemand",
-        "el": "grec",
-        "en": "Anglais",
-        "es": "Espanol",
-        "et": "estonien",
-        "fi": "finlandais",
-        "fr": "français",
-        "hu": "hongrois",
-        "it": "italien",
-        "ja": "Japonais",
-        "lt": "lituanien",
-        "lv": "letton",
-        "nl": "néerlandais",
-        "pl": "polonais",
-        "pt": "Portugais",
-        "ro": "roumain",
-        "ru": "russe",
-        "sk": "slovaque",
-        "sl": "slovène",
-        "sv": "suédois",
-        "tr": "turc",
-        "zh": "chinois"
-      }
+    "tracker": {
+      "starts": "Départs",
+      "eventEnd": "Fin de l'événement",
+      "eventEnded": "Cet événement est terminé.",
+      "current": "Actuel",
+      "next": "Suivant",
+      "day": "Jour",
+      "hour": "Heure",
+      "minute": "Minute",
+      "second": "Deuxième"
+    }
+  },
+  "error": {
+    "pageNotFound": "Page non trouvée."
+  },
+  "form": {
+    "placeholderSearch": "Rechercher..."
+  },
+  "geolocation": {
+    "title": "Activer la géolocalisation ?",
+    "content": "Souhaitez-vous activer votre emplacement sur la carte des invités ?",
+    "enable": "Activer",
+    "deny": "Refuser"
+  },
+  "locale": {
+    "selectorTitle": "Sélectionnez une langue",
+    "codes": {
+      "bg": "bulgare",
+      "cs": "tchèque",
+      "da": "danois",
+      "de": "Allemand",
+      "el": "grec",
+      "en": "Anglais",
+      "es": "Espanol",
+      "et": "estonien",
+      "fi": "finlandais",
+      "fr": "français",
+      "hu": "hongrois",
+      "it": "italien",
+      "ja": "Japonais",
+      "lt": "lituanien",
+      "lv": "letton",
+      "nl": "néerlandais",
+      "pl": "polonais",
+      "pt": "Portugais",
+      "ro": "roumain",
+      "ru": "russe",
+      "sk": "slovaque",
+      "sl": "slovène",
+      "sv": "suédois",
+      "tr": "turc",
+      "zh": "chinois"
     }
   }
-
+}

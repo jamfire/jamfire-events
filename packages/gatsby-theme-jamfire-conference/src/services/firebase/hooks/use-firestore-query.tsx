@@ -17,7 +17,8 @@ const useFirestoreQuery = (query: any) => {
           }))
         )
       },
-      (err: Error) => {
+      (err: any) => {
+        console.log(err)
         setError(err)
       }
     )

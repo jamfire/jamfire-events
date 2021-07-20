@@ -1,10 +1,14 @@
 // import libs
 import React from "react"
-import { ButtonProps } from "./_props"
+import { ButtonProps } from "./button.d"
 
-// import components
-import { Button } from "./_styles"
+// import styles
+import * as styles from "./button.module.scss"
 
 export default ({ url, children }: ButtonProps) => {
-  return <Button href={url}>{children}</Button>
+  return (
+    <a href={url} className={`button ${styles.button}`}>
+      {children}
+    </a>
+  )
 }

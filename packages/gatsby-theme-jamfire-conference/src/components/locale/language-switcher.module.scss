@@ -1,0 +1,24 @@
+@import "../../theme/media.scss";
+
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet-up {
+    margin-left: 1rem;
+  }
+}
+
+.switcher {
+  width: 2.5rem;
+  height: 28px;
+  background: var(--logo-hover);
+  color: var(--logo-color);
+  border-radius: 4px;
+  padding: 2px 0;
+  transition: 85ms all ease-out;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}

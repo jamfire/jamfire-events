@@ -1,10 +1,10 @@
 // import libs
 import React from "react"
-import { SidebarProps } from "./_props"
+import { SidebarProps } from "./sidebar.d"
 
-// import components
-import { Sidebar } from "./_styles"
+// import styles
+import * as styles from "./sidebar.module.scss"
 
 export default ({ children }: SidebarProps) => {
-  return <Sidebar>{children}</Sidebar>
+  return <aside className={styles.sidebar}>{children}</aside>
 }

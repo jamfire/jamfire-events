@@ -2,20 +2,23 @@
 import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
-import { ProviderProps } from "./_props"
+import { ProviderProps } from "./theme"
+import { GeolocationProps } from "../geolocation/geolocation"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"
 
 export default ({ children }: ProviderProps) => {
-
   // cookies
-  const [ , setCookies, removeCookies] = useCookies(["cookies"])
+  const [, setCookies, removeCookies] = useCookies(["cookies"])
 
   // state
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
   const [toggle, setToggle] = useState(initialState.toggle)
   const [toggleLogin, setToggleLogin] = useState(initialState.toggleLogin)
+  const [toggleDashboard, setToggleDashboard] = useState(
+    initialState.toggleDashboard
+  )
   const [navigation, setNavigation] = useState(initialState.navigation)
   const [user, setUser] = useState(initialState.user)
   const [activeRoom, setActiveRoom] = useState(initialState.activeRoom)
@@ -28,22 +31,11 @@ export default ({ children }: ProviderProps) => {
   )
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
+  const [geolocation, setGeolocation] = useState<null | GeolocationProps>(null)
 
-  // get initial dark mode
+  // set dark mode
   useEffect(() => {
     const dm: string = jamfireGet("darkMode")
-
-    if (dm === null && typeof window !== `undefined`) {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        return setDarkMode(true)
-      } else {
-        return setDarkMode(false)
-      }
-    }
-
     const isDarkMode: boolean = dm === "true"
     return setDarkMode(isDarkMode)
   }, [])
@@ -87,6 +79,8 @@ export default ({ children }: ProviderProps) => {
         setToggle,
         toggleLogin,
         setToggleLogin,
+        toggleDashboard,
+        setToggleDashboard,
         navigation,
         setNavigation,
         user,
@@ -105,7 +99,9 @@ export default ({ children }: ProviderProps) => {
         setEnableAnalytics,
         toggleLocale,
         setToggleLocale,
-        localesEnabled
+        localesEnabled,
+        geolocation,
+        setGeolocation,
       }}
     >
       {children}

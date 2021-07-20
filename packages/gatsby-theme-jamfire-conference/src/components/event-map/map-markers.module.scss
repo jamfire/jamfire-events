@@ -1,0 +1,21 @@
+.icon-wrapper {
+  transition: all 85ms ease-out;
+}
+
+.icon-background {
+  height: 100%;
+  width: 100%;
+  background: var(--logo-background);
+  opacity: 0.35;
+  border-radius: 100%;
+  z-index: 2;
+  transition: all 85ms ease-out;
+  content: " ";
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+  width: auto;
+  height: auto;
+}

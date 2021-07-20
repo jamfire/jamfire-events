@@ -1,0 +1,29 @@
+// modal wrapper component
+.wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  // backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+// modal component
+.modal {
+  height: auto;
+  border-radius: 4px;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+// modal content
+.content {
+  padding: 2rem;
+}

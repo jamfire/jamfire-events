@@ -1,0 +1,17 @@
+@import "../../theme/media.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--border-color);
+  overflow-y: scroll;
+  height: 100%;
+  grid-template-areas:
+    "content"
+    "sidebar";
+
+  @include tablet-side {
+    grid-template-areas: "sidebar content";
+    grid-template-columns: var(--sidebar-width) 1fr;
+  }
+}

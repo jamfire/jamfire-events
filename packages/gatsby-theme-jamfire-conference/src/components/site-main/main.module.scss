@@ -1,0 +1,13 @@
+@import "../../theme/media.scss";
+
+// styled main
+.main {
+  grid-area: main;
+
+  height: calc(100vh - 160px);
+  overflow-y: scroll;
+
+  @include tablet-up {
+    height: calc(100vh - 160px);
+  }
+}

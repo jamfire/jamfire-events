@@ -1,0 +1,12 @@
+// styled list component
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// styled list item component
+.item {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0;
+}

@@ -1,0 +1,26 @@
+@import "../../theme/media.scss";
+
+// events wrapper component
+.wrapper {
+  background: var(--content-background);
+  min-height: 100%;
+}
+
+// events component
+.events {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  position: relative;
+  padding: 1rem;
+
+  @include tablet-up {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+
+  @include tablet-side {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

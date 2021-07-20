@@ -1,0 +1,17 @@
+@import "../../theme/media.scss";
+
+// sidebar component
+.sidebar {
+  grid-area: sidebar;
+
+  @include tablet-up {
+    border-top: 1px solid var(--border-color);
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+  }
+
+  @include tablet-side {
+    border-top: none;
+    border-right: 1px solid var(--border-color);
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../theme/media.scss";
+
+// topbar component
+.topbar {
+  grid-area: topbar;
+  background: var(--logo-background);
+
+  display: flex;
+  justify-content: flex-end;
+  grid-template-areas: "user";
+
+  @include tablet-up {
+    padding: 0 2rem;
+  }
+}

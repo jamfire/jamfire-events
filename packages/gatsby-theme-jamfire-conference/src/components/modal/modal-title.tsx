@@ -1,29 +1,29 @@
 // import libs
 import React from "react"
-import { ModalTitleProps } from "./_props"
+import { ModalTitleProps } from "./modal.d"
 
 // import components
-import { ModalTitle } from "./_styles"
 import { GatsbyImage } from "gatsby-plugin-image"
+
+// import styles
+import * as styles from "./modal-title.module.scss"
 
 export default ({ title, config }: ModalTitleProps) => {
   // static query for logo data
-  const {
-    frontmatter: {
-      graphics: { logo },
-    },
-  } = config
+  const { graphics } = config?.frontmatter || {}
+
+  const { logo } = graphics || {}
 
   return (
-    <ModalTitle>
+    <div className={styles.title}>
       {logo && (
         <GatsbyImage
-          image={logo.childImageSharp.gatsbyImageData}
+          image={logo?.childImageSharp?.gatsbyImageData}
           loading="eager"
           alt={title}
         />
       )}
       <h3>{title}</h3>
-    </ModalTitle>
+    </div>
   )
 }

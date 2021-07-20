@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "Namai",
-      "allEvents": "Visi įvykiai",
-      "lobby": "Lobis",
-      "mainStage": "Pagrindinė scena",
-      "rooms": "Kambariai",
-      "qa": "Klausimai ir atsakymai",
-      "chat": "Kalbėtis",
-      "schedule": "Tvarkaraštis",
-      "polls": "Apklausos",
-      "map": "Dalyviai",
-      "toggleMenu": "Perjungti meniu"
+  "navigation": {
+    "home": "Namai",
+    "allEvents": "Visi įvykiai",
+    "lobby": "Lobis",
+    "mainStage": "Pagrindinė scena",
+    "rooms": "Kambariai",
+    "qa": "Klausimai ir atsakymai",
+    "chat": "Kalbėtis",
+    "schedule": "Tvarkaraštis",
+    "polls": "Apklausos",
+    "map": "Dalyviai",
+    "toggleMenu": "Perjungti meniu"
+  },
+  "regions": {
+    "cookiesNotice": "Slapukų pranešimas",
+    "topbar": "Vartotojo sąveika",
+    "localSwitcher": "Perjungti lokalę",
+    "login": "Vartotojo prisijungimas",
+    "dashboard": "Vartotojo informacijos suvestinė",
+    "featuredImage": "Panašus vaizdas",
+    "avatarImage": "Vartotojo atvaizdas",
+    "localeSwitcher": "Pasirinkite „Locale“"
+  },
+  "auth": {
+    "login": "Prisijungti",
+    "loginSocial": "Prisijunkite naudodamiesi socialine paskyra",
+    "loginEmail": "Prisijunkite naudodami el. Pašto adresą ir slaptažodį",
+    "logout": "Atsijungti",
+    "email": "El",
+    "emailInvalid": "Neteisingas el. pašto adresas",
+    "emailRequired": "Būtinas el. Pašto adresas",
+    "password": "Slaptažodis",
+    "passwordConfirm": "Patvirtinti slaptažodį",
+    "passwordShort": "Slaptažodis per trumpas",
+    "passwordRequired": "reikalingas slaptazodis",
+    "passwordMatch": "Slaptažodžiai turi sutapti",
+    "register": "Registruotis",
+    "registerAccount": "Registruokitės paskyros",
+    "existingAccount": "Jau turite paskyrą?"
+  },
+  "buttons": {
+    "yes": "Taip",
+    "confirm": "Patvirtinti",
+    "cancel": "Atšaukti",
+    "join": "Prisijunkite"
+  },
+  "cookies": {
+    "notice": "Slapukų pranešimas",
+    "preferences": "Slapukų nuostatos",
+    "accept": "Priimti",
+    "manage": "Tvarkyti",
+    "confirm": "Patvirtinti"
+  },
+  "credit": {
+    "get": "Gaukite „Jamfire“ konferenciją"
+  },
+  "dashboard": {
+    "title": "Prietaisų skydelis",
+    "hello": "Sveiki",
+    "cookies": "Tvarkykite slapukų nuostatas"
+  },
+  "dates": {
+    "mon": "Pirmadienis",
+    "tue": "Antradienis",
+    "wed": "Trečiadienis",
+    "thu": "Ketvirtadienis",
+    "fri": "Penktadienis",
+    "sat": "Šeštadienis",
+    "sun": "Sekmadienis",
+    "jan": "Sausio mėn",
+    "feb": "Vasario mėn",
+    "mar": "Kovas",
+    "apr": "Balandis",
+    "may": "Gegužė",
+    "jun": "Birželio mėn",
+    "jul": "Liepos mėn",
+    "aug": "Rugpjūtis",
+    "sep": "Rugsėjo mėn",
+    "oct": "Spalio mėn",
+    "nov": "Lapkričio mėn",
+    "dec": "Dekmeberis",
+    "am": "ESU",
+    "pm": "PM"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Prasideda",
+      "ends": "Baigiasi"
     },
-    "regions": {
-      "cookiesNotice": "Slapukų pranešimas",
-      "topbar": "Vartotojo sąveika",
-      "localSwitcher": "Perjungti lokalę",
-      "login": "Vartotojo prisijungimas",
-      "dashboard": "Vartotojo informacijos suvestinė",
-      "featuredImage": "Panašus vaizdas",
-      "avatarImage": "Vartotojo atvaizdas",
-      "localeSwitcher": "Pasirinkite „Locale“"
+    "chat": {
+      "login": "Prisijunkite prie pokalbio",
+      "beTheFirst": "Būk pirmas pokalbis!",
+      "message": "Pranešimas ...",
+      "send": "Siųsti",
+      "error": "Įvyko klaida. Pabandykite dar kartą vėliau."
     },
-    "auth": {
-      "login": "Prisijungti",
-      "loginSocial": "Prisijunkite naudodamiesi socialine paskyra",
-      "loginEmail": "Prisijunkite naudodami el. Pašto adresą ir slaptažodį",
-      "logout": "Atsijungti",
-      "email": "El",
-      "emailInvalid": "Neteisingas el. pašto adresas",
-      "emailRequired": "Būtinas el. Pašto adresas",
-      "password": "Slaptažodis",
-      "passwordConfirm": "Patvirtinti slaptažodį",
-      "passwordShort": "Slaptažodis per trumpas",
-      "passwordRequired": "reikalingas slaptazodis",
-      "passwordMatch": "Slaptažodžiai turi sutapti",
-      "register": "Registruotis",
-      "registerAccount": "Registruokitės paskyros",
-      "existingAccount": "Jau turite paskyrą?"
+    "menu": {
+      "label": "Rodyti meniu"
     },
-    "buttons": {
-      "yes": "Taip",
+    "qa": {
+      "question": "Klausimas",
+      "answer": "Atsakymas"
+    },
+    "rooms": {
+      "title": "Išeiti iš kambario?",
       "confirm": "Patvirtinti",
-      "cancel": "Atšaukti",
-      "join": "Prisijunkite"
+      "alert": "Šiuo metu esate vaizdo konferencijų salėje. Ar tikrai norite išeiti?"
     },
-    "cookies": {
-      "notice": "Slapukų pranešimas",
-      "preferences": "Slapukų nuostatos",
-      "accept": "Priimti",
-      "manage": "Tvarkyti",
-      "confirm": "Patvirtinti"
-    },
-    "credit": {
-      "get": "Gaukite „Jamfire“ konferenciją"
-    },
-    "dashboard": {
-      "title": "Prietaisų skydelis",
-      "hello": "Sveiki",
-      "cookies": "Tvarkykite slapukų nuostatas"
-    },
-    "dates": {
-      "mon": "Pirmadienis",
-      "tue": "Antradienis",
-      "wed": "Trečiadienis",
-      "thu": "Ketvirtadienis",
-      "fri": "Penktadienis",
-      "sat": "Šeštadienis",
-      "sun": "Sekmadienis",
-      "jan": "Sausio mėn",
-      "feb": "Vasario mėn",
-      "mar": "Kovas",
-      "apr": "Balandis",
-      "may": "Gegužė",
-      "jun": "Birželio mėn",
-      "jul": "Liepos mėn",
-      "aug": "Rugpjūtis",
-      "sep": "Rugsėjo mėn",
-      "oct": "Spalio mėn",
-      "nov": "Lapkričio mėn",
-      "dec": "Dekmeberis",
-      "am": "ESU",
-      "pm": "PM"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Prasideda",
-        "ends": "Baigiasi"
-      },
-      "chat": {
-        "login": "Prisijunkite prie pokalbio",
-        "beTheFirst": "Būk pirmas pokalbis!",
-        "message": "Pranešimas ...",
-        "send": "Siųsti"
-      },
-      "menu": {
-        "label": "Rodyti meniu"
-      },
-      "qa": {
-        "question": "Klausimas",
-        "answer": "Atsakymas"
-      },
-      "rooms": {
-        "title": "Išeiti iš kambario?",
-        "confirm": "Patvirtinti",
-        "alert": "Šiuo metu esate vaizdo konferencijų salėje. Ar tikrai norite išeiti?"
-      },
-      "tracker": {
-        "starts": "Prasideda",
-        "eventEnd": "Renginio pabaiga",
-        "eventEnded": "Šis renginys baigėsi.",
-        "current": "Dabartinis",
-        "next": "Kitas",
-        "day": "Diena",
-        "hour": "Valanda",
-        "minute": "Minutė",
-        "second": "Antra"
-      }
-    },
-    "error": {
-      "pageNotFound": "Puslapis nerastas."
-    },
-    "form": {
-      "placeholderSearch": "Paieška..."
-    },
-    "geolocation": {
-      "title": "Įgalinti geografinę vietą?",
-      "content": "Ar norėtumėte įgalinti savo buvimo vietą svečių žemėlapyje?",
-      "enable": "Įgalinti",
-      "deny": "Neigti"
-    },
-    "locale": {
-      "selectorTitle": "Pasirinkite kalbą",
-      "codes": {
-        "bg": "Bulgarų",
-        "cs": "Čekų",
-        "da": "Danų",
-        "de": "Vokiečių kalba",
-        "el": "Graikų",
-        "en": "Anglų",
-        "es": "Ispanų",
-        "et": "Estų",
-        "fi": "Suomių",
-        "fr": "Prancūzų kalba",
-        "hu": "Vengrų",
-        "it": "Italų",
-        "ja": "Japonų",
-        "lt": "Lietuvis",
-        "lv": "Latvių",
-        "nl": "Olandų",
-        "pl": "lenkas",
-        "pt": "Portugalų",
-        "ro": "Rumunų",
-        "ru": "Rusų",
-        "sk": "Slovakų",
-        "sl": "Slovėnų",
-        "sv": "Švedijos",
-        "tr": "Turkų",
-        "zh": "Kinų"
-      }
+    "tracker": {
+      "starts": "Prasideda",
+      "eventEnd": "Renginio pabaiga",
+      "eventEnded": "Šis renginys baigėsi.",
+      "current": "Dabartinis",
+      "next": "Kitas",
+      "day": "Diena",
+      "hour": "Valanda",
+      "minute": "Minutė",
+      "second": "Antra"
+    }
+  },
+  "error": {
+    "pageNotFound": "Puslapis nerastas."
+  },
+  "form": {
+    "placeholderSearch": "Paieška..."
+  },
+  "geolocation": {
+    "title": "Įgalinti geografinę vietą?",
+    "content": "Ar norėtumėte įgalinti savo buvimo vietą svečių žemėlapyje?",
+    "enable": "Įgalinti",
+    "deny": "Neigti"
+  },
+  "locale": {
+    "selectorTitle": "Pasirinkite kalbą",
+    "codes": {
+      "bg": "Bulgarų",
+      "cs": "Čekų",
+      "da": "Danų",
+      "de": "Vokiečių kalba",
+      "el": "Graikų",
+      "en": "Anglų",
+      "es": "Ispanų",
+      "et": "Estų",
+      "fi": "Suomių",
+      "fr": "Prancūzų kalba",
+      "hu": "Vengrų",
+      "it": "Italų",
+      "ja": "Japonų",
+      "lt": "Lietuvis",
+      "lv": "Latvių",
+      "nl": "Olandų",
+      "pl": "lenkas",
+      "pt": "Portugalų",
+      "ro": "Rumunų",
+      "ru": "Rusų",
+      "sk": "Slovakų",
+      "sl": "Slovėnų",
+      "sv": "Švedijos",
+      "tr": "Turkų",
+      "zh": "Kinų"
     }
   }
-
+}

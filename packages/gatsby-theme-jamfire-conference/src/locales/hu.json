@@ -1,164 +1,164 @@
 {
-    "navigation": {
-      "home": "itthon",
-      "allEvents": "Minden esemény",
-      "lobby": "Előcsarnok",
-      "mainStage": "Nagyszínpad",
-      "rooms": "Szobák",
-      "qa": "Kérdések és válaszok",
-      "chat": "Csevegés",
-      "schedule": "Menetrend",
-      "polls": "Szavazások",
-      "map": "Résztvevők",
-      "toggleMenu": "Toggle Menu"
+  "navigation": {
+    "home": "itthon",
+    "allEvents": "Minden esemény",
+    "lobby": "Előcsarnok",
+    "mainStage": "Nagyszínpad",
+    "rooms": "Szobák",
+    "qa": "Kérdések és válaszok",
+    "chat": "Csevegés",
+    "schedule": "Menetrend",
+    "polls": "Szavazások",
+    "map": "Résztvevők",
+    "toggleMenu": "Toggle Menu"
+  },
+  "regions": {
+    "cookiesNotice": "Cookie értesítés",
+    "topbar": "Felhasználói interakció",
+    "localSwitcher": "Kapcsolja be a Nyelv beállítást",
+    "login": "Bejelentkezés",
+    "dashboard": "Felhasználói irányítópult",
+    "featuredImage": "Kiemelt kép",
+    "avatarImage": "Felhasználói kép",
+    "localeSwitcher": "Válassza a Nyelv lehetőséget"
+  },
+  "auth": {
+    "login": "Belépés",
+    "loginSocial": "Bejelentkezés közösségi fiókkal",
+    "loginEmail": "Bejelentkezés e-mail címmel és jelszóval",
+    "logout": "Kijelentkezés",
+    "email": "Email",
+    "emailInvalid": "Érvénytelen e-mail",
+    "emailRequired": "E-mail szükséges",
+    "password": "Jelszó",
+    "passwordConfirm": "Jelszó megerősítése",
+    "passwordShort": "A jelszó túl rövid",
+    "passwordRequired": "Jelszó szükséges",
+    "passwordMatch": "a jelszavaknak egyezniük kell",
+    "register": "Regisztráció",
+    "registerAccount": "Regisztráljon egy fiókhoz",
+    "existingAccount": "Már van fiókja?"
+  },
+  "buttons": {
+    "yes": "Igen",
+    "confirm": "megerősít",
+    "cancel": "Megszünteti",
+    "join": "Csatlakozik"
+  },
+  "cookies": {
+    "notice": "Cookie értesítés",
+    "preferences": "Cookie-beállítások",
+    "accept": "Elfogad",
+    "manage": "Kezelés",
+    "confirm": "megerősít"
+  },
+  "credit": {
+    "get": "Szerezd meg a Jamfire konferenciát"
+  },
+  "dashboard": {
+    "title": "Irányítópult",
+    "hello": "Helló",
+    "cookies": "A Cookie-beállítások kezelése"
+  },
+  "dates": {
+    "mon": "hétfő",
+    "tue": "kedd",
+    "wed": "szerda",
+    "thu": "csütörtök",
+    "fri": "péntek",
+    "sat": "szombat",
+    "sun": "vasárnap",
+    "jan": "január",
+    "feb": "február",
+    "mar": "március",
+    "apr": "április",
+    "may": "Lehet",
+    "jun": "június",
+    "jul": "július",
+    "aug": "augusztus",
+    "sep": "szeptember",
+    "oct": "október",
+    "nov": "november",
+    "dec": "Decmeber",
+    "am": "AM",
+    "pm": "DÉLUTÁN"
+  },
+  "event": {
+    "lobby": {
+      "starts": "Indul",
+      "ends": "Véget ér"
     },
-    "regions": {
-      "cookiesNotice": "Cookie értesítés",
-      "topbar": "Felhasználói interakció",
-      "localSwitcher": "Kapcsolja be a Nyelv beállítást",
-      "login": "Bejelentkezés",
-      "dashboard": "Felhasználói irányítópult",
-      "featuredImage": "Kiemelt kép",
-      "avatarImage": "Felhasználói kép",
-      "localeSwitcher": "Válassza a Nyelv lehetőséget"
+    "chat": {
+      "login": "Jelentkezzen be a csevegéshez",
+      "beTheFirst": "Csevegjen elsőként!",
+      "message": "Üzenet...",
+      "send": "Küld",
+      "error": "Hiba történt. Kérlek, próbáld újra később."
     },
-    "auth": {
-      "login": "Belépés",
-      "loginSocial": "Bejelentkezés közösségi fiókkal",
-      "loginEmail": "Bejelentkezés e-mail címmel és jelszóval",
-      "logout": "Kijelentkezés",
-      "email": "Email",
-      "emailInvalid": "Érvénytelen e-mail",
-      "emailRequired": "E-mail szükséges",
-      "password": "Jelszó",
-      "passwordConfirm": "Jelszó megerősítése",
-      "passwordShort": "A jelszó túl rövid",
-      "passwordRequired": "Jelszó szükséges",
-      "passwordMatch": "a jelszavaknak egyezniük kell",
-      "register": "Regisztráció",
-      "registerAccount": "Regisztráljon egy fiókhoz",
-      "existingAccount": "Már van fiókja?"
+    "menu": {
+      "label": "Menü megjelenítése"
     },
-    "buttons": {
-      "yes": "Igen",
+    "qa": {
+      "question": "Kérdés",
+      "answer": "Válasz"
+    },
+    "rooms": {
+      "title": "Elhagyja a szobát?",
       "confirm": "megerősít",
-      "cancel": "Megszünteti",
-      "join": "Csatlakozik"
+      "alert": "Jelenleg videokonferencia teremben van. Biztosan el akarsz menni?"
     },
-    "cookies": {
-      "notice": "Cookie értesítés",
-      "preferences": "Cookie-beállítások",
-      "accept": "Elfogad",
-      "manage": "Kezelés",
-      "confirm": "megerősít"
-    },
-    "credit": {
-      "get": "Szerezd meg a Jamfire konferenciát"
-    },
-    "dashboard": {
-      "title": "Irányítópult",
-      "hello": "Helló",
-      "cookies": "A Cookie-beállítások kezelése"
-    },
-    "dates": {
-      "mon": "hétfő",
-      "tue": "kedd",
-      "wed": "szerda",
-      "thu": "csütörtök",
-      "fri": "péntek",
-      "sat": "szombat",
-      "sun": "vasárnap",
-      "jan": "január",
-      "feb": "február",
-      "mar": "március",
-      "apr": "április",
-      "may": "Lehet",
-      "jun": "június",
-      "jul": "július",
-      "aug": "augusztus",
-      "sep": "szeptember",
-      "oct": "október",
-      "nov": "november",
-      "dec": "Decmeber",
-      "am": "AM",
-      "pm": "DÉLUTÁN"
-    },
-    "event": {
-      "lobby": {
-        "starts": "Indul",
-        "ends": "Véget ér"
-      },
-      "chat": {
-        "login": "Jelentkezzen be a csevegéshez",
-        "beTheFirst": "Csevegjen elsőként!",
-        "message": "Üzenet...",
-        "send": "Küld"
-      },
-      "menu": {
-        "label": "Menü megjelenítése"
-      },
-      "qa": {
-        "question": "Kérdés",
-        "answer": "Válasz"
-      },
-      "rooms": {
-        "title": "Elhagyja a szobát?",
-        "confirm": "megerősít",
-        "alert": "Jelenleg videokonferencia teremben van. Biztosan el akarsz menni?"
-      },
-      "tracker": {
-        "starts": "Indul",
-        "eventEnd": "Esemény vége",
-        "eventEnded": "Ez az esemény befejeződött.",
-        "current": "Jelenlegi",
-        "next": "Következő",
-        "day": "Nap",
-        "hour": "Óra",
-        "minute": "Perc",
-        "second": "Második"
-      }
-    },
-    "error": {
-      "pageNotFound": "Az oldal nem található."
-    },
-    "form": {
-      "placeholderSearch": "Keresés..."
-    },
-    "geolocation": {
-      "title": "Engedélyezi a helymeghatározást?",
-      "content": "Szeretné engedélyezni tartózkodási helyét a vendégtérképen?",
-      "enable": "Engedélyezze",
-      "deny": "Tagadni"
-    },
-    "locale": {
-      "selectorTitle": "Válasszon nyelvet",
-      "codes": {
-        "bg": "bolgár",
-        "cs": "cseh",
-        "da": "dán",
-        "de": "német",
-        "el": "görög",
-        "en": "angol",
-        "es": "spanyol",
-        "et": "észt",
-        "fi": "finn",
-        "fr": "Francia",
-        "hu": "Magyar",
-        "it": "olasz",
-        "ja": "japán",
-        "lt": "litván",
-        "lv": "lett",
-        "nl": "holland",
-        "pl": "fényesít",
-        "pt": "portugál",
-        "ro": "román",
-        "ru": "orosz",
-        "sk": "szlovák",
-        "sl": "szlovén",
-        "sv": "svéd",
-        "tr": "török",
-        "zh": "kínai"
-      }
+    "tracker": {
+      "starts": "Indul",
+      "eventEnd": "Esemény vége",
+      "eventEnded": "Ez az esemény befejeződött.",
+      "current": "Jelenlegi",
+      "next": "Következő",
+      "day": "Nap",
+      "hour": "Óra",
+      "minute": "Perc",
+      "second": "Második"
+    }
+  },
+  "error": {
+    "pageNotFound": "Az oldal nem található."
+  },
+  "form": {
+    "placeholderSearch": "Keresés..."
+  },
+  "geolocation": {
+    "title": "Engedélyezi a helymeghatározást?",
+    "content": "Szeretné engedélyezni tartózkodási helyét a vendégtérképen?",
+    "enable": "Engedélyezze",
+    "deny": "Tagadni"
+  },
+  "locale": {
+    "selectorTitle": "Válasszon nyelvet",
+    "codes": {
+      "bg": "bolgár",
+      "cs": "cseh",
+      "da": "dán",
+      "de": "német",
+      "el": "görög",
+      "en": "angol",
+      "es": "spanyol",
+      "et": "észt",
+      "fi": "finn",
+      "fr": "Francia",
+      "hu": "Magyar",
+      "it": "olasz",
+      "ja": "japán",
+      "lt": "litván",
+      "lv": "lett",
+      "nl": "holland",
+      "pl": "fényesít",
+      "pt": "portugál",
+      "ro": "román",
+      "ru": "orosz",
+      "sk": "szlovák",
+      "sl": "szlovén",
+      "sv": "svéd",
+      "tr": "török",
+      "zh": "kínai"
     }
   }
-
+}

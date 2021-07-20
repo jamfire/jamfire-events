@@ -2,21 +2,18 @@
 import React, { useEffect, useState, useContext } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { useTranslation } from "react-i18next"
-import { CookieNoticeProps } from "./_props"
+import { CookieNoticeProps } from "./cookies"
+import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Markdown from "../markdown"
-import {
-  CookieNotice,
-  CookieNoticeTitle,
-  CookieContent,
-  Buttons,
-  Button,
-} from "./_styles"
+
+// import styles
+import * as styles from "./cookie-notice.module.scss"
 
 export default ({ cookies, config }: CookieNoticeProps) => {
-  const { setToggleCookies } = useContext(Context)
+  const { setToggleCookies } = useContext(ThemeContext)
 
   const [isLoading, setIsLoading] = useState(true)
   const [showConsent, setShowConsent] = useState(true)
@@ -55,34 +52,34 @@ export default ({ cookies, config }: CookieNoticeProps) => {
 
   // user has not accepted cookies
   return (
-    <CookieNotice
+    <div
+      className={styles.notice}
       role="region"
       id="cookie-notice"
       aria-label={t("regions.cookiesNotice")}
     >
       <CookieNotification cookies={cookies} config={config} />
-      <Buttons>
-        <Button
-          className="manage-cookies"
-          primary={true}
+      <div className={styles.buttons}>
+        <button
+          className={cx(styles.button, styles.primary, "manage-cookies")}
           onClick={() => setToggleCookies(true)}
         >
           {t("cookies.manage")}
-        </Button>
-        <Button className="accept-cookies" onClick={cookiesAccepted}>
+        </button>
+        <button
+          className={cx(styles.button, "accept-cookies")}
+          onClick={cookiesAccepted}
+        >
           {t("cookies.accept")}
-        </Button>
-      </Buttons>
-    </CookieNotice>
+        </button>
+      </div>
+    </div>
   )
 }
 
-const CookieNotification = ({ cookies, config }) => (
-  <CookieContent>
-    <CookieNoticeTitle>{config.frontmatter.title}</CookieNoticeTitle>
-    <Markdown
-      className="cookie-notice-content"
-      content={cookies.frontmatter.cookieNotification.content}
-    />
-  </CookieContent>
+const CookieNotification = ({ cookies, config }: CookieNoticeProps) => (
+  <div className={styles.content}>
+    <p className={styles.title}>{config?.frontmatter?.title}</p>
+    <Markdown content={cookies?.frontmatter?.cookieNotification?.content} />
+  </div>
 )

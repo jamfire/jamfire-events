@@ -1,0 +1,21 @@
+// container component
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 75px;
+}
+
+// icon component
+.icon {
+  color: #fff;
+  text-align: center;
+
+  .sun {
+    vertical-align: -0.25rem;
+  }
+
+  .moon {
+    vertical-align: -0.25rem;
+  }
+}

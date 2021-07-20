@@ -1,0 +1,14 @@
+@import "../../theme/media.scss";
+
+// toggle component
+.toggle {
+  grid-area: toggle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+
+  @include tablet-up {
+    display: none;
+  }
+}

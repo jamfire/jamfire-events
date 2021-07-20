@@ -1,0 +1,16 @@
+@import "../../theme/media.scss";
+
+// styled header
+.header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-columns: 1fr 80px 60px;
+  grid-template-areas: "branding topbar profile";
+  grid-gap: 0;
+
+  @include tablet-up {
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-areas: "profile branding topbar";
+  }
+}
