@@ -84,8 +84,8 @@ const RoomItem = ({ room, event, locale }: RoomItemProps) => {
         <RoomItemImage room={room} />
         <div className={styles.roomJoin}>
           <div className={styles.roomType}>
-            <span>{room.roomType}</span>
-            <span>{room.roomLocale}</span>
+            {room.roomType && <span>{room.roomType}</span>}
+            {room.roomLocale && <span>{room.roomLocale}</span>}
           </div>
           <JoinButton room={room} basePath={basePath} />
         </div>

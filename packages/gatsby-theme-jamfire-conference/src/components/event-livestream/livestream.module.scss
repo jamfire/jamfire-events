@@ -33,7 +33,7 @@
 .featuredImage {
   height: 40vh;
   background: var(--content-background);
-  grid-area: featured-image;
+  grid-area: content;
 
   @include tablet-up {
     height: calc(100vh - 160px);

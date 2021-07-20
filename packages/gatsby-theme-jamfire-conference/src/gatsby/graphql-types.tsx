@@ -694,6 +694,7 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___eventRooms___title = "childrenMarkdownRemark___frontmatter___eventRooms___title",
   childrenMarkdownRemark___frontmatter___eventRooms___description = "childrenMarkdownRemark___frontmatter___eventRooms___description",
   childrenMarkdownRemark___frontmatter___eventRooms___roomType = "childrenMarkdownRemark___frontmatter___eventRooms___roomType",
+  childrenMarkdownRemark___frontmatter___eventRooms___roomLocale = "childrenMarkdownRemark___frontmatter___eventRooms___roomLocale",
   childrenMarkdownRemark___frontmatter___eventRooms___roomUrl = "childrenMarkdownRemark___frontmatter___eventRooms___roomUrl",
   childrenMarkdownRemark___frontmatter___title = "childrenMarkdownRemark___frontmatter___title",
   childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = "childrenMarkdownRemark___frontmatter___analyticsCookies___enabled",
@@ -817,6 +818,7 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___eventRooms___title = "childMarkdownRemark___frontmatter___eventRooms___title",
   childMarkdownRemark___frontmatter___eventRooms___description = "childMarkdownRemark___frontmatter___eventRooms___description",
   childMarkdownRemark___frontmatter___eventRooms___roomType = "childMarkdownRemark___frontmatter___eventRooms___roomType",
+  childMarkdownRemark___frontmatter___eventRooms___roomLocale = "childMarkdownRemark___frontmatter___eventRooms___roomLocale",
   childMarkdownRemark___frontmatter___eventRooms___roomUrl = "childMarkdownRemark___frontmatter___eventRooms___roomUrl",
   childMarkdownRemark___frontmatter___title = "childMarkdownRemark___frontmatter___title",
   childMarkdownRemark___frontmatter___analyticsCookies___enabled = "childMarkdownRemark___frontmatter___analyticsCookies___enabled",
@@ -1850,6 +1852,7 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___eventRooms___title = "frontmatter___eventRooms___title",
   frontmatter___eventRooms___description = "frontmatter___eventRooms___description",
   frontmatter___eventRooms___roomType = "frontmatter___eventRooms___roomType",
+  frontmatter___eventRooms___roomLocale = "frontmatter___eventRooms___roomLocale",
   frontmatter___eventRooms___roomUrl = "frontmatter___eventRooms___roomUrl",
   frontmatter___eventGraphics___favicon___sourceInstanceName = "frontmatter___eventGraphics___favicon___sourceInstanceName",
   frontmatter___eventGraphics___favicon___absolutePath = "frontmatter___eventGraphics___favicon___absolutePath",
@@ -2431,6 +2434,7 @@ export type MarkdownRemarkFrontmatterEventRoom = {
   title: Scalars["String"]
   description?: Maybe<Scalars["String"]>
   roomType?: Maybe<Scalars["String"]>
+  roomLocale?: Maybe<Scalars["String"]>
   roomUrl?: Maybe<Scalars["String"]>
 }
 
@@ -2440,6 +2444,7 @@ export type MarkdownRemarkFrontmatterEventRoomFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
   description?: Maybe<StringQueryOperatorInput>
   roomType?: Maybe<StringQueryOperatorInput>
+  roomLocale?: Maybe<StringQueryOperatorInput>
   roomUrl?: Maybe<StringQueryOperatorInput>
 }
 
@@ -2763,6 +2768,7 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   eventRooms___title = "eventRooms___title",
   eventRooms___description = "eventRooms___description",
   eventRooms___roomType = "eventRooms___roomType",
+  eventRooms___roomLocale = "eventRooms___roomLocale",
   eventRooms___roomUrl = "eventRooms___roomUrl",
   eventGraphics___favicon___sourceInstanceName = "eventGraphics___favicon___sourceInstanceName",
   eventGraphics___favicon___absolutePath = "eventGraphics___favicon___absolutePath",
@@ -3576,14 +3582,14 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
   matchPath?: Maybe<StringQueryOperatorInput>
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
+  pluginCreator?: Maybe<SitePluginFilterInput>
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
   context?: Maybe<SitePageContextFilterInput>
-  pluginCreator?: Maybe<SitePluginFilterInput>
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>
 }
 
 export type QueryAllSitePageArgs = {
@@ -4276,14 +4282,14 @@ export type SitePage = Node & {
   internalComponentName: Scalars["String"]
   componentChunkName: Scalars["String"]
   matchPath?: Maybe<Scalars["String"]>
+  isCreatedByStatefulCreatePages?: Maybe<Scalars["Boolean"]>
+  pluginCreator?: Maybe<SitePlugin>
+  pluginCreatorId?: Maybe<Scalars["String"]>
   id: Scalars["ID"]
   parent?: Maybe<Node>
   children: Array<Node>
   internal: Internal
-  isCreatedByStatefulCreatePages?: Maybe<Scalars["Boolean"]>
   context?: Maybe<SitePageContext>
-  pluginCreator?: Maybe<SitePlugin>
-  pluginCreatorId?: Maybe<Scalars["String"]>
 }
 
 export type SitePageConnection = {
@@ -4357,101 +4363,7 @@ export enum SitePageFieldsEnum {
   internalComponentName = "internalComponentName",
   componentChunkName = "componentChunkName",
   matchPath = "matchPath",
-  id = "id",
-  parent___id = "parent___id",
-  parent___parent___id = "parent___parent___id",
-  parent___parent___parent___id = "parent___parent___parent___id",
-  parent___parent___parent___children = "parent___parent___parent___children",
-  parent___parent___children = "parent___parent___children",
-  parent___parent___children___id = "parent___parent___children___id",
-  parent___parent___children___children = "parent___parent___children___children",
-  parent___parent___internal___content = "parent___parent___internal___content",
-  parent___parent___internal___contentDigest = "parent___parent___internal___contentDigest",
-  parent___parent___internal___description = "parent___parent___internal___description",
-  parent___parent___internal___fieldOwners = "parent___parent___internal___fieldOwners",
-  parent___parent___internal___ignoreType = "parent___parent___internal___ignoreType",
-  parent___parent___internal___mediaType = "parent___parent___internal___mediaType",
-  parent___parent___internal___owner = "parent___parent___internal___owner",
-  parent___parent___internal___type = "parent___parent___internal___type",
-  parent___children = "parent___children",
-  parent___children___id = "parent___children___id",
-  parent___children___parent___id = "parent___children___parent___id",
-  parent___children___parent___children = "parent___children___parent___children",
-  parent___children___children = "parent___children___children",
-  parent___children___children___id = "parent___children___children___id",
-  parent___children___children___children = "parent___children___children___children",
-  parent___children___internal___content = "parent___children___internal___content",
-  parent___children___internal___contentDigest = "parent___children___internal___contentDigest",
-  parent___children___internal___description = "parent___children___internal___description",
-  parent___children___internal___fieldOwners = "parent___children___internal___fieldOwners",
-  parent___children___internal___ignoreType = "parent___children___internal___ignoreType",
-  parent___children___internal___mediaType = "parent___children___internal___mediaType",
-  parent___children___internal___owner = "parent___children___internal___owner",
-  parent___children___internal___type = "parent___children___internal___type",
-  parent___internal___content = "parent___internal___content",
-  parent___internal___contentDigest = "parent___internal___contentDigest",
-  parent___internal___description = "parent___internal___description",
-  parent___internal___fieldOwners = "parent___internal___fieldOwners",
-  parent___internal___ignoreType = "parent___internal___ignoreType",
-  parent___internal___mediaType = "parent___internal___mediaType",
-  parent___internal___owner = "parent___internal___owner",
-  parent___internal___type = "parent___internal___type",
-  children = "children",
-  children___id = "children___id",
-  children___parent___id = "children___parent___id",
-  children___parent___parent___id = "children___parent___parent___id",
-  children___parent___parent___children = "children___parent___parent___children",
-  children___parent___children = "children___parent___children",
-  children___parent___children___id = "children___parent___children___id",
-  children___parent___children___children = "children___parent___children___children",
-  children___parent___internal___content = "children___parent___internal___content",
-  children___parent___internal___contentDigest = "children___parent___internal___contentDigest",
-  children___parent___internal___description = "children___parent___internal___description",
-  children___parent___internal___fieldOwners = "children___parent___internal___fieldOwners",
-  children___parent___internal___ignoreType = "children___parent___internal___ignoreType",
-  children___parent___internal___mediaType = "children___parent___internal___mediaType",
-  children___parent___internal___owner = "children___parent___internal___owner",
-  children___parent___internal___type = "children___parent___internal___type",
-  children___children = "children___children",
-  children___children___id = "children___children___id",
-  children___children___parent___id = "children___children___parent___id",
-  children___children___parent___children = "children___children___parent___children",
-  children___children___children = "children___children___children",
-  children___children___children___id = "children___children___children___id",
-  children___children___children___children = "children___children___children___children",
-  children___children___internal___content = "children___children___internal___content",
-  children___children___internal___contentDigest = "children___children___internal___contentDigest",
-  children___children___internal___description = "children___children___internal___description",
-  children___children___internal___fieldOwners = "children___children___internal___fieldOwners",
-  children___children___internal___ignoreType = "children___children___internal___ignoreType",
-  children___children___internal___mediaType = "children___children___internal___mediaType",
-  children___children___internal___owner = "children___children___internal___owner",
-  children___children___internal___type = "children___children___internal___type",
-  children___internal___content = "children___internal___content",
-  children___internal___contentDigest = "children___internal___contentDigest",
-  children___internal___description = "children___internal___description",
-  children___internal___fieldOwners = "children___internal___fieldOwners",
-  children___internal___ignoreType = "children___internal___ignoreType",
-  children___internal___mediaType = "children___internal___mediaType",
-  children___internal___owner = "children___internal___owner",
-  children___internal___type = "children___internal___type",
-  internal___content = "internal___content",
-  internal___contentDigest = "internal___contentDigest",
-  internal___description = "internal___description",
-  internal___fieldOwners = "internal___fieldOwners",
-  internal___ignoreType = "internal___ignoreType",
-  internal___mediaType = "internal___mediaType",
-  internal___owner = "internal___owner",
-  internal___type = "internal___type",
   isCreatedByStatefulCreatePages = "isCreatedByStatefulCreatePages",
-  context___currentPage = "context___currentPage",
-  context___numPages = "context___numPages",
-  context___hasNextPage = "context___hasNextPage",
-  context___skip = "context___skip",
-  context___limit = "context___limit",
-  context___locale = "context___locale",
-  context___defaultLocale = "context___defaultLocale",
-  context___slug = "context___slug",
   pluginCreator___id = "pluginCreator___id",
   pluginCreator___parent___id = "pluginCreator___parent___id",
   pluginCreator___parent___parent___id = "pluginCreator___parent___parent___id",
@@ -4567,6 +4479,100 @@ export enum SitePageFieldsEnum {
   pluginCreator___packageJson___peerDependencies___version = "pluginCreator___packageJson___peerDependencies___version",
   pluginCreator___packageJson___keywords = "pluginCreator___packageJson___keywords",
   pluginCreatorId = "pluginCreatorId",
+  id = "id",
+  parent___id = "parent___id",
+  parent___parent___id = "parent___parent___id",
+  parent___parent___parent___id = "parent___parent___parent___id",
+  parent___parent___parent___children = "parent___parent___parent___children",
+  parent___parent___children = "parent___parent___children",
+  parent___parent___children___id = "parent___parent___children___id",
+  parent___parent___children___children = "parent___parent___children___children",
+  parent___parent___internal___content = "parent___parent___internal___content",
+  parent___parent___internal___contentDigest = "parent___parent___internal___contentDigest",
+  parent___parent___internal___description = "parent___parent___internal___description",
+  parent___parent___internal___fieldOwners = "parent___parent___internal___fieldOwners",
+  parent___parent___internal___ignoreType = "parent___parent___internal___ignoreType",
+  parent___parent___internal___mediaType = "parent___parent___internal___mediaType",
+  parent___parent___internal___owner = "parent___parent___internal___owner",
+  parent___parent___internal___type = "parent___parent___internal___type",
+  parent___children = "parent___children",
+  parent___children___id = "parent___children___id",
+  parent___children___parent___id = "parent___children___parent___id",
+  parent___children___parent___children = "parent___children___parent___children",
+  parent___children___children = "parent___children___children",
+  parent___children___children___id = "parent___children___children___id",
+  parent___children___children___children = "parent___children___children___children",
+  parent___children___internal___content = "parent___children___internal___content",
+  parent___children___internal___contentDigest = "parent___children___internal___contentDigest",
+  parent___children___internal___description = "parent___children___internal___description",
+  parent___children___internal___fieldOwners = "parent___children___internal___fieldOwners",
+  parent___children___internal___ignoreType = "parent___children___internal___ignoreType",
+  parent___children___internal___mediaType = "parent___children___internal___mediaType",
+  parent___children___internal___owner = "parent___children___internal___owner",
+  parent___children___internal___type = "parent___children___internal___type",
+  parent___internal___content = "parent___internal___content",
+  parent___internal___contentDigest = "parent___internal___contentDigest",
+  parent___internal___description = "parent___internal___description",
+  parent___internal___fieldOwners = "parent___internal___fieldOwners",
+  parent___internal___ignoreType = "parent___internal___ignoreType",
+  parent___internal___mediaType = "parent___internal___mediaType",
+  parent___internal___owner = "parent___internal___owner",
+  parent___internal___type = "parent___internal___type",
+  children = "children",
+  children___id = "children___id",
+  children___parent___id = "children___parent___id",
+  children___parent___parent___id = "children___parent___parent___id",
+  children___parent___parent___children = "children___parent___parent___children",
+  children___parent___children = "children___parent___children",
+  children___parent___children___id = "children___parent___children___id",
+  children___parent___children___children = "children___parent___children___children",
+  children___parent___internal___content = "children___parent___internal___content",
+  children___parent___internal___contentDigest = "children___parent___internal___contentDigest",
+  children___parent___internal___description = "children___parent___internal___description",
+  children___parent___internal___fieldOwners = "children___parent___internal___fieldOwners",
+  children___parent___internal___ignoreType = "children___parent___internal___ignoreType",
+  children___parent___internal___mediaType = "children___parent___internal___mediaType",
+  children___parent___internal___owner = "children___parent___internal___owner",
+  children___parent___internal___type = "children___parent___internal___type",
+  children___children = "children___children",
+  children___children___id = "children___children___id",
+  children___children___parent___id = "children___children___parent___id",
+  children___children___parent___children = "children___children___parent___children",
+  children___children___children = "children___children___children",
+  children___children___children___id = "children___children___children___id",
+  children___children___children___children = "children___children___children___children",
+  children___children___internal___content = "children___children___internal___content",
+  children___children___internal___contentDigest = "children___children___internal___contentDigest",
+  children___children___internal___description = "children___children___internal___description",
+  children___children___internal___fieldOwners = "children___children___internal___fieldOwners",
+  children___children___internal___ignoreType = "children___children___internal___ignoreType",
+  children___children___internal___mediaType = "children___children___internal___mediaType",
+  children___children___internal___owner = "children___children___internal___owner",
+  children___children___internal___type = "children___children___internal___type",
+  children___internal___content = "children___internal___content",
+  children___internal___contentDigest = "children___internal___contentDigest",
+  children___internal___description = "children___internal___description",
+  children___internal___fieldOwners = "children___internal___fieldOwners",
+  children___internal___ignoreType = "children___internal___ignoreType",
+  children___internal___mediaType = "children___internal___mediaType",
+  children___internal___owner = "children___internal___owner",
+  children___internal___type = "children___internal___type",
+  internal___content = "internal___content",
+  internal___contentDigest = "internal___contentDigest",
+  internal___description = "internal___description",
+  internal___fieldOwners = "internal___fieldOwners",
+  internal___ignoreType = "internal___ignoreType",
+  internal___mediaType = "internal___mediaType",
+  internal___owner = "internal___owner",
+  internal___type = "internal___type",
+  context___currentPage = "context___currentPage",
+  context___numPages = "context___numPages",
+  context___hasNextPage = "context___hasNextPage",
+  context___skip = "context___skip",
+  context___limit = "context___limit",
+  context___locale = "context___locale",
+  context___defaultLocale = "context___defaultLocale",
+  context___slug = "context___slug",
 }
 
 export type SitePageFilterInput = {
@@ -4575,14 +4581,14 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
   matchPath?: Maybe<StringQueryOperatorInput>
+  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
+  pluginCreator?: Maybe<SitePluginFilterInput>
+  pluginCreatorId?: Maybe<StringQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
   context?: Maybe<SitePageContextFilterInput>
-  pluginCreator?: Maybe<SitePluginFilterInput>
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageGroupConnection = {
@@ -5321,7 +5327,12 @@ export type EventFragmentFragment = { __typename?: "MarkdownRemark" } & Pick<
               Maybe<
                 { __typename?: "MarkdownRemarkFrontmatterEventRoom" } & Pick<
                   MarkdownRemarkFrontmatterEventRoom,
-                  "slug" | "title" | "description" | "roomType" | "roomUrl"
+                  | "slug"
+                  | "title"
+                  | "description"
+                  | "roomLocale"
+                  | "roomType"
+                  | "roomUrl"
                 > & {
                     image?: Maybe<
                       { __typename?: "File" } & {
