@@ -2,7 +2,12 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { DEFAULT_LOCALE } from "../../utils/constants"
-import { RoomsProps, RoomItemProps, RoomItemImageProps } from "./rooms.d"
+import {
+  RoomsProps,
+  RoomItemProps,
+  RoomItemImageProps,
+  JoinButtonProps,
+} from "./rooms.d"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -11,6 +16,7 @@ import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
 import RoomsSearch from "../event-rooms-search/rooms-search"
+import { GoLinkExternal } from "react-icons/go"
 
 // import styles
 import * as styles from "./rooms.module.scss"
@@ -22,15 +28,17 @@ export default ({ config, event, locale }: RoomsProps) => {
 
   // set the room name for search
   const setRoomName = (search: string) => {
-    setActiveRooms(search)
+    setActiveRooms(search.toLocaleLowerCase())
   }
 
   // filter rooms
   const filterRooms: (room: string) => boolean = (room: any) => {
     if (
-      room.title.includes(activeRooms) ||
-      room.description.includes(activeRooms) ||
-      room.slug.includes(activeRooms)
+      room.title.toLowerCase().includes(activeRooms) ||
+      room.description.toLowerCase().includes(activeRooms) ||
+      room.slug.toLowerCase().includes(activeRooms) ||
+      room.roomType.toLowerCase().includes(activeRooms) ||
+      room.roomLocale.toLowerCase().includes(activeRooms)
     ) {
       return true
     }
@@ -74,22 +82,49 @@ const RoomItem = ({ room, event, locale }: RoomItemProps) => {
     <ListItem>
       <div className={styles.roomHeader}>
         <RoomItemImage room={room} />
-        <div />
-        <Link
-          className={styles.joinButton}
-          to={`${basePath}rooms/${room.slug}/`}
-        >
-          {t("buttons.join")}
-        </Link>
+        <div className={styles.roomJoin}>
+          <div className={styles.roomType}>
+            <span>{room.roomType}</span>
+            <span>{room.roomLocale}</span>
+          </div>
+          <JoinButton room={room} basePath={basePath} />
+        </div>
       </div>
       <div className={styles.roomDescription}>
-        {room.title && <p className={styles.title}>{room.title}</p>}
-        {room.description && (
-          <p className={styles.description}>{room.description}</p>
-        )}
+        <div>
+          {room.title && <p className={styles.title}>{room.title}</p>}
+          {room.description && (
+            <p className={styles.description}>{room.description}</p>
+          )}
+        </div>
       </div>
     </ListItem>
   )
+}
+
+const JoinButton = ({ room, basePath }: JoinButtonProps) => {
+  const { t } = useTranslation()
+
+  // embedded jitsi type
+  if (room.roomType === "jitsi") {
+    return (
+      <Link className={styles.joinButton} to={`${basePath}rooms/${room.slug}/`}>
+        {t("buttons.join")}
+      </Link>
+    )
+  }
+  // non jitsi meeting
+  else {
+    return (
+      <a
+        className={styles.joinButton}
+        href={room.roomUrl || "#"}
+        target="_blank"
+      >
+        {t("buttons.join")} <GoLinkExternal className={styles.externalLink} />
+      </a>
+    )
+  }
 }
 
 const RoomItemImage = ({ room }: RoomItemImageProps) => {

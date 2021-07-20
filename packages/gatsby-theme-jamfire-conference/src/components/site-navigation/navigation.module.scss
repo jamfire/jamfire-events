@@ -113,10 +113,15 @@
           padding: 0.5rem 0.25rem;
           margin: 2px 0;
 
-          &.active,
-          &:hover {
+          &.active {
             color: var(--nav-anchor-active);
             border-right: 3px solid var(--anchor-active);
+            border-top: 0;
+          }
+
+          &:hover {
+            color: var(--nav-anchor-active);
+            border-right: 3px solid var(--accent-hover);
             border-top: 0;
           }
         }
