@@ -45,3 +45,4 @@ jobs:
           build: yarn build:conference
           start: yarn serve:conference
           project: packages/gatsby-theme-jamfire-conference-e2e
+          config-file: cypress-github-actions.json
