@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import { LayoutProps } from "./layout.d"
 import cx from "classnames"
 import "../../gatsby/fragments"
+import color from "tinycolor2"
 
 // import components
 import { ThemeContext } from "../../services/theme"
@@ -14,7 +15,7 @@ import Navigation from "../site-navigation"
 import Footer from "../site-footer"
 
 // import styles
-import "./global.scss"
+import * as theme from "../../services/theme/theme.module.scss"
 import * as styles from "./layout.module.scss"
 
 // loadable components
@@ -54,16 +55,17 @@ export default ({
 
   const { primaryColor, primaryColorHover } = colors || {}
 
-  const theme = darkMode ? styles.dark : styles.light
+  const themeClass = darkMode ? theme.dark : theme.light
 
   return (
-    <div className={cx(theme, styles.layout)} id="layout">
+    <div className={cx(themeClass, styles.layout)} id="layout">
       <style
         dangerouslySetInnerHTML={{
           __html: `
         :root {
           --primary-color: ${primaryColor};
           --accent-color: ${primaryColorHover};
+          --accent-hover: ${color(`${primaryColorHover}`).spin(3)}
         }
       `,
         }}

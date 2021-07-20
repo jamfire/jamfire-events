@@ -26,16 +26,16 @@
 
         &:hover {
           text-decoration: none;
-          background: var(--logo-background);
-          color: var(--logo-color);
+          background: var(--primary-color);
+          color: var(--header-color);
         }
 
         &.active {
-          background: var(--logo-background);
-          color: var(--logo-color);
+          background: var(--primary-color);
+          color: var(--header-color);
 
           &:hover {
-            background: var(--logo-hover);
+            background: var(--accent-hover);
           }
         }
       }

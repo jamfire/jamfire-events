@@ -68,8 +68,8 @@
   align-items: center;
   border: 0;
   outline: 0;
-  background: var(--logo-background);
-  color: var(--logo-color) !important;
+  background: var(--primary-color);
+  color: var(--header-color) !important;
   border-radius: 4px;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -79,6 +79,6 @@
 
   &:hover {
     text-decoration: none;
-    background: var(--logo-hover);
+    background: var(--accent-hover);
   }
 }

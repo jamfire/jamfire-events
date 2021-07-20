@@ -35,7 +35,7 @@
     background: var(--content-background-hover);
 
     .code {
-      background: var(--logo-hover);
+      background: var(--accent-hover);
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
     }
@@ -61,8 +61,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--logo-background);
-  color: var(--logo-color);
+  background: var(--primary-color);
+  color: var(--header-color);
   text-transform: uppercase;
   transition: all 85ms ease-out;
   border-radius: 4px;
