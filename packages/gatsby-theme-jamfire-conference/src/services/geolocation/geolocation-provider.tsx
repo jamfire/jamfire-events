@@ -22,6 +22,8 @@ export default ({
     return <>{children}</>
   }
 
+  const { geolocation, setGeolocation } = useContext(ThemeContext)
+
   // state
   const [geolocationEnabled, setGeolocationEnabled] = useState(
     initialState.geolocationEnabled
@@ -46,7 +48,7 @@ export default ({
   }, [])
 
   useEffect(() => {
-    if (isClient && !isLoading && geolocationEnabled) {
+    if (isClient && !isLoading && geolocation === null && geolocationEnabled) {
       let url = "https://weatherapi-com.p.rapidapi.com/ip.json?q=auto:ip"
 
       let headers = new Headers()
@@ -64,6 +66,8 @@ export default ({
             key: response.geoname_id,
           }
 
+          setGeolocation(geolocationData)
+
           firestore
             ?.collection("geolocation")
             .add(geolocationData)
@@ -76,6 +80,7 @@ export default ({
         })
         .catch(error => {
           console.log(error)
+          setGeolocation(null)
         })
     }
   }, [geolocationEnabled])
@@ -90,6 +95,7 @@ export default ({
   return (
     <GeolocationContext.Provider
       value={{
+        geolocation,
         geolocationEnabled,
         modal,
       }}

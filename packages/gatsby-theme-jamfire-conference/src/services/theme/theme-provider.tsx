@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
 import { ProviderProps } from "./theme"
+import { GeolocationProps } from "../geolocation/geolocation"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"
@@ -30,6 +31,7 @@ export default ({ children }: ProviderProps) => {
   )
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
+  const [geolocation, setGeolocation] = useState<null | GeolocationProps>(null)
 
   // set dark mode
   useEffect(() => {
@@ -98,6 +100,8 @@ export default ({ children }: ProviderProps) => {
         toggleLocale,
         setToggleLocale,
         localesEnabled,
+        geolocation,
+        setGeolocation,
       }}
     >
       {children}

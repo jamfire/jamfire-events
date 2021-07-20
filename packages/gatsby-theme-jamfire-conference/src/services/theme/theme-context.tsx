@@ -53,6 +53,8 @@ export const initialState: InitialState = {
   toggleLocale: false,
   setToggleLocale: () => true || false,
   localesEnabled: LOCALES.length > 1 ? true : false,
+  geolocation: null,
+  setGeolocation: () => null,
 }
 
 export const ThemeContext = createContext(initialState)

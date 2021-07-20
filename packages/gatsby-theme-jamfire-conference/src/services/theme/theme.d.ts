@@ -1,6 +1,7 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
 import { NavigationProps } from "../../components/site-navigation/navigation"
 import { SitePageContext } from "../../gatsby/graphql-types"
+import { GeolocationProps } from "../geolocation/geolocation"
 import firebase from "firebase/app"
 
 export interface ProviderProps {
@@ -36,4 +37,6 @@ export interface InitialState {
   toggleLocale: boolean
   setToggleLocale: Dispatch<SetStateAction<boolean>>
   localesEnabled: boolean
+  geolocation: null | GeolocationProps
+  setGeolocation: Dispatch<SetStateAction<null | GeolocationProps>>
 }
