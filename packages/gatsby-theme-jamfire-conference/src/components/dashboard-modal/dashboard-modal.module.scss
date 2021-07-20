@@ -68,14 +68,14 @@
         cursor: pointer;
         display: block;
         background: none;
-        color: var(--logo-background);
+        color: var(--primary-color);
         border: 0;
         outline: 0;
         padding: 0;
         transition: color 85ms ease-out;
 
         &:hover {
-          color: var(--logo-hover);
+          color: var(--accent-hover);
         }
       }
     }

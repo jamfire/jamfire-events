@@ -6,8 +6,8 @@
   transition: all 85ms ease-out;
 
   &:hover {
-    background: var(--logo-background);
-    color: var(--logo-color);
+    background: var(--primary-color);
+    color: var(--header-color);
     text-decoration: none;
   }
 }

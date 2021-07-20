@@ -13,12 +13,17 @@
 .switcher {
   width: 2.5rem;
   height: 28px;
-  background: var(--logo-hover);
-  color: var(--logo-color);
+  background: var(--accent-color);
+  color: var(--header-color);
   border-radius: 4px;
   padding: 2px 0;
   transition: 85ms all ease-out;
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+  transition: all 85ms ease-out;
+
+  &:hover {
+    background: var(--accent-hover);
+  }
 }

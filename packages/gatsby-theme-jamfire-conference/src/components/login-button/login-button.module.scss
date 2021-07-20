@@ -10,22 +10,24 @@
     margin-left: 1rem;
   }
 
-  button {
-    background: var(--logo-hover);
+  .logout,
+  .login {
+    display: none;
+    background: var(--accent-color);
     border: none;
     border-radius: 4px;
     padding: 1px 0.75rem;
     outline: none;
     cursor: pointer;
-    color: var(--logo-color);
+    color: var(--header-color);
+    transition: all 85ms ease-out;
 
-    &.logout,
-    &.login {
-      display: none;
+    &:hover {
+      background: var(--accent-hover);
+    }
 
-      @include tablet-up {
-        display: block;
-      }
+    @include tablet-up {
+      display: block;
     }
   }
 }
