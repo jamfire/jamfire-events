@@ -1,11 +1,18 @@
 # Changelog
 
-## Unreleased (2021-07-17)
+## Unreleased (2021-07-20)
 
 #### :rocket: Enhancement
 
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference-e2e`, `gatsby-theme-jamfire-conference`, `netlify-cms-widget-datetimezone`
+  - [#27](https://github.com/jamfire/jamfire/pull/27) refactor(gatsby-theme-jamfire-conference): integrate scss modules and fix typescript definitions ([@kalebheitzman](https://github.com/kalebheitzman))
 - `gatsby-theme-jamfire-conference`
   - [#25](https://github.com/jamfire/jamfire/pull/25) refactor(gatsby-theme-jamfire-conference): version 1.1.0 ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### :bug: Bug Fix
+
+- `gatsby-theme-jamfire-conference`
+  - [#35](https://github.com/jamfire/jamfire/pull/35) fix(gatsby-theme-jamfire-conference): fixed darkmode color scheme ([@kalebheitzman](https://github.com/kalebheitzman))
 
 #### :memo: Documentation
 
