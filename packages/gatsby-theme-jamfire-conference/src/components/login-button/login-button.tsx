@@ -6,13 +6,13 @@ import cx from "classnames"
 
 // import components
 import { FirebaseContext } from "../../services"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 
 // import styles
 import * as styles from "./login-button.module.scss"
 
 export default ({ isLoading, isLoggedIn }: LoginButtonProps) => {
-  const { setToggleLogin } = useContext(Context)
+  const { setToggleLogin } = useContext(ThemeContext)
 
   const { logout } = useContext(FirebaseContext)
 

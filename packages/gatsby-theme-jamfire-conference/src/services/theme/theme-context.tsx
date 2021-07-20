@@ -2,7 +2,7 @@
 import * as React from "react"
 import { createContext } from "react"
 import { LOCALES } from "../../utils/constants"
-import { InitialState } from "./_props"
+import { InitialState } from "./theme"
 
 // import components
 import { FaHome, FaCalendarAlt } from "react-icons/fa"

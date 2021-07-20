@@ -14,7 +14,7 @@ import { FaQuestion, FaComment } from "react-icons/fa"
 import * as styles from "./qa.module.scss"
 
 export default ({ config, event, locale }: QAProps) => {
-  const { title, eventQA, eventSettings } = event.frontmatter || {}
+  const { title, eventQA, eventSettings } = event?.frontmatter || {}
 
   if (!eventQA) return <Missing fontSize={4} />
 

@@ -5,8 +5,8 @@ import {
 import { RouteComponentProps } from "@reach/router"
 
 export interface QAProps extends RouteComponentProps {
-  config: MarkdownRemark
-  event: MarkdownRemark
+  config: MarkdownRemark | undefined
+  event: MarkdownRemark | undefined
   path?: string
   locale: string
 }

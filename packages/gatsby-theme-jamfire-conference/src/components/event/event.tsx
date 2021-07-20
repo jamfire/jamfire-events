@@ -11,7 +11,7 @@ import { checkIsClient } from "../../utils/check-is-client"
 import { FirebaseContext } from "../../services"
 import { Router } from "@reach/router"
 import Layout from "../site-layout"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import {
   FaHome,
   FaCalendarAlt,
@@ -60,9 +60,13 @@ export default ({ data, pageContext }: DataProps) => {
     let localize = true
 
     if (event && typeof event?.frontmatter?.eventSettings !== undefined) {
-      let localizedLabel = event?.frontmatter?.eventSettings[label] || null
+      const labels = JSON.parse(
+        JSON.stringify(event?.frontmatter?.eventSettings)
+      )
+      const localizedLabel =
+        Object.entries(labels).find(value => value[0] === label) || ""
 
-      if (localizedLabel) {
+      if (localizedLabel?.length > 0) {
         localize = false
       }
     }
@@ -77,7 +81,7 @@ export default ({ data, pageContext }: DataProps) => {
 
   const { mainStageFeature } = eventSettings || {}
 
-  const { setNavigation } = useContext(Context)
+  const { setNavigation } = useContext(ThemeContext)
 
   const basePath = `/event/${slug}/`
 
@@ -214,7 +218,7 @@ export default ({ data, pageContext }: DataProps) => {
       <RoomChange config={config} />
       <GeolocationProvider
         pageContext={pageContext}
-        providerEnabled={eventSettings?.map}
+        providerEnabled={eventSettings?.map || false}
         config={config}
       >
         <Router basepath={routerBasePath}>

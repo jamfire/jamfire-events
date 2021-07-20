@@ -1,10 +1,11 @@
 // import libs
+import React from "react"
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 import resourcesToBackend from "i18next-resources-to-backend"
 import { ENVIRONMENT } from "../../utils/constants"
-import { LocalesProviderProps } from "./_props"
+import { LocalesProviderProps } from "./locales.d"
 
 // import components
 import { I18nextProvider } from "react-i18next"

@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import { DarkModeProps } from "./dark-mode.d"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Switch from "react-switch"
 import { FaSun, FaMoon } from "react-icons/fa"
 
@@ -34,7 +34,7 @@ export default ({ config }: DarkModeProps) => {
   const offColor = darkModeOffColor || "#ff0050"
   const onColor = darkModeOnColor || "#ff0050"
 
-  const { darkMode, setDarkMode } = useContext(Context)
+  const { darkMode, setDarkMode } = useContext(ThemeContext)
 
   return (
     <div className={styles.container}>

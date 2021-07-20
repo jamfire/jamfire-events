@@ -7,7 +7,7 @@ import { LoginProviderProps, SocialLoginProps } from "./social-logins.d"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { FaFacebookF, FaTwitter, FaGoogle, FaGithub } from "react-icons/fa"
 
@@ -18,7 +18,7 @@ export default ({ socialLogin }: SocialLoginProps) => {
   // get firebase auth
   const { setAuthToken } = useContext(FirebaseContext)
 
-  const { setToggleLogin } = useContext(Context)
+  const { setToggleLogin } = useContext(ThemeContext)
 
   const loginWithProvider: (provider: LoginProviderProps) => void =
     provider => {

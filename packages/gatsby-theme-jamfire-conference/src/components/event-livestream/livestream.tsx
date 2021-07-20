@@ -10,7 +10,7 @@ import Missing from "../missing"
 import * as styles from "./livestream.module.scss"
 
 export default ({ event }: LivestreamProps) => {
-  const { eventGraphics, eventInformation } = event.frontmatter || {}
+  const { eventGraphics, eventInformation } = event?.frontmatter || {}
 
   const { lobbyImage } = eventGraphics || {}
 

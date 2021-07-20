@@ -4,14 +4,15 @@ import firebase from "firebase/app"
 
 // chat props
 export interface ChatProps extends RouteComponentProps {
-  config: MarkdownRemark
-  event: MarkdownRemark
+  config?: MarkdownRemark
+  event?: MarkdownRemark
   path?: string
+  locale: string
 }
 
 // message props
 export interface MessagesProps {
-  event_id: string
+  event_id?: string
   chats: any
   setChats: any
   scrollToBottom: any
@@ -39,7 +40,7 @@ export interface MessageProps {
 
 // send props
 export interface SendProps {
-  event_id: string
+  event_id?: string
   chats: any
   setChats: any
   scrollToBottom: any

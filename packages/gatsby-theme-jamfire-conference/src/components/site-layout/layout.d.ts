@@ -1,15 +1,15 @@
 // import libs
-import { MarkdownRemark } from "../../gatsby/graphql-types"
+import { MarkdownRemark, Maybe, File } from "../../gatsby/graphql-types"
 
 // layout props
 export interface LayoutProps {
   children: any
   title: string | null
-  config?: MarkdownRemark
-  cookies?: MarkdownRemark
-  event?: MarkdownRemark | null
-  headerLogo: File | null
-  favicon: File | null
+  config?: MarkdownRemark | undefined
+  cookies?: MarkdownRemark | undefined
+  event?: MarkdownRemark | undefined
+  headerLogo?: Maybe<File>
+  favicon?: Maybe<File>
   useHeaderTitle?: boolean
   locale: string
 }

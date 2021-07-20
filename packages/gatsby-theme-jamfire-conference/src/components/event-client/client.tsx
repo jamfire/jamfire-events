@@ -16,7 +16,7 @@ const Chat = loadable(() => import("../chat"))
 const QA = loadable(() => import("../event-qa"))
 
 export default ({ config, event, basePath, locale }: ClientProps) => {
-  const { eventSettings } = event.frontmatter || {}
+  const { eventSettings } = event?.frontmatter || {}
 
   const { mainStageFeature } = eventSettings || {}
 
@@ -25,7 +25,12 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
       <Sidebar>
         <Router basepath={basePath} style={{ height: "100%" }}>
           {mainStageFeature === "chat" && (
-            <Chat config={config} event={event} path="/main-stage" />
+            <Chat
+              config={config}
+              event={event}
+              path="/main-stage"
+              locale={locale}
+            />
           )}
           {mainStageFeature === "schedule" && (
             <Schedule
@@ -48,7 +53,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
             locale={locale}
             path="/schedule"
           />
-          <Chat config={config} event={event} path="/chat" />
+          <Chat config={config} event={event} path="/chat" locale={locale} />
           <QA config={config} event={event} path="/qa" locale={locale} />
         </Router>
       </Sidebar>

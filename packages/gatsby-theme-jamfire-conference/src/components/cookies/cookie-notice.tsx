@@ -6,14 +6,14 @@ import { CookieNoticeProps } from "./cookies"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Markdown from "../markdown"
 
 // import styles
 import * as styles from "./cookie-notice.module.scss"
 
 export default ({ cookies, config }: CookieNoticeProps) => {
-  const { setToggleCookies } = useContext(Context)
+  const { setToggleCookies } = useContext(ThemeContext)
 
   const [isLoading, setIsLoading] = useState(true)
   const [showConsent, setShowConsent] = useState(true)
@@ -79,7 +79,7 @@ export default ({ cookies, config }: CookieNoticeProps) => {
 
 const CookieNotification = ({ cookies, config }: CookieNoticeProps) => (
   <div className={styles.content}>
-    <p className={styles.title}>{config.frontmatter?.title}</p>
-    <Markdown content={cookies.frontmatter?.cookieNotification?.content} />
+    <p className={styles.title}>{config?.frontmatter?.title}</p>
+    <Markdown content={cookies?.frontmatter?.cookieNotification?.content} />
   </div>
 )

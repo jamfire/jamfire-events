@@ -1,13 +1,13 @@
 import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 export type CookieNoticeProps = {
-  config: MarkdownRemark
-  cookies: MarkdownRemark
+  config: MarkdownRemark | undefined
+  cookies: MarkdownRemark | undefined
 }
 
 export type ManageCookiesProps = {
-  config: MarkdownRemark
-  cookies: MarkdownRemark
+  config: MarkdownRemark | undefined
+  cookies: MarkdownRemark | undefined
 }
 
 export type ButtonProps = {

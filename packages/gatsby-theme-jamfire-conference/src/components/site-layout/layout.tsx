@@ -7,7 +7,7 @@ import cx from "classnames"
 import "../../gatsby/fragments"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Seo from "../seo"
 import Header from "../site-header"
 import Navigation from "../site-navigation"
@@ -30,13 +30,13 @@ export default ({
   title = null,
   config,
   cookies,
-  event = null,
+  event,
   headerLogo,
   favicon = null,
   useHeaderTitle = false,
   locale,
 }: LayoutProps) => {
-  const { navigation, darkMode } = useContext(Context)
+  const { navigation, darkMode } = useContext(ThemeContext)
 
   const { ready, i18n } = useTranslation()
 
@@ -71,7 +71,7 @@ export default ({
       <Seo
         activeTitle={title || ""}
         activeFavicon={favicon}
-        config={config || null}
+        config={config}
         locale={i18n.language}
       />
       <Header

@@ -3,13 +3,13 @@ import { MarkdownRemark } from "../../gatsby/graphql-types"
 
 // footer props
 export type FooterProps = {
-  config: MarkdownRemark
-  event: MarkdownRemark | null
+  config: MarkdownRemark | undefined
+  event: MarkdownRemark | undefined
 }
 
 // copyright props
 export type CopyrightProps = {
-  config: MarkdownRemark
+  config: MarkdownRemark | undefined
   mobile?: boolean
 }
 

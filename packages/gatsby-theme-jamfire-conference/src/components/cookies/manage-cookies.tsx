@@ -6,7 +6,7 @@ import { ManageCookiesProps } from "./cookies"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Switch from "react-switch"
 import { Modal } from "../modal"
 
@@ -17,7 +17,7 @@ import * as noticeStyles from "./cookie-notice.module.scss"
 export default ({ cookies, config }: ManageCookiesProps) => {
   // context
   const { toggleCookies, setToggleCookies, setEnableAnalytics } =
-    useContext(Context)
+    useContext(ThemeContext)
 
   // state
   const [isLoading, setIsLoading] = useState(true)

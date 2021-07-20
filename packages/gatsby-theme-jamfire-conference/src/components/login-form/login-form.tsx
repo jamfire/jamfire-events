@@ -6,7 +6,7 @@ import { FormValues } from "./login-form.d"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { FirebaseContext } from "../../services"
 import { Formik, FormikHelpers } from "formik"
 import Error from "../error"
@@ -21,7 +21,7 @@ export default () => {
 
   const { firebase, setAuthToken } = useContext(FirebaseContext)
 
-  const { setToggleLogin } = useContext(Context)
+  const { setToggleLogin } = useContext(ThemeContext)
 
   const { t } = useTranslation()
 

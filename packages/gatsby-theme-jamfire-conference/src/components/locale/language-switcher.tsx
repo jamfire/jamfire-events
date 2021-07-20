@@ -3,13 +3,14 @@ import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 
 // import styles
 import * as styles from "./language-switcher.module.scss"
 
 export default () => {
-  const { toggleLocale, setToggleLocale, localesEnabled } = useContext(Context)
+  const { toggleLocale, setToggleLocale, localesEnabled } =
+    useContext(ThemeContext)
 
   const { i18n } = useTranslation()
 

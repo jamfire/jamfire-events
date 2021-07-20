@@ -1,10 +1,10 @@
 // import libs
-import { MarkdownRemark, File } from "../../gatsby/graphql-types"
+import { MarkdownRemark, Maybe, File } from "../../gatsby/graphql-types"
 
 // header props
 export interface HeaderProps {
   config?: MarkdownRemark
-  headerLogo?: File
+  headerLogo?: Maybe<File>
   title: string | null
   locale: string
 }

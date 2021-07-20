@@ -7,7 +7,7 @@ import {
 import { SitePageContext } from "./graphql-types"
 import { RouteComponentProps } from "@reach/router"
 
-// extend gatsby data props for markdown content
+// data props for templates
 export interface DataProps extends RouteComponentProps {
   data: {
     config: MarkdownRemark
@@ -24,6 +24,7 @@ export interface DataProps extends RouteComponentProps {
   pageContext: PageContextProps
 }
 
+// extend page context interface
 export interface PageContextProps extends SitePageContext {
   locale: string
   defaultLocale: string
@@ -31,6 +32,7 @@ export interface PageContextProps extends SitePageContext {
   numPages?: number
 }
 
+// event props interface
 export interface EventsProps extends MarkdownRemarkGroupConnection {
   edges: Array<MarkdownRemarkEdge>
 }

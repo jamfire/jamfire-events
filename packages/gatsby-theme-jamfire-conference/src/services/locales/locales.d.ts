@@ -1,3 +1,10 @@
+export interface LocalesProviderProps {
+  children: React.ReactNode
+  defaultLocale: string
+  pageContext: {
+    locale: string
+  }
+}
 export interface LocalesProps {
   [bg: string]: string
   [cs: string]: string

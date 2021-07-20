@@ -3,14 +3,14 @@ import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { Twirl as Hamburger } from "hamburger-react"
 
 // import styles
 import * as styles from "./toggle.module.scss"
 
 export default () => {
-  const { toggle, setToggle, darkMode } = useContext(Context)
+  const { toggle, setToggle, darkMode } = useContext(ThemeContext)
 
   const toggleColor: string = darkMode ? "#aaa" : "#333"
 

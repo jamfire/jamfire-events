@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 
 // import components
 import { FirebaseContext } from "../../services/firebase"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { Modal } from "../modal"
 
 // import styles
@@ -13,7 +13,7 @@ import * as styles from "./dashboard-modal.module.scss"
 
 export default ({ config }: DashboardModalProps) => {
   const { toggleDashboard, setToggleDashboard, setToggleCookies } =
-    useContext(Context)
+    useContext(ThemeContext)
 
   const { isLoading, isLoggedIn, profile, logout } = useContext(FirebaseContext)
 

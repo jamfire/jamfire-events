@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
-import { ProviderProps } from "./_props"
+import { ProviderProps } from "./theme"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"

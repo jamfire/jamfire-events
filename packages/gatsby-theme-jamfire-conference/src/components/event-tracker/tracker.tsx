@@ -2,7 +2,10 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from "react"
 import { DateTime, DurationObject } from "luxon"
 import { useTranslation } from "react-i18next"
-import { MarkdownRemarkFrontmatterEventSchedule } from "../../gatsby/graphql-types"
+import {
+  MarkdownRemarkFrontmatterEventSchedule,
+  Maybe,
+} from "../../gatsby/graphql-types"
 import { TrackerProps } from "./tracker.d"
 import cx from "classnames"
 
@@ -57,6 +60,7 @@ export default ({ event }: TrackerProps) => {
       html = `<div>`
       html += `<div class="${styles.start}">${t("event.tracker.starts")}:</div>`
       html +=
+        // @ts-expect-error
         diff.days > 0
           ? `<div class="${cx(styles.box, styles.time)}"><span class="${
               styles.number
@@ -65,6 +69,7 @@ export default ({ event }: TrackerProps) => {
             ).charAt(0)}</span></div>`
           : ""
       html +=
+        // @ts-expect-error
         diff.hours > 0
           ? `<div class="${cx(styles.box, styles.time)}"><span class="${
               styles.number
@@ -73,6 +78,7 @@ export default ({ event }: TrackerProps) => {
             ).charAt(0)}</span></div>`
           : ""
       html +=
+        // @ts-expect-error
         diff.minutes >= 0
           ? `<div class="${cx(styles.box, styles.time)}"><span class="${
               styles.number
@@ -81,6 +87,7 @@ export default ({ event }: TrackerProps) => {
             ).charAt(0)}</span></div>`
           : ""
       html +=
+        // @ts-expect-error
         diff.seconds >= 0
           ? `<div class="${cx(styles.box, styles.time)}"><span class="${
               styles.number
@@ -98,21 +105,21 @@ export default ({ event }: TrackerProps) => {
       // get the next item if it exists
       // set to null if it does not exist
       let newKey: number = key + 1
-      let nextDateTime: MarkdownRemarkFrontmatterEventSchedule =
+      let nextDateTime: MarkdownRemarkFrontmatterEventSchedule | null =
         eventSchedule[newKey]
       if (typeof nextDateTime === `undefined`) {
         nextDateTime = null
       }
 
-      let nextItemTitle: string = t("event.tracker.eventEnd")
+      let nextItemTitle: Maybe<string> | undefined = t("event.tracker.eventEnd")
       if (nextDateTime) {
-        nextItemTitle = eventSchedule[newKey].title
+        nextItemTitle = eventSchedule[newKey]?.title
       }
 
       // format next datetime with luxon
       let NDT: DateTime | null = null
       if (nextDateTime) {
-        NDT = DateTime.fromISO(eventSchedule[newKey].startTime.datetime)
+        NDT = DateTime.fromISO(eventSchedule[newKey]?.startTime?.datetime)
       }
       // set NDT to close of event if no next item
       else {
@@ -141,6 +148,7 @@ export default ({ event }: TrackerProps) => {
           "event.tracker.next"
         )}: ${nextItemTitle}</div>`
         html +=
+          // @ts-expect-error
           diff.days > 0
             ? `<div class="${cx(styles.box, styles.time)}"><span class="${
                 styles.number
@@ -149,6 +157,7 @@ export default ({ event }: TrackerProps) => {
               ).charAt(0)}</span></div>`
             : ""
         html +=
+          // @ts-expect-error
           diff.hours > 0
             ? `<div class="${cx(styles.box, styles.time)}"><span class="${
                 styles.number
@@ -157,6 +166,7 @@ export default ({ event }: TrackerProps) => {
               ).charAt(0)}</span></div>`
             : ""
         html +=
+          // @ts-expect-error
           diff.minutes >= 0
             ? `<div class="${cx(styles.box, styles.time)}"><span class="${
                 styles.number
@@ -165,6 +175,7 @@ export default ({ event }: TrackerProps) => {
               ).charAt(0)}</span></div>`
             : ""
         html +=
+          // @ts-expect-error
           diff.seconds >= 0
             ? `<div class="${cx(styles.box, styles.time)}"><span class="${
                 styles.number

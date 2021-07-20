@@ -12,7 +12,7 @@ import "firebase/firestore"
 
 // import components
 import { FirebaseContext } from "../../services"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import MapBounds from "./map-bounds"
 import MapMarkers from "./map-markers"
 import Seo from "../seo"
@@ -29,7 +29,7 @@ export default ({ config, event, locale }: MapProps) => {
 
   const isClient = checkIsClient()
 
-  const { darkMode } = useContext(Context)
+  const { darkMode } = useContext(ThemeContext)
 
   const [bounds, setBounds]: SetBoundsProps = useState(
     new LatLngBounds([0, 0], [0, 0])

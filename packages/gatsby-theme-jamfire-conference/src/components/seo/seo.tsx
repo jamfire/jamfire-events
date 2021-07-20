@@ -47,16 +47,16 @@ export default ({
       }}
     >
       <title>
-        {activeTitle} | {config.frontmatter?.title}
+        {activeTitle} | {config?.frontmatter?.title}
       </title>
       <meta
         name="title"
-        content={`${activeTitle} | ${config.frontmatter?.title}`}
+        content={`${activeTitle} | ${config?.frontmatter?.title}`}
         data-react-helmet="true"
       />
       <meta
         name="description"
-        content={config.frontmatter?.description || ""}
+        content={config?.frontmatter?.description || ""}
         data-react-helmet="true"
       />
       {faviconSrc !== null && (

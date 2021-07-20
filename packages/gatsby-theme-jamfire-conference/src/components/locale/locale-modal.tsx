@@ -9,7 +9,7 @@ import { LocaleModalProps } from "./locale.d"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { Modal } from "../modal"
 
 // import styles
@@ -20,7 +20,8 @@ export default ({ config }: LocaleModalProps) => {
 
   const location = useLocation()
 
-  const { toggleLocale, setToggleLocale, localesEnabled } = useContext(Context)
+  const { toggleLocale, setToggleLocale, localesEnabled } =
+    useContext(ThemeContext)
 
   let locales = LOCALES.filter(locale => locale !== i18n.language)
 

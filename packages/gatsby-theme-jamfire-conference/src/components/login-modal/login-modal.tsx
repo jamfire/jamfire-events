@@ -4,7 +4,7 @@ import { LoginModalProps } from "./login-modal.d"
 import { useTranslation } from "react-i18next"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { Modal } from "../modal"
 import LoginForm from "../login-form"
 import SocialLogins from "../social-logins"
@@ -17,7 +17,7 @@ export default ({ config }: LoginModalProps) => {
 
   const { socialLogin } = frontmatter || {}
 
-  const { toggleLogin, setToggleLogin } = useContext(Context)
+  const { toggleLogin, setToggleLogin } = useContext(ThemeContext)
 
   const { t } = useTranslation()
 

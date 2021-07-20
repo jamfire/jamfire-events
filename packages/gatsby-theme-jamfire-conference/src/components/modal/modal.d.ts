@@ -14,12 +14,12 @@ export interface ModalProps {
   title: string
   isActive: boolean
   setIsActive: Dispatch<SetStateAction<boolean>>
-  config: MarkdownRemark
+  config: MarkdownRemark | undefined
 }
 
 export interface ModalTitleProps {
   title: string
-  config: MarkdownRemark
+  config: MarkdownRemark | undefined
 }
 
 export interface ModalButtonProps {

@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { DEFAULT_LOCALE } from "../../utils/constants"
-import { RoomsProps, RoomItemProps } from "./rooms.d"
+import { RoomsProps, RoomItemProps, RoomItemImageProps } from "./rooms.d"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -16,7 +16,7 @@ import RoomsSearch from "../event-rooms-search/rooms-search"
 import * as styles from "./rooms.module.scss"
 
 export default ({ config, event, locale }: RoomsProps) => {
-  const { title, eventRooms, eventSettings } = event.frontmatter || {}
+  const { title, eventRooms, eventSettings } = event?.frontmatter || {}
 
   const [activeRooms, setActiveRooms] = useState("")
 
@@ -63,7 +63,7 @@ export default ({ config, event, locale }: RoomsProps) => {
 }
 
 const RoomItem = ({ room, event, locale }: RoomItemProps) => {
-  const { slug } = event.frontmatter || {}
+  const { slug } = event?.frontmatter || {}
 
   const basePath =
     locale === DEFAULT_LOCALE ? `/event/${slug}/` : `/${locale}/event/${slug}/`
@@ -92,7 +92,7 @@ const RoomItem = ({ room, event, locale }: RoomItemProps) => {
   )
 }
 
-const RoomItemImage = ({ room }) => {
+const RoomItemImage = ({ room }: RoomItemImageProps) => {
   const { title, image } = room
 
   return (
@@ -100,7 +100,7 @@ const RoomItemImage = ({ room }) => {
       {image && (
         <GatsbyImage
           className={styles.gatsbyImageWrapper}
-          image={image.childImageSharp.gatsbyImageData}
+          image={image?.childImageSharp?.gatsbyImageData}
           alt={title}
         />
       )}

@@ -7,7 +7,7 @@ import cx from "classnames"
 
 // import components
 import { FirebaseContext } from "../../services"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import { FaFacebookF, FaTwitter, FaGoogle, FaEnvelope } from "react-icons/fa"
 
 // import styles
@@ -22,7 +22,7 @@ export default ({
 }: SendProps) => {
   const [disabled, setDisabled] = useState(true)
   const [message, setMessage] = useState("")
-  const { setToggleLogin } = useContext(Context)
+  const { setToggleLogin } = useContext(ThemeContext)
 
   const { firestore } = useContext(FirebaseContext)
 

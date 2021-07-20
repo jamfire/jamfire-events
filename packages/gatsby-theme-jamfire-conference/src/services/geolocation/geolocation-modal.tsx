@@ -1,7 +1,7 @@
 // import libs
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { GeolocationModalProps } from "./_props"
+import { GeolocationModalProps } from "./geolocation"
 
 // import components
 import { Modal, ModalButton } from "../../components/modal"

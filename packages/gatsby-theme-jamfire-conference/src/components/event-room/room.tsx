@@ -12,15 +12,21 @@ import { DEFAULT_LOCALE } from "../../utils/constants"
 import { RoomProps } from "./room.d"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Seo from "../seo"
 import Missing from "../missing"
 
 // import styles
 import * as styles from "./room.module.scss"
 
+declare global {
+  interface Window {
+    JitsiMeetExternalAPI: any
+  }
+}
+
 export default ({ config, event, locale, user }: RoomProps) => {
-  const { slug, title, eventInformation, eventRooms } = event.frontmatter || {}
+  const { slug, title, eventInformation, eventRooms } = event?.frontmatter || {}
 
   const { startTime } = eventInformation || {}
 
@@ -32,7 +38,7 @@ export default ({ config, event, locale, user }: RoomProps) => {
     )
   }
 
-  const { setActiveRoom } = useContext(Context)
+  const { setActiveRoom } = useContext(ThemeContext)
 
   const matchString =
     locale === DEFAULT_LOCALE
@@ -151,11 +157,11 @@ export default ({ config, event, locale, user }: RoomProps) => {
   }
 
   useEffect(() => {
-    //jitsi?.dispose?.()
     initilizeJitsi()
 
     setActiveRoom(true)
 
+    // @ts-ignore
     return () => jitsi?.dispose?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

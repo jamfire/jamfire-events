@@ -8,7 +8,7 @@ import { SiteNavigationProps, NavLinkProps } from "./navigation.d"
 import cx from "classnames"
 
 // import components
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 import Toggle from "./toggle"
 import Credit from "./credit"
 import Copyright from "../site-footer/copyright"
@@ -21,7 +21,7 @@ export default ({ navigation, config }: SiteNavigationProps) => {
     return <></>
   }
 
-  const { toggle } = useContext(Context)
+  const { toggle } = useContext(ThemeContext)
 
   const { i18n } = useTranslation()
 
@@ -46,7 +46,7 @@ export default ({ navigation, config }: SiteNavigationProps) => {
 // navlink component
 const NavLink = ({ locale, link }: NavLinkProps) => {
   const { activeRoom, roomModal, toggleRoomModal, setPagePath, setToggle } =
-    useContext(Context)
+    useContext(ThemeContext)
 
   const path = useLocation().pathname
 

@@ -5,13 +5,13 @@ import { AvatarProps } from "./avatar.d"
 
 // import components
 import { FaUser } from "react-icons/fa"
-import { Context } from "../../services/theme"
+import { ThemeContext } from "../../services/theme"
 
 // import styles
 import * as styles from "./avatar.module.scss"
 
 export default ({ isLoggedIn, isLoading, profile = null }: AvatarProps) => {
-  const { setToggleLogin, setToggleDashboard } = useContext(Context)
+  const { setToggleLogin, setToggleDashboard } = useContext(ThemeContext)
 
   const { t } = useTranslation()
 

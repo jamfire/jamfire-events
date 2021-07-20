@@ -10,17 +10,15 @@ import * as styles from "./modal-title.module.scss"
 
 export default ({ title, config }: ModalTitleProps) => {
   // static query for logo data
-  const {
-    frontmatter: {
-      graphics: { logo },
-    },
-  } = config
+  const { graphics } = config?.frontmatter || {}
+
+  const { logo } = graphics || {}
 
   return (
     <div className={styles.title}>
       {logo && (
         <GatsbyImage
-          image={logo.childImageSharp.gatsbyImageData}
+          image={logo?.childImageSharp?.gatsbyImageData}
           loading="eager"
           alt={title}
         />

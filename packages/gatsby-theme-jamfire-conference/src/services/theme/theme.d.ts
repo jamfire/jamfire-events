@@ -1,5 +1,5 @@
 import { ReactNode, Dispatch, SetStateAction } from "react"
-import { NavigationProps } from "../../components/site-navigation/navigation.d"
+import { NavigationProps } from "../../components/site-navigation/navigation"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import firebase from "firebase/app"
 
@@ -8,7 +8,7 @@ export interface ProviderProps {
   pageContext: SitePageContext
 }
 
-export type InitialState = {
+export interface InitialState {
   darkMode: boolean
   setDarkMode: Dispatch<SetStateAction<boolean>>
   toggle: boolean

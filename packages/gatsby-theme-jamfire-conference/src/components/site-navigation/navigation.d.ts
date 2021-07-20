@@ -16,7 +16,7 @@ export interface NavigationProps {
 // navigation props
 export interface SiteNavigationProps {
   navigation: NavigationProps[]
-  config: MarkdownRemark
+  config: MarkdownRemark | undefined
 }
 
 // navlink props

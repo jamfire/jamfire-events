@@ -1,6 +1,6 @@
 // import libs
 import { createContext } from "react"
-import { InitialState } from "./_props"
+import { InitialState } from "./geolocation.d"
 
 // initial state
 export const initialState: InitialState = {
