@@ -2,6 +2,7 @@
 import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { LoginButtonProps } from "./login-button.d"
+import cx from "classnames"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -27,7 +28,7 @@ export default ({ isLoading, isLoggedIn }: LoginButtonProps) => {
         <button
           role="button"
           aria-label={t("auth.logout")}
-          className={styles.logout}
+          className={cx(styles.logout, "logout")}
           onClick={() => {
             logout()
           }}
@@ -38,7 +39,7 @@ export default ({ isLoading, isLoggedIn }: LoginButtonProps) => {
         <button
           role="button"
           aria-label={t("auth.login")}
-          className={styles.login}
+          className={cx(styles.login, "login")}
           onClick={() => {
             setToggleLogin(true)
           }}

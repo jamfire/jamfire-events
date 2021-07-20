@@ -57,6 +57,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "cy:open": "cypress open",
     "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run",
+    "cy:conference": "start-server-and-test dev:conference http://localhost:8000 cy:conference:open",
+    "cy:conference:open": "yarn workspace gatsby-theme-jamfire-conference-e2e cy:open",
     "ssat:dev:conference": "start-server-and-test dev:conference http://localhost:8000 cy:open",
     "e2e:dev:conference": "concurrently --kill-others 'yarn tsc:compile:watch' 'yarn ssat:dev:conference'",
     "dev:conference": "yarn workspace gatsby-starter-jamfire-conference develop",

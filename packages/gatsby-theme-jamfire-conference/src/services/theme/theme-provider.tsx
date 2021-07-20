@@ -30,21 +30,9 @@ export default ({ children }: ProviderProps) => {
   const [toggleLocale, setToggleLocale] = useState(initialState.toggleLocale)
   const [localesEnabled] = useState(initialState.localesEnabled)
 
-  // get initial dark mode
+  // set dark mode
   useEffect(() => {
     const dm: string = jamfireGet("darkMode")
-
-    if (dm === null && typeof window !== `undefined`) {
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        return setDarkMode(true)
-      } else {
-        return setDarkMode(false)
-      }
-    }
-
     const isDarkMode: boolean = dm === "true"
     return setDarkMode(isDarkMode)
   }, [])

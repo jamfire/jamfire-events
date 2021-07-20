@@ -25,7 +25,7 @@ export default ({ config, headerLogo, title }: BrandingProps) => {
   }
 
   return (
-    <div className={styles.branding} role="banner">
+    <div className={styles.branding}>
       <h1>
         <Link to="/">
           {configLogo && (

@@ -64,7 +64,7 @@ export default ({ config }: LocaleModalProps) => {
 
           return (
             <div
-              className={cx(styles.language, activeClass)}
+              className={cx(styles.language, activeClass, `${locale}-locale`)}
               onClick={() => {
                 setSiteLocale(locale)
               }}
