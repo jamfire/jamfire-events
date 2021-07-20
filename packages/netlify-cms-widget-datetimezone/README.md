@@ -18,14 +18,14 @@ Configure Netlify CMS to use the widget.
 
 ```js
 // import libs
-import CMS, { init } from "netlify-cms-app"
+import CMS, { init } from "netlify-cms-app";
 import {
-  DateTimeZoneControl,
-  DateTimeZonePreview,
-} from "netlify-cms-widget-datetimezone"
+	DateTimeZoneControl,
+	DateTimeZonePreview,
+} from "netlify-cms-widget-datetimezone";
 
 // register datetimezone widget
-CMS.registerWidget("datetimezone", DateTimeZoneControl, DateTimeZonePreview)
+CMS.registerWidget("datetimezone", DateTimeZoneControl, DateTimeZonePreview);
 ```
 
 Add the widget to a field.
@@ -47,7 +47,7 @@ import { DateTime } from "luxon";
  * @param {string} datetime
  * @param {string} timezone
  * @param {string} locale
- */ 
+ */
 const DateComponent = ({ datetime, timezone, locale }) => {
 
   // get the entry datetime and timezone
