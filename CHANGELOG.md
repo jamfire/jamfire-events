@@ -1,9 +1,13 @@
 # Changelog
 
-## Unreleased (2021-07-20)
+## Unreleased (2021-07-21)
 
 #### :rocket: Enhancement
 
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
+  - [#38](https://github.com/jamfire/jamfire/pull/38) Add Google and Zoom as Room Options ([@kalebheitzman](https://github.com/kalebheitzman))
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`, `netlify-cms-widget-datetimezone`
+  - [#37](https://github.com/jamfire/jamfire/pull/37) Extract event context from theme context ([@kalebheitzman](https://github.com/kalebheitzman))
 - `gatsby-theme-jamfire-conference`
   - [#36](https://github.com/jamfire/jamfire/pull/36) refactor(gatsby-theme-jamfire-conference): update theme styles ([@kalebheitzman](https://github.com/kalebheitzman))
   - [#25](https://github.com/jamfire/jamfire/pull/25) refactor(gatsby-theme-jamfire-conference): version 1.1.0 ([@kalebheitzman](https://github.com/kalebheitzman))
@@ -21,6 +25,8 @@
 
 #### :house: Internal
 
+- `gatsby-theme-jamfire-conference-e2e`, `gatsby-theme-jamfire-conference`
+  - [#64](https://github.com/jamfire/jamfire/pull/64) test(gatsby-theme-jamfire-conference-e2e): update and verify cypress tests ([@kalebheitzman](https://github.com/kalebheitzman))
 - `gatsby-starter-jamfire-conference`
   - [#21](https://github.com/jamfire/jamfire/pull/21) build(gatsby-starter-jamfire-conference): removed experimental build … ([@kalebheitzman](https://github.com/kalebheitzman))
 
