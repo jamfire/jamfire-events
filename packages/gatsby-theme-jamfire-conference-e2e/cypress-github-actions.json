@@ -3,5 +3,9 @@
 	"integrationFolder": "cypress/e2e",
 	"viewportHeight": 900,
 	"viewportWidth": 1440,
-	"video": false
+	"video": false,
+	"retries": {
+		"runMode": 2,
+		"openMode": 2
+	}
 }

@@ -58,7 +58,7 @@ export default ({
   const themeClass = darkMode ? theme.dark : theme.light
 
   return (
-    <div className={cx(themeClass, styles.layout)} id="layout">
+    <div className={cx(themeClass, styles.layout, "site-layout")} id="layout">
       <style
         dangerouslySetInnerHTML={{
           __html: `

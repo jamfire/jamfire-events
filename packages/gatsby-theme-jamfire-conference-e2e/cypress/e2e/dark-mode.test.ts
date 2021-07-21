@@ -10,8 +10,11 @@ describe(`Interact with Dark Mode`, () => {
 	it(`Check for Light Mode`, () => {
 		cy.get(`.dark-mode input[type="checkbox"]`).should(`not.be.checked`);
 
-		// cy.get('body')
-		//   .should('have.css', 'background-color', 'rgb(255, 255, 255)')
+		cy.get(".site-layout").should(
+			"have.css",
+			"background-color",
+			"rgb(255, 255, 255)"
+		);
 	});
 
 	it(`Toggle to Dark Mode`, () => {
@@ -19,8 +22,11 @@ describe(`Interact with Dark Mode`, () => {
 
 		cy.get(`.dark-mode input[type="checkbox"]`).should(`be.checked`);
 
-		// cy.get('body')
-		//   .should('have.css', 'background-color', 'rgb(60, 64, 67)')
+		cy.get(".site-layout").should(
+			"have.css",
+			"background-color",
+			"rgb(60, 64, 67)"
+		);
 	});
 
 	it(`Toggle back to Light Mode`, () => {
@@ -28,7 +34,10 @@ describe(`Interact with Dark Mode`, () => {
 
 		cy.get(`.dark-mode input[type="checkbox"]`).should(`not.be.checked`);
 
-		// cy.get('body')
-		//   .should('have.css', 'background-color', 'rgb(60, 64, 67)')
+		cy.get(".site-layout").should(
+			"have.css",
+			"background-color",
+			"rgb(255, 255, 255)"
+		);
 	});
 });
