@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-jamfire-conference-e2e",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "cypress": "^8.0.0",
