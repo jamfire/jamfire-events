@@ -120,6 +120,7 @@ const JoinButton = ({ room, basePath }: JoinButtonProps) => {
         className={styles.joinButton}
         href={room.roomUrl || "#"}
         target="_blank"
+        rel="noreferrer"
       >
         {t("buttons.join")} <GoLinkExternal className={styles.externalLink} />
       </a>
