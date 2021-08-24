@@ -11,7 +11,7 @@
     "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run"
   },
   "dependencies": {
-    "axe-core": "^4.3.1",
+    "axe-core": "^4.3.3",
     "gatsby-cypress": "^1.9.0"
   }
 }
