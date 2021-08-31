@@ -11216,10 +11216,10 @@ i18next-resources-to-backend@^1.0.0:
   dependencies:
     "@babel/runtime" "7.14.0"
 
-i18next@^20.3.1:
-  version "20.3.4"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-20.3.4.tgz#5e05524a8baa17bbf99b89cdb427d3a68406aa64"
-  integrity sha512-xj3A2tGvwdWI1QBDKKFLOT/n4QImm+tN8QvHBIaTU/zN4YWK1NlpWPZN6mKzd3G1Wd7J1jU5BkFeaKQWHpf05w==
+i18next@^20.5.0:
+  version "20.5.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-20.5.0.tgz#e3729b325d8ed62496a5e14bae9716d31a113eb5"
+  integrity sha512-Mdw2e60XndOKSG0Ceta5R+902/pgwHHkqOhQ7+X4223RmCl5ItatLyx06jqiknGZFe3lRU/x6TAdF9aLL6BQ/Q==
   dependencies:
     "@babel/runtime" "^7.12.0"
 
