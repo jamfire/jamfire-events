@@ -4087,10 +4087,10 @@
     "@typescript-eslint/types" "4.28.4"
     eslint-visitor-keys "^2.0.0"
 
-"@vvo/tzdb@^6.7.0":
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.7.0.tgz#8a553df436a51b8813f75000206b080ad1e4a432"
-  integrity sha512-QBdgMZ9+fmSB/lFHfcjYaE9i43nGvXldzGENAcjFsawGMDUlXI7yZG6JBtPKscB1XFvPQfZ5kBsPzujZQdOr0A==
+"@vvo/tzdb@^6.11.0":
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.11.0.tgz#d1d66bf8fe2b189c04fe7be956955cb3b85a19e8"
+  integrity sha512-rXAECYmgXucWBjxULU32hGTZpqZDixTMuh69HFwYdGyigz96vnyDb0ZLElJURPy8+lAteImQk7VRhz/kLtWeHg==
   dependencies:
     luxon "1.26.0"
 
