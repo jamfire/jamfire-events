@@ -86,7 +86,7 @@
     "typeface-quattrocento-sans": "^1.1.13",
     "typeface-work-sans": "^1.1.13",
     "typography": "^0.16.19",
-    "yarn": "^1.22.10",
+    "yarn": "^1.22.15",
     "yup": "^0.32.9"
   },
   "devDependencies": {
