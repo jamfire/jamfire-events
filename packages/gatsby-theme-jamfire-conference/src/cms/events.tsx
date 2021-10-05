@@ -49,12 +49,25 @@ export default {
       i18n: true,
       fields: [
         {
-          name: "livestreamUrl",
+          name: "videoUrl",
           label: "LiveStream URL",
           widget: "string",
           hint: "Enter a livestream embed URL from YouTube, Vimeo, Facebook, etc.",
           required: false,
           i18n: true,
+        },
+        {
+          name: "presentationMode",
+          label: "Presentation Mode",
+          hint: "How should this video be presented? A timed video will begin automatically playing during your event start time. A standard video will allow guests to play the video anytime.",
+          widget: "select",
+          options: [
+            { label: "Livestream", value: "livestream" },
+            { label: "Timed", value: "timed" },
+            { label: "Standard", value: "standard" },
+          ],
+          default: ["livestream"],
+          required: false,
         },
         {
           name: "startTime",

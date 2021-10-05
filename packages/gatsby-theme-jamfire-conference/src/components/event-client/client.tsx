@@ -57,7 +57,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
           <QA config={config} event={event} path="/qa" locale={locale} />
         </Router>
       </Sidebar>
-      <Livestream event={event} />
+      <Livestream event={event} locale={locale} />
     </Wrapper>
   )
 }

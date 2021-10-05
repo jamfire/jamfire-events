@@ -2,10 +2,12 @@ export type Maybe<T> = T | null
 export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K]
 }
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]?: Maybe<T[SubKey]> }
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> &
-  { [SubKey in K]: Maybe<T[SubKey]> }
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>
+}
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>
+}
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string
@@ -352,8 +354,35 @@ export type DirectoryGroupConnection = {
   edges: Array<DirectoryEdge>
   nodes: Array<Directory>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<DirectoryGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type DirectoryGroupConnectionDistinctArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionMaxArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionMinArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionSumArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: DirectoryFieldsEnum
 }
 
 export type DirectorySortInput = {
@@ -697,16 +726,15 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___eventRooms___roomLocale = "childrenMarkdownRemark___frontmatter___eventRooms___roomLocale",
   childrenMarkdownRemark___frontmatter___eventRooms___roomUrl = "childrenMarkdownRemark___frontmatter___eventRooms___roomUrl",
   childrenMarkdownRemark___frontmatter___title = "childrenMarkdownRemark___frontmatter___title",
-  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = "childrenMarkdownRemark___frontmatter___analyticsCookies___enabled",
-  childrenMarkdownRemark___frontmatter___analyticsCookies___title = "childrenMarkdownRemark___frontmatter___analyticsCookies___title",
-  childrenMarkdownRemark___frontmatter___analyticsCookies___content = "childrenMarkdownRemark___frontmatter___analyticsCookies___content",
   childrenMarkdownRemark___frontmatter___templateKey = "childrenMarkdownRemark___frontmatter___templateKey",
   childrenMarkdownRemark___frontmatter___cookieNotification___title = "childrenMarkdownRemark___frontmatter___cookieNotification___title",
   childrenMarkdownRemark___frontmatter___cookieNotification___content = "childrenMarkdownRemark___frontmatter___cookieNotification___content",
   childrenMarkdownRemark___frontmatter___necessaryCookies___title = "childrenMarkdownRemark___frontmatter___necessaryCookies___title",
   childrenMarkdownRemark___frontmatter___necessaryCookies___content = "childrenMarkdownRemark___frontmatter___necessaryCookies___content",
+  childrenMarkdownRemark___frontmatter___analyticsCookies___title = "childrenMarkdownRemark___frontmatter___analyticsCookies___title",
+  childrenMarkdownRemark___frontmatter___analyticsCookies___content = "childrenMarkdownRemark___frontmatter___analyticsCookies___content",
+  childrenMarkdownRemark___frontmatter___analyticsCookies___enabled = "childrenMarkdownRemark___frontmatter___analyticsCookies___enabled",
   childrenMarkdownRemark___frontmatter___description = "childrenMarkdownRemark___frontmatter___description",
-  childrenMarkdownRemark___frontmatter___siteUrl = "childrenMarkdownRemark___frontmatter___siteUrl",
   childrenMarkdownRemark___frontmatter___colors___primaryColor = "childrenMarkdownRemark___frontmatter___colors___primaryColor",
   childrenMarkdownRemark___frontmatter___colors___primaryColorHover = "childrenMarkdownRemark___frontmatter___colors___primaryColorHover",
   childrenMarkdownRemark___frontmatter___colors___darkModeOnColor = "childrenMarkdownRemark___frontmatter___colors___darkModeOnColor",
@@ -715,35 +743,37 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___frontmatter___socialLogin___google = "childrenMarkdownRemark___frontmatter___socialLogin___google",
   childrenMarkdownRemark___frontmatter___socialLogin___twitter = "childrenMarkdownRemark___frontmatter___socialLogin___twitter",
   childrenMarkdownRemark___frontmatter___socialLogin___github = "childrenMarkdownRemark___frontmatter___socialLogin___github",
+  childrenMarkdownRemark___frontmatter___siteUrl = "childrenMarkdownRemark___frontmatter___siteUrl",
   childrenMarkdownRemark___frontmatter___slug = "childrenMarkdownRemark___frontmatter___slug",
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColor = "childrenMarkdownRemark___frontmatter___pageBranding___primaryColor",
   childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover = "childrenMarkdownRemark___frontmatter___pageBranding___primaryColorHover",
-  childrenMarkdownRemark___frontmatter___eventInformation___livestreamUrl = "childrenMarkdownRemark___frontmatter___eventInformation___livestreamUrl",
+  childrenMarkdownRemark___frontmatter___eventInformation___videoUrl = "childrenMarkdownRemark___frontmatter___eventInformation___videoUrl",
+  childrenMarkdownRemark___frontmatter___eventInformation___presentationMode = "childrenMarkdownRemark___frontmatter___eventInformation___presentationMode",
   childrenMarkdownRemark___frontmatter___eventBranding___primaryColor = "childrenMarkdownRemark___frontmatter___eventBranding___primaryColor",
   childrenMarkdownRemark___frontmatter___eventBranding___primaryColorHover = "childrenMarkdownRemark___frontmatter___eventBranding___primaryColorHover",
-  childrenMarkdownRemark___frontmatter___eventSettings___allEvents = "childrenMarkdownRemark___frontmatter___eventSettings___allEvents",
-  childrenMarkdownRemark___frontmatter___eventSettings___mainStage = "childrenMarkdownRemark___frontmatter___eventSettings___mainStage",
-  childrenMarkdownRemark___frontmatter___eventSettings___mainStageFeature = "childrenMarkdownRemark___frontmatter___eventSettings___mainStageFeature",
-  childrenMarkdownRemark___frontmatter___eventSettings___chat = "childrenMarkdownRemark___frontmatter___eventSettings___chat",
-  childrenMarkdownRemark___frontmatter___eventSettings___schedule = "childrenMarkdownRemark___frontmatter___eventSettings___schedule",
-  childrenMarkdownRemark___frontmatter___eventSettings___rooms = "childrenMarkdownRemark___frontmatter___eventSettings___rooms",
-  childrenMarkdownRemark___frontmatter___eventSettings___qa = "childrenMarkdownRemark___frontmatter___eventSettings___qa",
-  childrenMarkdownRemark___frontmatter___eventSettings___map = "childrenMarkdownRemark___frontmatter___eventSettings___map",
-  childrenMarkdownRemark___frontmatter___eventSettings___pollsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___pollsLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___qaLabel = "childrenMarkdownRemark___frontmatter___eventSettings___qaLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___mainStageLabel = "childrenMarkdownRemark___frontmatter___eventSettings___mainStageLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___polls = "childrenMarkdownRemark___frontmatter___eventSettings___polls",
-  childrenMarkdownRemark___frontmatter___eventSettings___mapLabel = "childrenMarkdownRemark___frontmatter___eventSettings___mapLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___allEventsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___allEventsLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___chatLabel = "childrenMarkdownRemark___frontmatter___eventSettings___chatLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___roomsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___roomsLabel",
-  childrenMarkdownRemark___frontmatter___eventSettings___scheduleLabel = "childrenMarkdownRemark___frontmatter___eventSettings___scheduleLabel",
   childrenMarkdownRemark___frontmatter___eventSchedule = "childrenMarkdownRemark___frontmatter___eventSchedule",
   childrenMarkdownRemark___frontmatter___eventSchedule___title = "childrenMarkdownRemark___frontmatter___eventSchedule___title",
   childrenMarkdownRemark___frontmatter___eventSchedule___description = "childrenMarkdownRemark___frontmatter___eventSchedule___description",
   childrenMarkdownRemark___frontmatter___eventQA = "childrenMarkdownRemark___frontmatter___eventQA",
   childrenMarkdownRemark___frontmatter___eventQA___question = "childrenMarkdownRemark___frontmatter___eventQA___question",
   childrenMarkdownRemark___frontmatter___eventQA___answer = "childrenMarkdownRemark___frontmatter___eventQA___answer",
+  childrenMarkdownRemark___frontmatter___eventSettings___pollsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___pollsLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___qaLabel = "childrenMarkdownRemark___frontmatter___eventSettings___qaLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___mainStage = "childrenMarkdownRemark___frontmatter___eventSettings___mainStage",
+  childrenMarkdownRemark___frontmatter___eventSettings___mainStageLabel = "childrenMarkdownRemark___frontmatter___eventSettings___mainStageLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___qa = "childrenMarkdownRemark___frontmatter___eventSettings___qa",
+  childrenMarkdownRemark___frontmatter___eventSettings___mainStageFeature = "childrenMarkdownRemark___frontmatter___eventSettings___mainStageFeature",
+  childrenMarkdownRemark___frontmatter___eventSettings___polls = "childrenMarkdownRemark___frontmatter___eventSettings___polls",
+  childrenMarkdownRemark___frontmatter___eventSettings___schedule = "childrenMarkdownRemark___frontmatter___eventSettings___schedule",
+  childrenMarkdownRemark___frontmatter___eventSettings___rooms = "childrenMarkdownRemark___frontmatter___eventSettings___rooms",
+  childrenMarkdownRemark___frontmatter___eventSettings___mapLabel = "childrenMarkdownRemark___frontmatter___eventSettings___mapLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___chat = "childrenMarkdownRemark___frontmatter___eventSettings___chat",
+  childrenMarkdownRemark___frontmatter___eventSettings___allEventsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___allEventsLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___allEvents = "childrenMarkdownRemark___frontmatter___eventSettings___allEvents",
+  childrenMarkdownRemark___frontmatter___eventSettings___map = "childrenMarkdownRemark___frontmatter___eventSettings___map",
+  childrenMarkdownRemark___frontmatter___eventSettings___chatLabel = "childrenMarkdownRemark___frontmatter___eventSettings___chatLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___roomsLabel = "childrenMarkdownRemark___frontmatter___eventSettings___roomsLabel",
+  childrenMarkdownRemark___frontmatter___eventSettings___scheduleLabel = "childrenMarkdownRemark___frontmatter___eventSettings___scheduleLabel",
   childrenMarkdownRemark___frontmatter___id = "childrenMarkdownRemark___frontmatter___id",
   childrenMarkdownRemark___frontmatter___parent___id = "childrenMarkdownRemark___frontmatter___parent___id",
   childrenMarkdownRemark___frontmatter___parent___children = "childrenMarkdownRemark___frontmatter___parent___children",
@@ -821,16 +851,15 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___eventRooms___roomLocale = "childMarkdownRemark___frontmatter___eventRooms___roomLocale",
   childMarkdownRemark___frontmatter___eventRooms___roomUrl = "childMarkdownRemark___frontmatter___eventRooms___roomUrl",
   childMarkdownRemark___frontmatter___title = "childMarkdownRemark___frontmatter___title",
-  childMarkdownRemark___frontmatter___analyticsCookies___enabled = "childMarkdownRemark___frontmatter___analyticsCookies___enabled",
-  childMarkdownRemark___frontmatter___analyticsCookies___title = "childMarkdownRemark___frontmatter___analyticsCookies___title",
-  childMarkdownRemark___frontmatter___analyticsCookies___content = "childMarkdownRemark___frontmatter___analyticsCookies___content",
   childMarkdownRemark___frontmatter___templateKey = "childMarkdownRemark___frontmatter___templateKey",
   childMarkdownRemark___frontmatter___cookieNotification___title = "childMarkdownRemark___frontmatter___cookieNotification___title",
   childMarkdownRemark___frontmatter___cookieNotification___content = "childMarkdownRemark___frontmatter___cookieNotification___content",
   childMarkdownRemark___frontmatter___necessaryCookies___title = "childMarkdownRemark___frontmatter___necessaryCookies___title",
   childMarkdownRemark___frontmatter___necessaryCookies___content = "childMarkdownRemark___frontmatter___necessaryCookies___content",
+  childMarkdownRemark___frontmatter___analyticsCookies___title = "childMarkdownRemark___frontmatter___analyticsCookies___title",
+  childMarkdownRemark___frontmatter___analyticsCookies___content = "childMarkdownRemark___frontmatter___analyticsCookies___content",
+  childMarkdownRemark___frontmatter___analyticsCookies___enabled = "childMarkdownRemark___frontmatter___analyticsCookies___enabled",
   childMarkdownRemark___frontmatter___description = "childMarkdownRemark___frontmatter___description",
-  childMarkdownRemark___frontmatter___siteUrl = "childMarkdownRemark___frontmatter___siteUrl",
   childMarkdownRemark___frontmatter___colors___primaryColor = "childMarkdownRemark___frontmatter___colors___primaryColor",
   childMarkdownRemark___frontmatter___colors___primaryColorHover = "childMarkdownRemark___frontmatter___colors___primaryColorHover",
   childMarkdownRemark___frontmatter___colors___darkModeOnColor = "childMarkdownRemark___frontmatter___colors___darkModeOnColor",
@@ -839,35 +868,37 @@ export enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___socialLogin___google = "childMarkdownRemark___frontmatter___socialLogin___google",
   childMarkdownRemark___frontmatter___socialLogin___twitter = "childMarkdownRemark___frontmatter___socialLogin___twitter",
   childMarkdownRemark___frontmatter___socialLogin___github = "childMarkdownRemark___frontmatter___socialLogin___github",
+  childMarkdownRemark___frontmatter___siteUrl = "childMarkdownRemark___frontmatter___siteUrl",
   childMarkdownRemark___frontmatter___slug = "childMarkdownRemark___frontmatter___slug",
   childMarkdownRemark___frontmatter___pageBranding___primaryColor = "childMarkdownRemark___frontmatter___pageBranding___primaryColor",
   childMarkdownRemark___frontmatter___pageBranding___primaryColorHover = "childMarkdownRemark___frontmatter___pageBranding___primaryColorHover",
-  childMarkdownRemark___frontmatter___eventInformation___livestreamUrl = "childMarkdownRemark___frontmatter___eventInformation___livestreamUrl",
+  childMarkdownRemark___frontmatter___eventInformation___videoUrl = "childMarkdownRemark___frontmatter___eventInformation___videoUrl",
+  childMarkdownRemark___frontmatter___eventInformation___presentationMode = "childMarkdownRemark___frontmatter___eventInformation___presentationMode",
   childMarkdownRemark___frontmatter___eventBranding___primaryColor = "childMarkdownRemark___frontmatter___eventBranding___primaryColor",
   childMarkdownRemark___frontmatter___eventBranding___primaryColorHover = "childMarkdownRemark___frontmatter___eventBranding___primaryColorHover",
-  childMarkdownRemark___frontmatter___eventSettings___allEvents = "childMarkdownRemark___frontmatter___eventSettings___allEvents",
-  childMarkdownRemark___frontmatter___eventSettings___mainStage = "childMarkdownRemark___frontmatter___eventSettings___mainStage",
-  childMarkdownRemark___frontmatter___eventSettings___mainStageFeature = "childMarkdownRemark___frontmatter___eventSettings___mainStageFeature",
-  childMarkdownRemark___frontmatter___eventSettings___chat = "childMarkdownRemark___frontmatter___eventSettings___chat",
-  childMarkdownRemark___frontmatter___eventSettings___schedule = "childMarkdownRemark___frontmatter___eventSettings___schedule",
-  childMarkdownRemark___frontmatter___eventSettings___rooms = "childMarkdownRemark___frontmatter___eventSettings___rooms",
-  childMarkdownRemark___frontmatter___eventSettings___qa = "childMarkdownRemark___frontmatter___eventSettings___qa",
-  childMarkdownRemark___frontmatter___eventSettings___map = "childMarkdownRemark___frontmatter___eventSettings___map",
-  childMarkdownRemark___frontmatter___eventSettings___pollsLabel = "childMarkdownRemark___frontmatter___eventSettings___pollsLabel",
-  childMarkdownRemark___frontmatter___eventSettings___qaLabel = "childMarkdownRemark___frontmatter___eventSettings___qaLabel",
-  childMarkdownRemark___frontmatter___eventSettings___mainStageLabel = "childMarkdownRemark___frontmatter___eventSettings___mainStageLabel",
-  childMarkdownRemark___frontmatter___eventSettings___polls = "childMarkdownRemark___frontmatter___eventSettings___polls",
-  childMarkdownRemark___frontmatter___eventSettings___mapLabel = "childMarkdownRemark___frontmatter___eventSettings___mapLabel",
-  childMarkdownRemark___frontmatter___eventSettings___allEventsLabel = "childMarkdownRemark___frontmatter___eventSettings___allEventsLabel",
-  childMarkdownRemark___frontmatter___eventSettings___chatLabel = "childMarkdownRemark___frontmatter___eventSettings___chatLabel",
-  childMarkdownRemark___frontmatter___eventSettings___roomsLabel = "childMarkdownRemark___frontmatter___eventSettings___roomsLabel",
-  childMarkdownRemark___frontmatter___eventSettings___scheduleLabel = "childMarkdownRemark___frontmatter___eventSettings___scheduleLabel",
   childMarkdownRemark___frontmatter___eventSchedule = "childMarkdownRemark___frontmatter___eventSchedule",
   childMarkdownRemark___frontmatter___eventSchedule___title = "childMarkdownRemark___frontmatter___eventSchedule___title",
   childMarkdownRemark___frontmatter___eventSchedule___description = "childMarkdownRemark___frontmatter___eventSchedule___description",
   childMarkdownRemark___frontmatter___eventQA = "childMarkdownRemark___frontmatter___eventQA",
   childMarkdownRemark___frontmatter___eventQA___question = "childMarkdownRemark___frontmatter___eventQA___question",
   childMarkdownRemark___frontmatter___eventQA___answer = "childMarkdownRemark___frontmatter___eventQA___answer",
+  childMarkdownRemark___frontmatter___eventSettings___pollsLabel = "childMarkdownRemark___frontmatter___eventSettings___pollsLabel",
+  childMarkdownRemark___frontmatter___eventSettings___qaLabel = "childMarkdownRemark___frontmatter___eventSettings___qaLabel",
+  childMarkdownRemark___frontmatter___eventSettings___mainStage = "childMarkdownRemark___frontmatter___eventSettings___mainStage",
+  childMarkdownRemark___frontmatter___eventSettings___mainStageLabel = "childMarkdownRemark___frontmatter___eventSettings___mainStageLabel",
+  childMarkdownRemark___frontmatter___eventSettings___qa = "childMarkdownRemark___frontmatter___eventSettings___qa",
+  childMarkdownRemark___frontmatter___eventSettings___mainStageFeature = "childMarkdownRemark___frontmatter___eventSettings___mainStageFeature",
+  childMarkdownRemark___frontmatter___eventSettings___polls = "childMarkdownRemark___frontmatter___eventSettings___polls",
+  childMarkdownRemark___frontmatter___eventSettings___schedule = "childMarkdownRemark___frontmatter___eventSettings___schedule",
+  childMarkdownRemark___frontmatter___eventSettings___rooms = "childMarkdownRemark___frontmatter___eventSettings___rooms",
+  childMarkdownRemark___frontmatter___eventSettings___mapLabel = "childMarkdownRemark___frontmatter___eventSettings___mapLabel",
+  childMarkdownRemark___frontmatter___eventSettings___chat = "childMarkdownRemark___frontmatter___eventSettings___chat",
+  childMarkdownRemark___frontmatter___eventSettings___allEventsLabel = "childMarkdownRemark___frontmatter___eventSettings___allEventsLabel",
+  childMarkdownRemark___frontmatter___eventSettings___allEvents = "childMarkdownRemark___frontmatter___eventSettings___allEvents",
+  childMarkdownRemark___frontmatter___eventSettings___map = "childMarkdownRemark___frontmatter___eventSettings___map",
+  childMarkdownRemark___frontmatter___eventSettings___chatLabel = "childMarkdownRemark___frontmatter___eventSettings___chatLabel",
+  childMarkdownRemark___frontmatter___eventSettings___roomsLabel = "childMarkdownRemark___frontmatter___eventSettings___roomsLabel",
+  childMarkdownRemark___frontmatter___eventSettings___scheduleLabel = "childMarkdownRemark___frontmatter___eventSettings___scheduleLabel",
   childMarkdownRemark___frontmatter___id = "childMarkdownRemark___frontmatter___id",
   childMarkdownRemark___frontmatter___parent___id = "childMarkdownRemark___frontmatter___parent___id",
   childMarkdownRemark___frontmatter___parent___children = "childMarkdownRemark___frontmatter___parent___children",
@@ -1075,8 +1106,35 @@ export type FileGroupConnection = {
   edges: Array<FileEdge>
   nodes: Array<File>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<FileGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type FileGroupConnectionDistinctArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionMaxArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionMinArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionSumArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: FileFieldsEnum
 }
 
 export type FileSortInput = {
@@ -1520,8 +1578,35 @@ export type ImageSharpGroupConnection = {
   edges: Array<ImageSharpEdge>
   nodes: Array<ImageSharp>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<ImageSharpGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type ImageSharpGroupConnectionDistinctArgs = {
+  field: ImageSharpFieldsEnum
+}
+
+export type ImageSharpGroupConnectionMaxArgs = {
+  field: ImageSharpFieldsEnum
+}
+
+export type ImageSharpGroupConnectionMinArgs = {
+  field: ImageSharpFieldsEnum
+}
+
+export type ImageSharpGroupConnectionSumArgs = {
+  field: ImageSharpFieldsEnum
+}
+
+export type ImageSharpGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: ImageSharpFieldsEnum
 }
 
 export type ImageSharpOriginal = {
@@ -2007,16 +2092,15 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___pageGraphics___featuredImage___id = "frontmatter___pageGraphics___featuredImage___id",
   frontmatter___pageGraphics___featuredImage___children = "frontmatter___pageGraphics___featuredImage___children",
   frontmatter___title = "frontmatter___title",
-  frontmatter___analyticsCookies___enabled = "frontmatter___analyticsCookies___enabled",
-  frontmatter___analyticsCookies___title = "frontmatter___analyticsCookies___title",
-  frontmatter___analyticsCookies___content = "frontmatter___analyticsCookies___content",
   frontmatter___templateKey = "frontmatter___templateKey",
   frontmatter___cookieNotification___title = "frontmatter___cookieNotification___title",
   frontmatter___cookieNotification___content = "frontmatter___cookieNotification___content",
   frontmatter___necessaryCookies___title = "frontmatter___necessaryCookies___title",
   frontmatter___necessaryCookies___content = "frontmatter___necessaryCookies___content",
+  frontmatter___analyticsCookies___title = "frontmatter___analyticsCookies___title",
+  frontmatter___analyticsCookies___content = "frontmatter___analyticsCookies___content",
+  frontmatter___analyticsCookies___enabled = "frontmatter___analyticsCookies___enabled",
   frontmatter___description = "frontmatter___description",
-  frontmatter___siteUrl = "frontmatter___siteUrl",
   frontmatter___colors___primaryColor = "frontmatter___colors___primaryColor",
   frontmatter___colors___primaryColorHover = "frontmatter___colors___primaryColorHover",
   frontmatter___colors___darkModeOnColor = "frontmatter___colors___darkModeOnColor",
@@ -2025,6 +2109,7 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___socialLogin___google = "frontmatter___socialLogin___google",
   frontmatter___socialLogin___twitter = "frontmatter___socialLogin___twitter",
   frontmatter___socialLogin___github = "frontmatter___socialLogin___github",
+  frontmatter___siteUrl = "frontmatter___siteUrl",
   frontmatter___slug = "frontmatter___slug",
   frontmatter___pageBranding___primaryColor = "frontmatter___pageBranding___primaryColor",
   frontmatter___pageBranding___primaryColorHover = "frontmatter___pageBranding___primaryColorHover",
@@ -2032,26 +2117,10 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___eventInformation___startTime___timezone = "frontmatter___eventInformation___startTime___timezone",
   frontmatter___eventInformation___endTime___datetime = "frontmatter___eventInformation___endTime___datetime",
   frontmatter___eventInformation___endTime___timezone = "frontmatter___eventInformation___endTime___timezone",
-  frontmatter___eventInformation___livestreamUrl = "frontmatter___eventInformation___livestreamUrl",
+  frontmatter___eventInformation___videoUrl = "frontmatter___eventInformation___videoUrl",
+  frontmatter___eventInformation___presentationMode = "frontmatter___eventInformation___presentationMode",
   frontmatter___eventBranding___primaryColor = "frontmatter___eventBranding___primaryColor",
   frontmatter___eventBranding___primaryColorHover = "frontmatter___eventBranding___primaryColorHover",
-  frontmatter___eventSettings___allEvents = "frontmatter___eventSettings___allEvents",
-  frontmatter___eventSettings___mainStage = "frontmatter___eventSettings___mainStage",
-  frontmatter___eventSettings___mainStageFeature = "frontmatter___eventSettings___mainStageFeature",
-  frontmatter___eventSettings___chat = "frontmatter___eventSettings___chat",
-  frontmatter___eventSettings___schedule = "frontmatter___eventSettings___schedule",
-  frontmatter___eventSettings___rooms = "frontmatter___eventSettings___rooms",
-  frontmatter___eventSettings___qa = "frontmatter___eventSettings___qa",
-  frontmatter___eventSettings___map = "frontmatter___eventSettings___map",
-  frontmatter___eventSettings___pollsLabel = "frontmatter___eventSettings___pollsLabel",
-  frontmatter___eventSettings___qaLabel = "frontmatter___eventSettings___qaLabel",
-  frontmatter___eventSettings___mainStageLabel = "frontmatter___eventSettings___mainStageLabel",
-  frontmatter___eventSettings___polls = "frontmatter___eventSettings___polls",
-  frontmatter___eventSettings___mapLabel = "frontmatter___eventSettings___mapLabel",
-  frontmatter___eventSettings___allEventsLabel = "frontmatter___eventSettings___allEventsLabel",
-  frontmatter___eventSettings___chatLabel = "frontmatter___eventSettings___chatLabel",
-  frontmatter___eventSettings___roomsLabel = "frontmatter___eventSettings___roomsLabel",
-  frontmatter___eventSettings___scheduleLabel = "frontmatter___eventSettings___scheduleLabel",
   frontmatter___eventSchedule = "frontmatter___eventSchedule",
   frontmatter___eventSchedule___startTime___datetime = "frontmatter___eventSchedule___startTime___datetime",
   frontmatter___eventSchedule___startTime___timezone = "frontmatter___eventSchedule___startTime___timezone",
@@ -2060,6 +2129,23 @@ export enum MarkdownRemarkFieldsEnum {
   frontmatter___eventQA = "frontmatter___eventQA",
   frontmatter___eventQA___question = "frontmatter___eventQA___question",
   frontmatter___eventQA___answer = "frontmatter___eventQA___answer",
+  frontmatter___eventSettings___pollsLabel = "frontmatter___eventSettings___pollsLabel",
+  frontmatter___eventSettings___qaLabel = "frontmatter___eventSettings___qaLabel",
+  frontmatter___eventSettings___mainStage = "frontmatter___eventSettings___mainStage",
+  frontmatter___eventSettings___mainStageLabel = "frontmatter___eventSettings___mainStageLabel",
+  frontmatter___eventSettings___qa = "frontmatter___eventSettings___qa",
+  frontmatter___eventSettings___mainStageFeature = "frontmatter___eventSettings___mainStageFeature",
+  frontmatter___eventSettings___polls = "frontmatter___eventSettings___polls",
+  frontmatter___eventSettings___schedule = "frontmatter___eventSettings___schedule",
+  frontmatter___eventSettings___rooms = "frontmatter___eventSettings___rooms",
+  frontmatter___eventSettings___mapLabel = "frontmatter___eventSettings___mapLabel",
+  frontmatter___eventSettings___chat = "frontmatter___eventSettings___chat",
+  frontmatter___eventSettings___allEventsLabel = "frontmatter___eventSettings___allEventsLabel",
+  frontmatter___eventSettings___allEvents = "frontmatter___eventSettings___allEvents",
+  frontmatter___eventSettings___map = "frontmatter___eventSettings___map",
+  frontmatter___eventSettings___chatLabel = "frontmatter___eventSettings___chatLabel",
+  frontmatter___eventSettings___roomsLabel = "frontmatter___eventSettings___roomsLabel",
+  frontmatter___eventSettings___scheduleLabel = "frontmatter___eventSettings___scheduleLabel",
   frontmatter___id = "frontmatter___id",
   frontmatter___parent___id = "frontmatter___parent___id",
   frontmatter___parent___parent___id = "frontmatter___parent___parent___id",
@@ -2237,21 +2323,21 @@ export type MarkdownRemarkFrontmatter = Node & {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphics>
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphics>
   title?: Maybe<Scalars["String"]>
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>
   templateKey?: Maybe<Scalars["String"]>
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotification>
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookies>
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookies>
   description?: Maybe<Scalars["String"]>
-  siteUrl?: Maybe<Scalars["String"]>
   colors?: Maybe<MarkdownRemarkFrontmatterColors>
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLogin>
+  siteUrl?: Maybe<Scalars["String"]>
   slug?: Maybe<Scalars["String"]>
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBranding>
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformation>
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBranding>
-  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettings>
   eventSchedule?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterEventSchedule>>>
   eventQA?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterEventQa>>>
+  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettings>
   id: Scalars["ID"]
   parent?: Maybe<Node>
   children: Array<Node>
@@ -2260,15 +2346,15 @@ export type MarkdownRemarkFrontmatter = Node & {
 
 export type MarkdownRemarkFrontmatterAnalyticsCookies = {
   __typename?: "MarkdownRemarkFrontmatterAnalyticsCookies"
-  enabled?: Maybe<Scalars["Boolean"]>
   title?: Maybe<Scalars["String"]>
   content?: Maybe<Scalars["String"]>
+  enabled?: Maybe<Scalars["Boolean"]>
 }
 
 export type MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput = {
-  enabled?: Maybe<BooleanQueryOperatorInput>
   title?: Maybe<StringQueryOperatorInput>
   content?: Maybe<StringQueryOperatorInput>
+  enabled?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type MarkdownRemarkFrontmatterColors = {
@@ -2367,7 +2453,8 @@ export type MarkdownRemarkFrontmatterEventInformation = {
   __typename?: "MarkdownRemarkFrontmatterEventInformation"
   startTime?: Maybe<MarkdownRemarkFrontmatterEventInformationStartTime>
   endTime?: Maybe<MarkdownRemarkFrontmatterEventInformationEndTime>
-  livestreamUrl?: Maybe<Scalars["String"]>
+  videoUrl?: Maybe<Scalars["String"]>
+  presentationMode?: Maybe<Scalars["String"]>
 }
 
 export type MarkdownRemarkFrontmatterEventInformationEndTime = {
@@ -2391,7 +2478,8 @@ export type MarkdownRemarkFrontmatterEventInformationEndTimeFilterInput = {
 export type MarkdownRemarkFrontmatterEventInformationFilterInput = {
   startTime?: Maybe<MarkdownRemarkFrontmatterEventInformationStartTimeFilterInput>
   endTime?: Maybe<MarkdownRemarkFrontmatterEventInformationEndTimeFilterInput>
-  livestreamUrl?: Maybe<StringQueryOperatorInput>
+  videoUrl?: Maybe<StringQueryOperatorInput>
+  presentationMode?: Maybe<StringQueryOperatorInput>
 }
 
 export type MarkdownRemarkFrontmatterEventInformationStartTime = {
@@ -2489,40 +2577,40 @@ export type MarkdownRemarkFrontmatterEventScheduleStartTimeFilterInput = {
 
 export type MarkdownRemarkFrontmatterEventSettings = {
   __typename?: "MarkdownRemarkFrontmatterEventSettings"
-  allEvents?: Maybe<Scalars["Boolean"]>
-  mainStage?: Maybe<Scalars["Boolean"]>
-  mainStageFeature?: Maybe<Scalars["String"]>
-  chat?: Maybe<Scalars["Boolean"]>
-  schedule?: Maybe<Scalars["Boolean"]>
-  rooms?: Maybe<Scalars["Boolean"]>
-  qa?: Maybe<Scalars["Boolean"]>
-  map?: Maybe<Scalars["Boolean"]>
   pollsLabel?: Maybe<Scalars["String"]>
   qaLabel?: Maybe<Scalars["String"]>
+  mainStage?: Maybe<Scalars["Boolean"]>
   mainStageLabel?: Maybe<Scalars["String"]>
+  qa?: Maybe<Scalars["Boolean"]>
+  mainStageFeature?: Maybe<Scalars["String"]>
   polls?: Maybe<Scalars["Boolean"]>
+  schedule?: Maybe<Scalars["Boolean"]>
+  rooms?: Maybe<Scalars["Boolean"]>
   mapLabel?: Maybe<Scalars["String"]>
+  chat?: Maybe<Scalars["Boolean"]>
   allEventsLabel?: Maybe<Scalars["String"]>
+  allEvents?: Maybe<Scalars["Boolean"]>
+  map?: Maybe<Scalars["Boolean"]>
   chatLabel?: Maybe<Scalars["String"]>
   roomsLabel?: Maybe<Scalars["String"]>
   scheduleLabel?: Maybe<Scalars["String"]>
 }
 
 export type MarkdownRemarkFrontmatterEventSettingsFilterInput = {
-  allEvents?: Maybe<BooleanQueryOperatorInput>
-  mainStage?: Maybe<BooleanQueryOperatorInput>
-  mainStageFeature?: Maybe<StringQueryOperatorInput>
-  chat?: Maybe<BooleanQueryOperatorInput>
-  schedule?: Maybe<BooleanQueryOperatorInput>
-  rooms?: Maybe<BooleanQueryOperatorInput>
-  qa?: Maybe<BooleanQueryOperatorInput>
-  map?: Maybe<BooleanQueryOperatorInput>
   pollsLabel?: Maybe<StringQueryOperatorInput>
   qaLabel?: Maybe<StringQueryOperatorInput>
+  mainStage?: Maybe<BooleanQueryOperatorInput>
   mainStageLabel?: Maybe<StringQueryOperatorInput>
+  qa?: Maybe<BooleanQueryOperatorInput>
+  mainStageFeature?: Maybe<StringQueryOperatorInput>
   polls?: Maybe<BooleanQueryOperatorInput>
+  schedule?: Maybe<BooleanQueryOperatorInput>
+  rooms?: Maybe<BooleanQueryOperatorInput>
   mapLabel?: Maybe<StringQueryOperatorInput>
+  chat?: Maybe<BooleanQueryOperatorInput>
   allEventsLabel?: Maybe<StringQueryOperatorInput>
+  allEvents?: Maybe<BooleanQueryOperatorInput>
+  map?: Maybe<BooleanQueryOperatorInput>
   chatLabel?: Maybe<StringQueryOperatorInput>
   roomsLabel?: Maybe<StringQueryOperatorInput>
   scheduleLabel?: Maybe<StringQueryOperatorInput>
@@ -3083,16 +3171,15 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   pageGraphics___featuredImage___internal___owner = "pageGraphics___featuredImage___internal___owner",
   pageGraphics___featuredImage___internal___type = "pageGraphics___featuredImage___internal___type",
   title = "title",
-  analyticsCookies___enabled = "analyticsCookies___enabled",
-  analyticsCookies___title = "analyticsCookies___title",
-  analyticsCookies___content = "analyticsCookies___content",
   templateKey = "templateKey",
   cookieNotification___title = "cookieNotification___title",
   cookieNotification___content = "cookieNotification___content",
   necessaryCookies___title = "necessaryCookies___title",
   necessaryCookies___content = "necessaryCookies___content",
+  analyticsCookies___title = "analyticsCookies___title",
+  analyticsCookies___content = "analyticsCookies___content",
+  analyticsCookies___enabled = "analyticsCookies___enabled",
   description = "description",
-  siteUrl = "siteUrl",
   colors___primaryColor = "colors___primaryColor",
   colors___primaryColorHover = "colors___primaryColorHover",
   colors___darkModeOnColor = "colors___darkModeOnColor",
@@ -3101,6 +3188,7 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   socialLogin___google = "socialLogin___google",
   socialLogin___twitter = "socialLogin___twitter",
   socialLogin___github = "socialLogin___github",
+  siteUrl = "siteUrl",
   slug = "slug",
   pageBranding___primaryColor = "pageBranding___primaryColor",
   pageBranding___primaryColorHover = "pageBranding___primaryColorHover",
@@ -3108,26 +3196,10 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   eventInformation___startTime___timezone = "eventInformation___startTime___timezone",
   eventInformation___endTime___datetime = "eventInformation___endTime___datetime",
   eventInformation___endTime___timezone = "eventInformation___endTime___timezone",
-  eventInformation___livestreamUrl = "eventInformation___livestreamUrl",
+  eventInformation___videoUrl = "eventInformation___videoUrl",
+  eventInformation___presentationMode = "eventInformation___presentationMode",
   eventBranding___primaryColor = "eventBranding___primaryColor",
   eventBranding___primaryColorHover = "eventBranding___primaryColorHover",
-  eventSettings___allEvents = "eventSettings___allEvents",
-  eventSettings___mainStage = "eventSettings___mainStage",
-  eventSettings___mainStageFeature = "eventSettings___mainStageFeature",
-  eventSettings___chat = "eventSettings___chat",
-  eventSettings___schedule = "eventSettings___schedule",
-  eventSettings___rooms = "eventSettings___rooms",
-  eventSettings___qa = "eventSettings___qa",
-  eventSettings___map = "eventSettings___map",
-  eventSettings___pollsLabel = "eventSettings___pollsLabel",
-  eventSettings___qaLabel = "eventSettings___qaLabel",
-  eventSettings___mainStageLabel = "eventSettings___mainStageLabel",
-  eventSettings___polls = "eventSettings___polls",
-  eventSettings___mapLabel = "eventSettings___mapLabel",
-  eventSettings___allEventsLabel = "eventSettings___allEventsLabel",
-  eventSettings___chatLabel = "eventSettings___chatLabel",
-  eventSettings___roomsLabel = "eventSettings___roomsLabel",
-  eventSettings___scheduleLabel = "eventSettings___scheduleLabel",
   eventSchedule = "eventSchedule",
   eventSchedule___startTime___datetime = "eventSchedule___startTime___datetime",
   eventSchedule___startTime___timezone = "eventSchedule___startTime___timezone",
@@ -3136,6 +3208,23 @@ export enum MarkdownRemarkFrontmatterFieldsEnum {
   eventQA = "eventQA",
   eventQA___question = "eventQA___question",
   eventQA___answer = "eventQA___answer",
+  eventSettings___pollsLabel = "eventSettings___pollsLabel",
+  eventSettings___qaLabel = "eventSettings___qaLabel",
+  eventSettings___mainStage = "eventSettings___mainStage",
+  eventSettings___mainStageLabel = "eventSettings___mainStageLabel",
+  eventSettings___qa = "eventSettings___qa",
+  eventSettings___mainStageFeature = "eventSettings___mainStageFeature",
+  eventSettings___polls = "eventSettings___polls",
+  eventSettings___schedule = "eventSettings___schedule",
+  eventSettings___rooms = "eventSettings___rooms",
+  eventSettings___mapLabel = "eventSettings___mapLabel",
+  eventSettings___chat = "eventSettings___chat",
+  eventSettings___allEventsLabel = "eventSettings___allEventsLabel",
+  eventSettings___allEvents = "eventSettings___allEvents",
+  eventSettings___map = "eventSettings___map",
+  eventSettings___chatLabel = "eventSettings___chatLabel",
+  eventSettings___roomsLabel = "eventSettings___roomsLabel",
+  eventSettings___scheduleLabel = "eventSettings___scheduleLabel",
   id = "id",
   parent___id = "parent___id",
   parent___parent___id = "parent___parent___id",
@@ -3230,21 +3319,21 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>
   title?: Maybe<StringQueryOperatorInput>
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>
   templateKey?: Maybe<StringQueryOperatorInput>
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>
   description?: Maybe<StringQueryOperatorInput>
-  siteUrl?: Maybe<StringQueryOperatorInput>
   colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>
+  siteUrl?: Maybe<StringQueryOperatorInput>
   slug?: Maybe<StringQueryOperatorInput>
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBrandingFilterInput>
-  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>
   eventSchedule?: Maybe<MarkdownRemarkFrontmatterEventScheduleFilterListInput>
   eventQA?: Maybe<MarkdownRemarkFrontmatterEventQaFilterListInput>
+  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>
   id?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   children?: Maybe<NodeFilterListInput>
@@ -3268,8 +3357,35 @@ export type MarkdownRemarkFrontmatterGroupConnection = {
   edges: Array<MarkdownRemarkFrontmatterEdge>
   nodes: Array<MarkdownRemarkFrontmatter>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<MarkdownRemarkFrontmatterGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type MarkdownRemarkFrontmatterGroupConnectionDistinctArgs = {
+  field: MarkdownRemarkFrontmatterFieldsEnum
+}
+
+export type MarkdownRemarkFrontmatterGroupConnectionMaxArgs = {
+  field: MarkdownRemarkFrontmatterFieldsEnum
+}
+
+export type MarkdownRemarkFrontmatterGroupConnectionMinArgs = {
+  field: MarkdownRemarkFrontmatterFieldsEnum
+}
+
+export type MarkdownRemarkFrontmatterGroupConnectionSumArgs = {
+  field: MarkdownRemarkFrontmatterFieldsEnum
+}
+
+export type MarkdownRemarkFrontmatterGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: MarkdownRemarkFrontmatterFieldsEnum
 }
 
 export type MarkdownRemarkFrontmatterNecessaryCookies = {
@@ -3329,8 +3445,35 @@ export type MarkdownRemarkGroupConnection = {
   edges: Array<MarkdownRemarkEdge>
   nodes: Array<MarkdownRemark>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<MarkdownRemarkGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type MarkdownRemarkGroupConnectionDistinctArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionMaxArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionMinArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionSumArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: MarkdownRemarkFieldsEnum
 }
 
 export type MarkdownRemarkSortInput = {
@@ -3419,16 +3562,16 @@ export type Query = {
   allSiteFunction: SiteFunctionConnection
   sitePage?: Maybe<SitePage>
   allSitePage: SitePageConnection
+  sitePlugin?: Maybe<SitePlugin>
+  allSitePlugin: SitePluginConnection
+  siteBuildMetadata?: Maybe<SiteBuildMetadata>
+  allSiteBuildMetadata: SiteBuildMetadataConnection
   imageSharp?: Maybe<ImageSharp>
   allImageSharp: ImageSharpConnection
   markdownRemark?: Maybe<MarkdownRemark>
   allMarkdownRemark: MarkdownRemarkConnection
   markdownRemarkFrontmatter?: Maybe<MarkdownRemarkFrontmatter>
   allMarkdownRemarkFrontmatter: MarkdownRemarkFrontmatterConnection
-  sitePlugin?: Maybe<SitePlugin>
-  allSitePlugin: SitePluginConnection
-  siteBuildMetadata?: Maybe<SiteBuildMetadata>
-  allSiteBuildMetadata: SiteBuildMetadataConnection
   eventByLocale?: Maybe<MarkdownRemark>
   eventsByLocale?: Maybe<Array<Maybe<MarkdownRemark>>>
   pageByLocale?: Maybe<MarkdownRemark>
@@ -3599,6 +3742,45 @@ export type QueryAllSitePageArgs = {
   limit?: Maybe<Scalars["Int"]>
 }
 
+export type QuerySitePluginArgs = {
+  resolve?: Maybe<StringQueryOperatorInput>
+  name?: Maybe<StringQueryOperatorInput>
+  version?: Maybe<StringQueryOperatorInput>
+  nodeAPIs?: Maybe<StringQueryOperatorInput>
+  browserAPIs?: Maybe<StringQueryOperatorInput>
+  ssrAPIs?: Maybe<StringQueryOperatorInput>
+  pluginFilepath?: Maybe<StringQueryOperatorInput>
+  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
+  packageJson?: Maybe<SitePluginPackageJsonFilterInput>
+  subPluginPaths?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
+}
+
+export type QueryAllSitePluginArgs = {
+  filter?: Maybe<SitePluginFilterInput>
+  sort?: Maybe<SitePluginSortInput>
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+}
+
+export type QuerySiteBuildMetadataArgs = {
+  buildTime?: Maybe<DateQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
+}
+
+export type QueryAllSiteBuildMetadataArgs = {
+  filter?: Maybe<SiteBuildMetadataFilterInput>
+  sort?: Maybe<SiteBuildMetadataSortInput>
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+}
+
 export type QueryImageSharpArgs = {
   fixed?: Maybe<ImageSharpFixedFilterInput>
   fluid?: Maybe<ImageSharpFluidFilterInput>
@@ -3650,21 +3832,21 @@ export type QueryMarkdownRemarkFrontmatterArgs = {
   eventGraphics?: Maybe<MarkdownRemarkFrontmatterEventGraphicsFilterInput>
   pageGraphics?: Maybe<MarkdownRemarkFrontmatterPageGraphicsFilterInput>
   title?: Maybe<StringQueryOperatorInput>
-  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>
   templateKey?: Maybe<StringQueryOperatorInput>
   cookieNotification?: Maybe<MarkdownRemarkFrontmatterCookieNotificationFilterInput>
   necessaryCookies?: Maybe<MarkdownRemarkFrontmatterNecessaryCookiesFilterInput>
+  analyticsCookies?: Maybe<MarkdownRemarkFrontmatterAnalyticsCookiesFilterInput>
   description?: Maybe<StringQueryOperatorInput>
-  siteUrl?: Maybe<StringQueryOperatorInput>
   colors?: Maybe<MarkdownRemarkFrontmatterColorsFilterInput>
   socialLogin?: Maybe<MarkdownRemarkFrontmatterSocialLoginFilterInput>
+  siteUrl?: Maybe<StringQueryOperatorInput>
   slug?: Maybe<StringQueryOperatorInput>
   pageBranding?: Maybe<MarkdownRemarkFrontmatterPageBrandingFilterInput>
   eventInformation?: Maybe<MarkdownRemarkFrontmatterEventInformationFilterInput>
   eventBranding?: Maybe<MarkdownRemarkFrontmatterEventBrandingFilterInput>
-  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>
   eventSchedule?: Maybe<MarkdownRemarkFrontmatterEventScheduleFilterListInput>
   eventQA?: Maybe<MarkdownRemarkFrontmatterEventQaFilterListInput>
+  eventSettings?: Maybe<MarkdownRemarkFrontmatterEventSettingsFilterInput>
   id?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   children?: Maybe<NodeFilterListInput>
@@ -3674,44 +3856,6 @@ export type QueryMarkdownRemarkFrontmatterArgs = {
 export type QueryAllMarkdownRemarkFrontmatterArgs = {
   filter?: Maybe<MarkdownRemarkFrontmatterFilterInput>
   sort?: Maybe<MarkdownRemarkFrontmatterSortInput>
-  skip?: Maybe<Scalars["Int"]>
-  limit?: Maybe<Scalars["Int"]>
-}
-
-export type QuerySitePluginArgs = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
-  resolve?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
-  nodeAPIs?: Maybe<StringQueryOperatorInput>
-  browserAPIs?: Maybe<StringQueryOperatorInput>
-  ssrAPIs?: Maybe<StringQueryOperatorInput>
-  pluginFilepath?: Maybe<StringQueryOperatorInput>
-  packageJson?: Maybe<SitePluginPackageJsonFilterInput>
-}
-
-export type QueryAllSitePluginArgs = {
-  filter?: Maybe<SitePluginFilterInput>
-  sort?: Maybe<SitePluginSortInput>
-  skip?: Maybe<Scalars["Int"]>
-  limit?: Maybe<Scalars["Int"]>
-}
-
-export type QuerySiteBuildMetadataArgs = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
-  buildTime?: Maybe<DateQueryOperatorInput>
-}
-
-export type QueryAllSiteBuildMetadataArgs = {
-  filter?: Maybe<SiteBuildMetadataFilterInput>
-  sort?: Maybe<SiteBuildMetadataSortInput>
   skip?: Maybe<Scalars["Int"]>
   limit?: Maybe<Scalars["Int"]>
 }
@@ -3763,11 +3907,11 @@ export type SiteBuildTimeArgs = {
 
 export type SiteBuildMetadata = Node & {
   __typename?: "SiteBuildMetadata"
+  buildTime?: Maybe<Scalars["Date"]>
   id: Scalars["ID"]
   parent?: Maybe<Node>
   children: Array<Node>
   internal: Internal
-  buildTime?: Maybe<Scalars["Date"]>
 }
 
 export type SiteBuildMetadataBuildTimeArgs = {
@@ -3820,6 +3964,7 @@ export type SiteBuildMetadataEdge = {
 }
 
 export enum SiteBuildMetadataFieldsEnum {
+  buildTime = "buildTime",
   id = "id",
   parent___id = "parent___id",
   parent___parent___id = "parent___parent___id",
@@ -3906,15 +4051,14 @@ export enum SiteBuildMetadataFieldsEnum {
   internal___mediaType = "internal___mediaType",
   internal___owner = "internal___owner",
   internal___type = "internal___type",
-  buildTime = "buildTime",
 }
 
 export type SiteBuildMetadataFilterInput = {
+  buildTime?: Maybe<DateQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
-  buildTime?: Maybe<DateQueryOperatorInput>
 }
 
 export type SiteBuildMetadataGroupConnection = {
@@ -3923,8 +4067,35 @@ export type SiteBuildMetadataGroupConnection = {
   edges: Array<SiteBuildMetadataEdge>
   nodes: Array<SiteBuildMetadata>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<SiteBuildMetadataGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type SiteBuildMetadataGroupConnectionDistinctArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionMaxArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionMinArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionSumArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: SiteBuildMetadataFieldsEnum
 }
 
 export type SiteBuildMetadataSortInput = {
@@ -4256,8 +4427,35 @@ export type SiteFunctionGroupConnection = {
   edges: Array<SiteFunctionEdge>
   nodes: Array<SiteFunction>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<SiteFunctionGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type SiteFunctionGroupConnectionDistinctArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionMaxArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionMinArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionSumArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: SiteFunctionFieldsEnum
 }
 
 export type SiteFunctionSortInput = {
@@ -4271,8 +4469,35 @@ export type SiteGroupConnection = {
   edges: Array<SiteEdge>
   nodes: Array<Site>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<SiteGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type SiteGroupConnectionDistinctArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionMaxArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionMinArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionSumArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: SiteFieldsEnum
 }
 
 export type SitePage = Node & {
@@ -4364,47 +4589,13 @@ export enum SitePageFieldsEnum {
   componentChunkName = "componentChunkName",
   matchPath = "matchPath",
   isCreatedByStatefulCreatePages = "isCreatedByStatefulCreatePages",
-  pluginCreator___id = "pluginCreator___id",
-  pluginCreator___parent___id = "pluginCreator___parent___id",
-  pluginCreator___parent___parent___id = "pluginCreator___parent___parent___id",
-  pluginCreator___parent___parent___children = "pluginCreator___parent___parent___children",
-  pluginCreator___parent___children = "pluginCreator___parent___children",
-  pluginCreator___parent___children___id = "pluginCreator___parent___children___id",
-  pluginCreator___parent___children___children = "pluginCreator___parent___children___children",
-  pluginCreator___parent___internal___content = "pluginCreator___parent___internal___content",
-  pluginCreator___parent___internal___contentDigest = "pluginCreator___parent___internal___contentDigest",
-  pluginCreator___parent___internal___description = "pluginCreator___parent___internal___description",
-  pluginCreator___parent___internal___fieldOwners = "pluginCreator___parent___internal___fieldOwners",
-  pluginCreator___parent___internal___ignoreType = "pluginCreator___parent___internal___ignoreType",
-  pluginCreator___parent___internal___mediaType = "pluginCreator___parent___internal___mediaType",
-  pluginCreator___parent___internal___owner = "pluginCreator___parent___internal___owner",
-  pluginCreator___parent___internal___type = "pluginCreator___parent___internal___type",
-  pluginCreator___children = "pluginCreator___children",
-  pluginCreator___children___id = "pluginCreator___children___id",
-  pluginCreator___children___parent___id = "pluginCreator___children___parent___id",
-  pluginCreator___children___parent___children = "pluginCreator___children___parent___children",
-  pluginCreator___children___children = "pluginCreator___children___children",
-  pluginCreator___children___children___id = "pluginCreator___children___children___id",
-  pluginCreator___children___children___children = "pluginCreator___children___children___children",
-  pluginCreator___children___internal___content = "pluginCreator___children___internal___content",
-  pluginCreator___children___internal___contentDigest = "pluginCreator___children___internal___contentDigest",
-  pluginCreator___children___internal___description = "pluginCreator___children___internal___description",
-  pluginCreator___children___internal___fieldOwners = "pluginCreator___children___internal___fieldOwners",
-  pluginCreator___children___internal___ignoreType = "pluginCreator___children___internal___ignoreType",
-  pluginCreator___children___internal___mediaType = "pluginCreator___children___internal___mediaType",
-  pluginCreator___children___internal___owner = "pluginCreator___children___internal___owner",
-  pluginCreator___children___internal___type = "pluginCreator___children___internal___type",
-  pluginCreator___internal___content = "pluginCreator___internal___content",
-  pluginCreator___internal___contentDigest = "pluginCreator___internal___contentDigest",
-  pluginCreator___internal___description = "pluginCreator___internal___description",
-  pluginCreator___internal___fieldOwners = "pluginCreator___internal___fieldOwners",
-  pluginCreator___internal___ignoreType = "pluginCreator___internal___ignoreType",
-  pluginCreator___internal___mediaType = "pluginCreator___internal___mediaType",
-  pluginCreator___internal___owner = "pluginCreator___internal___owner",
-  pluginCreator___internal___type = "pluginCreator___internal___type",
   pluginCreator___resolve = "pluginCreator___resolve",
   pluginCreator___name = "pluginCreator___name",
   pluginCreator___version = "pluginCreator___version",
+  pluginCreator___nodeAPIs = "pluginCreator___nodeAPIs",
+  pluginCreator___browserAPIs = "pluginCreator___browserAPIs",
+  pluginCreator___ssrAPIs = "pluginCreator___ssrAPIs",
+  pluginCreator___pluginFilepath = "pluginCreator___pluginFilepath",
   pluginCreator___pluginOptions___plugins = "pluginCreator___pluginOptions___plugins",
   pluginCreator___pluginOptions___plugins___resolve = "pluginCreator___pluginOptions___plugins___resolve",
   pluginCreator___pluginOptions___plugins___id = "pluginCreator___pluginOptions___plugins___id",
@@ -4418,6 +4609,7 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___allExtensions = "pluginCreator___pluginOptions___allExtensions",
   pluginCreator___pluginOptions___modulePath = "pluginCreator___pluginOptions___modulePath",
   pluginCreator___pluginOptions___manualInit = "pluginCreator___pluginOptions___manualInit",
+  pluginCreator___pluginOptions___implementation___info = "pluginCreator___pluginOptions___implementation___info",
   pluginCreator___pluginOptions___sourceMap = "pluginCreator___pluginOptions___sourceMap",
   pluginCreator___pluginOptions___autoLabel = "pluginCreator___pluginOptions___autoLabel",
   pluginCreator___pluginOptions___labelFormat = "pluginCreator___pluginOptions___labelFormat",
@@ -4458,11 +4650,6 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___disableBgImage = "pluginCreator___pluginOptions___disableBgImage",
   pluginCreator___pluginOptions___linkStyles = "pluginCreator___pluginOptions___linkStyles",
   pluginCreator___pluginOptions___pathCheck = "pluginCreator___pluginOptions___pathCheck",
-  pluginCreator___pluginOptions___implementation___info = "pluginCreator___pluginOptions___implementation___info",
-  pluginCreator___nodeAPIs = "pluginCreator___nodeAPIs",
-  pluginCreator___browserAPIs = "pluginCreator___browserAPIs",
-  pluginCreator___ssrAPIs = "pluginCreator___ssrAPIs",
-  pluginCreator___pluginFilepath = "pluginCreator___pluginFilepath",
   pluginCreator___packageJson___name = "pluginCreator___packageJson___name",
   pluginCreator___packageJson___description = "pluginCreator___packageJson___description",
   pluginCreator___packageJson___version = "pluginCreator___packageJson___version",
@@ -4478,6 +4665,45 @@ export enum SitePageFieldsEnum {
   pluginCreator___packageJson___peerDependencies___name = "pluginCreator___packageJson___peerDependencies___name",
   pluginCreator___packageJson___peerDependencies___version = "pluginCreator___packageJson___peerDependencies___version",
   pluginCreator___packageJson___keywords = "pluginCreator___packageJson___keywords",
+  pluginCreator___subPluginPaths = "pluginCreator___subPluginPaths",
+  pluginCreator___id = "pluginCreator___id",
+  pluginCreator___parent___id = "pluginCreator___parent___id",
+  pluginCreator___parent___parent___id = "pluginCreator___parent___parent___id",
+  pluginCreator___parent___parent___children = "pluginCreator___parent___parent___children",
+  pluginCreator___parent___children = "pluginCreator___parent___children",
+  pluginCreator___parent___children___id = "pluginCreator___parent___children___id",
+  pluginCreator___parent___children___children = "pluginCreator___parent___children___children",
+  pluginCreator___parent___internal___content = "pluginCreator___parent___internal___content",
+  pluginCreator___parent___internal___contentDigest = "pluginCreator___parent___internal___contentDigest",
+  pluginCreator___parent___internal___description = "pluginCreator___parent___internal___description",
+  pluginCreator___parent___internal___fieldOwners = "pluginCreator___parent___internal___fieldOwners",
+  pluginCreator___parent___internal___ignoreType = "pluginCreator___parent___internal___ignoreType",
+  pluginCreator___parent___internal___mediaType = "pluginCreator___parent___internal___mediaType",
+  pluginCreator___parent___internal___owner = "pluginCreator___parent___internal___owner",
+  pluginCreator___parent___internal___type = "pluginCreator___parent___internal___type",
+  pluginCreator___children = "pluginCreator___children",
+  pluginCreator___children___id = "pluginCreator___children___id",
+  pluginCreator___children___parent___id = "pluginCreator___children___parent___id",
+  pluginCreator___children___parent___children = "pluginCreator___children___parent___children",
+  pluginCreator___children___children = "pluginCreator___children___children",
+  pluginCreator___children___children___id = "pluginCreator___children___children___id",
+  pluginCreator___children___children___children = "pluginCreator___children___children___children",
+  pluginCreator___children___internal___content = "pluginCreator___children___internal___content",
+  pluginCreator___children___internal___contentDigest = "pluginCreator___children___internal___contentDigest",
+  pluginCreator___children___internal___description = "pluginCreator___children___internal___description",
+  pluginCreator___children___internal___fieldOwners = "pluginCreator___children___internal___fieldOwners",
+  pluginCreator___children___internal___ignoreType = "pluginCreator___children___internal___ignoreType",
+  pluginCreator___children___internal___mediaType = "pluginCreator___children___internal___mediaType",
+  pluginCreator___children___internal___owner = "pluginCreator___children___internal___owner",
+  pluginCreator___children___internal___type = "pluginCreator___children___internal___type",
+  pluginCreator___internal___content = "pluginCreator___internal___content",
+  pluginCreator___internal___contentDigest = "pluginCreator___internal___contentDigest",
+  pluginCreator___internal___description = "pluginCreator___internal___description",
+  pluginCreator___internal___fieldOwners = "pluginCreator___internal___fieldOwners",
+  pluginCreator___internal___ignoreType = "pluginCreator___internal___ignoreType",
+  pluginCreator___internal___mediaType = "pluginCreator___internal___mediaType",
+  pluginCreator___internal___owner = "pluginCreator___internal___owner",
+  pluginCreator___internal___type = "pluginCreator___internal___type",
   pluginCreatorId = "pluginCreatorId",
   id = "id",
   parent___id = "parent___id",
@@ -4597,8 +4823,35 @@ export type SitePageGroupConnection = {
   edges: Array<SitePageEdge>
   nodes: Array<SitePage>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<SitePageGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type SitePageGroupConnectionDistinctArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionMaxArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionMinArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionSumArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: SitePageFieldsEnum
 }
 
 export type SitePageSortInput = {
@@ -4608,19 +4861,20 @@ export type SitePageSortInput = {
 
 export type SitePlugin = Node & {
   __typename?: "SitePlugin"
-  id: Scalars["ID"]
-  parent?: Maybe<Node>
-  children: Array<Node>
-  internal: Internal
   resolve?: Maybe<Scalars["String"]>
   name?: Maybe<Scalars["String"]>
   version?: Maybe<Scalars["String"]>
-  pluginOptions?: Maybe<SitePluginPluginOptions>
   nodeAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
   browserAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
   ssrAPIs?: Maybe<Array<Maybe<Scalars["String"]>>>
   pluginFilepath?: Maybe<Scalars["String"]>
+  pluginOptions?: Maybe<SitePluginPluginOptions>
   packageJson?: Maybe<SitePluginPackageJson>
+  subPluginPaths?: Maybe<Array<Maybe<Scalars["String"]>>>
+  id: Scalars["ID"]
+  parent?: Maybe<Node>
+  children: Array<Node>
+  internal: Internal
 }
 
 export type SitePluginConnection = {
@@ -4666,6 +4920,98 @@ export type SitePluginEdge = {
 }
 
 export enum SitePluginFieldsEnum {
+  resolve = "resolve",
+  name = "name",
+  version = "version",
+  nodeAPIs = "nodeAPIs",
+  browserAPIs = "browserAPIs",
+  ssrAPIs = "ssrAPIs",
+  pluginFilepath = "pluginFilepath",
+  pluginOptions___plugins = "pluginOptions___plugins",
+  pluginOptions___plugins___resolve = "pluginOptions___plugins___resolve",
+  pluginOptions___plugins___id = "pluginOptions___plugins___id",
+  pluginOptions___plugins___name = "pluginOptions___plugins___name",
+  pluginOptions___plugins___version = "pluginOptions___plugins___version",
+  pluginOptions___plugins___pluginOptions___target = "pluginOptions___plugins___pluginOptions___target",
+  pluginOptions___plugins___pluginOptions___rel = "pluginOptions___plugins___pluginOptions___rel",
+  pluginOptions___plugins___pluginOptions___maxWidth = "pluginOptions___plugins___pluginOptions___maxWidth",
+  pluginOptions___plugins___pluginOptions___linkImagesToOriginal = "pluginOptions___plugins___pluginOptions___linkImagesToOriginal",
+  pluginOptions___plugins___pluginOptions___showCaptions = "pluginOptions___plugins___pluginOptions___showCaptions",
+  pluginOptions___plugins___pluginOptions___markdownCaptions = "pluginOptions___plugins___pluginOptions___markdownCaptions",
+  pluginOptions___plugins___pluginOptions___sizeByPixelDensity = "pluginOptions___plugins___pluginOptions___sizeByPixelDensity",
+  pluginOptions___plugins___pluginOptions___backgroundColor = "pluginOptions___plugins___pluginOptions___backgroundColor",
+  pluginOptions___plugins___pluginOptions___quality = "pluginOptions___plugins___pluginOptions___quality",
+  pluginOptions___plugins___pluginOptions___withWebp = "pluginOptions___plugins___pluginOptions___withWebp",
+  pluginOptions___plugins___pluginOptions___tracedSVG = "pluginOptions___plugins___pluginOptions___tracedSVG",
+  pluginOptions___plugins___pluginOptions___loading = "pluginOptions___plugins___pluginOptions___loading",
+  pluginOptions___plugins___pluginOptions___decoding = "pluginOptions___plugins___pluginOptions___decoding",
+  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = "pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha",
+  pluginOptions___plugins___pluginOptions___disableBgImage = "pluginOptions___plugins___pluginOptions___disableBgImage",
+  pluginOptions___plugins___nodeAPIs = "pluginOptions___plugins___nodeAPIs",
+  pluginOptions___plugins___browserAPIs = "pluginOptions___plugins___browserAPIs",
+  pluginOptions___plugins___pluginFilepath = "pluginOptions___plugins___pluginFilepath",
+  pluginOptions___isTSX = "pluginOptions___isTSX",
+  pluginOptions___jsxPragma = "pluginOptions___jsxPragma",
+  pluginOptions___allExtensions = "pluginOptions___allExtensions",
+  pluginOptions___modulePath = "pluginOptions___modulePath",
+  pluginOptions___manualInit = "pluginOptions___manualInit",
+  pluginOptions___implementation___info = "pluginOptions___implementation___info",
+  pluginOptions___sourceMap = "pluginOptions___sourceMap",
+  pluginOptions___autoLabel = "pluginOptions___autoLabel",
+  pluginOptions___labelFormat = "pluginOptions___labelFormat",
+  pluginOptions___cssPropOptimization = "pluginOptions___cssPropOptimization",
+  pluginOptions___pathToConfigModule = "pluginOptions___pathToConfigModule",
+  pluginOptions___omitGoogleFont = "pluginOptions___omitGoogleFont",
+  pluginOptions___devMode = "pluginOptions___devMode",
+  pluginOptions___googleAnalytics___trackingId = "pluginOptions___googleAnalytics___trackingId",
+  pluginOptions___googleAnalytics___cookieName = "pluginOptions___googleAnalytics___cookieName",
+  pluginOptions___googleAnalytics___anonymize = "pluginOptions___googleAnalytics___anonymize",
+  pluginOptions___googleAnalytics___allowAdFeatures = "pluginOptions___googleAnalytics___allowAdFeatures",
+  pluginOptions___googleTagManager___cookieName = "pluginOptions___googleTagManager___cookieName",
+  pluginOptions___googleTagManager___dataLayerName = "pluginOptions___googleTagManager___dataLayerName",
+  pluginOptions___facebookPixel___cookieName = "pluginOptions___facebookPixel___cookieName",
+  pluginOptions___environments = "pluginOptions___environments",
+  pluginOptions___color = "pluginOptions___color",
+  pluginOptions___showSpinner = "pluginOptions___showSpinner",
+  pluginOptions___name = "pluginOptions___name",
+  pluginOptions___path = "pluginOptions___path",
+  pluginOptions___base64Width = "pluginOptions___base64Width",
+  pluginOptions___stripMetadata = "pluginOptions___stripMetadata",
+  pluginOptions___defaultQuality = "pluginOptions___defaultQuality",
+  pluginOptions___failOnError = "pluginOptions___failOnError",
+  pluginOptions___target = "pluginOptions___target",
+  pluginOptions___rel = "pluginOptions___rel",
+  pluginOptions___maxWidth = "pluginOptions___maxWidth",
+  pluginOptions___linkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
+  pluginOptions___showCaptions = "pluginOptions___showCaptions",
+  pluginOptions___markdownCaptions = "pluginOptions___markdownCaptions",
+  pluginOptions___sizeByPixelDensity = "pluginOptions___sizeByPixelDensity",
+  pluginOptions___backgroundColor = "pluginOptions___backgroundColor",
+  pluginOptions___quality = "pluginOptions___quality",
+  pluginOptions___withWebp = "pluginOptions___withWebp",
+  pluginOptions___tracedSVG = "pluginOptions___tracedSVG",
+  pluginOptions___loading = "pluginOptions___loading",
+  pluginOptions___decoding = "pluginOptions___decoding",
+  pluginOptions___disableBgImageOnAlpha = "pluginOptions___disableBgImageOnAlpha",
+  pluginOptions___disableBgImage = "pluginOptions___disableBgImage",
+  pluginOptions___linkStyles = "pluginOptions___linkStyles",
+  pluginOptions___pathCheck = "pluginOptions___pathCheck",
+  packageJson___name = "packageJson___name",
+  packageJson___description = "packageJson___description",
+  packageJson___version = "packageJson___version",
+  packageJson___main = "packageJson___main",
+  packageJson___license = "packageJson___license",
+  packageJson___dependencies = "packageJson___dependencies",
+  packageJson___dependencies___name = "packageJson___dependencies___name",
+  packageJson___dependencies___version = "packageJson___dependencies___version",
+  packageJson___devDependencies = "packageJson___devDependencies",
+  packageJson___devDependencies___name = "packageJson___devDependencies___name",
+  packageJson___devDependencies___version = "packageJson___devDependencies___version",
+  packageJson___peerDependencies = "packageJson___peerDependencies",
+  packageJson___peerDependencies___name = "packageJson___peerDependencies___name",
+  packageJson___peerDependencies___version = "packageJson___peerDependencies___version",
+  packageJson___keywords = "packageJson___keywords",
+  subPluginPaths = "subPluginPaths",
   id = "id",
   parent___id = "parent___id",
   parent___parent___id = "parent___parent___id",
@@ -4752,113 +5098,23 @@ export enum SitePluginFieldsEnum {
   internal___mediaType = "internal___mediaType",
   internal___owner = "internal___owner",
   internal___type = "internal___type",
-  resolve = "resolve",
-  name = "name",
-  version = "version",
-  pluginOptions___plugins = "pluginOptions___plugins",
-  pluginOptions___plugins___resolve = "pluginOptions___plugins___resolve",
-  pluginOptions___plugins___id = "pluginOptions___plugins___id",
-  pluginOptions___plugins___name = "pluginOptions___plugins___name",
-  pluginOptions___plugins___version = "pluginOptions___plugins___version",
-  pluginOptions___plugins___pluginOptions___target = "pluginOptions___plugins___pluginOptions___target",
-  pluginOptions___plugins___pluginOptions___rel = "pluginOptions___plugins___pluginOptions___rel",
-  pluginOptions___plugins___pluginOptions___maxWidth = "pluginOptions___plugins___pluginOptions___maxWidth",
-  pluginOptions___plugins___pluginOptions___linkImagesToOriginal = "pluginOptions___plugins___pluginOptions___linkImagesToOriginal",
-  pluginOptions___plugins___pluginOptions___showCaptions = "pluginOptions___plugins___pluginOptions___showCaptions",
-  pluginOptions___plugins___pluginOptions___markdownCaptions = "pluginOptions___plugins___pluginOptions___markdownCaptions",
-  pluginOptions___plugins___pluginOptions___sizeByPixelDensity = "pluginOptions___plugins___pluginOptions___sizeByPixelDensity",
-  pluginOptions___plugins___pluginOptions___backgroundColor = "pluginOptions___plugins___pluginOptions___backgroundColor",
-  pluginOptions___plugins___pluginOptions___quality = "pluginOptions___plugins___pluginOptions___quality",
-  pluginOptions___plugins___pluginOptions___withWebp = "pluginOptions___plugins___pluginOptions___withWebp",
-  pluginOptions___plugins___pluginOptions___tracedSVG = "pluginOptions___plugins___pluginOptions___tracedSVG",
-  pluginOptions___plugins___pluginOptions___loading = "pluginOptions___plugins___pluginOptions___loading",
-  pluginOptions___plugins___pluginOptions___decoding = "pluginOptions___plugins___pluginOptions___decoding",
-  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = "pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha",
-  pluginOptions___plugins___pluginOptions___disableBgImage = "pluginOptions___plugins___pluginOptions___disableBgImage",
-  pluginOptions___plugins___nodeAPIs = "pluginOptions___plugins___nodeAPIs",
-  pluginOptions___plugins___browserAPIs = "pluginOptions___plugins___browserAPIs",
-  pluginOptions___plugins___pluginFilepath = "pluginOptions___plugins___pluginFilepath",
-  pluginOptions___isTSX = "pluginOptions___isTSX",
-  pluginOptions___jsxPragma = "pluginOptions___jsxPragma",
-  pluginOptions___allExtensions = "pluginOptions___allExtensions",
-  pluginOptions___modulePath = "pluginOptions___modulePath",
-  pluginOptions___manualInit = "pluginOptions___manualInit",
-  pluginOptions___sourceMap = "pluginOptions___sourceMap",
-  pluginOptions___autoLabel = "pluginOptions___autoLabel",
-  pluginOptions___labelFormat = "pluginOptions___labelFormat",
-  pluginOptions___cssPropOptimization = "pluginOptions___cssPropOptimization",
-  pluginOptions___pathToConfigModule = "pluginOptions___pathToConfigModule",
-  pluginOptions___omitGoogleFont = "pluginOptions___omitGoogleFont",
-  pluginOptions___devMode = "pluginOptions___devMode",
-  pluginOptions___googleAnalytics___trackingId = "pluginOptions___googleAnalytics___trackingId",
-  pluginOptions___googleAnalytics___cookieName = "pluginOptions___googleAnalytics___cookieName",
-  pluginOptions___googleAnalytics___anonymize = "pluginOptions___googleAnalytics___anonymize",
-  pluginOptions___googleAnalytics___allowAdFeatures = "pluginOptions___googleAnalytics___allowAdFeatures",
-  pluginOptions___googleTagManager___cookieName = "pluginOptions___googleTagManager___cookieName",
-  pluginOptions___googleTagManager___dataLayerName = "pluginOptions___googleTagManager___dataLayerName",
-  pluginOptions___facebookPixel___cookieName = "pluginOptions___facebookPixel___cookieName",
-  pluginOptions___environments = "pluginOptions___environments",
-  pluginOptions___color = "pluginOptions___color",
-  pluginOptions___showSpinner = "pluginOptions___showSpinner",
-  pluginOptions___name = "pluginOptions___name",
-  pluginOptions___path = "pluginOptions___path",
-  pluginOptions___base64Width = "pluginOptions___base64Width",
-  pluginOptions___stripMetadata = "pluginOptions___stripMetadata",
-  pluginOptions___defaultQuality = "pluginOptions___defaultQuality",
-  pluginOptions___failOnError = "pluginOptions___failOnError",
-  pluginOptions___target = "pluginOptions___target",
-  pluginOptions___rel = "pluginOptions___rel",
-  pluginOptions___maxWidth = "pluginOptions___maxWidth",
-  pluginOptions___linkImagesToOriginal = "pluginOptions___linkImagesToOriginal",
-  pluginOptions___showCaptions = "pluginOptions___showCaptions",
-  pluginOptions___markdownCaptions = "pluginOptions___markdownCaptions",
-  pluginOptions___sizeByPixelDensity = "pluginOptions___sizeByPixelDensity",
-  pluginOptions___backgroundColor = "pluginOptions___backgroundColor",
-  pluginOptions___quality = "pluginOptions___quality",
-  pluginOptions___withWebp = "pluginOptions___withWebp",
-  pluginOptions___tracedSVG = "pluginOptions___tracedSVG",
-  pluginOptions___loading = "pluginOptions___loading",
-  pluginOptions___decoding = "pluginOptions___decoding",
-  pluginOptions___disableBgImageOnAlpha = "pluginOptions___disableBgImageOnAlpha",
-  pluginOptions___disableBgImage = "pluginOptions___disableBgImage",
-  pluginOptions___linkStyles = "pluginOptions___linkStyles",
-  pluginOptions___pathCheck = "pluginOptions___pathCheck",
-  pluginOptions___implementation___info = "pluginOptions___implementation___info",
-  nodeAPIs = "nodeAPIs",
-  browserAPIs = "browserAPIs",
-  ssrAPIs = "ssrAPIs",
-  pluginFilepath = "pluginFilepath",
-  packageJson___name = "packageJson___name",
-  packageJson___description = "packageJson___description",
-  packageJson___version = "packageJson___version",
-  packageJson___main = "packageJson___main",
-  packageJson___license = "packageJson___license",
-  packageJson___dependencies = "packageJson___dependencies",
-  packageJson___dependencies___name = "packageJson___dependencies___name",
-  packageJson___dependencies___version = "packageJson___dependencies___version",
-  packageJson___devDependencies = "packageJson___devDependencies",
-  packageJson___devDependencies___name = "packageJson___devDependencies___name",
-  packageJson___devDependencies___version = "packageJson___devDependencies___version",
-  packageJson___peerDependencies = "packageJson___peerDependencies",
-  packageJson___peerDependencies___name = "packageJson___peerDependencies___name",
-  packageJson___peerDependencies___version = "packageJson___peerDependencies___version",
-  packageJson___keywords = "packageJson___keywords",
 }
 
 export type SitePluginFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
   resolve?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   version?: Maybe<StringQueryOperatorInput>
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
   nodeAPIs?: Maybe<StringQueryOperatorInput>
   browserAPIs?: Maybe<StringQueryOperatorInput>
   ssrAPIs?: Maybe<StringQueryOperatorInput>
   pluginFilepath?: Maybe<StringQueryOperatorInput>
+  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>
+  subPluginPaths?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type SitePluginGroupConnection = {
@@ -4867,8 +5123,35 @@ export type SitePluginGroupConnection = {
   edges: Array<SitePluginEdge>
   nodes: Array<SitePlugin>
   pageInfo: PageInfo
+  distinct: Array<Scalars["String"]>
+  max?: Maybe<Scalars["Float"]>
+  min?: Maybe<Scalars["Float"]>
+  sum?: Maybe<Scalars["Float"]>
+  group: Array<SitePluginGroupConnection>
   field: Scalars["String"]
   fieldValue?: Maybe<Scalars["String"]>
+}
+
+export type SitePluginGroupConnectionDistinctArgs = {
+  field: SitePluginFieldsEnum
+}
+
+export type SitePluginGroupConnectionMaxArgs = {
+  field: SitePluginFieldsEnum
+}
+
+export type SitePluginGroupConnectionMinArgs = {
+  field: SitePluginFieldsEnum
+}
+
+export type SitePluginGroupConnectionSumArgs = {
+  field: SitePluginFieldsEnum
+}
+
+export type SitePluginGroupConnectionGroupArgs = {
+  skip?: Maybe<Scalars["Int"]>
+  limit?: Maybe<Scalars["Int"]>
+  field: SitePluginFieldsEnum
 }
 
 export type SitePluginPackageJson = {
@@ -4949,6 +5232,7 @@ export type SitePluginPluginOptions = {
   allExtensions?: Maybe<Scalars["Boolean"]>
   modulePath?: Maybe<Scalars["String"]>
   manualInit?: Maybe<Scalars["Boolean"]>
+  implementation?: Maybe<SitePluginPluginOptionsImplementation>
   sourceMap?: Maybe<Scalars["Boolean"]>
   autoLabel?: Maybe<Scalars["String"]>
   labelFormat?: Maybe<Scalars["String"]>
@@ -4985,7 +5269,6 @@ export type SitePluginPluginOptions = {
   disableBgImage?: Maybe<Scalars["Boolean"]>
   linkStyles?: Maybe<Scalars["Boolean"]>
   pathCheck?: Maybe<Scalars["Boolean"]>
-  implementation?: Maybe<SitePluginPluginOptionsImplementation>
 }
 
 export type SitePluginPluginOptionsFacebookPixel = {
@@ -5004,6 +5287,7 @@ export type SitePluginPluginOptionsFilterInput = {
   allExtensions?: Maybe<BooleanQueryOperatorInput>
   modulePath?: Maybe<StringQueryOperatorInput>
   manualInit?: Maybe<BooleanQueryOperatorInput>
+  implementation?: Maybe<SitePluginPluginOptionsImplementationFilterInput>
   sourceMap?: Maybe<BooleanQueryOperatorInput>
   autoLabel?: Maybe<StringQueryOperatorInput>
   labelFormat?: Maybe<StringQueryOperatorInput>
@@ -5040,7 +5324,6 @@ export type SitePluginPluginOptionsFilterInput = {
   disableBgImage?: Maybe<BooleanQueryOperatorInput>
   linkStyles?: Maybe<BooleanQueryOperatorInput>
   pathCheck?: Maybe<BooleanQueryOperatorInput>
-  implementation?: Maybe<SitePluginPluginOptionsImplementationFilterInput>
 }
 
 export type SitePluginPluginOptionsGoogleAnalytics = {
@@ -5241,7 +5524,7 @@ export type EventFragmentFragment = { __typename?: "MarkdownRemark" } & Pick<
           eventInformation?: Maybe<
             { __typename?: "MarkdownRemarkFrontmatterEventInformation" } & Pick<
               MarkdownRemarkFrontmatterEventInformation,
-              "livestreamUrl"
+              "videoUrl"
             > & {
                 startTime?: Maybe<
                   {

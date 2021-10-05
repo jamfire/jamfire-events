@@ -31,7 +31,8 @@ export const EventFragment = graphql`
       title
       slug
       eventInformation {
-        livestreamUrl
+        videoUrl
+        presentationMode
         startTime {
           datetime
           timezone

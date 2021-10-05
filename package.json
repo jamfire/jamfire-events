@@ -64,6 +64,7 @@
     "build:conference": "yarn workspace gatsby-starter-jamfire-conference build",
     "serve:conference": "yarn workspace gatsby-starter-jamfire-conference serve",
     "build:datetimezone": "yarn workspace netlify-cms-widget-datetimezone build",
+    "codegen:conference": "yarn workspace gatsby-theme-jamfire-conference codegen",
     "prepare": "is-ci || husky install"
   },
   "config": {
