@@ -4087,12 +4087,10 @@
     "@typescript-eslint/types" "4.28.4"
     eslint-visitor-keys "^2.0.0"
 
-"@vvo/tzdb@^6.7.0":
-  version "6.7.0"
-  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.7.0.tgz#8a553df436a51b8813f75000206b080ad1e4a432"
-  integrity sha512-QBdgMZ9+fmSB/lFHfcjYaE9i43nGvXldzGENAcjFsawGMDUlXI7yZG6JBtPKscB1XFvPQfZ5kBsPzujZQdOr0A==
-  dependencies:
-    luxon "1.26.0"
+"@vvo/tzdb@^6.28.0":
+  version "6.28.0"
+  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.28.0.tgz#562a35ce343c3d547575fd3cbac29e3f642347a0"
+  integrity sha512-nRApJUfYIjng1dxGdHekGY7wGtOcTSBze4zijnSIc9YYuD2r0jnlFMmyMLbh8BHSEW6j0PGVg+LR/rRjQOivGw==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -13272,11 +13270,6 @@ lru-queue@^0.1.0:
   integrity sha1-Jzi9nw089PhEkMVzbEhpmsYyzaM=
   dependencies:
     es5-ext "~0.10.2"
-
-luxon@1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.26.0.tgz#d3692361fda51473948252061d0f8561df02b578"
-  integrity sha512-+V5QIQ5f6CDXQpWNICELwjwuHdqeJM1UenlZWx5ujcRMc9venvluCjFb4t5NYLhb6IhkbMVOxzVuOqkgMxee2A==
 
 luxon@^2.0.0:
   version "2.0.1"
