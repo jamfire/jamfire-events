@@ -4,9 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 0.5rem;
 
   @include tablet-up {
     margin-left: 1rem;
+    margin-right: 0;
   }
 }
 

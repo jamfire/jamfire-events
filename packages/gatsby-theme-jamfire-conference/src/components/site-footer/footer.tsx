@@ -8,7 +8,7 @@ import Copyright from "./copyright"
 // import styles
 import * as styles from "./footer.module.scss"
 
-export const Footer = ({ config, event }: FooterProps) => {
+export const Footer = ({ config }: FooterProps) => {
   return (
     <footer className={styles.footer}>
       <Copyright config={config} />
