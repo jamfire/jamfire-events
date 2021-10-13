@@ -8,9 +8,10 @@
   grid-template-columns: 1fr 80px 60px;
   grid-template-areas: "branding topbar profile";
   grid-gap: 0;
+  background: var(--primary-color);
 
   @include tablet-up {
-    grid-template-columns: 100px 1fr 1fr;
-    grid-template-areas: "profile branding topbar";
+    grid-template-columns: 100px var(--sidebar-width) 2fr 1fr;
+    grid-template-areas: "profile branding event-tracker topbar";
   }
 }
