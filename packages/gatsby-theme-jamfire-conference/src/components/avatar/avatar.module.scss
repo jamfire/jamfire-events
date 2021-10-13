@@ -11,7 +11,7 @@
   @include tablet-up {
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    background: transparent;
+    background: var(--background);
   }
 
   @include desktop {

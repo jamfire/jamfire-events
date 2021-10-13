@@ -81,6 +81,7 @@ export default ({
         headerLogo={headerLogo}
         title={useHeaderTitle ? title : null}
         locale={locale}
+        event={event}
       />
       <Navigation navigation={navigation} config={config} />
       <Main>{children}</Main>
