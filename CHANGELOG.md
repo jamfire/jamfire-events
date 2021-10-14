@@ -1,5 +1,16 @@
 # Changelog
 
+## Updated Dependencies (2021-10-14)
+
+#### :rocket: Enhancement
+
+- `gatsby-theme-jamfire-conference-e2e`, `gatsby-theme-jamfire-conference`, `netlify-cms-widget-datetimezone`
+  - [#296](https://github.com/jamfire/jamfire/pull/296) chore: 🤖 updated deps ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## gatsby-theme-jamfire-conference@1.1.1 (2021-10-14)
 
 #### :rocket: Enhancement
