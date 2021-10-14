@@ -1,6 +1,6 @@
 {
   "name": "netlify-cms-widget-datetimezone",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "DateTime with Timezone Netlify CMS Widget",
   "main": "dist/main.js",
   "author": {
