@@ -8281,10 +8281,10 @@ eslint-module-utils@^2.7.0:
     find-up "^2.1.0"
     pkg-dir "^2.0.0"
 
-eslint-plugin-baseui@^10.4.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-baseui/-/eslint-plugin-baseui-10.4.0.tgz#4ee5a26442f7d07a366b225ea18ea78502ae70c4"
-  integrity sha512-Z2x89BwZjXiLtL/Tr8S2LAhHPWTqQ/2AT+HsdmEaX5AtifrPxCphlWUCllCgjewXBnV/km++7aiccT/q7tgtlg==
+eslint-plugin-baseui@^10.5.0:
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-baseui/-/eslint-plugin-baseui-10.5.0.tgz#c497da9271eed6f1454c8ee65617243f62df12fa"
+  integrity sha512-A2xb6DMYPwJDCDHDL6jYNT+I6N7vYy1qihJHU96cRzj733ZvoSlB08/lwxdTGNR7kFywH68ooWBtmaKC6E1T6Q==
 
 eslint-plugin-flowtype@^5.9.2:
   version "5.10.0"
