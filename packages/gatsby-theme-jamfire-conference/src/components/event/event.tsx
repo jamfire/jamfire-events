@@ -24,6 +24,7 @@ import {
   FaListAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa"
+import navigation from "../site-navigation/navigation"
 
 const isClient = checkIsClient()
 
@@ -57,25 +58,6 @@ export default ({ data, pageContext }: DataProps) => {
   const cookiesData = localizeData(cookies, defaultCookies)
 
   const { locale } = pageContext
-
-  // check against label keys
-  const localizedLabel: (label: string) => boolean = label => {
-    let localize = true
-
-    if (event && typeof event?.frontmatter?.eventSettings !== undefined) {
-      const labels = JSON.parse(
-        JSON.stringify(event?.frontmatter?.eventSettings)
-      )
-      const localizedLabel =
-        Object.entries(labels).find(value => value[0] === label) || ""
-
-      if (localizedLabel?.length > 0) {
-        localize = false
-      }
-    }
-
-    return localize
-  }
 
   const { title, slug, eventSettings, eventGraphics } =
     eventData?.frontmatter || {}
@@ -124,9 +106,7 @@ export default ({ data, pageContext }: DataProps) => {
       enabled: true,
     },
     {
-      title: localizedLabel("mainStageLabel")
-        ? "navigation.mainStage"
-        : eventSettings?.mainStageLabel,
+      title: eventSettings?.mainStageLabel || "navigation.mainStage",
       to: `${basePath}main-stage/`,
       className: "event-mainstage-link",
       icon: <FaVideo />,
@@ -134,9 +114,7 @@ export default ({ data, pageContext }: DataProps) => {
       enabled: eventSettings?.mainStage === true,
     },
     {
-      title: localizedLabel("scheduleLabel")
-        ? "navigation.schedule"
-        : eventSettings?.scheduleLabel,
+      title: eventSettings?.scheduleLabel || "navigation.schedule",
       to: `${basePath}schedule/`,
       className: "event-schedule-link",
       icon: <FaListAlt />,
@@ -145,9 +123,7 @@ export default ({ data, pageContext }: DataProps) => {
         eventSettings?.schedule === true && mainStageFeature !== "schedule",
     },
     {
-      title: localizedLabel("chatLabel")
-        ? "navigation.chat"
-        : eventSettings?.chatLabel,
+      title: eventSettings?.chatLabel || "navigation.chat",
       to: `${basePath}chat/`,
       className: "event-chat-link",
       icon: <FaUserFriends />,
@@ -155,9 +131,7 @@ export default ({ data, pageContext }: DataProps) => {
       enabled: eventSettings?.chat === true && mainStageFeature !== "chat",
     },
     {
-      title: localizedLabel("roomsLabel")
-        ? "navigation.rooms"
-        : eventSettings?.roomsLabel,
+      title: eventSettings?.roomsLabel || "navigation.rooms",
       to: `${basePath}rooms/`,
       className: "event-rooms-link",
       icon: <FaUsers />,
@@ -165,9 +139,7 @@ export default ({ data, pageContext }: DataProps) => {
       enabled: eventSettings?.rooms === true,
     },
     {
-      title: localizedLabel("qaLabel")
-        ? "navigation.qa"
-        : eventSettings?.qaLabel,
+      title: eventSettings?.qaLabel || "navigation.qa",
       to: `${basePath}qa/`,
       className: "event-qa-link",
       icon: <FaQuestion />,
@@ -175,16 +147,14 @@ export default ({ data, pageContext }: DataProps) => {
       enabled: eventSettings?.qa === true,
     },
     // {
-    //   title: localizedLabel("pollsLabel") ? "navigation.polls" : eventSettings.pollsLabel,
+    //   title: eventSettings.pollsLabel || "navigation.polls",
     //   to: `${basePath}polls/`,
     //   icon: <FaPoll />,
     //   partiallyActive: false,
     //   enabled: eventSettings.polls === true,
     // },
     {
-      title: localizedLabel("mapLabel")
-        ? "navigation.map"
-        : eventSettings?.mapLabel,
+      title: eventSettings?.mapLabel || "navigation.map",
       to: `${basePath}map/`,
       className: "event-map-link",
       icon: <FaMapMarkerAlt />,

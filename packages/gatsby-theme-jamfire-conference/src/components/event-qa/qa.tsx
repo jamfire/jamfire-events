@@ -18,11 +18,15 @@ export default ({ config, event, locale }: QAProps) => {
 
   if (!eventQA) return <Missing fontSize={4} />
 
+  const { t } = useTranslation()
+
+  const pageTitle = eventSettings?.qaLabel || t("navigation.qa")
+
   return (
     <List>
       <Seo
         config={config}
-        activeTitle={`${eventSettings?.qaLabel} | ${title}`}
+        activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
       />
       {eventQA &&

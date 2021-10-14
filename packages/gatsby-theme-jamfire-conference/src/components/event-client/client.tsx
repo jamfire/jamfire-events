@@ -30,6 +30,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
               event={event}
               path="/main-stage"
               locale={locale}
+              featured={true}
             />
           )}
           {mainStageFeature === "schedule" && (
@@ -38,6 +39,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
               event={event}
               locale={locale}
               path="/main-stage"
+              featured={true}
             />
           )}
           <Rooms config={config} event={event} locale={locale} path="/rooms" />

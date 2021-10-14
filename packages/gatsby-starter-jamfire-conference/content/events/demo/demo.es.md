@@ -67,6 +67,8 @@ eventRooms:
     description: |
       Sala de conferencias 1 con un gráfico.
     image: pexels-bruno-salvadori-2269872.jpg
+    roomType: jitsi
+    roomLocale: es
 eventQA:
   - question: ¿Dónde puedo acceder a esta conferencia?
     answer: Puede acceder a ella en el escritorio, la tableta y los dispositivos

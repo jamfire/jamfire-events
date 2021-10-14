@@ -8,6 +8,7 @@ export interface ScheduleProps extends RouteComponentProps {
   config: MarkdownRemark | undefined
   event: MarkdownRemark | undefined
   locale: string
+  featured?: boolean
 }
 
 export interface ScheduleItemProps {

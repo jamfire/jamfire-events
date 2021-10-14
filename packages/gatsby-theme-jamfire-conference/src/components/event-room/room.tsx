@@ -50,13 +50,9 @@ export default ({ config, event, locale, user }: RoomProps) => {
   const eventRoom = eventRooms.find(room => room?.slug === match?.room)
 
   // parse date
-  const jsDate = new Date(startTime?.datetime)
-  const luxonDate = DateTime.fromMillis(jsDate.getTime())
-  const yy = luxonDate.year
-  const mm = luxonDate.month
-  const dd = luxonDate.day
+  const luxonDate = DateTime.fromISO(startTime?.datetime)
 
-  const jitsiRoom = `${eventRoom?.slug}-${yy}-${mm}-${dd}`
+  const jitsiRoom = `${eventRoom?.slug}-${luxonDate.toFormat("yyyy LLL dd")}`
 
   const jitsiContainerId = "jitsi-container-id"
 

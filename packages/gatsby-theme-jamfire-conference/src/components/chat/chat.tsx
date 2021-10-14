@@ -2,6 +2,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ChatProps } from "./chat.d"
 import { checkIsClient } from "../../utils/check-is-client"
+import { useTranslation } from "react-i18next"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -12,7 +13,7 @@ import Send from "./send"
 // import styles
 import * as styles from "./chat.module.scss"
 
-export default ({ config, event, locale }: ChatProps) => {
+export default ({ config, event, locale, featured }: ChatProps) => {
   const { id, frontmatter } = event || {}
 
   const { title, eventSettings } = frontmatter || {}
@@ -21,6 +22,8 @@ export default ({ config, event, locale }: ChatProps) => {
   const [mobile, setMobile] = useState(false)
 
   const isClient = checkIsClient()
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (typeof document !== `undefined` && isClient) {
@@ -44,11 +47,18 @@ export default ({ config, event, locale }: ChatProps) => {
     }
   }
 
+  let pageTitle = ""
+  if (featured) {
+    pageTitle = eventSettings?.mainStageLabel || t("navigation.mainStage")
+  } else {
+    pageTitle = eventSettings?.mainStageLabel || t("navigation.chat")
+  }
+
   return (
     <div className={`chat ${styles.chat}`} id="chat">
       <Seo
         config={config}
-        activeTitle={`${eventSettings?.chatLabel} | ${title}`}
+        activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
       />
       <Messages
