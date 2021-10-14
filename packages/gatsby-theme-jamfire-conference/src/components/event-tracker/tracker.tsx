@@ -126,10 +126,7 @@ export default ({ event, locale }: TrackerProps) => {
 
   return (
     <div className={styles.tracker}>
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{ __html: tracker }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: tracker }} />
     </div>
   )
 }

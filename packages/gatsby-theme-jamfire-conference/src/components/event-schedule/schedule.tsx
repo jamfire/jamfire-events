@@ -2,6 +2,7 @@
 import React from "react"
 import { DateTime } from "luxon"
 import { ScheduleProps, ScheduleItemProps } from "./schedule.d"
+import { useTranslation } from "react-i18next"
 
 // import components
 import Seo from "../seo"
@@ -11,16 +12,25 @@ import Missing from "../missing"
 // import styles
 import * as styles from "./schedule.module.scss"
 
-export default ({ config, event, locale }: ScheduleProps) => {
+export default ({ config, event, locale, featured }: ScheduleProps) => {
   const { title, eventSchedule, eventSettings } = event?.frontmatter || {}
 
+  const { t } = useTranslation()
+
   if (!eventSchedule) return <Missing fontSize={4} />
+
+  let pageTitle = ""
+  if (featured) {
+    pageTitle = eventSettings?.scheduleLabel || t("navigation.mainStage")
+  } else {
+    pageTitle = eventSettings?.scheduleLabel || t("navigation.schedule")
+  }
 
   return (
     <List>
       <Seo
         config={config}
-        activeTitle={`${eventSettings?.mainStageLabel} | ${title}`}
+        activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
       />
       {eventSchedule &&

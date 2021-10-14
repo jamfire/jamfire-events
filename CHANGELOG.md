@@ -1,5 +1,16 @@
 # Changelog
 
+## gatsby-theme-jamfire-conference@1.1.1 (2021-10-14)
+
+#### :rocket: Enhancement
+
+- `gatsby-theme-jamfire-conference`
+  - [#285](https://github.com/jamfire/jamfire/pull/285) Updates ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## gatsby-theme-jamfire-conference@1.1.0 (2021-07-21)
 
 #### :rocket: Enhancement

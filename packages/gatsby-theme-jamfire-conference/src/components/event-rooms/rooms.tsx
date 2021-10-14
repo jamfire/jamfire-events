@@ -26,6 +26,8 @@ export default ({ config, event, locale }: RoomsProps) => {
 
   const [activeRooms, setActiveRooms] = useState("")
 
+  const { t } = useTranslation()
+
   // set the room name for search
   const setRoomName = (search: string) => {
     setActiveRooms(search.toLocaleLowerCase())
@@ -48,11 +50,13 @@ export default ({ config, event, locale }: RoomsProps) => {
   // no event rooms
   if (!eventRooms) return <Missing fontSize={4} />
 
+  const pageTitle = eventSettings?.roomsLabel || t("navigation.rooms")
+
   return (
     <List>
       <Seo
         config={config}
-        activeTitle={`${eventSettings?.roomsLabel} | ${title}`}
+        activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
       />
       <ListItem>

@@ -8,6 +8,7 @@ export interface ChatProps extends RouteComponentProps {
   event?: MarkdownRemark
   path?: string
   locale: string
+  featured?: boolean
 }
 
 // message props
