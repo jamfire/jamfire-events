@@ -4,8 +4,10 @@
 
 #### :rocket: Enhancement
 
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
+  - [#295](https://github.com/jamfire/jamfire/pull/295) refactor: 💡 fixed seo room titles & navigation ([@kalebheitzman](https://github.com/kalebheitzman))
 - `gatsby-theme-jamfire-conference`
-  - [#285](https://github.com/jamfire/jamfire/pull/285) Updates ([@kalebheitzman](https://github.com/kalebheitzman))
+  - [#285](https://github.com/jamfire/jamfire/pull/285) event tracker refactor ([@kalebheitzman](https://github.com/kalebheitzman))
 
 #### Committers: 1
 
