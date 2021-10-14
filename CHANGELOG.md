@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (2021-10-14)
+## gatsby-theme-jamfire-conference@1.1.0 (2021-10-14)
 
 #### :rocket: Enhancement
 
