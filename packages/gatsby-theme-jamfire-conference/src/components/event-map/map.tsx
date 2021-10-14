@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next"
 import { useFirestoreQuery } from "../../services"
 import { checkIsClient } from "../../utils/check-is-client"
 import { SetBoundsProps, DataProps } from "./event-map"
-import firebase from "firebase/app"
-import "firebase/firestore"
+import firebase from "firebase/compat/app"
+import "firebase/compat/firestore"
 
 // import components
 import { FirebaseContext } from "../../services"

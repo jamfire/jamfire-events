@@ -1,6 +1,6 @@
 // import libs
 import React, { useState, useContext } from "react"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import { useTranslation } from "react-i18next"
 import { SendProps } from "./chat.d"
 import cx from "classnames"

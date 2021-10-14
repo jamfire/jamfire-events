@@ -5,7 +5,7 @@ import { divIcon } from "leaflet"
 import _ from "lodash"
 import { CoordinatesDataItemProps } from "./event-map.d"
 import { checkIsClient } from "../../utils/check-is-client"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 
 // import components
 import { Marker } from "react-leaflet"

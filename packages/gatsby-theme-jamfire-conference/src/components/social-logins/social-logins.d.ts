@@ -1,4 +1,4 @@
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import { MarkdownRemarkFrontmatterSocialLogin } from "../../gatsby/graphql-types"
 
 // social login props

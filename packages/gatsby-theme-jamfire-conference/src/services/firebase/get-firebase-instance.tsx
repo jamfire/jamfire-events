@@ -1,7 +1,7 @@
 // import libs
-import "firebase/auth"
+import "firebase/compat/auth"
 import { checkIsClient } from "../../utils/check-is-client"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 
 // configuration
 const config = {

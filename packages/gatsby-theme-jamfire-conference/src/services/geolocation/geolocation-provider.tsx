@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from "../../services"
 import { checkIsClient } from "../../utils/check-is-client"
 import { GeolocationProviderProps } from "./geolocation"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 
 // import components
 import { EventContext } from "../event"

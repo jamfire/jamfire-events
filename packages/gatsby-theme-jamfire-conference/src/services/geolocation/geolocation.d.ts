@@ -1,7 +1,7 @@
 // import libs
 import { Dispatch, SetStateAction } from "react"
 import { MarkdownRemark } from "../../gatsby/graphql-types"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import { SitePageContext } from "./graphql-types"
 
 export interface InitialState {
