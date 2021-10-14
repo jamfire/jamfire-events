@@ -1,5 +1,5 @@
 import { MarkdownRemark } from "../../gatsby/graphql-types"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 import { RouteComponentProps } from "@reach/router"
 
 export interface RoomProps extends RouteComponentProps {

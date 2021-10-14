@@ -15,17 +15,9 @@ module.exports = merge(common, {
 		clean: true,
 	},
 	devServer: {
-		contentBase: `./public`,
 		port: 9000,
-		openPage: `#/collections/datetime/entries/datetime`,
-		inline: false,
 		hot: true,
-		clientLogLevel: `info`,
 		compress: true,
-		overlay: {
-			warnings: true,
-			errors: true,
-		},
 	},
 	plugins: [new HtmlWebpackPlugin()],
 });

@@ -1,6 +1,6 @@
 import { RouteComponentProps } from "@reach/router"
 import { MarkdownRemark } from "../../gatsby/graphql-types"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 
 // chat props
 export interface ChatProps extends RouteComponentProps {

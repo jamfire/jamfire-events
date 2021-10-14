@@ -1,7 +1,7 @@
 // import libs
 import React, { useContext } from "react"
-import firebase from "firebase/app"
-import "firebase/auth"
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
 import { useTranslation } from "react-i18next"
 import { LoginProviderProps, SocialLoginProps } from "./social-logins.d"
 import cx from "classnames"

@@ -1,6 +1,6 @@
 import "./bootstrap.js";
-import CMS, { init } from "netlify-cms";
-import "netlify-cms/dist/cms.css";
+import CMS, { init } from "netlify-cms-app";
+// import "netlify-cms-app/dist/cms.css";
 import { DateTimeZoneControl, DateTimeZonePreview } from "../src";
 
 const config = {

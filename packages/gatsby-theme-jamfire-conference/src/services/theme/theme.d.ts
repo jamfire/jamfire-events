@@ -2,7 +2,7 @@ import { ReactNode, Dispatch, SetStateAction } from "react"
 import { NavigationProps } from "../../components/site-navigation/navigation"
 import { SitePageContext } from "../../gatsby/graphql-types"
 import { GeolocationProps } from "../geolocation/geolocation"
-import firebase from "firebase/app"
+import firebase from "firebase/compat/app"
 
 export interface ProviderProps {
   children: ReactNode
