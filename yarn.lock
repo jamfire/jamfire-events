@@ -9464,6 +9464,22 @@ gatsby-core-utils@^2.14.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
+gatsby-core-utils@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.0.0.tgz#5a0fccd9118acb874dd64324fcc3c1b407a5c16e"
+  integrity sha512-MEQAgP+/ddDTOjcfRhyZenLfr6q3nyh01muI6QTgz0qAFsbS50lZh9SbczgpuKnb6qiST1KR0OUIYTaBFXfB2g==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    file-type "^16.5.3"
+    fs-extra "^10.0.0"
+    got "^11.8.2"
+    node-object-hash "^2.3.9"
+    proper-lockfile "^4.1.2"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-cypress@^1.9.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-cypress/-/gatsby-cypress-1.14.0.tgz#1ca63515f40e1f769bef9aa7784a9996e0207265"
@@ -9526,16 +9542,16 @@ gatsby-plugin-emotion@^6.8.0:
     "@babel/runtime" "^7.15.4"
     "@emotion/babel-preset-css-prop" "^11.2.0"
 
-gatsby-plugin-gatsby-cloud@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-3.2.0.tgz#8303d3a7337f621a19689c4a39c3623b634f6c28"
-  integrity sha512-9s6HgwKY1ViLl1Zu5GfEf5lLkSAT2rzieOVnjb7OmId/K1+qzJgpnj2qe+4lMDigfp1hpuDjBmcPJLxfSttHgw==
+gatsby-plugin-gatsby-cloud@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-4.0.0.tgz#2c494b149d3807d87b9b3e7b5b8ee0a90186cc6a"
+  integrity sha512-UwNGp3CIbS4KmyrR9iVxM/gxEWbGip3t1+0y/wuF2zl/I2W+3zwzKotLZfZrRgjzYIYXTp5c9VVa4Afpi+XROw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     date-fns "^2.23.0"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^2.14.0"
-    gatsby-telemetry "^2.14.0"
+    gatsby-core-utils "^3.0.0"
+    gatsby-telemetry "^3.0.0"
     kebab-hash "^0.1.2"
     lodash "^4.17.21"
     webpack-assets-manifest "^5.0.6"
@@ -9857,6 +9873,25 @@ gatsby-telemetry@^2.14.0:
     lodash "^4.17.21"
     node-fetch "^2.6.1"
     uuid "3.4.0"
+
+gatsby-telemetry@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.0.0.tgz#d3ed8c36742942d97b5639f9cc499d5c24921158"
+  integrity sha512-qUFH5B48R0adY3AiEVOGZ0Lu4bOBmuHtAbAdzAMLMlXvIubSfc3VvxyB64jKQfZ3l1FyAIddSHz8i5yKAXekWA==
+  dependencies:
+    "@babel/code-frame" "^7.14.0"
+    "@babel/runtime" "^7.15.4"
+    "@turist/fetch" "^7.1.7"
+    "@turist/time" "^0.0.2"
+    async-retry-ng "^2.0.1"
+    boxen "^4.2.0"
+    configstore "^5.0.1"
+    fs-extra "^10.0.0"
+    gatsby-core-utils "^3.0.0"
+    git-up "^4.0.5"
+    is-docker "^2.2.1"
+    lodash "^4.17.21"
+    node-fetch "^2.6.1"
 
 gatsby-transformer-remark-frontmatter@^1.1.0:
   version "1.1.0"
