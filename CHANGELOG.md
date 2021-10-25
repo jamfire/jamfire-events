@@ -1,5 +1,16 @@
 # Changelog
 
+## Updated translations (2021-10-25)
+
+#### :bug: Bug Fix
+
+- `gatsby-theme-jamfire-conference`
+  - [#330](https://github.com/jamfire/jamfire/pull/330) Translations ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## Updated Dependencies (2021-10-14)
 
 #### :rocket: Enhancement
