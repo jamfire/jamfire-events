@@ -58,7 +58,7 @@
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.22",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^5.5.0",
-    "gatsby-source-filesystem": "^3.8.0",
+    "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-remark-frontmatter": "^1.1.0",
     "gatsby-transformer-sharp": "^3.8.0",
