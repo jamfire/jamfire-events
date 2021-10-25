@@ -76,7 +76,6 @@ export const EventFragment = graphql`
         description
         roomLocale
         roomType
-        roomUrl
         image {
           childImageSharp {
             gatsbyImageData(height: 40, width: 40, layout: FIXED)
