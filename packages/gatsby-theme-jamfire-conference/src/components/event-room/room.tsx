@@ -133,7 +133,7 @@ export default ({ config, event, locale, user }: RoomProps) => {
         "participants-pane",
         "profile",
         "raisehand",
-        // 'recording',
+        "recording",
         // 'security',
         "select-background",
         "settings",
