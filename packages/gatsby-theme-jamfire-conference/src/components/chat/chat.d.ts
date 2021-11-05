@@ -13,7 +13,7 @@ export interface ChatProps extends RouteComponentProps {
 
 // message props
 export interface MessagesProps {
-  event_id?: string
+  event_id?: string | null
   chats: any
   setChats: any
   scrollToBottom: any
@@ -33,17 +33,26 @@ export interface MessageProps {
     user_id: string
     displayName: string
     photoURL: string
+    locale: string
   }
   userId: string | number
   sameSender: boolean
   nextSender: boolean
+  currentLocale: string
 }
 
 // send props
 export interface SendProps {
-  event_id?: string
+  event_id?: string | null
   chats: any
   setChats: any
   scrollToBottom: any
   user: firebase.User | null
+}
+
+// translation props
+export interface TranslationProps {
+  locale: string
+  currentLocale: string
+  message: string
 }

@@ -5,7 +5,6 @@ import loadable from "@loadable/component"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { localizeData } from "../../utils/localized-data"
 import { DataProps } from "../../gatsby/data-props"
-import { checkIsClient } from "../../utils/check-is-client"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -24,9 +23,6 @@ import {
   FaListAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa"
-import navigation from "../site-navigation/navigation"
-
-const isClient = checkIsClient()
 
 // loadable components
 const GeolocationProvider = loadable(

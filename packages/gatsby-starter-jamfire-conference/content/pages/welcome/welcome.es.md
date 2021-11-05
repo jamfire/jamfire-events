@@ -1,4 +1,5 @@
 ---
+templateKey: page
 slug: /
 title: Bienvenido
 pageBranding:

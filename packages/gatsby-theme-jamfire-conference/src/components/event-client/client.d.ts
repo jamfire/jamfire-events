@@ -6,6 +6,8 @@ import { RouteComponentProps } from "@reach/router"
 export interface ClientProps extends RouteComponentProps {
   config?: MarkdownRemark
   event?: MarkdownRemark
+  defaultEventID?: string
   basePath?: string
   locale: string
+  defaultEventID?: string
 }
