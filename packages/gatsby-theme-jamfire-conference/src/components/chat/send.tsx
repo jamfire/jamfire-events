@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react"
 import firebase from "firebase/compat/app"
 import { useTranslation } from "react-i18next"
 import { SendProps } from "./chat.d"
+import { LOCALES } from "../../utils/constants"
 import cx from "classnames"
 
 // import components
@@ -48,11 +49,67 @@ export default ({
       </div>
     )
 
-  const sendMessage = (event: any) => {
+  const getTranslations = async (message: string) => {
+    // get the deepl api key if it exists
+    const authKey = process.env.GATSBY_DEEPL_API_KEY
+    const baseUrl = process.env.GATSBY_DEEPL_BASE_URL
+
+    if (!authKey) return {}
+
+    // build language params
+    const sourceLang = i18n.language
+
+    // get the locales
+    let locales = LOCALES.filter(locale => locale !== sourceLang)
+
+    // build the initial translations object
+    let translations: any = {}
+    LOCALES.forEach(locale => {
+      translations[locale] = ""
+    })
+
+    // set the sourceLang default message
+    translations[sourceLang] = message
+
+    let urls: any = []
+    locales.forEach(locale => {
+      let url = `${baseUrl}/v2/translate?auth_key=${authKey}`
+      url += `&text=${encodeURIComponent(message)}`
+      url += `&target_lang=${locale}`
+      url += `&source_lang=${sourceLang}`
+
+      urls.push(
+        fetch(url).then(res =>
+          res.json().then(data => {
+            return data.translations[0].text
+          })
+        )
+      )
+    })
+
+    return await Promise.all(urls).then(data => {
+      // build the translatedText dataset
+      let translatedText: any = {}
+      locales.forEach((locale, idx) => {
+        translatedText[locale] = data[idx]
+      })
+
+      // add the original translation
+      translatedText[sourceLang] = message
+
+      return translatedText
+    })
+  }
+
+  const sendMessage = async (event: any) => {
+    event.preventDefault()
+
     setDisabled(true)
 
+    const translations = await getTranslations(message)
+
     // build temporary chat
-    const chat = {
+    let chat = {
       created_at: firebase.firestore.Timestamp.now(),
       message: message,
       user_id: user.uid,
@@ -60,6 +117,7 @@ export default ({
       photoURL: user.photoURL,
       event_id: event_id,
       locale: i18n.language,
+      // translations: translations
     }
 
     // set new temporary chats
@@ -77,6 +135,11 @@ export default ({
         setMessage("")
         setDisabled(false)
         scrollToBottom()
+
+        firestore
+          ?.collection("messages")
+          .doc(docRef.id)
+          .update({ translations: translations })
       })
       .catch(error => {
         console.log("Error adding document: ", error)

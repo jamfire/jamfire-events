@@ -34,6 +34,7 @@ export interface MessageProps {
     displayName: string
     photoURL: string
     locale: string
+    translations: string[]
   }
   userId: string | number
   sameSender: boolean
@@ -52,7 +53,6 @@ export interface SendProps {
 
 // translation props
 export interface TranslationProps {
-  locale: string
   currentLocale: string
-  message: string
+  translations: string[]
 }
