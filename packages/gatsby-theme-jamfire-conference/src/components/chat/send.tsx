@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react"
 import firebase from "firebase/compat/app"
 import { useTranslation } from "react-i18next"
 import { SendProps } from "./chat.d"
-import { LOCALES } from "../../utils/constants"
+import { LOCALES, DEEPL_LOCALES } from "../../utils/constants"
 import cx from "classnames"
 
 // import components
@@ -60,7 +60,9 @@ export default ({
     const sourceLang = i18n.language
 
     // get the locales
-    let locales = LOCALES.filter(locale => locale !== sourceLang)
+    let locales = LOCALES.filter(locale => locale !== sourceLang).filter(
+      locale => DEEPL_LOCALES.includes(locale.toUpperCase())
+    )
 
     // build the initial translations object
     let translations: any = {}
