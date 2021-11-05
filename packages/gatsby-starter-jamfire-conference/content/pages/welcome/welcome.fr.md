@@ -1,4 +1,6 @@
 ---
+templateKey: page
+slug: /
 title: Bienvenue
 pageBranding:
   primaryColor: "#2371e3"

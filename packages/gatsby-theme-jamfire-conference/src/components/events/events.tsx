@@ -1,6 +1,6 @@
 // import libs
 import React from "react"
-import { localizeData, localizeEvents } from "../../utils/localized-data"
+import { localizeData } from "../../utils/localized-data"
 import { DataProps } from "../../gatsby/data-props"
 import { useTranslation } from "react-i18next"
 
@@ -22,7 +22,7 @@ export default ({ data, pageContext }: DataProps) => {
     defaultCookies,
   } = data || {}
 
-  const eventsData = localizeEvents(events, defaultEvents)
+  const eventsData = localizeData(events, defaultEvents)
   const configData = localizeData(config, defaultConfig)
   const cookiesData = localizeData(cookies, defaultCookies)
 
