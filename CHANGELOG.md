@@ -1,5 +1,18 @@
 # Changelog
 
+## Localization (2021-11-05)
+
+Chat now features autotranslate with a DeepL API Key and missing languages will use default content.
+
+#### :rocket: Enhancement
+
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
+  - [#366](https://github.com/jamfire/jamfire/pull/366) Localization ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## Updated translations (2021-10-25)
 
 #### :bug: Bug Fix
