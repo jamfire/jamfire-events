@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (2021-11-05)
+## Auto-translate Chat (2021-11-05)
 
 #### :rocket: Enhancement
 
