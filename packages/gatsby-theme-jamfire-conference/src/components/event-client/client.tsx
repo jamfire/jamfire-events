@@ -15,7 +15,13 @@ const Rooms = loadable(() => import("../event-rooms"))
 const Chat = loadable(() => import("../chat"))
 const QA = loadable(() => import("../event-qa"))
 
-export default ({ config, event, basePath, locale }: ClientProps) => {
+export default ({
+  config,
+  event,
+  basePath,
+  locale,
+  defaultEventID,
+}: ClientProps) => {
   const { eventSettings } = event?.frontmatter || {}
 
   const { mainStageFeature } = eventSettings || {}
@@ -31,6 +37,7 @@ export default ({ config, event, basePath, locale }: ClientProps) => {
               path="/main-stage"
               locale={locale}
               featured={true}
+              defaultEventID={defaultEventID}
             />
           )}
           {mainStageFeature === "schedule" && (

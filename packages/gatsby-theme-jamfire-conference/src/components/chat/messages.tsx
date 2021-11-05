@@ -1,6 +1,6 @@
 // import libs
 import React, { useEffect, useState, useContext } from "react"
-import { MessagesProps, MessageProps } from "./chat.d"
+import { MessagesProps, MessageProps, TranslationProps } from "./chat.d"
 import { useFirestoreQuery } from "../../services"
 import { useTranslation } from "react-i18next"
 import { DateTime } from "luxon"
@@ -20,7 +20,9 @@ export default ({
   user,
   event_id,
 }: MessagesProps) => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
+
+  const currentLocale = i18n.language
 
   const { firestore } = useContext(FirebaseContext)
 
@@ -107,6 +109,7 @@ export default ({
               userId={user ? user.uid : 0}
               sameSender={sameSender}
               nextSender={nextSender}
+              currentLocale={currentLocale}
             />
           )
         })}
@@ -116,12 +119,20 @@ export default ({
   )
 }
 
-const Message = ({ item, userId, sameSender, nextSender }: MessageProps) => {
-  const { message, created_at, user_id, displayName, photoURL } = item
+const Message = ({
+  item,
+  userId,
+  sameSender,
+  nextSender,
+  currentLocale,
+}: MessageProps) => {
+  const { message, created_at, user_id, displayName, photoURL, locale } = item
 
   const me = userId === user_id ? "me" : "not-me"
   const first = sameSender ? "not-first" : "first"
   const date = DateTime.fromSeconds(created_at.seconds)
+
+  const authKey = process.env.GATSBY_DEEPL_API_KEY || null
 
   return (
     <li className={cx(styles.message, styles[me], styles[first])}>
@@ -131,7 +142,16 @@ const Message = ({ item, userId, sameSender, nextSender }: MessageProps) => {
         </div>
       )}
       <div className={cx(styles.text, styles[me])}>
-        <span>{message}</span>
+        <span>
+          {message}
+          {locale !== currentLocale && authKey && (
+            <TranslatedMessage
+              locale={locale}
+              currentLocale={currentLocale}
+              message={message}
+            />
+          )}
+        </span>
       </div>
       {!nextSender && me === "me" && (
         <div className={cx(styles.name, styles[me])}>
@@ -147,4 +167,31 @@ const Message = ({ item, userId, sameSender, nextSender }: MessageProps) => {
       )}
     </li>
   )
+}
+
+const TranslatedMessage = ({
+  locale,
+  currentLocale,
+  message,
+}: TranslationProps) => {
+  const authKey = process.env.GATSBY_DEEPL_API_KEY
+
+  if (!authKey) return <></>
+
+  let url = `https://api.deepl.com/v2/translate?auth_key=${authKey}`
+  url += `&text=${encodeURIComponent(message)}`
+  url += `&target_lang=${currentLocale}`
+  url += `&source_lang=${locale}`
+
+  const [translation, setTransation] = useState("...")
+
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        setTransation(data.translations[0].text)
+      })
+  }, [])
+
+  return <div className={styles.translation}>{translation}</div>
 }

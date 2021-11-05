@@ -26,7 +26,7 @@ export default ({
 
   const { firestore } = useContext(FirebaseContext)
 
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   if (!event_id) return <></>
 
@@ -59,6 +59,7 @@ export default ({
       displayName: user.displayName,
       photoURL: user.photoURL,
       event_id: event_id,
+      locale: i18n.language,
     }
 
     // set new temporary chats

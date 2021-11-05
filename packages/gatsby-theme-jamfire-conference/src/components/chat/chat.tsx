@@ -62,14 +62,14 @@ export default ({ config, event, locale, featured }: ChatProps) => {
         locale={locale}
       />
       <Messages
-        event_id={id}
+        event_id={frontmatter?.slug}
         chats={chats}
         setChats={setChats}
         scrollToBottom={scrollToBottom}
         user={user}
       />
       <Send
-        event_id={id}
+        event_id={frontmatter?.slug}
         chats={chats}
         setChats={setChats}
         scrollToBottom={scrollToBottom}
