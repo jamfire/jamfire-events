@@ -34,6 +34,7 @@ export default ({ data, pageContext }: DataProps) => {
       ? pageGraphics?.featuredImage?.childImageSharp?.gatsbyImageData
       : null
 
+  console.log(config, defaultConfig)
   return (
     <Layout
       title={title || ""}
