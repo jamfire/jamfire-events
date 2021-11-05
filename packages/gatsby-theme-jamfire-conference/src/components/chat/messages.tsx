@@ -22,7 +22,7 @@ export default ({
 }: MessagesProps) => {
   const { i18n, t } = useTranslation()
 
-  const currentLocale = i18n.language
+  const currentLocale: string = i18n.language
 
   const { firestore } = useContext(FirebaseContext)
 
@@ -126,13 +126,19 @@ const Message = ({
   nextSender,
   currentLocale,
 }: MessageProps) => {
-  const { message, created_at, user_id, displayName, photoURL, locale } = item
+  const {
+    message,
+    created_at,
+    user_id,
+    displayName,
+    photoURL,
+    locale,
+    translations,
+  } = item
 
   const me = userId === user_id ? "me" : "not-me"
   const first = sameSender ? "not-first" : "first"
   const date = DateTime.fromSeconds(created_at.seconds)
-
-  const authKey = process.env.GATSBY_DEEPL_API_KEY || null
 
   return (
     <li className={cx(styles.message, styles[me], styles[first])}>
@@ -144,11 +150,10 @@ const Message = ({
       <div className={cx(styles.text, styles[me])}>
         <span>
           {message}
-          {locale !== currentLocale && authKey && (
+          {locale !== currentLocale && (
             <TranslatedMessage
-              locale={locale}
               currentLocale={currentLocale}
-              message={message}
+              translations={translations}
             />
           )}
         </span>
@@ -170,28 +175,17 @@ const Message = ({
 }
 
 const TranslatedMessage = ({
-  locale,
   currentLocale,
-  message,
+  translations,
 }: TranslationProps) => {
-  const authKey = process.env.GATSBY_DEEPL_API_KEY
+  try {
+    // @ts-expect-error
+    const translation = translations[currentLocale]
 
-  if (!authKey) return <></>
+    if (!translation) return <></>
 
-  let url = `https://api.deepl.com/v2/translate?auth_key=${authKey}`
-  url += `&text=${encodeURIComponent(message)}`
-  url += `&target_lang=${currentLocale}`
-  url += `&source_lang=${locale}`
-
-  const [translation, setTransation] = useState("...")
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        setTransation(data.translations[0].text)
-      })
-  }, [])
-
-  return <div className={styles.translation}>{translation}</div>
+    return <div className={styles.translation}>{translation}</div>
+  } catch {
+    return <></>
+  }
 }
