@@ -28,13 +28,19 @@ export default ({ cookies, config }: ManageCookiesProps) => {
   const { t } = useTranslation()
 
   // get cookie information
-  const { frontmatter } = cookies
+  const { frontmatter } = cookies || {}
 
   const { necessaryCookies, analyticsCookies } = frontmatter || {}
 
   // set state on load
   useEffect(() => {
     let analyticsEnabled = jamfireGet("analyticsEnabled")
+
+    if (analyticsEnabled === null) {
+      analyticsEnabled = analyticsCookies?.enabled ? "true" : "false"
+    }
+
+    console.log(analyticsEnabled)
     setAnalyticsEnabled(analyticsEnabled === "true" ? true : false) // component state
     setEnableAnalytics(analyticsEnabled === "true" ? true : false) // provider context
     setIsLoading(false)
