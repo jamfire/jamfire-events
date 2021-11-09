@@ -38,10 +38,6 @@ export default ({ cookies, config }: ManageCookiesProps) => {
 
     if (analyticsEnabled === null) {
       analyticsEnabled = analyticsCookies?.enabled ? "true" : "false"
-      jamfireSet(
-        "analyticsEnabled",
-        analyticsEnabled === "true" ? "true" : "false"
-      )
     }
 
     console.log(analyticsEnabled)
