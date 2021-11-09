@@ -28,6 +28,8 @@ const sizeFactor = (size: number) => {
 export default ({ data }: firebase.firestore.DocumentData) => {
   const locations = parseLocations(data)
 
+  console.log(locations)
+
   const isClient = checkIsClient()
 
   if (!isClient) {
