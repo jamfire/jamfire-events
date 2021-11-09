@@ -1,11 +1,13 @@
-import fetch from "node-fetch"
+// import fetch from "node-fetch"
+
+const axios = require("axios").default
 
 export default async function handler(req, res) {
-  let url = "http://ip-api.com/json"
+  const url = "http://ip-api.com/json"
 
   try {
-    const result = await fetch(url).then(res => {
-      return res.json()
+    const result = await axios.get(url).then(res => {
+      return res.data
     })
 
     res.json(result)
