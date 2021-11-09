@@ -8,6 +8,8 @@ export interface InitialState {
   geolocation?: GeolocationProps | null
   geolocationEnabled: boolean
   modal: boolean
+  enableGeolocation?: any
+  toggleModal?: any
 }
 
 export interface GeolocationProviderProps {

@@ -9,11 +9,9 @@ import firebase from "firebase/compat/app"
 import { EventContext } from "../event"
 import { GeolocationContext, initialState } from "./"
 import { FirebaseContext } from "../"
-import GeolocationModal from "./geolocation-modal"
 
 export default ({
   children,
-  config,
   pageContext,
   providerEnabled,
 }: GeolocationProviderProps) => {
@@ -37,6 +35,7 @@ export default ({
   const { firestore, isLoading } = useContext(FirebaseContext)
 
   const geolocationSetting = `enableGeolocation-${pageContext.slug}`
+  const geolocationSettingDocId = `geoId-${pageContext.slug}`
 
   useEffect(() => {
     const geoEnabled = jamfireGet(geolocationSetting)
@@ -48,6 +47,11 @@ export default ({
   }, [])
 
   useEffect(() => {
+    const geolocationDocId = jamfireGet(geolocationSettingDocId)
+    if (geolocationDocId) {
+      return
+    }
+
     if (isClient && !isLoading && geolocation === null && geolocationEnabled) {
       let url = "/api/gatsby-theme-jamfire-conference/lookup"
 
@@ -70,6 +74,7 @@ export default ({
               .add(geolocationData)
               .then(docRef => {
                 console.log("Document written with ID: ", docRef.id)
+                jamfireSet(geolocationSettingDocId, docRef.id)
               })
               .catch(error => {
                 console.log("Error adding document: ", error)
@@ -87,8 +92,20 @@ export default ({
 
   // enable geolocation
   const enableGeolocation: (enable: boolean) => void = enable => {
+    console.log("geolocation enabled: ", enable)
     setGeolocationEnabled(enable)
     jamfireSet(geolocationSetting, enable ? "true" : "false")
+    // remove the geolocationSettingDocId
+    if (!enable) {
+      setGeolocation(null)
+      // delete the id from firebase
+      const docId = jamfireGet(geolocationSettingDocId)
+      if (docId) {
+        firestore?.collection("geolocation").doc(docId).delete()
+      }
+      // remove the id from localstorage
+      jamfireSet(geolocationSettingDocId, "")
+    }
     toggleModal(false)
   }
 
@@ -98,14 +115,16 @@ export default ({
         geolocation,
         geolocationEnabled,
         modal,
+        toggleModal,
+        enableGeolocation,
       }}
     >
-      <GeolocationModal
+      {/* <GeolocationModal
         config={config}
         isActive={modal}
         setIsActive={toggleModal}
         enableGeolocation={enableGeolocation}
-      />
+      /> */}
       {children}
     </GeolocationContext.Provider>
   )
