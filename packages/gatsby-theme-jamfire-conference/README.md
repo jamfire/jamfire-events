@@ -38,9 +38,6 @@ GATSBY_FIREBASE_MESSAGING_SENDER_ID=
 GATSBY_FIREBASE_APP_ID=
 GATSBY_FIREBASE_MEASUREMENT_ID=
 
-# geolocation api key
-GATSBY_GEOLOCATION_API_KEY=
-
 # optional analytics
 GATSBY_GOOGLE_ANALYTICS_TRACKING_ID=
 GATSBY_GOOGLE_TAG_MANAGER_TRACKING_ID=
@@ -49,6 +46,10 @@ GATSBY_FACEBOOK_PIXEL_ID=
 # optional locales
 GATSBY_DEFAULT_LOCALE=en
 GATSBY_LOCALES=en,bg,cs,da,de,el,es,et,fi,fr,hu,it,ja,lt,lv,nl,pl,pt,ro,ru,sk,sl,sv,zh
+
+# deepl api key for automated chat translation
+GATSBY_DEEPL_API_KEY=
+GATSBY_DEEPL_BASE_URL=https://api.deepl.com
 ```
 
 ## Firebase Configuration
@@ -83,16 +84,6 @@ service cloud.firestore {
     }
   }
 }
-```
-
-## Rapid API KEY
-
-This theme uses RapidAPI to retreive location information for the Event Guest Map. You need to signup for a free RapidAPI account and retrieve your key from the [WeatherAPI integration.](https://rapidapi.com/weatherapi/api/weatherapi-com/)
-
-Put this key in the following env var:
-
-```
-GATSBY_RAPID_API_KEY=
 ```
 
 ## Theme Configuration
