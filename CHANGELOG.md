@@ -1,11 +1,13 @@
 # Changelog
 
-## Geolocation Gatsby Function (2021-11-09)
-
-Adds Geolocation Gatsby Function for decoding IP addresses.
+## Bug Fixes and Enhancements to the general theme (2021-11-09)
 
 #### :rocket: Enhancement
 
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
+  - [#388](https://github.com/jamfire/jamfire/pull/388) Analytics ([@kalebheitzman](https://github.com/kalebheitzman))
+- `gatsby-theme-jamfire-conference`
+  - [#387](https://github.com/jamfire/jamfire/pull/387) feat: 🎸 refactored geolocation modal ([@kalebheitzman](https://github.com/kalebheitzman))
 - `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
   - [#382](https://github.com/jamfire/jamfire/pull/382) Map & Geolocation ([@kalebheitzman](https://github.com/kalebheitzman))
 
