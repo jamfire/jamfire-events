@@ -65,9 +65,10 @@ export default ({ config, event, locale }: MapProps) => {
       coords.push([lat, lon])
     })
 
-    const newBounds = new LatLngBounds(coords)
-
-    setBounds(newBounds)
+    if (coords.length > 0) {
+      const newBounds = new LatLngBounds(coords).pad(0.1)
+      setBounds(newBounds)
+    }
   }, [data])
 
   // if loading or an error display the loader

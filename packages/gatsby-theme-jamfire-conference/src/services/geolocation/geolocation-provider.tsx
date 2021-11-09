@@ -49,13 +49,9 @@ export default ({
 
   useEffect(() => {
     if (isClient && !isLoading && geolocation === null && geolocationEnabled) {
-      let url = "https://weatherapi-com.p.rapidapi.com/ip.json?q=auto:ip"
+      let url = "/api/gatsby-theme-jamfire-conference/lookup"
 
-      let headers = new Headers()
-      headers.append("x-rapidapi-key", `${process.env.GATSBY_RAPID_API_KEY}`)
-      headers.append("x-rapidapi-host", "weatherapi-com.p.rapidapi.com")
-
-      fetch(url, { method: "GET", headers: headers })
+      fetch(url)
         .then(res => res.json())
         .then(response => {
           const geolocationData = {
@@ -63,7 +59,7 @@ export default ({
             slug: pageContext.slug,
             lat: response.lat,
             lon: response.lon,
-            key: response.geoname_id,
+            key: `${response.countryCode}_${response.region}_${response.city}`.toLocaleLowerCase(),
           }
 
           setGeolocation(geolocationData)
