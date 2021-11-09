@@ -1,12 +1,12 @@
-// import fetch from "node-fetch"
-
 const axios = require("axios").default
+const RequestIp = require("@supercharge/request-ip")
 
 export default async function handler(req, res) {
-  const url = "http://ip-api.com/json"
+  const url = "http://ip-api.com/json/"
+  const ip = RequestIp.getClientIp(req)
 
   try {
-    const result = await axios.get(url).then(res => {
+    const result = await axios.get(`${url}${ip}`).then(res => {
       return res.data
     })
 

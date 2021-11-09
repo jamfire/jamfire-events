@@ -54,25 +54,29 @@ export default ({
       fetch(url)
         .then(res => res.json())
         .then(response => {
-          const geolocationData = {
-            created_at: firebase.firestore.Timestamp.now(),
-            slug: pageContext.slug,
-            lat: response.lat,
-            lon: response.lon,
-            key: `${response.countryCode}_${response.region}_${response.city}`.toLocaleLowerCase(),
+          if (response.status !== "fail") {
+            const geolocationData = {
+              created_at: firebase.firestore.Timestamp.now(),
+              slug: pageContext.slug,
+              lat: response.lat,
+              lon: response.lon,
+              key: `${response.countryCode}_${response.region}_${response.city}`.toLocaleLowerCase(),
+            }
+
+            setGeolocation(geolocationData)
+
+            firestore
+              ?.collection("geolocation")
+              .add(geolocationData)
+              .then(docRef => {
+                console.log("Document written with ID: ", docRef.id)
+              })
+              .catch(error => {
+                console.log("Error adding document: ", error)
+              })
+          } else {
+            setGeolocation(null)
           }
-
-          setGeolocation(geolocationData)
-
-          firestore
-            ?.collection("geolocation")
-            .add(geolocationData)
-            .then(docRef => {
-              console.log("Document written with ID: ", docRef.id)
-            })
-            .catch(error => {
-              console.log("Error adding document: ", error)
-            })
         })
         .catch(error => {
           console.log(error)
