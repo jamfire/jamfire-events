@@ -4,3 +4,6 @@
 
 [dev]
     command = "gatsby develop"
+
+[[plugins]]
+    package = "@netlify/plugin-gatsby"
