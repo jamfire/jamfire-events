@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "home": "itthon",
+    "home": "Főoldal",
     "allEvents": "Minden esemény",
     "lobby": "Előcsarnok",
     "mainStage": "Nagyszínpad",
@@ -15,12 +15,12 @@
   "regions": {
     "cookiesNotice": "Cookie értesítés",
     "topbar": "Felhasználói interakció",
-    "localSwitcher": "Kapcsolja be a Nyelv beállítást",
+    "localSwitcher": "Nyelvi beállítások",
     "login": "Bejelentkezés",
     "dashboard": "Felhasználói irányítópult",
     "featuredImage": "Kiemelt kép",
     "avatarImage": "Felhasználói kép",
-    "localeSwitcher": "Válassza a Nyelv lehetőséget"
+    "localeSwitcher": "Válassza ki a nyelvet"
   },
   "auth": {
     "login": "Belépés",
@@ -34,15 +34,15 @@
     "passwordConfirm": "Jelszó megerősítése",
     "passwordShort": "A jelszó túl rövid",
     "passwordRequired": "Jelszó szükséges",
-    "passwordMatch": "a jelszavaknak egyezniük kell",
+    "passwordMatch": "A jelszavaknak egyezniük kell",
     "register": "Regisztráció",
-    "registerAccount": "Regisztráljon egy fiókhoz",
+    "registerAccount": "Regisztráljon egy fiókot",
     "existingAccount": "Már van fiókja?"
   },
   "buttons": {
     "yes": "Igen",
-    "confirm": "megerősít",
-    "cancel": "Megszünteti",
+    "confirm": "Megerősít",
+    "cancel": "Mégsem",
     "join": "Csatlakozik"
   },
   "cookies": {
@@ -50,10 +50,10 @@
     "preferences": "Cookie-beállítások",
     "accept": "Elfogad",
     "manage": "Kezelés",
-    "confirm": "megerősít"
+    "confirm": "Megerősít"
   },
   "credit": {
-    "get": "Szerezd meg a Jamfire konferenciát"
+    "get": "Szerezd meg a Jamfire Conference-t"
   },
   "dashboard": {
     "title": "Irányítópult",
@@ -72,16 +72,16 @@
     "feb": "február",
     "mar": "március",
     "apr": "április",
-    "may": "Lehet",
+    "may": "május",
     "jun": "június",
     "jul": "július",
     "aug": "augusztus",
     "sep": "szeptember",
     "oct": "október",
     "nov": "november",
-    "dec": "Decmeber",
-    "am": "AM",
-    "pm": "DÉLUTÁN"
+    "dec": "decmeber",
+    "am": "délelőtt",
+    "pm": "délután"
   },
   "event": {
     "lobby": {
@@ -104,8 +104,8 @@
     },
     "rooms": {
       "title": "Elhagyja a szobát?",
-      "confirm": "megerősít",
-      "alert": "Jelenleg videokonferencia teremben van. Biztosan el akarsz menni?"
+      "confirm": "Megerősít",
+      "alert": "Jelenleg videokonferencia teremben vagy. Biztosan ki akarsz lépni?"
     },
     "tracker": {
       "starts": "Indul",
@@ -116,7 +116,7 @@
       "day": "Nap",
       "hour": "Óra",
       "minute": "Perc",
-      "second": "Második"
+      "second": "Másodperc"
     }
   },
   "error": {
@@ -128,8 +128,8 @@
   "geolocation": {
     "title": "Engedélyezi a helymeghatározást?",
     "content": "Szeretné engedélyezni tartózkodási helyét a vendégtérképen?",
-    "enable": "Engedélyezze",
-    "deny": "Tagadni"
+    "enable": "Igen, engedélyezem",
+    "deny": "Nem engedélyezem"
   },
   "locale": {
     "selectorTitle": "Válasszon nyelvet",
@@ -143,14 +143,14 @@
       "es": "spanyol",
       "et": "észt",
       "fi": "finn",
-      "fr": "Francia",
-      "hu": "Magyar",
+      "fr": "francia",
+      "hu": "magyar",
       "it": "olasz",
       "ja": "japán",
       "lt": "litván",
       "lv": "lett",
       "nl": "holland",
-      "pl": "fényesít",
+      "pl": "lengyel",
       "pt": "portugál",
       "ro": "román",
       "ru": "orosz",

@@ -1,26 +1,26 @@
 {
   "navigation": {
     "home": "Acasă",
-    "allEvents": "Toate evenimentele",
+    "allEvents": "Toate Evenimentele",
     "lobby": "Lobby",
-    "mainStage": "Etapa principală",
+    "mainStage": "Scena Principală",
     "rooms": "Camere",
-    "qa": "Întrebări și răspunsuri",
-    "chat": "conversație",
-    "schedule": "Programa",
+    "qa": "Întrebări și Răspunsuri",
+    "chat": "Conversație",
+    "schedule": "Orar",
     "polls": "Sondaje",
     "map": "Participanți",
-    "toggleMenu": "Comutați la meniu"
+    "toggleMenu": "Comutare Meniu"
   },
   "regions": {
     "cookiesNotice": "Notificare cookie-uri",
-    "topbar": "Interacțiunea cu utilizatorul",
-    "localSwitcher": "Toggle Locale",
-    "login": "Logare utilizator",
-    "dashboard": "Tabloul de bord al utilizatorului",
-    "featuredImage": "Imagine prezentată",
-    "avatarImage": "Imagine utilizator",
-    "localeSwitcher": "Selectați Locale"
+    "topbar": "Interacțiune cu utilizatorul",
+    "localSwitcher": "Comutare Localizare",
+    "login": "Autentificare Utilizator",
+    "dashboard": "Tabloul de Bord al Utilizatorului",
+    "featuredImage": "Imagine Prezentată",
+    "avatarImage": "Imagine Utilizator",
+    "localeSwitcher": "Selectați Localizare"
   },
   "auth": {
     "login": "Autentificare",
@@ -29,59 +29,59 @@
     "logout": "Deconectați-vă",
     "email": "E-mail",
     "emailInvalid": "E-mail invalid",
-    "emailRequired": "E-mailul este obligatoriu",
+    "emailRequired": "E-mailul este necesar",
     "password": "Parola",
-    "passwordConfirm": "Confirmă parola",
+    "passwordConfirm": "Confirmați parola",
     "passwordShort": "Parola este prea scurtă",
-    "passwordRequired": "Parola este necesara",
-    "passwordMatch": "Parolele trebuie să se potrtivească",
-    "register": "Inregistreaza-te",
+    "passwordRequired": "Parola este necesară",
+    "passwordMatch": "Parolele trebuie să se potrivească",
+    "register": "Inregistrați-vă",
     "registerAccount": "Înregistrați-vă pentru un cont",
-    "existingAccount": "ai deja un cont?"
+    "existingAccount": "Aveți deja un cont?"
   },
   "buttons": {
     "yes": "da",
-    "confirm": "A confirma",
-    "cancel": "Anulare",
-    "join": "A te alatura"
+    "confirm": "Confirmă",
+    "cancel": "Anulează",
+    "join": "Intră"
   },
   "cookies": {
-    "notice": "Notificare cookie-uri",
-    "preferences": "Preferințe cookie",
-    "accept": "Accept",
-    "manage": "Administra",
-    "confirm": "A confirma"
+    "notice": "Notificare Cookie-uri",
+    "preferences": "Preferințe Cookie",
+    "accept": "Acceptă",
+    "manage": "Gestionează",
+    "confirm": "Confirmă"
   },
   "credit": {
-    "get": "Ia Jamfire Conference"
+    "get": "Ia Conferința Jamfire"
   },
   "dashboard": {
-    "title": "Bord",
-    "hello": "Buna ziua",
+    "title": "Tablou de Bord",
+    "hello": "Bună ziua",
     "cookies": "Gestionați preferințele cookie-urilor"
   },
   "dates": {
-    "mon": "luni",
-    "tue": "marţi",
-    "wed": "miercuri",
-    "thu": "joi",
-    "fri": "vineri",
-    "sat": "sâmbătă",
-    "sun": "duminică",
-    "jan": "ianuarie",
-    "feb": "februarie",
+    "mon": "Luni",
+    "tue": "Marţi",
+    "wed": "Miercuri",
+    "thu": "Joi",
+    "fri": "Vineri",
+    "sat": "Sâmbătă",
+    "sun": "Duminică",
+    "jan": "Ianuarie",
+    "feb": "Februarie",
     "mar": "Martie",
     "apr": "Aprilie",
     "may": "Mai",
-    "jun": "iunie",
-    "jul": "iulie",
+    "jun": "Iunie",
+    "jul": "Iulie",
     "aug": "August",
     "sep": "Septembrie",
-    "oct": "octombrie",
-    "nov": "noiembrie",
-    "dec": "Decmeber",
-    "am": "A.M",
-    "pm": "P.M"
+    "oct": "Octombrie",
+    "nov": "Noiembrie",
+    "dec": "Decembrie",
+    "am": "AM",
+    "pm": "PM"
   },
   "event": {
     "lobby": {
@@ -90,10 +90,10 @@
     },
     "chat": {
       "login": "Conectați-vă pentru a conversa",
-      "beTheFirst": "Fii primul care discută!",
+      "beTheFirst": "Fiți primul care spune!",
       "message": "Mesaj...",
       "send": "Trimite",
-      "error": "A aparut o eroare. Vă rugăm să încercați din nou mai târziu."
+      "error": "A apărut o eroare. Vă rugăm să încercați din nou mai târziu."
     },
     "menu": {
       "label": "Afișați meniul"
@@ -103,24 +103,24 @@
       "answer": "Răspuns"
     },
     "rooms": {
-      "title": "Paraseste camera?",
-      "confirm": "A confirma",
-      "alert": "În prezent vă aflați într-o sală de videoconferință. Esti sigur ca vrei sa pleci?"
+      "title": "Părăsiți camera?",
+      "confirm": "Confirmați",
+      "alert": "În prezent vă aflați într-o sală de videoconferință. Sigur doriți să plecați?"
     },
     "tracker": {
       "starts": "Începe",
-      "eventEnd": "Sfârșitul evenimentului",
+      "eventEnd": "Sfârșitul Evenimentului",
       "eventEnded": "Acest eveniment s-a încheiat.",
-      "current": "Actual",
+      "current": "Curent",
       "next": "Următorul",
       "day": "Zi",
-      "hour": "Ora",
+      "hour": "Oră",
       "minute": "Minut",
       "second": "Al doilea"
     }
   },
   "error": {
-    "pageNotFound": "Pagina nu a fost gasita."
+    "pageNotFound": "Pagina nu a fost găsită."
   },
   "form": {
     "placeholderSearch": "Căutare..."
@@ -128,37 +128,37 @@
   "geolocation": {
     "title": "Activați geolocalizarea?",
     "content": "Doriți să vă activați locația pe harta oaspeților?",
-    "enable": "Permite",
-    "deny": "Nega"
+    "enable": "Activează",
+    "deny": "Refuză"
   },
   "locale": {
     "selectorTitle": "Selectați o limbă",
     "codes": {
       "bg": "bulgară",
-      "cs": "ceh",
-      "da": "danez",
-      "de": "limba germana",
-      "el": "Greacă",
-      "en": "Engleză",
-      "es": "Spaniolă",
+      "cs": "cehă",
+      "da": "daneză",
+      "de": "germană",
+      "el": "greacă",
+      "en": "engleză",
+      "es": "spaniolă",
       "et": "Estonă",
       "fi": "finlandeză",
-      "fr": "limba franceza",
-      "hu": "Maghiară",
-      "it": "Italiană",
+      "fr": "franceză",
+      "hu": "maghiară",
+      "it": "italiană",
       "ja": "japonez",
-      "lt": "lituanian",
-      "lv": "Letonă",
-      "nl": "Olandeză",
-      "pl": "Lustrui",
-      "pt": "Portugheză",
-      "ro": "Română",
-      "ru": "Rusă",
-      "sk": "Slovacă",
-      "sl": "Slovenă",
-      "sv": "suedez",
-      "tr": "turc",
-      "zh": "chinez"
+      "lt": "lituaniană",
+      "lv": "letonă",
+      "nl": "olandeză",
+      "pl": "poloneză",
+      "pt": "portugheză",
+      "ro": "română",
+      "ru": "rusă",
+      "sk": "slovacă",
+      "sl": "slovenă",
+      "sv": "suedeză",
+      "tr": "turcă",
+      "zh": "chineză"
     }
   }
 }
