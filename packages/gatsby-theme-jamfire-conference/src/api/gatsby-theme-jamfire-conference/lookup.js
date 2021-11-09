@@ -1,10 +1,6 @@
-import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
 import fetch from "node-fetch"
 
-export default async function handler(
-  req: GatsbyFunctionRequest,
-  res: GatsbyFunctionResponse
-) {
+export default async function handler(req, res) {
   let url = "http://ip-api.com/json"
 
   try {
