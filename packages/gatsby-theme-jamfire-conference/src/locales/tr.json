@@ -2,55 +2,55 @@
   "navigation": {
     "home": "Ev",
     "allEvents": "Tüm Etkinlikler",
-    "lobby": "lobi",
-    "mainStage": "Ana sahne",
+    "lobby": "Lobi",
+    "mainStage": "Ana Sahne",
     "rooms": "Odalar",
     "qa": "Soru-Cevap",
     "chat": "Sohbet",
     "schedule": "program",
     "polls": "anketler",
     "map": "katılımcılar",
-    "toggleMenu": "Menüyü Aç/Kapat"
+    "toggleMenu": "Geçiş Menüsü"
   },
   "regions": {
     "cookiesNotice": "Çerez Bildirimi",
-    "topbar": "Kullanıcı etkileşimi",
-    "localSwitcher": "Yerel Ayarı Aç/Kapat",
+    "topbar": "Üst Çubuk",
+    "localSwitcher": "Yerel Anahtarlayıcı",
     "login": "Kullanıcı Girişi",
     "dashboard": "Kullanıcı Kontrol Paneli",
-    "featuredImage": "Özellikli resim",
+    "featuredImage": "Özellikli Resim",
     "avatarImage": "Kullanıcı Resmi",
-    "localeSwitcher": "Yerel Ayar Seçin"
+    "localeSwitcher": "Yerel Ayar Değiştirici"
   },
   "auth": {
-    "login": "Oturum aç",
+    "login": "Oturum Aç",
     "loginSocial": "Bir sosyal hesapla giriş yapın",
     "loginEmail": "E-posta ve şifre ile giriş yapın",
     "logout": "Çıkış Yap",
     "email": "E-posta",
-    "emailInvalid": "Geçersiz e-posta",
-    "emailRequired": "Email gereklidir",
-    "password": "Parola",
+    "emailInvalid": "Geçersiz E-posta",
+    "emailRequired": "E-posta gereklidir",
+    "password": "Şifre",
     "passwordConfirm": "Şifreyi Onayla",
-    "passwordShort": "Şifre çok kısa",
-    "passwordRequired": "Şifre gereklidir",
-    "passwordMatch": "Şifreler aynı olmalıdır",
-    "register": "Kayıt ol",
-    "registerAccount": "Bir hesap için kaydolun",
-    "existingAccount": "Zaten hesabınız var mı?"
+    "passwordShort": "Şifre Çok Kısa",
+    "passwordRequired": "Şifre Gereklidir",
+    "passwordMatch": "Şifreler Aynı Olmalıdır",
+    "register": "Kayıt Ol",
+    "registerAccount": "Bir Hesap İçin Kaydolun",
+    "existingAccount": "Zaten Hesabınız Var Mı?"
   },
   "buttons": {
     "yes": "Evet",
-    "confirm": "Onaylamak",
-    "cancel": "İptal etmek",
-    "join": "Katılmak"
+    "confirm": "Onayla",
+    "cancel": "İptal Et",
+    "join": "Katıl"
   },
   "cookies": {
     "notice": "Çerez Bildirimi",
     "preferences": "Çerez Tercihleri",
-    "accept": "Kabul etmek",
+    "accept": "Kabul Et",
     "manage": "Yönet",
-    "confirm": "Onaylamak"
+    "confirm": "Onayla"
   },
   "credit": {
     "get": "Jamfire Konferansını Alın"
@@ -104,19 +104,19 @@
     },
     "rooms": {
       "title": "Odayı terket?",
-      "confirm": "Onaylamak",
+      "confirm": "Onayla",
       "alert": "Şu anda bir video konferans odasındasınız. Ayrılmak istediğinden emin misin?"
     },
     "tracker": {
       "starts": "başlar",
       "eventEnd": "Etkinlik Sonu",
       "eventEnded": "Bu etkinlik sona erdi.",
-      "current": "mevcut",
+      "current": "Mevcut",
       "next": "Sonraki",
       "day": "Gün",
       "hour": "Saat",
       "minute": "Dakika",
-      "second": "İkinci"
+      "second": "Saniye"
     }
   },
   "error": {
@@ -128,36 +128,36 @@
   "geolocation": {
     "title": "Coğrafi Konum Etkinleştirilsin mi?",
     "content": "Konuk haritasında konumunuzu etkinleştirmek ister misiniz?",
-    "enable": "etkinleştirme",
-    "deny": "Reddetmek"
+    "enable": "Etkinleştir",
+    "deny": "Reddet"
   },
   "locale": {
     "selectorTitle": "Bir dil seç",
     "codes": {
       "bg": "Bulgarca",
-      "cs": "Çek",
-      "da": "Danimarkalı",
+      "cs": "Çekçe",
+      "da": "Danimarkaca",
       "de": "Almanca",
-      "el": "Yunan",
+      "el": "Yunanca",
       "en": "ingilizce",
       "es": "İspanyol",
-      "et": "estonyaca",
+      "et": "Estonyaca",
       "fi": "Fince",
       "fr": "Fransızca",
       "hu": "Macarca",
-      "it": "İtalyan",
+      "it": "İtalyanca",
       "ja": "Japonca",
-      "lt": "litvanyaca",
+      "lt": "Litvanyaca",
       "lv": "Letonca",
       "nl": "Flemenkçe",
       "pl": "Lehçe",
       "pt": "Portekizce",
       "ro": "Rumence",
       "ru": "Rusça",
-      "sk": "Slovak",
+      "sk": "Slovakça",
       "sl": "Slovence",
       "sv": "İsveççe",
-      "tr": "Türk",
+      "tr": "Türkçe",
       "zh": "Çince"
     }
   }
