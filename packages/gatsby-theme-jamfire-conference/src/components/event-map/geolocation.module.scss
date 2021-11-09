@@ -1,0 +1,23 @@
+.geolocation {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5000;
+}
+
+.geolocation-help {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  border-top-right-radius: 12px;
+  color: #fff;
+}
+
+.geolocation-switch {
+  margin-right: 0.5rem;
+
+  svg {
+    height: 10px;
+  }
+}

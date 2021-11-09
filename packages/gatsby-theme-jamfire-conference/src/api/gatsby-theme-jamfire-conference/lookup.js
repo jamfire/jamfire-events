@@ -2,11 +2,15 @@ const axios = require("axios").default
 const RequestIp = require("@supercharge/request-ip")
 
 export default async function handler(req, res) {
-  const url = "http://ip-api.com/json/"
+  let url = "http://ip-api.com/json/"
   const ip = RequestIp.getClientIp(req)
 
+  if (ip !== "127.0.0.1") {
+    url = `${url}${ip}`
+  }
+
   try {
-    const result = await axios.get(`${url}${ip}`).then(res => {
+    const result = await axios.get(url).then(res => {
       return res.data
     })
 

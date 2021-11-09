@@ -17,6 +17,9 @@ import MapBounds from "./map-bounds"
 import MapMarkers from "./map-markers"
 import Seo from "../seo"
 import Loader from "../loader"
+import Geolocation from "./geolocation"
+import { GeolocationContext } from "../../services"
+import GeolocationModal from "../../services/geolocation/geolocation-modal"
 
 // import css
 import "leaflet/dist/leaflet.css"
@@ -30,9 +33,16 @@ export default ({ config, event, locale }: MapProps) => {
   const isClient = checkIsClient()
 
   const { darkMode } = useContext(ThemeContext)
+  const { modal, toggleModal, enableGeolocation } =
+    useContext(GeolocationContext)
 
   const [bounds, setBounds]: SetBoundsProps = useState(
-    new LatLngBounds([0, 0], [0, 0])
+    new LatLngBounds(
+      // southwest
+      [-30, -100],
+      // northeast
+      [70, 100]
+    )
   )
   const [loaded, setLoaded] = useState(false)
 
@@ -115,6 +125,14 @@ export default ({ config, event, locale }: MapProps) => {
           <MapBounds bounds={bounds} />
           <MapMarkers data={data} />
         </MapContainer>
+        <GeolocationModal
+          // @ts-expect-error
+          config={config}
+          isActive={modal}
+          setIsActive={toggleModal}
+          enableGeolocation={enableGeolocation}
+        />
+        <Geolocation />
       </div>
     )
   }
