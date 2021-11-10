@@ -5,7 +5,7 @@ import { SeoProps } from "./seo.d"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 
 // import components
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet"
 
 export default ({
   config,
@@ -18,47 +18,13 @@ export default ({
     return <></>
   }
 
+  // get page data
   const { frontmatter } = config || {}
-
   const { graphics } = frontmatter || {}
-
   const { favicon } = graphics || {}
 
+  // change favicon
   const [faviconSrc, setFaviconSrc] = useState("")
-
-  // baseurl
-  const baseUrl = frontmatter?.siteUrl
-
-  // opengraph
-  let ogUrl = null
-  let ogType = "article"
-  let ogTitle = null
-  let ogDesc = null
-  let ogImage = null
-
-  // opengraph url
-  if (event) {
-    console.log()
-    ogUrl = `${baseUrl}/event/${event.frontmatter?.slug}`
-    ogType = `website`
-    ogTitle = `${event.frontmatter?.title} | ${frontmatter?.title}`
-  }
-
-  // opengraph image
-  if (
-    event &&
-    event.frontmatter &&
-    event.frontmatter.eventGraphics &&
-    event.frontmatter.eventGraphics.lobbyImage
-  ) {
-    const { eventGraphics } = event.frontmatter
-
-    if (eventGraphics?.socialGraphic) {
-      ogImage =
-        `${baseUrl}${eventGraphics.socialGraphic.childImageSharp.gatsbyImageData.images.fallback.src}` ||
-        null
-    }
-  }
 
   useEffect(() => {
     // favicon processing
@@ -75,25 +41,59 @@ export default ({
     }
   }, [activeFavicon])
 
+  // baseurl
+  const baseUrl = frontmatter?.siteUrl
+
+  // metadata
+  let meta = []
+
+  /**
+   * page metadata
+   */
+
+  /**
+   * event metadata
+   */
+
+  if (event) {
+    meta.push({
+      name: "og:url",
+      content: `${baseUrl}/event/${event.frontmatter?.slug}`,
+    })
+    meta.push({ name: "og:type", content: `website` })
+    meta.push({
+      name: "og:title",
+      content: `${event.frontmatter?.title} | ${frontmatter?.title}`,
+    })
+  }
+
+  if (
+    event &&
+    event.frontmatter &&
+    event.frontmatter.eventGraphics &&
+    event.frontmatter.eventGraphics.lobbyImage
+  ) {
+    const { eventGraphics } = event.frontmatter
+
+    // @ts-expect-error
+    if (eventGraphics?.socialGraphic) {
+      // @ts-expect-error
+      meta.push({
+        name: "og:image",
+        content: `${baseUrl}${eventGraphics.socialGraphic.childImageSharp.gatsbyImageData.images.fallback.src}`,
+      })
+    }
+  }
+
   return (
     <Helmet
       htmlAttributes={{
         lang: locale,
       }}
+      title={activeTitle}
+      titleTemplate={`%s | ${config?.frontmatter?.title}`}
+      meta={meta.concat(meta)}
     >
-      <title>
-        {activeTitle} | {config?.frontmatter?.title}
-      </title>
-      <meta
-        name="title"
-        content={`${activeTitle} | ${config?.frontmatter?.title}`}
-        data-react-helmet="true"
-      />
-      <meta
-        name="description"
-        content={config?.frontmatter?.description || ""}
-        data-react-helmet="true"
-      />
       {faviconSrc !== null && (
         <link
           rel="icon"
@@ -102,11 +102,6 @@ export default ({
           sizes="16x16"
         />
       )}
-      {ogUrl && <meta property="og:url" content={ogUrl} />}
-      {ogType && <meta property="og:type" content={ogType} />}
-      {ogTitle && <meta property="og:title" content={ogTitle} />}
-      {ogDesc && <meta property="og:description" content={ogDesc} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
     </Helmet>
   )
 }

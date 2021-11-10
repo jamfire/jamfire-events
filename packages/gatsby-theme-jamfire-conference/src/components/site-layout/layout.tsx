@@ -18,6 +18,10 @@ import Footer from "../site-footer"
 import * as theme from "../../services/theme/theme.module.scss"
 import * as styles from "./layout.module.scss"
 
+// import fonts
+require("typeface-work-sans")
+require("typeface-quattrocento-sans")
+
 // loadable components
 const LoginModal = loadable(() => import("../login-modal/login-modal"))
 const Main = loadable(() => import("../site-main"))
