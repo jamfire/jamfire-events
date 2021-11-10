@@ -58,6 +58,7 @@ export default ({ config, event, locale }: RoomsProps) => {
         config={config}
         activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
+        event={event}
       />
       <ListItem>
         <RoomsSearch setRoomName={setRoomName} />

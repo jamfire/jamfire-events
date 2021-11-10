@@ -193,6 +193,7 @@ export default ({ config, event, locale, user }: RoomProps) => {
         config={config}
         activeTitle={`${eventRoom?.title} | ${title}`}
         locale={locale}
+        event={event}
       />
       <div className={styles.jitsiContainer} id={jitsiContainerId} />
     </>

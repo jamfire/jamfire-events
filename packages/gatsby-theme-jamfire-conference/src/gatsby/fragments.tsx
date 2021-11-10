@@ -65,6 +65,11 @@ export const EventFragment = graphql`
             gatsbyImageData(width: 960, layout: CONSTRAINED)
           }
         }
+        socialGraphic: lobbyImage {
+          childImageSharp {
+            gatsbyImageData(width: 1200, height: 628)
+          }
+        }
       }
       eventBranding {
         primaryColor

@@ -60,6 +60,7 @@ export default ({ config, event, locale, featured }: ChatProps) => {
         config={config}
         activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
+        event={event}
       />
       <Messages
         event_id={frontmatter?.slug}

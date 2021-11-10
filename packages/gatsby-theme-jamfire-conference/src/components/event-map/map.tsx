@@ -97,6 +97,7 @@ export default ({ config, event, locale }: MapProps) => {
           config={config}
           activeTitle={`${t("navigation.map")} | ${title}`}
           locale={locale}
+          event={event}
         />
         <MapContainer
           className={styles.leafletContainer}
