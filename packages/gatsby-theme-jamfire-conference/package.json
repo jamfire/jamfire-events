@@ -43,7 +43,7 @@
     "formik": "^2.2.8",
     "gatsby-image": "^3.8.0",
     "gatsby-plugin-emotion": "^6.8.0",
-    "gatsby-plugin-gatsby-cloud": "^3.2.0",
+    "gatsby-plugin-gatsby-cloud": "^4.1.1",
     "gatsby-plugin-gdpr-cookies": "^2.0.0",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-loadable-components-ssr": "^3.0.0",
