@@ -1,5 +1,21 @@
 # Changelog
 
+## SEO Enhancements (2021-11-10)
+
+#### :rocket: Enhancement
+
+- `gatsby-theme-jamfire-conference`
+  - [#400](https://github.com/jamfire/jamfire/pull/400) feat: 🎸 added opengraph tags to events ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### :bug: Bug Fix
+
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference`
+  - [#399](https://github.com/jamfire/jamfire/pull/399) Rooms Updates ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## Bug Fixes and Enhancements to the general theme (2021-11-09)
 
 #### :rocket: Enhancement
