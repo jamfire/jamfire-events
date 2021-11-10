@@ -44,6 +44,7 @@
   width: 40px;
   height: 40px;
   border-radius: 40px;
+  background: var(--list-header-background-callout);
 
   span {
     display: flex;
@@ -57,7 +58,6 @@
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background: var(--list-header-background-callout);
   }
 }
 
@@ -115,4 +115,8 @@
     font-size: 0.75rem;
     margin-left: 0.15rem;
   }
+}
+
+.end-item {
+  padding: 5rem 2rem;
 }
