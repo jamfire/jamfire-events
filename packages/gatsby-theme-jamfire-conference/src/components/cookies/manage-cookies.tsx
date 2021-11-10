@@ -40,7 +40,6 @@ export default ({ cookies, config }: ManageCookiesProps) => {
       analyticsEnabled = analyticsCookies?.enabled ? "true" : "false"
     }
 
-    console.log(analyticsEnabled)
     setAnalyticsEnabled(analyticsEnabled === "true" ? true : false) // component state
     setEnableAnalytics(analyticsEnabled === "true" ? true : false) // provider context
     setIsLoading(false)

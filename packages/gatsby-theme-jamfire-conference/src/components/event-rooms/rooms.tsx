@@ -70,7 +70,18 @@ export default ({ config, event, locale }: RoomsProps) => {
             )
           }
         })}
+      <EndItem />
     </List>
+  )
+}
+
+const EndItem = () => {
+  const { t } = useTranslation()
+
+  return (
+    <ListItem>
+      <div className={styles.endItem} />
+    </ListItem>
   )
 }
 
@@ -133,18 +144,26 @@ const JoinButton = ({ room, basePath }: JoinButtonProps) => {
 }
 
 const RoomItemImage = ({ room }: RoomItemImageProps) => {
-  const { title, image } = room
+  const { title, image } = room || {}
+
+  // @ts-expect-error
+  const length = Object.keys(image).length
+
+  if (length === 0) {
+    return (
+      <div className={styles.roomImage}>
+        <span>{room.title.charAt(0)}</span>
+      </div>
+    )
+  }
 
   return (
     <div className={styles.roomImage}>
-      {image && (
-        <GatsbyImage
-          className={styles.gatsbyImageWrapper}
-          image={image?.childImageSharp?.gatsbyImageData}
-          alt={title}
-        />
-      )}
-      {!image && <span>{room.title.charAt(0)}</span>}
+      <GatsbyImage
+        className={styles.gatsbyImageWrapper}
+        image={image?.childImageSharp?.gatsbyImageData}
+        alt={title}
+      />
     </div>
   )
 }
