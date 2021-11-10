@@ -7,4 +7,5 @@ export interface SeoProps {
   activeTitle?: string
   activeFavicon?: any
   locale: string
+  event?: MarkdownRemark
 }

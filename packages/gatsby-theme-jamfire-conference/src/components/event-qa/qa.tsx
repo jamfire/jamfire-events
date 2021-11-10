@@ -28,6 +28,7 @@ export default ({ config, event, locale }: QAProps) => {
         config={config}
         activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
+        event={event}
       />
       {eventQA &&
         eventQA.map((item: any, key: number) => (

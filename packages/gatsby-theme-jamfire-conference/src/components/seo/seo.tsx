@@ -12,6 +12,7 @@ export default ({
   activeTitle,
   activeFavicon = null,
   locale = DEFAULT_LOCALE,
+  event,
 }: SeoProps) => {
   if (!activeTitle || config === null) {
     return <></>
@@ -24,6 +25,40 @@ export default ({
   const { favicon } = graphics || {}
 
   const [faviconSrc, setFaviconSrc] = useState("")
+
+  // baseurl
+  const baseUrl = frontmatter?.siteUrl
+
+  // opengraph
+  let ogUrl = null
+  let ogType = "article"
+  let ogTitle = null
+  let ogDesc = null
+  let ogImage = null
+
+  // opengraph url
+  if (event) {
+    console.log()
+    ogUrl = `${baseUrl}/event/${event.frontmatter?.slug}`
+    ogType = `website`
+    ogTitle = `${event.frontmatter?.title} | ${frontmatter?.title}`
+  }
+
+  // opengraph image
+  if (
+    event &&
+    event.frontmatter &&
+    event.frontmatter.eventGraphics &&
+    event.frontmatter.eventGraphics.lobbyImage
+  ) {
+    const { eventGraphics } = event.frontmatter
+
+    if (eventGraphics?.socialGraphic) {
+      ogImage =
+        `${baseUrl}${eventGraphics.socialGraphic.childImageSharp.gatsbyImageData.images.fallback.src}` ||
+        null
+    }
+  }
 
   useEffect(() => {
     // favicon processing
@@ -67,6 +102,11 @@ export default ({
           sizes="16x16"
         />
       )}
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      {ogType && <meta property="og:type" content={ogType} />}
+      {ogTitle && <meta property="og:title" content={ogTitle} />}
+      {ogDesc && <meta property="og:description" content={ogDesc} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
     </Helmet>
   )
 }

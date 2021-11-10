@@ -32,6 +32,7 @@ export default ({ config, event, locale, featured }: ScheduleProps) => {
         config={config}
         activeTitle={`${pageTitle} | ${title}`}
         locale={locale}
+        event={event}
       />
       {eventSchedule &&
         eventSchedule.map((item: any, key: number) => (

@@ -43,6 +43,7 @@ export default ({ config, event, locale }: LobbyProps) => {
         config={config}
         locale={locale}
         activeFavicon={favicon}
+        event={event}
       />
       <div className={styles.content} tabIndex={0} style={{ padding: "2rem" }}>
         <h1>{title}</h1>

@@ -75,6 +75,7 @@ export default ({
         activeFavicon={favicon}
         config={config}
         locale={i18n.language}
+        event={event}
       />
       <Header
         config={config}
