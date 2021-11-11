@@ -140,8 +140,10 @@ const JoinButton = ({ room, basePath }: JoinButtonProps) => {
 const RoomItemImage = ({ room }: RoomItemImageProps) => {
   const { title, image } = room || {}
 
-  // @ts-expect-error
-  const length = Object.keys(image).length
+  let length = 0
+  if (image && Object.keys(image)) {
+    length = Object.keys(image).length
+  }
 
   if (length === 0) {
     return (
