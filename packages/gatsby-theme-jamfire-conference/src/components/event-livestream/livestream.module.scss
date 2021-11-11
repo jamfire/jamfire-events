@@ -23,7 +23,7 @@
 
   @include tablet-up {
     overflow-y: scroll;
-    height: fill-available;
+    height: stretch;
     height: 100%;
     border-right: 1px solid var(--border-color);
   }
