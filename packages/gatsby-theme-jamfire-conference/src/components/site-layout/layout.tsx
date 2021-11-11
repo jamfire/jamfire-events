@@ -18,10 +18,6 @@ import Footer from "../site-footer"
 import * as theme from "../../services/theme/theme.module.scss"
 import * as styles from "./layout.module.scss"
 
-// import fonts
-require("typeface-work-sans")
-require("typeface-quattrocento-sans")
-
 // loadable components
 const LoginModal = loadable(() => import("../login-modal/login-modal"))
 const Main = loadable(() => import("../site-main"))
@@ -53,7 +49,15 @@ export default ({
   }, [ready])
 
   if (!loaded) {
-    return null
+    return (
+      <Seo
+        activeTitle={title || ""}
+        activeFavicon={favicon}
+        config={config}
+        locale={locale}
+        pageData={pageData}
+      />
+    )
   }
 
   const { colors } = config?.frontmatter || {}
@@ -63,18 +67,7 @@ export default ({
   const themeClass = darkMode ? theme.dark : theme.light
 
   return (
-    <div className={cx(themeClass, styles.layout, "site-layout")} id="layout">
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        :root {
-          --primary-color: ${primaryColor};
-          --accent-color: ${primaryColorHover};
-          --accent-hover: ${color(`${primaryColorHover}`).spin(3)}
-        }
-      `,
-        }}
-      />
+    <>
       <Seo
         activeTitle={title || ""}
         activeFavicon={favicon}
@@ -82,21 +75,34 @@ export default ({
         locale={i18n.language}
         pageData={pageData}
       />
-      <Header
-        config={config}
-        headerLogo={headerLogo}
-        title={useHeaderTitle ? title : null}
-        locale={locale}
-        event={event}
-      />
-      <Navigation navigation={navigation} config={config} />
-      <Main>{children}</Main>
-      <Footer config={config} event={event} />
-      <LoginModal config={config} />
-      <LocaleModal config={config} />
-      <CookieNotice cookies={cookies} config={config} />
-      <ManageCookies cookies={cookies} config={config} />
-      <DashboardModal config={config} />
-    </div>
+      <div className={cx(themeClass, styles.layout, "site-layout")} id="layout">
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          :root {
+            --primary-color: ${primaryColor};
+            --accent-color: ${primaryColorHover};
+            --accent-hover: ${color(`${primaryColorHover}`).spin(3)}
+          }
+        `,
+          }}
+        />
+        <Header
+          config={config}
+          headerLogo={headerLogo}
+          title={useHeaderTitle ? title : null}
+          locale={locale}
+          event={event}
+        />
+        <Navigation navigation={navigation} config={config} />
+        <Main>{children}</Main>
+        <Footer config={config} event={event} />
+        <LoginModal config={config} />
+        <LocaleModal config={config} />
+        <CookieNotice cookies={cookies} config={config} />
+        <ManageCookies cookies={cookies} config={config} />
+        <DashboardModal config={config} />
+      </div>
+    </>
   )
 }

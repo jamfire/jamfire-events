@@ -25,12 +25,6 @@ module.exports = () => {
         },
       },
       /**
-       * SEO
-       */
-      {
-        resolve: `gatsby-plugin-react-helmet`,
-      },
-      /**
        * Netlify && Netlify CMS
        */
       {
@@ -43,6 +37,12 @@ module.exports = () => {
           //stylesPath: `${__dirname}/src/cms/cms.css`, // default: undefined
           manualInit: true,
         },
+      },
+      /**
+       * SEO
+       */
+      {
+        resolve: `gatsby-plugin-react-helmet-async`,
       },
       /**
        * Typography & Styling

@@ -5,7 +5,7 @@ import { SeoProps } from "./seo.d"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 
 // import components
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 
 export default ({
   config,
@@ -48,17 +48,24 @@ export default ({
   let meta = []
 
   /**
-   * page metadata
-   */
-
-  /**
    * pageData metadata
    */
 
   if (pageData) {
+    // build the path
+    let path = "/"
+    switch (pageData.frontmatter?.templateKey) {
+      case "page":
+        path = `${path}${pageData.frontmatter?.slug}`
+      case "event":
+        path = `${path}/event/${pageData.frontmatter?.slug}`
+      default:
+        path = pageData.frontmatter?.slug || "/"
+    }
+
     meta.push({
       name: "og:url",
-      content: `${baseUrl}/event/${pageData.frontmatter?.slug}`,
+      content: `${baseUrl}${path}`,
     })
     meta.push({ name: "og:type", content: `website` })
     meta.push({

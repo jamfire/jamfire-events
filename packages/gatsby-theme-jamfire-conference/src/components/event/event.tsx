@@ -5,6 +5,7 @@ import loadable from "@loadable/component"
 import { DEFAULT_LOCALE } from "../../utils/constants"
 import { localizeData } from "../../utils/localized-data"
 import { DataProps } from "../../gatsby/data-props"
+import Seo from "../seo"
 
 // import components
 import { FirebaseContext } from "../../services"
@@ -168,7 +169,15 @@ export default ({ data, pageContext }: DataProps) => {
   }, [])
 
   if (isLoading) {
-    return <></>
+    return (
+      <Seo
+        activeTitle={title || ""}
+        activeFavicon={favicon}
+        config={config}
+        locale={locale}
+        pageData={eventData}
+      />
+    )
   }
 
   const routerBasePath: string =
