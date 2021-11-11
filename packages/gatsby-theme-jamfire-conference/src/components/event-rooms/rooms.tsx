@@ -12,7 +12,6 @@ import {
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
 import RoomsSearch from "../event-rooms-search/rooms-search"
@@ -54,12 +53,6 @@ export default ({ config, event, locale }: RoomsProps) => {
 
   return (
     <List>
-      <Seo
-        config={config}
-        activeTitle={`${pageTitle} | ${title}`}
-        locale={locale}
-        event={event}
-      />
       <ListItem>
         <RoomsSearch setRoomName={setRoomName} />
       </ListItem>

@@ -5,7 +5,6 @@ import { ScheduleProps, ScheduleItemProps } from "./schedule.d"
 import { useTranslation } from "react-i18next"
 
 // import components
-import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
 
@@ -28,12 +27,6 @@ export default ({ config, event, locale, featured }: ScheduleProps) => {
 
   return (
     <List>
-      <Seo
-        config={config}
-        activeTitle={`${pageTitle} | ${title}`}
-        locale={locale}
-        event={event}
-      />
       {eventSchedule &&
         eventSchedule.map((item: any, key: number) => (
           <ScheduleItem key={key} item={item} locale={locale} />

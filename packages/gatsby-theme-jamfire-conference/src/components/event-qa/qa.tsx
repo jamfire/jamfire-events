@@ -5,7 +5,6 @@ import { QAProps, QAItem } from "./qa.d"
 import cx from "classnames"
 
 // import components
-import Seo from "../seo"
 import { List, ListItem } from "../list"
 import Missing from "../missing"
 import { FaQuestion, FaComment } from "react-icons/fa"
@@ -24,12 +23,6 @@ export default ({ config, event, locale }: QAProps) => {
 
   return (
     <List>
-      <Seo
-        config={config}
-        activeTitle={`${pageTitle} | ${title}`}
-        locale={locale}
-        event={event}
-      />
       {eventQA &&
         eventQA.map((item: any, key: number) => (
           <QuestionAnswer key={key} item={item} />

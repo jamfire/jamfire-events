@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next"
 
 // import components
 import { FirebaseContext } from "../../services"
-import Seo from "../seo"
 import Messages from "./messages"
 import Send from "./send"
 
@@ -56,12 +55,6 @@ export default ({ config, event, locale, featured }: ChatProps) => {
 
   return (
     <div className={`chat ${styles.chat}`} id="chat">
-      <Seo
-        config={config}
-        activeTitle={`${pageTitle} | ${title}`}
-        locale={locale}
-        event={event}
-      />
       <Messages
         event_id={frontmatter?.slug}
         chats={chats}

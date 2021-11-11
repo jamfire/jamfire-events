@@ -40,6 +40,7 @@ export default ({
   favicon = null,
   useHeaderTitle = false,
   locale,
+  pageData,
 }: LayoutProps) => {
   const { navigation, darkMode } = useContext(ThemeContext)
 
@@ -79,7 +80,7 @@ export default ({
         activeFavicon={favicon}
         config={config}
         locale={i18n.language}
-        event={event}
+        pageData={pageData}
       />
       <Header
         config={config}

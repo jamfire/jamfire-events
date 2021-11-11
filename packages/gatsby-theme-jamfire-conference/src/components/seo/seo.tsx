@@ -12,7 +12,7 @@ export default ({
   activeTitle,
   activeFavicon = null,
   locale = DEFAULT_LOCALE,
-  event,
+  pageData,
 }: SeoProps) => {
   if (!activeTitle || config === null) {
     return <></>
@@ -52,35 +52,34 @@ export default ({
    */
 
   /**
-   * event metadata
+   * pageData metadata
    */
 
-  if (event) {
+  if (pageData) {
     meta.push({
       name: "og:url",
-      content: `${baseUrl}/event/${event.frontmatter?.slug}`,
+      content: `${baseUrl}/event/${pageData.frontmatter?.slug}`,
     })
     meta.push({ name: "og:type", content: `website` })
     meta.push({
       name: "og:title",
-      content: `${event.frontmatter?.title} | ${frontmatter?.title}`,
+      content: `${pageData.frontmatter?.title} | ${frontmatter?.title}`,
     })
   }
 
-  if (
-    event &&
-    event.frontmatter &&
-    event.frontmatter.eventGraphics &&
-    event.frontmatter.eventGraphics.lobbyImage
-  ) {
-    const { eventGraphics } = event.frontmatter
+  if (pageData?.frontmatter?.eventGraphics?.lobbyImage) {
+    const { eventGraphics } = pageData?.frontmatter || {}
 
-    // @ts-expect-error
-    if (eventGraphics?.socialGraphic) {
-      // @ts-expect-error
+    const {
+      socialGraphic: {
+        childImageSharp: { gatsbyImageData },
+      },
+    } = pageData.frontmatter.eventGraphics || {}
+
+    if (gatsbyImageData) {
       meta.push({
         name: "og:image",
-        content: `${baseUrl}${eventGraphics.socialGraphic.childImageSharp.gatsbyImageData.images.fallback.src}`,
+        content: `${baseUrl}${gatsbyImageData.images.fallback.src}`,
       })
     }
   }

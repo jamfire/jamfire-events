@@ -64,6 +64,7 @@
     "start:conference": "concurrently --kill-others 'yarn proxy:conference' 'yarn dev:conference'",
     "build:conference": "yarn workspace gatsby-starter-jamfire-conference build",
     "serve:conference": "yarn workspace gatsby-starter-jamfire-conference serve",
+    "codegen:conference": "yarn workspace gatsby-theme-jamfire-conference codegen",
     "build:datetimezone": "yarn workspace netlify-cms-widget-datetimezone build",
     "start:datetimezone": "yarn workspace netlify-cms-widget-datetimezone start",
     "prepare": "is-ci || husky install"

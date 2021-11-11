@@ -13,7 +13,6 @@ import { RoomProps } from "./room.d"
 
 // import components
 import { EventContext } from "../../services/event"
-import Seo from "../seo"
 import Missing from "../missing"
 
 // import styles
@@ -187,15 +186,5 @@ export default ({ config, event, locale, user }: RoomProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return (
-    <>
-      <Seo
-        config={config}
-        activeTitle={`${eventRoom?.title} | ${title}`}
-        locale={locale}
-        event={event}
-      />
-      <div className={styles.jitsiContainer} id={jitsiContainerId} />
-    </>
-  )
+  return <div className={styles.jitsiContainer} id={jitsiContainerId} />
 }
