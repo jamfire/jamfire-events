@@ -27,6 +27,8 @@
     "loginSocial": "Melden Sie sich mit einem sozialen Konto an",
     "loginEmail": "Login mit E-Mail und Passwort",
     "logout": "Ausloggen",
+    "displayName": "Ihr name",
+    "displayNameRequired": "Name ist erforderlich",
     "email": "Email",
     "emailInvalid": "Ungültige E-Mail",
     "emailRequired": "E-Mail ist erforderlich",
@@ -93,7 +95,8 @@
       "beTheFirst": "Seien Sie der Erste, der chattet!",
       "message": "Botschaft...",
       "send": "Senden",
-      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+      "notice": "Automatische Übersetzung bereitgestellt von <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Zeige das Menü"

@@ -27,6 +27,8 @@
     "loginSocial": "Login with a social account",
     "loginEmail": "Login with email and password",
     "logout": "Logout",
+    "displayName": "Your Name",
+    "displayNameRequired": "Name is required",
     "email": "Email",
     "emailInvalid": "Invalid Email",
     "emailRequired": "Email is required",
@@ -93,7 +95,8 @@
       "beTheFirst": "Be the first to chat!",
       "message": "Message...",
       "send": "Send",
-      "error": "An error occurred. Please try again later."
+      "error": "An error occurred. Please try again later.",
+      "notice": "Automatic Translation provided by <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Show menu"

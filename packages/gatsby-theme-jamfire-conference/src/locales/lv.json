@@ -27,6 +27,8 @@
     "loginSocial": "Piesakieties, izmantojot sociālo kontu",
     "loginEmail": "Piesakieties ar e-pastu un paroli",
     "logout": "Izlogoties",
+    "displayName": "Jūsu vārds",
+    "displayNameRequired": "Nosaukums ir obligāts",
     "email": "E-pasts",
     "emailInvalid": "Nepareizs e-pasts",
     "emailRequired": "Nepieciešams e-pasts",
@@ -93,7 +95,8 @@
       "beTheFirst": "Esi pirmais, kurš tērzē!",
       "message": "Ziņojums ...",
       "send": "Nosūtīt",
-      "error": "Radusies kļūda. Lūdzu, pamēģiniet vēlreiz vēlāk."
+      "error": "Radusies kļūda. Lūdzu, pamēģiniet vēlreiz vēlāk.",
+      "notice": "Automātiskā tulkošana, ko nodrošina <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Rādīt izvēlni"

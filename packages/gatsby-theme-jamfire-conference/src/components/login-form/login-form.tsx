@@ -28,7 +28,7 @@ export default () => {
   // create user
   const onRegister = useCallback(
     async (
-      { email, password }: FormValues,
+      { displayName, email, password }: FormValues,
       actions: FormikHelpers<FormValues>
     ) => {
       try {
@@ -37,6 +37,10 @@ export default () => {
         const { user } = await firebase
           .auth()
           .createUserWithEmailAndPassword(email, password)
+
+        // update user displayName
+        await user?.updateProfile({ displayName: displayName })
+
         if (user) {
           const { refreshToken } = user
           setAuthToken(refreshToken)
@@ -45,7 +49,7 @@ export default () => {
 
         actions.setStatus({ errors: [], success: true })
       } catch (error) {
-        console.log(error)
+        // @ts-expect-error
         setLoginError(error.message)
       } finally {
         actions.setSubmitting(false)
@@ -74,7 +78,7 @@ export default () => {
 
         actions.setStatus({ errors: [], success: true })
       } catch (error) {
-        console.log(error)
+        // @ts-expect-error
         setLoginError(error.message)
       } finally {
         actions.setSubmitting(false)
@@ -95,6 +99,7 @@ export default () => {
 
   // register form schema
   const RegisterValidationSchema = Yup.object().shape({
+    displayName: Yup.string().required(t("auth.displayNameRequired")),
     email: Yup.string()
       .email(t("auth.emailInvalid"))
       .required(t("auth.emailRequired")),
@@ -110,7 +115,12 @@ export default () => {
   return (
     <div className={styles.loginForm}>
       <Formik
-        initialValues={{ email: "", password: "", passwordConfirmation: "" }}
+        initialValues={{
+          displayName: "",
+          email: "",
+          password: "",
+          passwordConfirmation: "",
+        }}
         initialStatus={{ errors: [], success: false }}
         validationSchema={
           register ? RegisterValidationSchema : SignInValidationSchema
@@ -128,6 +138,23 @@ export default () => {
         }) => (
           <form onSubmit={handleSubmit}>
             <p>{t("auth.loginEmail")}</p>
+            {register && (
+              <div className={styles.fieldWrapper}>
+                <input
+                  className={styles.input}
+                  type="displayName"
+                  name="displayName"
+                  placeholder={t("auth.displayName")}
+                  aria-placeholder={t("auth.displayName")}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.displayName}
+                />
+                {errors.displayName && touched.displayName && (
+                  <div className={styles.error}>{errors.displayName}</div>
+                )}
+              </div>
+            )}
             <div className={styles.fieldWrapper}>
               <input
                 className={styles.input}

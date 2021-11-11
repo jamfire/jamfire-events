@@ -27,6 +27,8 @@
     "loginSocial": "Prijavite se s socialnim računom",
     "loginEmail": "Prijavite se z e-pošto in geslom",
     "logout": "Odjava",
+    "displayName": "Vaše ime",
+    "displayNameRequired": "Zahtevano je ime",
     "email": "E-naslov",
     "emailInvalid": "Neveljaven e-poštni naslov",
     "emailRequired": "E-pošta je obvezna",
@@ -93,7 +95,8 @@
       "beTheFirst": "Klepetajte prvi!",
       "message": "Sporočilo ...",
       "send": "Pošlji",
-      "error": "Pojavila se je napaka. Prosim poskusite kasneje."
+      "error": "Pojavila se je napaka. Prosim poskusite kasneje.",
+      "notice": "Samodejno prevajanje, ki ga zagotavlja <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Prikaži meni"

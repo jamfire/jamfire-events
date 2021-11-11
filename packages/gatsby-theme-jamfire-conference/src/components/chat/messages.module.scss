@@ -7,10 +7,10 @@
   }
 
   height: 100%;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 
   @include tablet-up {
-    height: calc(100vh - 220px);
+    height: calc(100vh - 240px);
     overflow-y: scroll;
     padding-bottom: 0;
   }
@@ -97,10 +97,21 @@
   align-items: flex-end;
 
   img {
-    background: var(--placeholder-color);
+    background: var(--content-background);
     width: 40px;
     height: 40px;
     border-radius: 40px;
     margin-bottom: 0;
+  }
+
+  div {
+    background: var(--content-background);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

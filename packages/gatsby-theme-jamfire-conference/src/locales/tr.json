@@ -27,6 +27,8 @@
     "loginSocial": "Bir sosyal hesapla giriş yapın",
     "loginEmail": "E-posta ve şifre ile giriş yapın",
     "logout": "Çıkış Yap",
+    "displayName": "Adınız",
+    "displayNameRequired": "İsim gerekli",
     "email": "E-posta",
     "emailInvalid": "Geçersiz E-posta",
     "emailRequired": "E-posta gereklidir",
@@ -93,7 +95,8 @@
       "beTheFirst": "İlk sohbet eden siz olun!",
       "message": "İleti...",
       "send": "gönder",
-      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz."
+      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.",
+      "notice": "<a href=\"https://deepl.com\" target=\"_blank\">DeepL</a> tarafından sağlanan Otomatik Çeviri"
     },
     "menu": {
       "label": "Menüyü göster"

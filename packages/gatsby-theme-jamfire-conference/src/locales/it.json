@@ -27,6 +27,8 @@
     "loginSocial": "Accedi con un account social",
     "loginEmail": "Accedi con email e password",
     "logout": "Disconnettersi",
+    "displayName": "Il tuo nome",
+    "displayNameRequired": "Il nome è richiesto",
     "email": "E-mail",
     "emailInvalid": "E-mail non valido",
     "emailRequired": "L'e-mail è obbligatoria",
@@ -93,7 +95,8 @@
       "beTheFirst": "Sii il primo a chattare!",
       "message": "Messaggio...",
       "send": "Spedire",
-      "error": "Si è verificato un errore. Per favore riprova più tardi."
+      "error": "Si è verificato un errore. Per favore riprova più tardi.",
+      "notice": "Traduzione automatica fornita da <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Mostra menu"

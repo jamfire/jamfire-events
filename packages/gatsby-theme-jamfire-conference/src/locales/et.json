@@ -27,6 +27,8 @@
     "loginSocial": "Sisselogimine sotsiaalse kontoga",
     "loginEmail": "Logi sisse e-posti ja parooliga",
     "logout": "Logi välja",
+    "displayName": "Teie nimi",
+    "displayNameRequired": "Nimi on nõutav",
     "email": "E-post",
     "emailInvalid": "Vale e-post",
     "emailRequired": "E-post on kohustuslik",
@@ -93,7 +95,8 @@
       "beTheFirst": "Ole esimene, kes vestleb!",
       "message": "Sõnum ...",
       "send": "Saada",
-      "error": "Ilmnes viga. Palun proovi hiljem uuesti."
+      "error": "Ilmnes viga. Palun proovi hiljem uuesti.",
+      "notice": "Automaatne tõlge, mida pakub <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Kuva menüü"

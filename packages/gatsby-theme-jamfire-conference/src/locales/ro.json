@@ -27,6 +27,8 @@
     "loginSocial": "Conectați-vă cu un cont social",
     "loginEmail": "Conectați-vă cu e-mail și parolă",
     "logout": "Deconectați-vă",
+    "displayName": "Numele dumneavoastră",
+    "displayNameRequired": "Numele este obligatoriu",
     "email": "E-mail",
     "emailInvalid": "E-mail invalid",
     "emailRequired": "E-mailul este necesar",
@@ -93,7 +95,8 @@
       "beTheFirst": "Fiți primul care spune!",
       "message": "Mesaj...",
       "send": "Trimite",
-      "error": "A apărut o eroare. Vă rugăm să încercați din nou mai târziu."
+      "error": "A apărut o eroare. Vă rugăm să încercați din nou mai târziu.",
+      "notice": "Traducere automată furnizată de <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Afișați meniul"

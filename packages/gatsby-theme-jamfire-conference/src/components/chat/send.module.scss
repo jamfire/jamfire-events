@@ -2,11 +2,11 @@
 
 .send {
   background: var(--list-header-background);
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
+  padding: 1rem;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // height: 60px;
 
   position: fixed;
   width: 100%;
@@ -17,6 +17,13 @@
     width: auto;
     bottom: auto;
   }
+}
+
+.notice {
+  font-size: 10px;
+  font-style: italic;
+  margin: 0;
+  padding: 5px 0 0;
 }
 
 .login {

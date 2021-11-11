@@ -27,6 +27,8 @@
     "loginSocial": "ソーシャルアカウントでログインする",
     "loginEmail": "メールアドレスとパスワードでログイン",
     "logout": "ログアウト",
+    "displayName": "お名前",
+    "displayNameRequired": "名前は必須です。",
     "email": "Eメール",
     "emailInvalid": "無効なメール",
     "emailRequired": "メールが必要です",
@@ -93,7 +95,8 @@
       "beTheFirst": "最初にチャットしましょう！",
       "message": "メッセージ...",
       "send": "送信",
-      "error": "エラーが発生しました。後でもう一度やり直してください。"
+      "error": "エラーが発生しました。後でもう一度やり直してください。",
+      "notice": "自動翻訳は、<a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>によって提供されます。"
     },
     "menu": {
       "label": "メニューを表示"

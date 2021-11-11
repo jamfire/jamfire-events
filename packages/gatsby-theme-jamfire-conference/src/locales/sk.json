@@ -27,6 +27,8 @@
     "loginSocial": "Prihláste sa pomocou sociálneho účtu",
     "loginEmail": "Prihláste sa pomocou e-mailu a hesla",
     "logout": "Odhlásiť sa",
+    "displayName": "Vaše meno",
+    "displayNameRequired": "Vyžaduje sa meno",
     "email": "Email",
     "emailInvalid": "Neplatný email",
     "emailRequired": "E-mail je povinný",
@@ -93,7 +95,8 @@
       "beTheFirst": "Buďte prvý, kto chatuje!",
       "message": "Správa ...",
       "send": "Pošli",
-      "error": "Nastala chyba. Skúste neskôr prosím."
+      "error": "Nastala chyba. Skúste neskôr prosím.",
+      "notice": "Automatický preklad poskytuje <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Zobraziť ponuku"

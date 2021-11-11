@@ -27,6 +27,8 @@
     "loginSocial": "Log in met een sociaal account",
     "loginEmail": "Log in met e-mail en wachtwoord",
     "logout": "Uitloggen",
+    "displayName": "Uw naam",
+    "displayNameRequired": "Naam is verplicht",
     "email": "E-mail",
     "emailInvalid": "Ongeldig e-mail",
     "emailRequired": "E-mail is vereist",
@@ -93,7 +95,8 @@
       "beTheFirst": "Wees de eerste om te chatten!",
       "message": "Bericht...",
       "send": "Sturen",
-      "error": "Er is een fout opgetreden. Probeer het later opnieuw."
+      "error": "Er is een fout opgetreden. Probeer het later opnieuw.",
+      "notice": "Automatische vertaling geleverd door <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Laat het menu zien"

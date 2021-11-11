@@ -178,6 +178,10 @@ export default ({
           {t("event.chat.send")}
         </button>
       </form>
+      <p
+        className={styles.notice}
+        dangerouslySetInnerHTML={{ __html: t("event.chat.notice") }}
+      />
     </div>
   )
 }

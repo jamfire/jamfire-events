@@ -142,9 +142,14 @@ const Message = ({
 
   return (
     <li className={cx(styles.message, styles[me], styles[first])}>
-      {!nextSender && (
+      {!nextSender && photoURL && (
         <div className={styles.avatar}>
           <img src={photoURL} alt={displayName} />
+        </div>
+      )}
+      {!nextSender && !photoURL && (
+        <div className={styles.avatar}>
+          <div>{displayName.charAt(0)}</div>
         </div>
       )}
       <div className={cx(styles.text, styles[me])}>

@@ -27,6 +27,8 @@
     "loginSocial": "Entrar com uma conta social",
     "loginEmail": "Login com email e senha",
     "logout": "Sair",
+    "displayName": "O seu nome",
+    "displayNameRequired": "O nome é obrigatório",
     "email": "E-mail",
     "emailInvalid": "E-mail inválido",
     "emailRequired": "E-mail é obrigatório",
@@ -93,7 +95,8 @@
       "beTheFirst": "Seja o primeiro a conversar!",
       "message": "Mensagem...",
       "send": "Mandar",
-      "error": "Um erro ocorreu. Por favor, tente novamente mais tarde."
+      "error": "Um erro ocorreu. Por favor, tente novamente mais tarde.",
+      "notice": "Tradução automática fornecida por <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Mostrar menu"

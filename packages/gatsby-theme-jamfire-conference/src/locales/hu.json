@@ -27,6 +27,8 @@
     "loginSocial": "Bejelentkezés közösségi fiókkal",
     "loginEmail": "Bejelentkezés e-mail címmel és jelszóval",
     "logout": "Kijelentkezés",
+    "displayName": "Az Ön neve",
+    "displayNameRequired": "A név kötelező",
     "email": "Email",
     "emailInvalid": "Érvénytelen e-mail",
     "emailRequired": "E-mail szükséges",
@@ -93,7 +95,8 @@
       "beTheFirst": "Csevegjen elsőként!",
       "message": "Üzenet...",
       "send": "Küld",
-      "error": "Hiba történt. Kérlek, próbáld újra később."
+      "error": "Hiba történt. Kérlek, próbáld újra később.",
+      "notice": "A <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a> által biztosított automatikus fordítás."
     },
     "menu": {
       "label": "Menü megjelenítése"

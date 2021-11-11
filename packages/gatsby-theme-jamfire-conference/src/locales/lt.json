@@ -27,6 +27,8 @@
     "loginSocial": "Prisijunkite naudodamiesi socialine paskyra",
     "loginEmail": "Prisijunkite naudodami el. Pašto adresą ir slaptažodį",
     "logout": "Atsijungti",
+    "displayName": "Jūsų vardas",
+    "displayNameRequired": "Būtina nurodyti vardą ir pavardę",
     "email": "El",
     "emailInvalid": "Neteisingas el. pašto adresas",
     "emailRequired": "Būtinas el. Pašto adresas",
@@ -93,7 +95,8 @@
       "beTheFirst": "Būk pirmas pokalbis!",
       "message": "Pranešimas ...",
       "send": "Siųsti",
-      "error": "Įvyko klaida. Pabandykite dar kartą vėliau."
+      "error": "Įvyko klaida. Pabandykite dar kartą vėliau.",
+      "notice": "Automatinis vertimas, kurį teikia <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Rodyti meniu"

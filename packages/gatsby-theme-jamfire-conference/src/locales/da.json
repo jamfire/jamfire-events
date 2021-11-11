@@ -27,6 +27,8 @@
     "loginSocial": "Log ind med en social konto",
     "loginEmail": "Log ind med e-mail og adgangskode",
     "logout": "Log ud",
+    "displayName": "Dit navn",
+    "displayNameRequired": "Navn er påkrævet",
     "email": "E-mail",
     "emailInvalid": "Ugyldig email",
     "emailRequired": "E-mail er påkrævet",
@@ -93,7 +95,8 @@
       "beTheFirst": "Vær den første til at chatte!",
       "message": "Besked...",
       "send": "Sende",
-      "error": "En fejl opstod. Prøv igen senere."
+      "error": "En fejl opstod. Prøv igen senere.",
+      "notice": "Automatisk oversættelse leveret af <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Vis menu"

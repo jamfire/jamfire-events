@@ -27,6 +27,8 @@
     "loginSocial": "使用社交帐户登录",
     "loginEmail": "使用电子邮件和密码登录",
     "logout": "登出",
+    "displayName": "您的姓名",
+    "displayNameRequired": "名字是必须的",
     "email": "电子邮件",
     "emailInvalid": "不合规电邮",
     "emailRequired": "电子邮件为必填项",
@@ -93,7 +95,8 @@
       "beTheFirst": "成为第一个聊天的人！",
       "message": "信息...",
       "send": "发送",
-      "error": "发生错误。请稍后再试。"
+      "error": "发生错误。请稍后再试。",
+      "notice": "自动翻译由<a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>提供。"
     },
     "menu": {
       "label": "显示菜单"

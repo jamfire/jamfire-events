@@ -66,14 +66,17 @@ export default ({ isLoggedIn, isLoading, profile = null }: AvatarProps) => {
       onClick={() => setToggleDashboard(true)}
     >
       <div className={styles.avatar}>
-        <img
-          role="img"
-          aria-label={t("regions.avatarImage")}
-          src={avatarPhotoURL}
-          alt={avatarDisplayName}
-          height="40"
-          width="40"
-        />
+        {avatarPhotoURL && (
+          <img
+            role="img"
+            aria-label={t("regions.avatarImage")}
+            src={avatarPhotoURL}
+            alt={avatarDisplayName}
+            height="40"
+            width="40"
+          />
+        )}
+        {!avatarPhotoURL && <div>{avatarDisplayName.charAt(0)}</div>}
       </div>
     </div>
   )

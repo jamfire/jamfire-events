@@ -27,6 +27,8 @@
     "loginSocial": "Logga in med ett socialt konto",
     "loginEmail": "Logga in med e-post och lösenord",
     "logout": "Logga ut",
+    "displayName": "Ditt namn",
+    "displayNameRequired": "Namn är ett krav",
     "email": "E-post",
     "emailInvalid": "Ogiltig e-postadress",
     "emailRequired": "E-post krävs",
@@ -93,7 +95,8 @@
       "beTheFirst": "Bli den första att chatta!",
       "message": "Meddelande...",
       "send": "Skicka",
-      "error": "Ett fel uppstod. Vänligen försök igen senare."
+      "error": "Ett fel uppstod. Vänligen försök igen senare.",
+      "notice": "Automatisk översättning tillhandahålls av <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Visa meny"

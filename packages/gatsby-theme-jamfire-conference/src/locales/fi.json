@@ -27,6 +27,8 @@
     "loginSocial": "Kirjaudu sisään sosiaalisella tilillä",
     "loginEmail": "Kirjaudu sisään sähköpostilla ja salasanalla",
     "logout": "Kirjautua ulos",
+    "displayName": "Nimesi",
+    "displayNameRequired": "Nimi vaaditaan",
     "email": "Sähköposti",
     "emailInvalid": "Virheellinen sähköpostiosoite",
     "emailRequired": "Sähköposti vaaditaan",
@@ -93,7 +95,8 @@
       "beTheFirst": "Ole ensimmäinen chat!",
       "message": "Viesti...",
       "send": "Lähettää",
-      "error": "Tapahtui virhe. Yritä uudelleen myöhemmin."
+      "error": "Tapahtui virhe. Yritä uudelleen myöhemmin.",
+      "notice": "Automaattisen käännöksen tarjoaa <a href=\"https://deepl.com\" target=\"_blank\">DeepL</a>"
     },
     "menu": {
       "label": "Näytä-valikko"
