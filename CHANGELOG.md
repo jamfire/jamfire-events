@@ -1,5 +1,16 @@
 # Changelog
 
+## Bump to Gatsby V4 (2021-11-11)
+
+#### :rocket: Enhancement
+
+- `gatsby-starter-jamfire-conference`, `gatsby-theme-jamfire-conference-e2e`, `gatsby-theme-jamfire-conference`
+  - [#401](https://github.com/jamfire/jamfire/pull/401) chore: 🤖 updated deps ([@kalebheitzman](https://github.com/kalebheitzman))
+
+#### Committers: 1
+
+- Kaleb Heitzman ([@kalebheitzman](https://github.com/kalebheitzman))
+
 ## SEO Enhancements (2021-11-10)
 
 #### :rocket: Enhancement
