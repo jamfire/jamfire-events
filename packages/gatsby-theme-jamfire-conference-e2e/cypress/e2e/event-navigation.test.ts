@@ -18,8 +18,6 @@ describe(`Interact with Event Navigation`, () => {
 	it(`Navigate to demo event`, () => {
 		cy.get(`.event-demo`).click().wait(2000).assertRoute(`/event/demo/`);
 
-		cy.get(`#geolocation-modal .deny`).click();
-
 		cy.get(`main`).contains(`A Demo Event`);
 	});
 
@@ -65,6 +63,8 @@ describe(`Interact with Event Navigation`, () => {
 
 	it(`Navigate to map`, () => {
 		cy.get(`a.event-map-link`).click().assertRoute(`/event/demo/map/`);
+
+		cy.get(`#geolocation-modal .deny`).click();
 	});
 
 	it(`Navigate home`, () => {

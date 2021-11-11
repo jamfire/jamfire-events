@@ -46,8 +46,6 @@ describe(`Check theme for a11y`, () => {
 			],
 		});
 
-		cy.get(`#geolocation-modal .deny`).click();
-
 		cy.checkA11y();
 	});
 
@@ -63,8 +61,6 @@ describe(`Check theme for a11y`, () => {
 				},
 			],
 		});
-
-		cy.get(`#geolocation-modal .deny`).click();
 
 		cy.checkA11y();
 	});
@@ -82,8 +78,6 @@ describe(`Check theme for a11y`, () => {
 			],
 		});
 
-		cy.get(`#geolocation-modal .deny`).click();
-
 		cy.checkA11y();
 	});
 
@@ -100,15 +94,33 @@ describe(`Check theme for a11y`, () => {
 			],
 		});
 
-		cy.get(`#geolocation-modal .deny`).click();
-
 		cy.checkA11y();
 	});
 
-	it(`Demo Event -> Conference Room a11y`, () => {
-		cy.visit(`/event/demo/rooms/jamfire-conference-room-1/`).assertRoute(
-			`/event/demo/rooms/jamfire-conference-room-1/`
-		);
+	// it(`Demo Event -> Conference Room a11y`, () => {
+	// 	cy.visit(`/event/demo/rooms/jamfire-conference-room-1/`).assertRoute(
+	// 		`/event/demo/rooms/jamfire-conference-room-1/`
+	// 	);
+	// 	cy.wait(2000);
+	// 	cy.injectAxe();
+	// 	cy.configureAxe({
+	// 		rules: [
+	// 			{
+	// 				id: `color-contrast`,
+	// 				enabled: false,
+	// 			},
+	// 			{
+	// 				id: `frame-title`,
+	// 				enabled: false,
+	// 			},
+	// 		],
+	// 	});
+
+	// 	cy.checkA11y();
+	// });
+
+	it(`Demo Event -> Q&A`, () => {
+		cy.visit(`/event/demo/qa/`).assertRoute(`/event/demo/qa/`);
 		cy.wait(2000);
 		cy.injectAxe();
 		cy.configureAxe({
@@ -117,20 +129,14 @@ describe(`Check theme for a11y`, () => {
 					id: `color-contrast`,
 					enabled: false,
 				},
-				{
-					id: `frame-title`,
-					enabled: false,
-				},
 			],
 		});
-
-		cy.get(`#geolocation-modal .deny`).click();
 
 		cy.checkA11y();
 	});
 
-	it(`Demo Event -> Q&A`, () => {
-		cy.visit(`/event/demo/qa/`).assertRoute(`/event/demo/qa/`);
+	it(`Demo Event -> Map`, () => {
+		cy.visit(`/event/demo/map/`).assertRoute(`/event/demo/map/`);
 		cy.wait(2000);
 		cy.injectAxe();
 		cy.configureAxe({
