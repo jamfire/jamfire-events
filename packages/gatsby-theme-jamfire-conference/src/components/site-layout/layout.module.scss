@@ -10,9 +10,9 @@
   grid-template-rows: 80px 1fr;
   height: 100vh;
   min-height: 100vh;
-  min-height: fill-available;
+  min-height: stretch;
   max-height: 100vh;
-  max-height: fill-available;
+  max-height: stretch;
   width: 100vw;
 
   @include tablet-up {

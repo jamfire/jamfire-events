@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 export const PageFragment = graphql`
   fragment PageFragment on MarkdownRemark {
     frontmatter {
+      templateKey
       title
       pageGraphics {
         featuredImage {
@@ -28,6 +29,7 @@ export const EventFragment = graphql`
       locale
     }
     frontmatter {
+      templateKey
       title
       slug
       eventInformation {
@@ -121,6 +123,7 @@ export const EventsFragment = graphql`
       locale
     }
     frontmatter {
+      templateKey
       title
       slug
       eventInformation {
@@ -152,6 +155,7 @@ export const EventsFragment = graphql`
 export const ConfigurationFragment = graphql`
   fragment ConfigurationFragment on MarkdownRemark {
     frontmatter {
+      templateKey
       title
       description
       siteUrl

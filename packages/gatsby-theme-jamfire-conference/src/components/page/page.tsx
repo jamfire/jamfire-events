@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next"
 import Layout from "../site-layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Missing from "../missing"
-import Seo from "../seo"
 
 // import styles
 import * as styles from "./page.module.scss"

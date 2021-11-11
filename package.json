@@ -59,6 +59,7 @@
     "cy:conference:open": "yarn workspace gatsby-theme-jamfire-conference-e2e cy:open",
     "ssat:dev:conference": "start-server-and-test dev:conference http://localhost:8000 cy:open",
     "e2e:dev:conference": "concurrently --kill-others 'yarn tsc:compile:watch' 'yarn ssat:dev:conference'",
+    "clean:conference": "yarn workspace gatsby-starter-jamfire-conference clean",
     "dev:conference": "yarn workspace gatsby-starter-jamfire-conference start",
     "proxy:conference": "yarn workspace gatsby-starter-jamfire-conference proxy",
     "start:conference": "concurrently --kill-others 'yarn proxy:conference' 'yarn dev:conference'",

@@ -11,7 +11,7 @@ module.exports = async ({ createResolvers }) => {
           slug: "String!",
         },
         async resolve(source, args, context, info) {
-          return await context.nodeModel.runQuery({
+          return await context.nodeModel.findOne({
             query: {
               filter: {
                 frontmatter: { slug: { eq: args.slug } },
@@ -34,7 +34,7 @@ module.exports = async ({ createResolvers }) => {
           skip: "Int!",
         },
         async resolve(source, args, context, info) {
-          return await context.nodeModel.runQuery({
+          return await context.nodeModel.findAll({
             query: {
               filter: {
                 limit: args.limit,
@@ -57,7 +57,7 @@ module.exports = async ({ createResolvers }) => {
           slug: "String!",
         },
         async resolve(source, args, context, info) {
-          return await context.nodeModel.runQuery({
+          return await context.nodeModel.findOne({
             query: {
               filter: {
                 frontmatter: { slug: { eq: args.slug } },
@@ -78,7 +78,7 @@ module.exports = async ({ createResolvers }) => {
           locale: "String!",
         },
         async resolve(source, args, context, info) {
-          return await context.nodeModel.runQuery({
+          return await context.nodeModel.findOne({
             query: {
               filter: {
                 fields: {
@@ -98,7 +98,7 @@ module.exports = async ({ createResolvers }) => {
           locale: "String!",
         },
         async resolve(source, args, context, info) {
-          return await context.nodeModel.runQuery({
+          return await context.nodeModel.findOne({
             query: {
               filter: {
                 fields: {
