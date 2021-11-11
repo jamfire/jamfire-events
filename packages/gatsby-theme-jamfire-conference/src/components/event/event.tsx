@@ -184,6 +184,7 @@ export default ({ data, pageContext }: DataProps) => {
         headerLogo={headerLogo}
         favicon={favicon}
         locale={pageContext.locale}
+        pageData={eventData}
       >
         <RoomChange config={config} />
         <GeolocationProvider
@@ -213,7 +214,12 @@ export default ({ data, pageContext }: DataProps) => {
               path="/rooms/:room"
             />
             {eventSettings?.map && (
-              <Map config={config} event={event} locale={locale} path="/map" />
+              <Map
+                config={config}
+                event={eventData}
+                locale={locale}
+                path="/map"
+              />
             )}
           </Router>
         </GeolocationProvider>

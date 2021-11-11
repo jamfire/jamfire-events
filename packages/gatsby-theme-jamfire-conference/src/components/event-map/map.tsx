@@ -15,7 +15,6 @@ import { FirebaseContext } from "../../services"
 import { ThemeContext } from "../../services/theme"
 import MapBounds from "./map-bounds"
 import MapMarkers from "./map-markers"
-import Seo from "../seo"
 import Loader from "../loader"
 import Geolocation from "./geolocation"
 import { GeolocationContext } from "../../services"
@@ -93,12 +92,6 @@ export default ({ config, event, locale }: MapProps) => {
   if (isClient && bounds !== null) {
     return (
       <div className={styles.wrapper}>
-        <Seo
-          config={config}
-          activeTitle={`${t("navigation.map")} | ${title}`}
-          locale={locale}
-          event={event}
-        />
         <MapContainer
           className={styles.leafletContainer}
           center={[0, 0]}

@@ -6,7 +6,6 @@ import { LobbyProps } from "./lobby.d"
 
 // import components
 import { GatsbyImage } from "gatsby-plugin-image"
-import Seo from "../seo"
 import Missing from "../missing"
 
 // import styles
@@ -38,13 +37,6 @@ export default ({ config, event, locale }: LobbyProps) => {
 
   return (
     <div className={styles.event}>
-      <Seo
-        activeTitle={`${title}`}
-        config={config}
-        locale={locale}
-        activeFavicon={favicon}
-        event={event}
-      />
       <div className={styles.content} tabIndex={0} style={{ padding: "2rem" }}>
         <h1>{title}</h1>
         <ul className={styles.eventTimes}>

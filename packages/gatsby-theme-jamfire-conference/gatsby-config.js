@@ -25,6 +25,12 @@ module.exports = () => {
         },
       },
       /**
+       * SEO
+       */
+      {
+        resolve: `gatsby-plugin-react-helmet`,
+      },
+      /**
        * Netlify && Netlify CMS
        */
       {
@@ -48,33 +54,15 @@ module.exports = () => {
         },
       },
       {
-        resolve: `gatsby-plugin-emotion`,
-        options: {
-          sourceMap: true,
-          autoLabel: "dev-only",
-          labelFormat: `[local]`,
-          cssPropOptimization: true,
-        },
-      },
-      {
         resolve: `gatsby-plugin-typography`,
         options: {
           pathToConfigModule: path.join(__dirname, `src/theme/typography`),
           omitGoogleFont: true,
         },
       },
-      {
-        resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
-        options: {
-          devMode: false,
-        },
-      },
       /**
-       * SEO
+       * Gastby Cloud
        */
-      {
-        resolve: `gatsby-plugin-react-helmet-async`,
-      },
       {
         resolve: `gatsby-plugin-gatsby-cloud`,
       },

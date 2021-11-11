@@ -18,6 +18,10 @@ import Footer from "../site-footer"
 import * as theme from "../../services/theme/theme.module.scss"
 import * as styles from "./layout.module.scss"
 
+// import fonts
+require("typeface-work-sans")
+require("typeface-quattrocento-sans")
+
 // loadable components
 const LoginModal = loadable(() => import("../login-modal/login-modal"))
 const Main = loadable(() => import("../site-main"))
@@ -36,6 +40,7 @@ export default ({
   favicon = null,
   useHeaderTitle = false,
   locale,
+  pageData,
 }: LayoutProps) => {
   const { navigation, darkMode } = useContext(ThemeContext)
 
@@ -75,7 +80,7 @@ export default ({
         activeFavicon={favicon}
         config={config}
         locale={i18n.language}
-        event={event}
+        pageData={pageData}
       />
       <Header
         config={config}

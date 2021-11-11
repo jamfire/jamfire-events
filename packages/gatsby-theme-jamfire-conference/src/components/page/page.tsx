@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next"
 import Layout from "../site-layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Missing from "../missing"
+import Seo from "../seo"
 
 // import styles
 import * as styles from "./page.module.scss"
@@ -40,6 +41,7 @@ export default ({ data, pageContext }: DataProps) => {
       locale={pageContext.locale}
       config={configData}
       cookies={cookiesData}
+      pageData={pageData}
     >
       <div className={styles.page}>
         <div className={styles.content}>

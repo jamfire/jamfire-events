@@ -12,4 +12,5 @@ export interface LayoutProps {
   favicon?: Maybe<File>
   useHeaderTitle?: boolean
   locale: string
+  pageData?: MarkdownRemark
 }
