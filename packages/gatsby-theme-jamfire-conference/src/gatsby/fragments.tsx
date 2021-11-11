@@ -69,7 +69,11 @@ export const EventFragment = graphql`
         }
         socialGraphic: lobbyImage {
           childImageSharp {
-            gatsbyImageData(width: 1200, height: 628)
+            gatsbyImageData(
+              width: 1200
+              height: 628
+              transformOptions: { cropFocus: CENTER }
+            )
           }
         }
       }
