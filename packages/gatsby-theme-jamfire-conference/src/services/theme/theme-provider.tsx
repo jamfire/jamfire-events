@@ -37,7 +37,12 @@ export default ({ children }: ProviderProps) => {
 
   // update local storage
   useEffect(() => {
-    jamfireSet("darkMode", darkMode ? "true" : "false")
+    const cookiesAccepted: string = jamfireGet("cookiesAccepted")
+    const cookiesEnabled: boolean = cookiesAccepted === "true"
+
+    if (cookiesEnabled) {
+      jamfireSet("darkMode", darkMode ? "true" : "false")
+    }
   }, [darkMode])
 
   // set analytics preference
