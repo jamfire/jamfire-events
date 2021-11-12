@@ -58,6 +58,10 @@ export default ({ cookies, config }: CookieNoticeProps) => {
     jamfireSet("analyticsEnabled", analyticsEnabled ? "true" : "false")
 
     setShowConsent(false)
+
+    if (window) {
+      window.location.reload()
+    }
   }
 
   // cookies still being parsed
