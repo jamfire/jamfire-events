@@ -42,7 +42,7 @@ export const initialState: InitialState = {
   setPagePath: () => null,
   toggleCookies: false,
   setToggleCookies: () => true || false,
-  enableAnalytics: true,
+  enableAnalytics: false,
   setEnableAnalytics: () => true || false,
   toggleLocale: false,
   setToggleLocale: () => true || false,

@@ -13,7 +13,7 @@ import Markdown from "../markdown"
 import * as styles from "./cookie-notice.module.scss"
 
 export default ({ cookies, config }: CookieNoticeProps) => {
-  const { setToggleCookies } = useContext(ThemeContext)
+  const { setToggleCookies, setEnableAnalytics } = useContext(ThemeContext)
 
   const [isLoading, setIsLoading] = useState(true)
   const [showConsent, setShowConsent] = useState(true)
@@ -36,7 +36,27 @@ export default ({ cookies, config }: CookieNoticeProps) => {
 
   // set consent
   const cookiesAccepted = () => {
+    // get cookies accepted pref
     jamfireSet("cookiesAccepted", "true")
+
+    // initial anlaytics check
+    let analyticsEnabled = jamfireGet("analyticsEnabled")
+
+    // if analytics is null, set pref based on content spec
+    if (analyticsEnabled === null) {
+      analyticsEnabled = cookies?.frontmatter?.analyticsCookies?.enabled
+        ? "true"
+        : "false"
+    }
+
+    // enable analytics if true
+    if (analyticsEnabled === "true") {
+      setEnableAnalytics(analyticsEnabled)
+    }
+
+    // set localstorage value
+    jamfireSet("analyticsEnabled", analyticsEnabled ? "true" : "false")
+
     setShowConsent(false)
   }
 

@@ -3,13 +3,18 @@ import React, { useState, useEffect } from "react"
 import { jamfireSet, jamfireGet } from ".."
 import { useCookies } from "react-cookie"
 import { ProviderProps } from "./theme.d"
+import { DateTime } from "luxon"
 
 // import components
 import { ThemeContext, initialState } from "./theme-context"
 
 export default ({ children }: ProviderProps) => {
   // cookies
-  const [, setCookies, removeCookies] = useCookies(["cookies"])
+  const [, setCookies, removeCookies] = useCookies([
+    "gatsby-gdpr-google-analytics",
+    "gatsby-gdpr-google-tagmanager",
+    "gatsby-gdpr-facebook-pixel",
+  ])
 
   // state
   const [darkMode, setDarkMode] = useState(initialState.darkMode)
@@ -53,6 +58,7 @@ export default ({ children }: ProviderProps) => {
 
   // enabled analytics cookies
   useEffect(() => {
+    console.log("analytics: ", enableAnalytics)
     if (enableAnalytics) {
       setCookies("gatsby-gdpr-google-analytics", true, {
         path: "/",
