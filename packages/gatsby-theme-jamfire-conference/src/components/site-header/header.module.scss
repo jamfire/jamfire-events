@@ -11,7 +11,7 @@
   background: var(--primary-color);
 
   @include tablet-up {
-    grid-template-columns: 100px var(--sidebar-width) 2fr 1fr;
+    grid-template-columns: 100px var(--sidebar-width) 3fr 2fr;
     grid-template-areas: "profile branding event-tracker topbar";
   }
 }
