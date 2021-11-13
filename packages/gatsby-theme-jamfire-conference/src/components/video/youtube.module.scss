@@ -42,6 +42,13 @@
   background: #e3053e;
   color: #fff;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: 0.5rem;
+  }
 
   &:hover {
     background: #ff0051;

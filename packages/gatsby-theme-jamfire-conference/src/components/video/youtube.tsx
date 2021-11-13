@@ -4,6 +4,9 @@ import { VideoProps } from "./youtube.d"
 import YouTube, { Options } from "react-youtube"
 import { useTranslation } from "react-i18next"
 
+// import components
+import { FaVolumeUp, FaPlay } from "react-icons/fa"
+
 // import styles
 import * as styles from "./youtube.module.scss"
 
@@ -69,12 +72,12 @@ export default ({ videoID, locale }: VideoProps) => {
       <div className={styles.secondaryControls}>
         {muted && (
           <button className={styles.button} onClick={() => controlMute()}>
-            {muted ? t("video.soundOn") : t("video.soundOff")}
+            <FaVolumeUp /> {muted ? t("video.soundOn") : t("video.soundOff")}
           </button>
         )}
         {!playing && (
           <button className={styles.button} onClick={() => playVideo()}>
-            {muted ? t("video.playVideo") : t("video.stopVideo")}
+            <FaPlay /> {muted ? t("video.playVideo") : t("video.stopVideo")}
           </button>
         )}
       </div>
