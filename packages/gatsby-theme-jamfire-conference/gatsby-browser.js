@@ -3,6 +3,9 @@ import React from "react"
 import loadable from "@loadable/component"
 import { DEFAULT_LOCALE } from "./src/utils/constants"
 
+// import components
+import CookiesDisabled from "./src/components/cookies/disabled"
+
 // import fonts
 require("typeface-work-sans")
 require("typeface-quattrocento-sans")
@@ -29,6 +32,9 @@ const ThemeProvider = loadable(() =>
 
 // wrap root element
 export const wrapRootElement = ({ element }) => {
+  if (navigator && !navigator.cookieEnabled) {
+    return <CookiesDisabled />
+  }
   return (
     <CookiesProvider>
       <FirebaseProvider>{element}</FirebaseProvider>

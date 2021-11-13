@@ -4,6 +4,7 @@
  * Using localStorage for populating application state
  */
 import { checkIsClient } from "../../utils/check-is-client"
+import * as storage from "../../utils/storage"
 
 // for window checking
 const isClient: boolean = checkIsClient()
@@ -11,7 +12,7 @@ const isClient: boolean = checkIsClient()
 // private get jamfire settings
 const getJamfireSettings = () => {
   if (isClient) {
-    let settings: string | null = localStorage.getItem("jamfireSettings")
+    let settings: string | null = storage.local.getItem("jamfireSettings")
     let jamfireSettings = null
     if (settings === null) {
       jamfireSettings = {}
@@ -33,7 +34,7 @@ export const jamfireSet = (name: string, value: string) => {
       [name]: value,
     })
 
-    return localStorage.setItem("jamfireSettings", JSON.stringify(values))
+    return storage.local.setItem("jamfireSettings", JSON.stringify(values))
   }
 
   return null

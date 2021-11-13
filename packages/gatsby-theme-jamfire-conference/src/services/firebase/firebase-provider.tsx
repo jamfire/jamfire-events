@@ -13,6 +13,7 @@ import "firebase/compat/firestore"
 import { checkIsClient } from "../../utils/check-is-client"
 import { getFirebase } from "./get-firebase-instance"
 import { FirebaseContextData } from "./firebase"
+import * as storage from "../../utils/storage"
 
 // import components
 import FirebaseContext from "./firebase-context"
@@ -21,6 +22,12 @@ import FirebaseContext from "./firebase-context"
 const FirebaseProvider: FC<FirebaseContextData> = ({ children }) => {
   // check if is browser
   const isClient: boolean = useMemo(() => checkIsClient(), [])
+
+  // authToken
+  let authTokenLocal = null
+  if (isClient) {
+    authTokenLocal = storage.local.getItem("authToken") || null
+  }
 
   // state management
   const [firebase, setFirebase] = useState<firebase.app.App | null>(null)
@@ -33,13 +40,13 @@ const FirebaseProvider: FC<FirebaseContextData> = ({ children }) => {
   const [authToken, setAuthToken]: [
     string | null,
     Dispatch<SetStateAction<string | null>>
-  ] = useState(isClient ? window.localStorage.getItem("authToken") : null)
+  ] = useState(authTokenLocal)
 
   // set auth token to local storage and state
   const onSetAuthToken = (token: string | null) => {
     setAuthToken(token)
     if (token) {
-      localStorage.setItem("authToken", token)
+      storage.local.setItem("authToken", token)
     }
   }
 
@@ -48,7 +55,7 @@ const FirebaseProvider: FC<FirebaseContextData> = ({ children }) => {
     console.log("logout")
     if (isClient && auth) {
       auth.signOut()
-      localStorage.removeItem("authToken")
+      storage.local.removeItem("authToken")
     }
   }
 
@@ -93,7 +100,7 @@ const FirebaseProvider: FC<FirebaseContextData> = ({ children }) => {
   // get the token
   useEffect(() => {
     if (isClient && !authToken) {
-      const token = window.localStorage.getItem("authToken")
+      const token = storage.local.getItem("authToken")
 
       if (token) {
         onSetAuthToken(token)
