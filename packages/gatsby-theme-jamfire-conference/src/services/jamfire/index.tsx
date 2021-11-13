@@ -12,7 +12,8 @@ const isClient: boolean = checkIsClient()
 // private get jamfire settings
 const getJamfireSettings = () => {
   if (isClient) {
-    let settings: string | null = storage.local.getItem("jamfireSettings")
+    let settings: string | null =
+      storage.local.getItem("jamfireSettings") || null
     let jamfireSettings = null
     if (settings === null) {
       jamfireSettings = {}
