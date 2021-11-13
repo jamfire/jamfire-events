@@ -31,7 +31,7 @@ export default ({
       ?.collection("messages")
       .where("event_id", "==", event_id)
       .orderBy("created_at", "asc")
-      .limit(100)
+      .limit(500)
   )
 
   const [scrollActive, setScrollActive] = useState(true)
