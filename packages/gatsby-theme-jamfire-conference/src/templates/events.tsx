@@ -24,6 +24,7 @@ export const eventsQuery = graphql`
     }
     events: allMarkdownRemark(
       filter: {
+        frontmatter: { published: { eq: true } }
         fields: { locale: { eq: $locale }, templateKey: { eq: "event" } }
       }
       limit: $limit
@@ -38,6 +39,7 @@ export const eventsQuery = graphql`
     }
     defaultEvents: allMarkdownRemark(
       filter: {
+        frontmatter: { published: { eq: true } }
         fields: { locale: { eq: $defaultLocale }, templateKey: { eq: "event" } }
       }
       limit: $limit
