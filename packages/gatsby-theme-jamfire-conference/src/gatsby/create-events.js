@@ -18,6 +18,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
       filter: {
         frontmatter: {
           templateKey: {eq: "event"}
+          published: {eq: true}
         }
         fields: {
           locale: {eq: $locale}
@@ -192,28 +193,6 @@ module.exports = async ({ actions, graphql, reporter }) => {
             slug: event.frontmatter.slug,
           },
         })
-
-        // extra paths to create
-        // const paths = [
-        //   "main-stage",
-        //   "schedule",
-        //   "rooms",
-        //   "qa",
-        //   "map"
-        // ]
-
-        // paths.forEach(path => {
-        //   // create dynamic routes
-        //   createPage({
-        //     path: `${eventPath}${path}`,
-        //     component: eventTemplate,
-        //     context: {
-        //       locale: locale,
-        //       defaultLocale: defaultLocale,
-        //       slug: event.frontmatter.slug,
-        //     },
-        //   })
-        // })
 
         // create dynamic routes
         createPage({

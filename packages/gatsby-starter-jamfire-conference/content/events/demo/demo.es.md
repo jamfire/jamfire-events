@@ -1,4 +1,5 @@
 ---
+published: true
 slug: demo
 title: Un evento de demostración
 eventInformation:

@@ -1,4 +1,5 @@
 ---
+published: false
 slug: demo-2
 title: Demostración personalizada
 eventInformation:

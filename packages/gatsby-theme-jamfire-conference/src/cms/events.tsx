@@ -23,6 +23,13 @@ export default {
       i18n: "duplicate",
     },
     {
+      name: "published",
+      label: "Published?",
+      default: true,
+      widget: "boolean",
+      i18n: "duplicate",
+    },
+    {
       name: "slug",
       label: "Slug",
       hint: "Enter a unique url slug for your event, i.e. demo-event",

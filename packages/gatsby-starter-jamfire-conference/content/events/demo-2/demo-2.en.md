@@ -1,5 +1,6 @@
 ---
 templateKey: event
+published: false
 slug: demo-2
 title: Customized Demo
 eventInformation:
@@ -69,11 +70,15 @@ eventRooms:
       Conference Room 1 with a graphic.
 
     image: conference-room-1.jpg
+    roomLocale: en
+    roomType: jitsi
   - title: Conference Room 2
     slug: jamfire-conference-room-2
     description: |+
       Conference Room 2 without a graphic.
 
+    roomLocale: en
+    roomType: jitsi
 eventQA:
   - question: Where can I access this conference?
     answer: You can access it on desktop, tablet, and mobile devices.

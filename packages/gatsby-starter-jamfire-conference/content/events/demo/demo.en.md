@@ -1,5 +1,6 @@
 ---
 templateKey: event
+published: true
 slug: demo
 title: A Demo Event
 eventInformation:
@@ -86,14 +87,14 @@ eventRooms:
     roomUrl: https://zoom.us/my/kalebheitzman?pwd=1234567890
     image: room-3.jpg
     roomLocale: es
-  - roomType: "google"
+  - roomType: google
     slug: jamfire-conference-room-4
     title: Conference Room 4
     description: Conference Room 4 that launches a Google Meet conference.
     roomUrl: https://meet.google.com/stj-sryk-rff
     image: room-4.jpg
     roomLocale: en
-  - roomType: "jitsi"
+  - roomType: jitsi
     slug: jamfire-conference-room-5
     title: Conference Room 5
     description: Conference Room 5 that launches a Google Meet conference.
