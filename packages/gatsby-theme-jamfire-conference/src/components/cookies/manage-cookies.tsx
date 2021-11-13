@@ -67,6 +67,10 @@ export default ({ cookies, config }: ManageCookiesProps) => {
     jamfireSet("analyticsEnabled", analyticsEnabled ? "true" : "false")
     setEnableAnalytics(analyticsEnabled)
     setToggleCookies(false)
+
+    if (window) {
+      window.location.reload()
+    }
   }
 
   if (isLoading) {

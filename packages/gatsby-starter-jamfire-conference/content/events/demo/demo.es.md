@@ -8,6 +8,7 @@ eventInformation:
   endTime:
     datetime: 2030-01-30T12:00:00.000-05:00
     timezone: America/New_York
+  livestreamUrl: https://www.youtube.com/embed/gSpPtHSELfY?autoplay=1&cc_load_policy=1&cc_lang_pref=es&mute=1
 eventGraphics:
   favicon: ""
   headerLogo: ""

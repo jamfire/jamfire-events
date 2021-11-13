@@ -9,7 +9,7 @@ eventInformation:
   endTime:
     datetime: 2030-01-30T12:00:00.000-05:00
     timezone: America/New_York
-  livestreamUrl: https://player.vimeo.com/video/348733803?playsline=1&quality=1080p&autoplay=1&muted=0
+  livestreamUrl: https://www.youtube.com/embed/gSpPtHSELfY?autoplay=1&cc_load_policy=1&cc_lang_pref=en&mute=1
 eventGraphics:
   lobbyImage: demo-event.jpg
   favicon: ""
