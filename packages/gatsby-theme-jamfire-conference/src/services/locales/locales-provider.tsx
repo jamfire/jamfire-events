@@ -2,7 +2,7 @@
 import React from "react"
 import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
-import LanguageDetector from "i18next-browser-languagedetector"
+// import LanguageDetector from "i18next-browser-languagedetector"
 import resourcesToBackend from "i18next-resources-to-backend"
 import { ENVIRONMENT } from "../../utils/constants"
 import { LocalesProviderProps } from "./locales.d"
@@ -17,7 +17,7 @@ export const LocalesProvider = ({
 }: LocalesProviderProps) => {
   !i18n.isInitialized &&
     i18n
-      .use(LanguageDetector)
+      // .use(LanguageDetector)
       .use(
         resourcesToBackend((language, namespace, callback) => {
           import(`../../locales/${language}.json`)
