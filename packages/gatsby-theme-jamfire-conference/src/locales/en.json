@@ -163,5 +163,11 @@
       "tr": "Turkish",
       "zh": "Chinese"
     }
+  },
+  "video": {
+    "soundOn": "Turn sound on",
+    "soundOff": "Turn sound off",
+    "playVideo": "Play Video",
+    "stopVideo": "Stop Video"
   }
 }

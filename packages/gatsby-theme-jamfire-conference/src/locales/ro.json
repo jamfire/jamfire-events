@@ -163,5 +163,11 @@
       "tr": "turcă",
       "zh": "chineză"
     }
+  },
+  "video": {
+    "soundOn": "Activează sunetul",
+    "soundOff": "Opriți sunetul",
+    "playVideo": "Rulează video",
+    "stopVideo": "Opriți videoclipul"
   }
 }
