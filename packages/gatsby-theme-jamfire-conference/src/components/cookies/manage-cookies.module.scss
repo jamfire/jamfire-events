@@ -75,6 +75,10 @@
   padding: 1rem;
   overflow-y: scroll;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   h3 {
     margin-bottom: 0;
   }
