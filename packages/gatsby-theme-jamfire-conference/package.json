@@ -1,5 +1,5 @@
 {
-  "version": "4.0.3",
+  "version": "4.0.4",
   "name": "gatsby-theme-jamfire-conference",
   "description": "Jamstack Conferencing using GatsbyJS, NetlifyCMS, and Firebase",
   "main": "gatsby-config.js",
