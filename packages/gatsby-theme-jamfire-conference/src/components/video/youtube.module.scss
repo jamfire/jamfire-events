@@ -39,7 +39,11 @@
   border-radius: 4px;
   border: 0;
   outline: 0;
-  background: var(--primary-color);
-  color: var(--header-color);
+  background: #e3053e;
+  color: #fff;
   cursor: pointer;
+
+  &:hover {
+    background: #ff0051;
+  }
 }
