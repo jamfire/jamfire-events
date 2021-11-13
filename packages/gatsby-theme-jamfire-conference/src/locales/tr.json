@@ -163,5 +163,11 @@
       "tr": "Türkçe",
       "zh": "Çince"
     }
+  },
+  "video": {
+    "soundOn": "sesi aç",
+    "soundOff": "sesi kapat",
+    "playVideo": "Video oynatmak",
+    "stopVideo": "Videoyu durdur"
   }
 }

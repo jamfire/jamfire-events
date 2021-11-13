@@ -163,5 +163,11 @@
       "tr": "török",
       "zh": "kínai"
     }
+  },
+  "video": {
+    "soundOn": "Hang bekapcsolása",
+    "soundOff": "Hang kikapcsolása",
+    "playVideo": "Videó lejátszása",
+    "stopVideo": "Videó megállítása"
   }
 }

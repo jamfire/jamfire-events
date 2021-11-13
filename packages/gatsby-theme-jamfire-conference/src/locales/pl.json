@@ -163,5 +163,11 @@
       "tr": "turecki",
       "zh": "chiński"
     }
+  },
+  "video": {
+    "soundOn": "Włącz dźwięk",
+    "soundOff": "Wyłącz dźwięk",
+    "playVideo": "Odtwórz wideo",
+    "stopVideo": "Zatrzymaj wideo"
   }
 }

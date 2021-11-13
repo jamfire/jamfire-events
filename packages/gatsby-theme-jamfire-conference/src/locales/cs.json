@@ -163,5 +163,11 @@
       "tr": "turečtina",
       "zh": "čínština"
     }
+  },
+  "video": {
+    "soundOn": "Zapnout zvuk",
+    "soundOff": "Vypnout zvuk",
+    "playVideo": "Přehrát video",
+    "stopVideo": "Zastavit video"
   }
 }
