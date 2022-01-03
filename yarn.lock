@@ -4477,10 +4477,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.0.tgz#d3b707e0aba3111719f941dacb2408eff3c27319"
   integrity sha512-1Dy3BdOliDwxA7VZSIg55E1d/us2KvsCQOZV25fgufG//CsnZBGiSAL7qewTQf7YVHH0A9PHgzwMmKIZ8aFYVw==
 
-"@vvo/tzdb@^6.7.0":
-  version "6.31.0"
-  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.31.0.tgz#63ad5449c48b79247dc9b6d485a5cc1d9294d175"
-  integrity sha512-CbpYwd4eNl8hJFaDJcG/IaYlPiJx8S5G3deWcwYJcmIJEAs/6UyuQUkgug+bz+ComtFATuSoATm4oYXfj4FUFg==
+"@vvo/tzdb@^6.42.0":
+  version "6.42.0"
+  resolved "https://registry.yarnpkg.com/@vvo/tzdb/-/tzdb-6.42.0.tgz#eee311b691d31871252060a9392e67ebc20c4338"
+  integrity sha512-J38PHc+/qJLPzhvn84TIxEcVHuclofqhhsKY/1XtsE7PE961QOlK/QEm+6l9LIP9eVoq2pCX3lxGUNwlg0EmYg==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
