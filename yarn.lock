@@ -9666,10 +9666,10 @@ gatsby-plugin-image@^2.0.0:
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
-gatsby-plugin-loadable-components-ssr@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-loadable-components-ssr/-/gatsby-plugin-loadable-components-ssr-4.0.0.tgz#fc32f12d620d98669934154c39a027b9d66f3bde"
-  integrity sha512-cd0a0k0R/l8DWaeODIDtZlTm0NPlpC+TEuoGX2dcDnPfKUWRsZHjpCcy4f2kzgTk6ZO4oCA5iCGydM8iIx904A==
+gatsby-plugin-loadable-components-ssr@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-loadable-components-ssr/-/gatsby-plugin-loadable-components-ssr-4.2.0.tgz#2020f8dfa622d8b21fb36a83c9abac2947a4abdd"
+  integrity sha512-ifTJ4QhbSI3rA1wmtye9/tch6jz+7fUbQk52A2wl0hho397EmvISoXHb/V5iOg/eN2dDcGvwwr2/NuLuQx7AUQ==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@loadable/babel-plugin" "^5.13.2"
