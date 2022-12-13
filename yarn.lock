@@ -3763,10 +3763,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@testing-library/cypress@^8.0.0":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-8.0.1.tgz#46bf2ae45ba8599a5f77b1dc2386444564cad3ce"
-  integrity sha512-JCGy8u4ia+OQQJxVqKqjqpb0i4kmHQhu5jKFVBp+v/YSICnf52fil2MWIJqO+tH9ZQXtp3aF7uKHsVipWaI0BQ==
+"@testing-library/cypress@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-9.0.0.tgz#3facad49c4654a99bbd138f83f33b415d2d6f097"
+  integrity sha512-c1XiCGeHGGTWn0LAU12sFUfoX3qfId5gcSE2yHode+vsyHDWraxDPALjVnHd4/Fa3j4KBcc5k++Ccy6A9qnkMA==
   dependencies:
     "@babel/runtime" "^7.14.6"
     "@testing-library/dom" "^8.1.0"
