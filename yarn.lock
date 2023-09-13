@@ -1050,12 +1050,12 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
-  version "7.16.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
-  integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.20.13", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+  version "7.22.15"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.15.tgz#38f46494ccf6cf020bd4eed7124b425e83e523b8"
+  integrity sha512-T0O+aa+4w0u06iNmapipJXMV4HoUir03hpx3/YqXXhu9xim3w+dVphjFWl1OH8NbZHw5Lbm9k45drDkgq2VNNA==
   dependencies:
-    regenerator-runtime "^0.13.4"
+    regenerator-runtime "^0.14.0"
 
 "@babel/standalone@^7.15.5":
   version "7.16.3"
@@ -3734,15 +3734,15 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@soda/friendly-errors-webpack-plugin@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.8.0.tgz#84751d82a93019d5c92c0cf0e45ac59087cd2240"
-  integrity sha512-RLotfx6k1+nfLacwNCenj7VnTMPxVwYKoGOcffMFoJDKM8tXzBiCN0hMHFJNnoAojduYAsxuiMm0EOMixgiRow==
+"@soda/friendly-errors-webpack-plugin@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@soda/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.8.1.tgz#4d4fbb1108993aaa362116247c3d18188a2c6c85"
+  integrity sha512-h2ooWqP8XuFqTXT+NyAFbrArzfQA7R6HTezADrvD9Re8fxMLTPPniLdqVTdDaO0eIoLaAwKT+d6w+5GeTk7Vbg==
   dependencies:
-    chalk "^2.4.2"
-    error-stack-parser "^2.0.2"
-    string-width "^2.0.0"
-    strip-ansi "^5"
+    chalk "^3.0.0"
+    error-stack-parser "^2.0.6"
+    string-width "^4.2.3"
+    strip-ansi "^6.0.1"
 
 "@supercharge/request-ip@^1.1.2":
   version "1.1.2"
@@ -8214,7 +8214,7 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-error-stack-parser@^2.0.2, error-stack-parser@^2.0.6:
+error-stack-parser@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.0.6.tgz#5a99a707bd7a4c58a797902d48d82803ede6aad8"
   integrity sha512-d51brTeqC+BHlwF0BhPtcYgF5nlzf9ZZ0ZIUQNZpc9ZB9qw5IJ2diTrBY9jlCJkTLITYPjmiX6OWCwH+fuyNgQ==
@@ -9676,17 +9676,17 @@ gatsby-plugin-loadable-components-ssr@^4.0.0:
     "@loadable/server" "^5.15.0"
     "@loadable/webpack-plugin" "^5.15.0"
 
-gatsby-plugin-netlify-cms@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-6.1.0.tgz#9416221e613f838c056e08eedb3564865f38f87f"
-  integrity sha512-EdRn2nHDH10BWRYLorWcO6RR7RpLjXF10cjb7kdO9ohelRacIh19f9mpRQazvjhlcW3Q0xJfxz+mUoRczLiL2Q==
+gatsby-plugin-netlify-cms@^7.12.0:
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-7.12.0.tgz#557cfade28236b000baa5f9eb03be5007d193cfb"
+  integrity sha512-RCyPz3nmu7hfK4SMZydE4qdKKIzInE+ghSFkDnZJVrSk+4vGKlvblKhugQgOf6qpSkIEpsjKA57mf9xbAqasWA==
   dependencies:
-    "@babel/runtime" "^7.15.4"
-    "@soda/friendly-errors-webpack-plugin" "1.8.0"
+    "@babel/runtime" "^7.20.13"
+    "@soda/friendly-errors-webpack-plugin" "1.8.1"
     copy-webpack-plugin "^7.0.0"
-    html-webpack-plugin "^5.3.2"
-    html-webpack-skip-assets-plugin "^1.0.2"
-    html-webpack-tags-plugin "^3.0.1"
+    html-webpack-plugin "^5.5.3"
+    html-webpack-skip-assets-plugin "^1.0.3"
+    html-webpack-tags-plugin "^3.0.2"
     lodash "^4.17.21"
     mini-css-extract-plugin "1.6.2"
     netlify-identity-widget "^1.9.2"
@@ -11165,10 +11165,10 @@ html-void-elements@^1.0.0:
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.5.tgz#ce9159494e86d95e45795b166c2021c2cfca4483"
   integrity sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==
 
-html-webpack-plugin@^5.3.2:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.5.0.tgz#c3911936f57681c1f9f4d8b68c158cd9dfe52f50"
-  integrity sha512-sy88PC2cRTVxvETRgUHFrL4No3UxvcH8G1NepGhqaTT+GXN2kTamqasot0inS5hXeg1cMbFDt27zzo9p35lZVw==
+html-webpack-plugin@^5.3.2, html-webpack-plugin@^5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.5.3.tgz#72270f4a78e222b5825b296e5e3e1328ad525a3e"
+  integrity sha512-6YrDKTuqaP/TquFH7h4srYWsZx+x6k6+FbsTm0ziCwGHDP78Unr1r9F/H4+sGmMbX08GQcJ+K64x55b+7VM/jg==
   dependencies:
     "@types/html-minifier-terser" "^6.0.0"
     html-minifier-terser "^6.0.2"
@@ -11176,14 +11176,14 @@ html-webpack-plugin@^5.3.2:
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
-html-webpack-skip-assets-plugin@^1.0.2:
+html-webpack-skip-assets-plugin@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/html-webpack-skip-assets-plugin/-/html-webpack-skip-assets-plugin-1.0.3.tgz#415c8a11d76a17fa1de0d75a91e2b8fae9d9ed71"
   integrity sha512-vpdh+JZGlE1Df3IftH2gw5P7b6yfTsahcOIJnkkkj5iJU9dUStXgzgALoXWwl8+17wWgFm3edcJzeYTJBYfMAw==
   dependencies:
     minimatch "3.0.4"
 
-html-webpack-tags-plugin@^3.0.1:
+html-webpack-tags-plugin@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/html-webpack-tags-plugin/-/html-webpack-tags-plugin-3.0.2.tgz#eefc6600e45b36605e8f91bbd497fc7f4f6d2d8c"
   integrity sha512-jZ4IHjT8AWyNa4RJ+8p0+AGkunLf1H5E/IjzW+9BOQbJ39Dy2jZULnxseXsEAiFxu6DX6z+sOZKV9rhbEDtpqA==
@@ -17791,6 +17791,11 @@ regenerator-runtime@^0.13.3, regenerator-runtime@^0.13.4:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
+
 regenerator-transform@^0.14.2:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/regenerator-transform/-/regenerator-transform-0.14.5.tgz#c98da154683671c9c4dcb16ece736517e1b7feb4"
@@ -19406,7 +19411,7 @@ string-width@^1.0.1:
     is-fullwidth-code-point "^3.0.0"
     strip-ansi "^6.0.1"
 
-string-width@^2.0.0, string-width@^2.1.0, string-width@^2.1.1:
+string-width@^2.1.0, string-width@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-2.1.1.tgz#ab93f27a8dc13d28cac815c462143a6d9012ae9e"
   integrity sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==
@@ -19529,7 +19534,7 @@ strip-ansi@^4.0.0:
   dependencies:
     ansi-regex "^3.0.0"
 
-strip-ansi@^5, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
+strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-5.2.0.tgz#8c9a536feb6afc962bdfa5b104a5091c1ad9c0ae"
   integrity sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
